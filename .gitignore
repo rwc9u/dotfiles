@@ -4,3 +4,4 @@ emacs.d/yasnippets-shoulda
 *.elc
 .DS_Store
 emacs.d/private.el
+emacs.d/url

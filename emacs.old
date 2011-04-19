@@ -1,0 +1,1500 @@
+;-*-Emacs-Lisp-*-
+;;============================================================
+;; some global defaults
+;;============================================================
+(setq-default indent-tabs-mode nil)
+(line-number-mode 1)
+(column-number-mode 1)
+(toggle-scroll-bar -1)
+(setq visible-bell t)
+(setq truncate-lines nil)
+(setq truncate-partial-width-windows nil)
+;; brute force fix to make sure nxml mode is always used for xml files
+(setq magic-mode-alist nil)
+;; make scrolling nicer
+(setq scroll-step 1)
+(setq scroll-conservatively 300)
+
+(show-paren-mode t)
+(icomplete-mode 1)
+(fset 'yes-or-no-p 'y-or-n-p)
+;; hide the tool bar on Carbon Emacs
+(tool-bar-mode 0)
+;; start emacs subprocess for emacs client processes
+(server-start)
+
+;;===================================
+;; default load directory
+;;==================================
+(add-to-list 'load-path "~/site-lisp")
+
+;;============================================================
+;; font lock
+;;============================================================
+(load "font-lock")
+(font-lock-mode)
+
+;;============================================================
+;; maxframe
+;;============================================================
+(require 'maxframe)
+(setq mf-max-width 1920)
+(add-hook 'window-setup-hook 'maximize-frame t)
+
+;;============================================================
+;; adding additional functionality to isearch
+;;============================================================
+(define-key isearch-mode-map (kbd "C-o")
+  (lambda ()
+    (interactive)
+    (let ((case-fold-search isearch-case-fold-search))
+      (occur (if isearch-regexp isearch-string
+               (regexp-quote isearch-string))))))
+
+
+
+(and window-system
+     ;;      (create-fontset-from-fontset-spec
+     ;;       (concat
+     ;;        "-apple-monaco-medium-r-normal--10-*-*-*-*-*-fontset-monaco,"
+     ;;        "ascii:-apple-monaco-medium-r-normal--10-100-*-*-m-100-mac-roman,"
+     ;;        "latin-iso8859-1:-apple-monaco-medium-r-normal--10-100-*-*-m-100-mac-roman"))
+     (create-fontset-from-fontset-spec
+      (concat
+       "-apple-monaco-medium-r-normal--11-*-*-*-*-*-fontset-monaco,"
+       "ascii:-apple-monaco-medium-r-normal--11-100-*-*-m-100-mac-roman,"
+       "latin-iso8859-1:-apple-monaco-medium-r-normal--11-100-*-*-m-100-mac-roman"))
+     (create-fontset-from-fontset-spec
+      (concat
+       "-apple-monaco-medium-r-normal--12-*-*-*-*-*-fontset-monaco,"
+       "ascii:-apple-monaco-medium-r-normal--12-100-*-*-m-100-mac-roman,"
+       "latin-iso8859-1:-apple-monaco-medium-r-normal--12-100-*-*-m-100-mac-roman"))
+     (create-fontset-from-fontset-spec
+      (concat
+       "-apple-monaco-medium-r-normal--16-*-*-*-*-*-fontset-monaco,"
+       "ascii:-apple-monaco-medium-r-normal--16-100-*-*-m-100-mac-roman,"
+       "latin-iso8859-1:-apple-monaco-medium-r-normal--16-100-*-*-m-100-mac-roman"))
+     (create-fontset-from-fontset-spec
+      (concat
+       "-apple-monaco-medium-r-normal--20-*-*-*-*-*-fontset-monaco,"
+       "ascii:-apple-monaco-medium-r-normal--20-100-*-*-m-100-mac-roman,"
+       "latin-iso8859-1:-apple-monaco-medium-r-normal--20-100-*-*-m-100-mac-roman"))
+     )
+
+(setq default-frame-alist '((font . "fontset-monaco")))
+
+
+;;============================================================
+;; color themes
+;;============================================================
+(load-file "~/site-lisp/color-theme-arjen/color-theme-arjen.el")
+(require 'color-theme-arjen)
+(color-theme-arjen)
+
+;;============================================================
+;; psvn
+;;============================================================
+(require 'psvn)
+(setq svn-status-ediff-delete-temporary-files t)
+
+;;============================================================
+;; git
+;;============================================================
+(add-to-list 'load-path "~/site-lisp/git")
+(require 'git)
+
+
+;;============================================================
+;; highlight current line
+;;============================================================
+(global-hl-line-mode 1)
+;; To customize the background color
+;; (set-face-foreground 'hl-line nil)
+(set-face-background `hl-line "#111")
+
+;;============================================================
+;; jde and semantic
+;;============================================================
+;;; Load all JDEE related libraries
+;;; JDEE, documentation and file are located at:
+;;; http://jdee.sunsite.dk/
+;;; To speed-up installation for JDEE beginners use:
+;;; http://wttools.sourceforge.net/emacs-stuff/package.html#install-jdee
+;; Configuration variables here:
+;; (setq semantic-load-turn-useful-things-on t)
+
+;; previously on
+;;(setq semantic-load-turn-everything-on t)
+(setq semantic-load-enable-minimum-features t)
+;; (setq global-semantic-show-dirty-mode -1)
+;; (setq global-semantic-show-unmatched-syntax-mode -1)
+;; Load CEDET
+(load-file "~/site-lisp/cedet/common/cedet.el")
+(setq semanticdb-project-roots
+      (list "~/dev/kajeet" "~/dev/store"))
+;; (semantic-load-enable-code-helpers)
+;; provides semantic tag folding of methods and comments
+(require 'semantic-tag-folding)
+(require 'semantic-load)
+;; (global-semantic-tag-folding-mode)
+
+;; Use the full Java 1.5 grammar to parse Java files
+;; (autoload 'wisent-java-default-setup "wisent-java"
+;;   "Hook run to setup Semantic in `java-mode'." nil nil)
+
+(add-to-list 'load-path "~/site-lisp/elib")
+(add-to-list 'load-path "~/site-lisp/jde/lisp")
+(require 'jde)
+(require 'jde-hippie)
+(load "jde")
+(load "jde-hippie")
+(defun my-jde-mode-hook ()
+  ;; (set (make-local-variable 'hippie-expand-try-functions-list)
+  ;;     '(
+  ;;      try-complete-abbrev try-complete-file-name-partially try-complete-file-name try-expand-all-abbrevs try-expand-list try-expand-line try-expand-dabbrev try-expand-dabbrev-all-buffers try-expand-dabbrev-from-kill
+  ;;))
+  ;; (set (make-local-variable 'hippie-expand-try-functions-list)
+  ;;     '())
+  ;;  (make-local-variable 'hippie-expand-try-functions-list)
+  ;;  (add-to-list 'hippie-expand-try-functions-list 'jdeh-try-expand-partially)
+  ;;  (add-to-list 'hippie-expand-try-functions-list 'jdeh-try-expand-fast)
+  ;;  (add-to-list 'hippie-expand-try-functions-list 'jdeh-try-expand-partially-fast)
+  ;;  (add-to-list 'hippie-expand-try-functions-list 'jdeh-try-expand t)
+
+  ;; turned off due to crashes
+  ;;  (flymake-mode-on)
+  (define-key jde-mode-map [?\C-c ?d]  'flymake-display-err-menu-for-current-line)
+  (define-key jde-mode-map [?\C-c ?m]  'jde-usages-display-call-tree-for-thing-at-point)
+  (define-key jde-mode-map [?\C-c ?c]  'jde-usages-display-subs-implementing-method)
+
+  (message "my-jde-mode-hook function finished")
+  )
+
+(add-hook 'jde-mode-hook 'my-jde-mode-hook)
+
+(add-hook 'conf-javaprop-mode-hook
+          '(lambda () (conf-quote-normal nil)))
+;; uses jde-usages for certain functions seems to speed things up
+(defalias 'jde-complete-invoke-get-class-info 'jde-usages-complete-invoke-get-class-info)
+(defalias 'jde-parse-eval-type-of 'jde-usages-parse-eval-type-of)
+(defalias 'jde-parse-import-list 'jde-usages-parse-import-list)
+(defalias 'jde-import-insert-import 'jde-usages-import-insert-import)
+(defalias 'jde-open-get-class-to-open 'jde-usages-get-class-to-open)
+(defalias 'jde-parse-get-qualified-name 'jde-usages-parse-get-qualified-name)
+(defalias 'jde-parse-class-exists 'jde-usages-parse-class-exists)
+
+
+(require 'jde-eclipse-compiler-server)
+
+
+(require 'tempo)
+(defcustom  jde-gen-serialVersionUID
+  '(
+    "(end-of-line) '&"
+    "\"private static final long serialVersionUID = -8749352745860453757L;\""
+    )
+  "*Template for serialVersionUID. "
+  :group 'jde-gen
+  :type '(repeat string)
+  :set '(lambda (sym val)
+          (defalias 'jde-gen-serialVersionUID
+            (tempo-define-template
+             "serialVersionUID statement"
+             (jde-gen-read-template val)
+             nil
+             "Insert serialVersionUID statement."))
+          (set-default sym val)))
+
+
+;;============================================================
+;; ecb
+;;============================================================
+(add-to-list 'load-path "~/site-lisp/ecb")
+(require 'ecb)
+
+;;============================================================
+;; auto-overlays
+;;===========================================================
+(add-to-list 'load-path "~/site-lisp/auto-overlays")
+(require 'completion-ui)
+
+(require 'dabbrev)
+
+(defun dabbrev--wrapper (prefix maxnum)
+  "Wrapper around `dabbrev--find-all-completions'
+  to pass to `completion-define-minor-mode'."
+  (dabbrev--reset-global-variables)
+  (let ((completions (dabbrev--find-all-expansions prefix nil)))
+    (when maxnum
+      (setq completions
+            (butlast completions (- (length completions) maxnum))))
+    (mapcar (lambda (word) (substring word (length prefix)))
+            completions)))
+(setq completion-function 'dabbrev--wrapper)
+
+
+;;============================================================
+;; ruby
+;;===========================================================
+(add-to-list 'load-path "~/site-lisp/ruby")
+(autoload 'ruby-mode "ruby-mode"
+  "Mode for editing ruby source files" t)
+(setq auto-mode-alist
+      (append '(("\\.rb$" . ruby-mode)
+                ("\\.sake$" . ruby-mode)
+                ("\\.autotest$" . ruby-mode)
+                ) auto-mode-alist))
+(setq interpreter-mode-alist (append '(("ruby" . ruby-mode))
+                                     interpreter-mode-alist))
+(add-hook 'ruby-mode-hook 'turn-on-font-lock)
+
+
+(autoload 'run-ruby "inf-ruby"
+  "Run an inferior Ruby process")
+(autoload 'inf-ruby-keys "inf-ruby"
+  "Set local key defs for inf-ruby in ruby-mode")
+(add-hook 'ruby-mode-hook
+          '(lambda ()
+             (inf-ruby-keys)
+             ))
+(add-hook 'ruby-mode-hook 'ansi-color-for-comint-mode-on)
+(add-hook 'compilation-shell-minor-mode-hook 'ansi-color-for-comint-mode-on)
+(require 'ruby-electric)
+
+(add-to-list 'load-path "~/site-lisp/rdebug")
+(require 'rdebug)
+;;============================================================
+;; rails
+;;===========================================================
+(add-to-list 'load-path "~/site-lisp/find-recursive")
+(add-to-list 'load-path "~/site-lisp/snippet")
+(add-to-list 'load-path "~/site-lisp/rails")
+
+(defun try-complete-abbrev (old)
+  (if (expand-abbrev) t nil))
+
+
+(require 'snippet)
+(require 'rails)
+
+
+(add-hook 'ruby-mode-hook
+          (lambda()
+            (add-hook 'local-write-file-hooks
+                      '(lambda()
+                         (save-excursion
+                           (untabify (point-min) (point-max))
+                           (delete-trailing-whitespace)
+                           )))
+            (set (make-local-variable 'indent-tabs-mode) 'nil)
+            (set (make-local-variable 'tab-width) 2)
+            (imenu-add-to-menubar "IMENU")
+            (require 'ruby-electric)
+            (ruby-electric-mode t)
+            ))
+
+
+(defun rails-find-and-goto-error ()
+  "Finds error in rails html log go on error line"
+  (interactive)
+  (search-forward-regexp "RAILS_ROOT: \\([^<]*\\)")
+  (let ((rails-root (concat (match-string 1) "/")))
+    (search-forward "id=\"Application-Trace\"")
+    (search-forward "RAILS_ROOT}")
+    (search-forward-regexp "\\([^:]*\\):\\([0-9]+\\)")
+    (let  ((file (match-string 1))
+           (line (match-string 2)))
+                                        ;(kill-buffer (current-buffer))
+      (message
+       (format "Error found in file \"%s\" on line %s. "  file line))
+      (find-file (concat rails-root file))
+      (goto-line (string-to-int line)))))
+
+(defun ruby-eval-buffer ()
+  "Evaluate the buffer with ruby."
+  (interactive)
+  (shell-command-on-region (point-min) (point-max) "/opt/local/bin/ruby"))
+
+
+(defun rails-rake:delete-task-cache()
+  "Deletes the tasks cache file."
+  (interactive
+   (rails-project:in-root
+    (let* ((cache-file (rails-core:file "tmp/.tasks-cache")))
+      (if (file-exists-p cache-file)
+          (delete-file cache-file)
+        )))))
+
+;; add the vendor directory so that I can hop to various source
+(add-to-list 'rails-tags-dirs "vendor")
+;;============================================================
+;; emacs ri
+;;===========================================================
+(add-to-list 'load-path "~/site-lisp/ri-emacs")
+(setq ri-ruby-script "/Users/rchristie/site-lisp/ri-emacs/ri-emacs.rb")
+(setq ri-ruby-program "/opt/local/bin/ruby")
+(load-file "~/site-lisp/ri-emacs/ri-ruby.el")
+
+(add-hook 'ruby-mode-hook
+          '(lambda ()
+             (define-key ruby-mode-map [?\C-c ?\C-v ?\C-.]
+               'ri-ruby-complete-symbol)))
+(add-hook 'ruby-mode-hook
+          '(lambda ()
+             (define-key ruby-mode-map [?\C-c ?\C-v ?\C-w]
+               'rails-browse-api-at-point)))
+
+(add-hook 'ruby-mode-hook
+          '(lambda ()
+             (local-set-key "\C-c\C-a" 'ri-ruby-show-args)))
+
+
+(add-hook 'inferior-ruby-mode-hook
+          '(lambda ()
+             (local-set-key [?\C-c ?\C-v ?\C-.] 'ri-ruby-complete-symbol)
+             (local-set-key "\C-c\C-a" 'ri-ruby-show-args)))
+
+;;============================================================
+;; ruby semantic integration
+;;============================================================
+;; (add-to-list 'load-path "~/site-lisp/ruby-wisent")
+;; (load "~/site-lisp/ruby-wisent/wisent-ruby-wy.el")
+;; (load "~/site-lisp/ruby-wisent/wisent-ruby.el")
+;; (add-hook 'ruby-mode-hook 'wisent-ruby-default-setup)
+
+
+;;============================================================
+;; autotest
+;;============================================================
+(require 'autotest)
+
+;;============================================================
+;; rcode tools
+;;============================================================
+(require 'rcodetools)
+
+
+;;============================================================
+;; haml templating
+;;============================================================
+(add-to-list 'load-path "~/site-lisp/haml")
+(require 'haml-mode)
+(require 'sass-mode)
+(add-to-list 'auto-mode-alist '("haml$" . haml-mode))
+(add-to-list 'auto-mode-alist '("sass$" . sass-mode))
+
+
+;;============================================================
+;; yet another snippet
+;;============================================================
+(add-to-list 'load-path "~/site-lisp/snippets")
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/snippets")
+
+
+
+;;============================================================
+;; linemark functionality
+;;============================================================
+(setq bm-restore-repository-on-load t)
+(require 'bm)
+(global-set-key (kbd "<M-f2>") 'bm-toggle)
+(global-set-key (kbd "<f2>")   'bm-next)
+(global-set-key (kbd "<S-f2>") 'bm-previous)
+;; make bookmarks persistent as default
+;; (setq-default bm-buffer-persistence t)
+
+;; Loading the repository from file when on start up.
+(add-hook' after-init-hook 'bm-repository-load)
+
+;; Restoring bookmarks when on file find.
+(add-hook 'find-file-hooks 'bm-buffer-restore)
+
+;; Saving bookmark data on killing a buffer
+(add-hook 'kill-buffer-hook 'bm-buffer-save)
+
+;; Saving the repository to file when on exit.
+;; kill-buffer-hook is not called when emacs is killed, so we
+;; must save all bookmarks first.
+(add-hook 'kill-emacs-hook '(lambda nil
+                              (bm-buffer-save-all)
+                              (bm-repository-save)))
+
+;;============================================================
+;; flyspell
+;;============================================================
+(require 'flyspell)
+(autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
+(autoload 'flyspell-delay-command "flyspell" "Delay on command." t)
+
+(setq flyspell-mouse-map
+      (let ((map (make-sparse-keymap)))
+        (define-key map [down-mouse-3] #'flyspell-correct-word)
+        map))
+
+(add-hook 'font-lock-mode-hook 'flyspell-prog-mode)
+
+(add-to-list 'flyspell-prog-text-faces 'nxml-text-face)
+
+(defun force-flyspell-mode ()
+  "Activates flyspell-mode, whether already active or not."
+  (flyspell-mode 1))
+
+
+;;============================================================
+;; sql-mode
+;;============================================================
+(autoload 'sql-mode "sql-mode" "SQL Editing Mode" t)
+(setq auto-mode-alist
+      (append '(("\\.tbl$" . sql-mode)
+                ("\\.sp$"  . sql-mode))
+              auto-mode-alist))
+
+
+(defun connect-kajeetuser ()
+  "Connect as the kajeet user"
+  (interactive)
+  (sql-send-string "@connect kajeetuser/n0rmxuxaccess@labrob;"))
+
+(defun connect-seops_dev ()
+  "Connect as the seops_dev  user"
+  (interactive)
+  (sql-send-string "@connect seops_dev/seops@labrob;"))
+
+;;============================================================
+;; plsql-mode
+;;
+;; required adding a new file in the lisp src
+;;============================================================
+(add-to-list 'load-path "~/site-lisp/plsql")
+(load "plsql")
+(autoload 'plsql-mode "plsql-mode" "PL/SQL Editing Mode" t)
+(setq auto-mode-alist
+      (append '(("\\.pb$" . plsql-mode)
+                ("\\.ps$" . plsql-mode)
+                ("\\.sql$" . plsql-mode))
+              auto-mode-alist))
+
+;;============================================================
+;; eol-conversion
+;;
+;;============================================================
+(add-to-list 'load-path (expand-file-name "~/site-lisp/eol-conversion"))
+(load-library "eol-conversion")
+
+;;============================================================
+;; css mode
+;; using version from carbon emacs
+;;============================================================
+(autoload 'css-mode "css-mode")
+(setq auto-mode-alist
+      (cons '("\\.css\\'" . css-mode) auto-mode-alist))
+(setq cssm-indent-function #'cssm-c-style-indenter)
+
+
+;;============================================================
+;; w3m
+;;
+;;============================================================
+;; (require 'w3m-load)
+
+
+;;============================================================
+;; nxml configuration
+;;
+;;============================================================
+;; (add-to-list 'load-path "~/site-lisp/nxhtml-0.85-070220/nxhtml")
+;; (load-library "appmenu")
+
+;; (load "~/site-lisp/nxhtml-0.85-070220/autostart.el")
+
+;; (add-to-list 'load-path "~/site-lisp/nxml")
+(load "/Applications/Emacs.app/Contents/Resources/site-lisp/nxml/autostart.el")
+
+(eval-after-load 'nxhtml
+ '(define-key nxhtml-mode-map [f2] 'nxml-complete))
+(setq
+ nxhtml-global-minor-mode nil
+ mumamo-chunk-coloring 'submode-colored
+ nxhtml-skip-welcome t
+ ;; indent-region-mode t
+ nxhtml-default-encoding "utf8"
+ rng-nxml-auto-validate-flag nil
+ ;; nxml-degraded t
+ )
+
+(setq auto-mode-alist
+      (append '(
+                ("\\.xml"  . nxml-mode)
+                ("\\.xsl"  . nxml-mode)
+                ("\\.fo"   . nxml-mode)
+                ("\\.svg"  . nxml-mode)
+                ("\\.tld"  . nxml-mode)
+                ("\\.vm"   . nxml-mode)
+                ("\\.rvml" . nxml-mode)
+                ("\\.html" . nxhtml-mode)
+                ("\\.jsp"  . nxhtml-mode)
+                )
+              auto-mode-alist
+              )
+      )
+
+;;============================================================
+;; xhtml help
+;;============================================================
+(require 'xhtml-help)
+
+
+;;============================================================
+;; minibuffer space completion
+;;============================================================
+(define-key minibuffer-local-filename-completion-map (kbd "SPC")
+  'minibuffer-complete-word)
+
+(define-key minibuffer-local-must-match-filename-map (kbd "SPC")
+  'minibuffer-complete-word)
+
+;;============================================================
+;; tail configuration
+;;============================================================
+(require 'tail)
+(setq tail-hide-delay nil)
+(setq tail-max-size 6)
+(setq tail-volatile nil)
+
+;;============================================================
+;; grep edit configuration
+;;============================================================
+;;(require 'grep-edit)
+(autoload 'global-replace-lines "globrep"
+  "Put back grepped lines" t)
+(autoload 'global-replace "globrep"
+  "query-replace across files" t)
+(autoload 'global-grep-and-replace "globrep"
+  "grep and query-replace across files" t)
+
+
+;;============================================================
+;; text table manipulation configuration
+;;===========================================================
+(require 'table)
+(add-hook 'text-mode-hook 'table-recognize)
+
+;;===========================================================
+;; slime mode
+;;==========================================================
+(require 'slime)
+(slime-setup)
+
+;;============================================================
+;; iswitchb
+;;============================================================
+(require 'iswitchb)                   ;gives me the C= minibuffer list
+
+;;============================================================
+;; iswitchb ignores
+;;============================================================
+(iswitchb-mode 1)
+(add-to-list 'iswitchb-buffer-ignore "^ ")
+(add-to-list 'iswitchb-buffer-ignore "*Messages*")
+(add-to-list 'iswitchb-buffer-ignore "*ECB")
+(add-to-list 'iswitchb-buffer-ignore "*Buffer")
+(add-to-list 'iswitchb-buffer-ignore "*Completions")
+(add-to-list 'iswitchb-buffer-ignore "*ftp ")
+(add-to-list 'iswitchb-buffer-ignore "*bsh")
+;; (add-to-list 'iswitchb-buffer-ignore "*compilation")
+(add-to-list 'iswitchb-buffer-ignore "*jde-log")
+(add-to-list 'iswitchb-buffer-ignore "^[tT][aA][gG][sS]$")
+
+
+;;============================================================
+;; ido
+;;============================================================
+(require 'ido)
+(ido-mode t)
+(setq ido-enable-flex-matching t) ; fuzzy matching is a must have
+ 
+;; This tab override shouldn't be necessary given ido's default 
+;; configuration, but minibuffer-complete otherwise dominates the 
+;; tab binding because of my custom tab-completion-everywhere 
+;; configuration.
+(add-hook 'ido-setup-hook 
+          (lambda () 
+            (define-key ido-completion-map [tab] 'ido-complete)))
+;; (add-to-list 'ido-ignore-buffers "^ ")
+;; (add-to-list 'ido-ignore-buffers "*Messages*")
+;; (add-to-list 'ido-ignore-buffers "*ECB")
+;; (add-to-list 'ido-ignore-buffers "*Buffer")
+;; (add-to-list 'ido-ignore-buffers "*Completions")
+;; (add-to-list 'ido-ignore-buffers "*ftp ")
+;; (add-to-list 'ido-ignore-buffers "*bsh")
+;; (add-to-list 'ido-ignore-buffers "*compilation")
+;; (add-to-list 'ido-ignore-buffers "*jde-log")
+;; (add-to-list 'ido-ignore-buffers "^[tT][aA][gG][sS]$")
+
+
+;;============================================================
+;; html-helper mode
+;;============================================================
+(add-to-list 'load-path (expand-file-name "~/site-lisp/html-helper"))
+(autoload 'html-helper-mode "html-helper-mode" "Yay HTML" t)
+(load "hhm-config")
+;;   (setq auto-mode-alist (cons '("\\.html$" . html-helper-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.asp$" . html-helper-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.phtml$" . html-helper-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.php$" . html-helper-mode) auto-mode-alist))
+;;   (setq auto-mode-alist (cons '("\\.jsp$" . html-helper-mode) auto-mode-alist))
+
+
+;;============================================================
+;; js mode
+;;============================================================
+(autoload 'js2-mode "js2" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+(setq js2-basic-offset 2)
+(setq js2-use-font-lock-faces t)
+
+
+
+(add-to-list 'load-path (expand-file-name "~/site-lisp/mmm-mode"))
+(require 'mmm-mode)       ; multiple major mode helps with jsp and php
+(setq mmm-global-mode 'maybe)
+(setq mmm-submode-decoration-level 2)
+
+;; This is the simplest example. Many applications will need no more
+;; than a simple regexp.
+(mmm-add-classes
+ '((embedded-css
+    :submode css
+    :face mmm-declaration-submode-face
+    :delimiter-mode nil
+    :front "<style[^>]*>"
+    :back "</style>")))
+
+;;}}}
+;;{{{ Javascript in HTML
+
+;; We use two classes here, one for code in a <script> tag and another
+;; for code embedded as a property of an HTML tag, then another class
+;; to group them together.
+(mmm-add-group
+ 'html-js
+ '((js-tag
+    :submode javascript
+    :face mmm-code-submode-face
+    :delimiter-mode nil
+    :front "<script\[^>\]*"
+    :back"</script>"
+    :insert ((?j js-tag nil @ "<script language=\"JavaScript\">"
+                 @ "\n" _ "\n" @ "</script>" @))
+    )
+   (js-inline
+    :submode javascript
+    :face mmm-code-submode-face
+    :delimiter-mode nil
+    :front "on\\w+=\""
+    :back "\"")))
+
+(mmm-add-group 'jsp
+               `((jsp-comment
+                  :submode text-mode
+                  :face mmm-comment-submode-face
+                  :front "<%--"
+                  :back "--%>"
+                  :insert ((?- jsp-comment nil @ "<%--" @ " " _ " " @ "--%>" @))
+                  )
+                 (jsp-code
+                  :submode jde-mode
+                  :match-face (("<%!" . mmm-declaration-submode-face)
+                               ("<%=" . mmm-output-submode-face)
+                               ("<%"  . mmm-code-submode-face))
+                  :front "<%[!=]?"
+                  :back "%>"
+                  :match-name "jsp"
+                  :insert ((?% jsp-code nil @ "<%" @ " " _ " " @ "%>" @)
+                           (?! jsp-declaration nil @ "<%!" @ " " _ " " @ "%>" @)
+                           (?= jsp-expression nil @ "<%=" @ " " _ " " @ "%>" @))
+                  )
+                 (jsp-directive
+                  :submode text-mode
+                  :face mmm-special-submode-face
+                  :front "<%@"
+                  :back "%>"
+                  :insert ((?@ jsp-directive nil @ "<%@" @ " " _ " " @ "%>" @))
+                  )))
+
+;;  (add-to-list 'mmm-mode-ext-classes-alist '(html-helper-mode nil jsp))
+;; (add-to-list 'mmm-mode-ext-classes-alist '(html-helper-mode nil embedded-css))
+;; (add-to-list 'mmm-mode-ext-classes-alist '(html-helper-mode nil html-js))
+;; (add-to-list 'mmm-mode-ext-classes-alist '(html-helper-mode nil html-in-php))
+;; (mmm-add-mode-ext-class 'html-helper-mode "\\.jsp\\'" 'jsp)
+
+;; commented out for new version of emads
+;; (mmm-add-mode-ext-class 'html-helper-mode nil 'jsp)
+;; (mmm-add-mode-ext-class 'html-helper-mode nil 'embedded-css)
+;; (mmm-add-mode-ext-class 'html-helper-mode nil 'html-js)
+
+;; added for rhtml
+(set-face-background 'mmm-output-submode-face  "gray26")
+(set-face-background 'mmm-code-submode-face    "SteelBlue4")
+(set-face-background 'mmm-comment-submode-face "LightYellow")
+
+;; (set-face-background 'mmm-output-submode-face  "LightGrey")
+;; (set-face-background 'mmm-code-submode-face    "MediumSlateBlue")
+;; (set-face-background 'mmm-comment-submode-face "DarkOliveGreen")
+
+(mmm-add-classes
+ '((erb-code
+    :submode ruby-mode
+    :match-face (("<%#" . mmm-comment-submode-face)
+                 ("<%=" . mmm-output-submode-face)
+                 ("<%"  . mmm-code-submode-face))
+    :front "<%[#=]?"
+    :back "-?%>"
+    :insert ((?% erb-code       nil @ "<%"  @ " " _ " " @ "%>" @)
+             (?# erb-comment    nil @ "<%#" @ " " _ " " @ "%>" @)
+             (?= erb-expression nil @ "<%=" @ " " _ " " @ "%>" @))
+    )))
+
+
+(add-to-list 'auto-mode-alist '("\\.rhtml$" . html-helper-mode))
+;; (add-to-list 'auto-mode-alist '("\\.html.erb$" . html-helper-mode))
+
+(add-to-list 'mmm-mode-ext-classes-alist '(html-helper-mode nil erb-code))
+(mmm-add-mode-ext-class 'html-helper-mode "\\.rhtml\\'" 'erb-code)
+;; (mmm-add-mode-ext-class 'html-helper-mode "\\.html.erb\\'" 'erb-code)
+
+
+;;============================================================
+;; key mappings
+;;============================================================
+(global-set-key [delete] 'delete-char)
+(global-set-key "\M-%" 'query-replace-regexp)
+(global-set-key [f3] 'grep-find)
+(global-set-key [(control f3)] 'gse-locate)
+(global-set-key [(control f4)] 'semantic-tag-folding-fold-block)
+(global-set-key [(control meta f4)] 'semantic-tag-folding-show-block)
+(global-set-key [f4] 'html-script-toggle-narrow)
+(global-set-key [f5] 'jde-build)
+(global-set-key [S-f5] 'ruby-eval-buffer)
+(global-set-key [(control f5)] 'xmp)
+(global-set-key [f6] 'goto-line)
+(global-set-key [S-f7] 'kmacro-start-macro-or-insert-counter)
+(global-set-key [f7] 'kmacro-end-or-call-macro)
+(global-set-key [f8] 'sql-send-region)
+(global-set-key [(control f8)] 'sql-send-buffer)
+(global-set-key [(control f9)] 'rails-svn-status-into-root)
+(global-set-key [(meta f1)]    'ri)
+
+
+(global-set-key "%" 'match-paren)
+
+(global-set-key [(meta \))] 'zoom-way-out)
+(global-set-key [(meta _)] 'zoom-in)
+(global-set-key [(meta +)] 'zoom-out)
+
+                                        ; (global-set-key '(meta n) 'switch-to-next-buffer-in-group)
+                                        ; (global-set-key '(meta p) 'switch-to-previous-buffer-in-group)
+                                        ; (global-set-key '(meta N) 'switch-to-next-buffer)
+                                        ; (global-set-key '(meta P) 'switch-to-previous-buffer)
+
+(define-key global-map [(control meta n)]   'next-error)
+(define-key global-map [(control meta p)]   'previous-error)
+
+;; trying to map M-tab to something else M-`
+;; (define-key key-translation-map  (kbd "<M-`>") "\e\t" )
+;; (keyboard-translate ?\M-` ?\M-\t)
+
+
+;; some additional keymappings
+                                        ; Map the window manipulation keys to meta 0, 1, 2, o
+(global-set-key (kbd "M-3") 'split-window-horizontally) ; was digit-argument
+(global-set-key (kbd "M-2") 'split-window-vertically) ; was digit-argument
+(global-set-key (kbd "M-1") 'delete-other-windows) ; was digit-argument
+(global-set-key (kbd "M-0") 'delete-window) ; was digit-argument
+(global-set-key (kbd "M-o") 'other-window)  ; was facemenu-keymap
+
+                                        ; Mac conventions
+(global-set-key (kbd "M-a") 'mark-whole-buffer) ; was backward-sentence.
+(global-set-key (kbd "M-s") 'save-buffer) ; was center-line. cmd-s is OS X convention.
+                                        ; (defalias 'center-line 'save-buffer)
+
+
+;;============================================================
+;; Include the following only if you want to run
+;; bash as your shell.
+;; Setup Emacs to run bash as its primary shell.
+;;============================================================
+(setq shell-file-name "bash")
+(setq shell-command-switch "-c")
+(setq explicit-shell-file-name shell-file-name)
+(setenv "SHELL" shell-file-name)
+;; (setq explicit-sh-args '("-login" "-i"))
+(setq explicit-sh-args '("-i"))
+;;(if (boundp 'w32-quote-process-args)
+;;    (setq w32-quote-process-args ?\")) ;; Include only for MS Windows
+
+;; this is needed to handle text binary mode problems with bash
+(setq process-coding-system-alist
+      (cons '("bash" . latin-1-unix) process-coding-system-alist))
+
+;;============================================================
+;; enable use of cygwin paths in windows
+;;============================================================
+;; (require 'cygwin-mount)
+;; (cygwin-mount-activate)
+
+
+;;============================================================
+;; Environment settings
+;;===========================================================
+(setq exec-path (cons "/opt/local/bin" exec-path))
+(setenv "PATH" (concat "/opt/local/bin:" (getenv "PATH")))
+
+(setq exec-path (cons "/opt/local/lib/postgresql83/bin" exec-path))
+(setenv "PATH" (concat "/opt/local/lib/postgresql83/bin:" (getenv "PATH")))
+
+
+;; (setq exec-path (cons "~/bin" exec-path))
+;; (setenv "PATH" (concat "~/bin:" (getenv "PATH")))
+
+(setq exec-path (cons "/usr/local/mysql/bin" exec-path))
+(setenv "PATH" (concat "/usr/local/mysql/bin:" (getenv "PATH")))
+
+(setenv "CATALINA_HOME" "/usr/local/tomcat")
+(setenv "ANT_HOME" "/usr/local/ant")
+(setenv "JAVA_HOME" "/System/Library/Frameworks/JavaVM.framework/Versions/1.5/Home")
+(setenv "DYLD_LIBRARY_PATH" "/usr/local/oracle-instantclient")
+(setenv "TNS_ADMIN" "/usr/local/oracle-instantclient")
+;; (setq exec-path (cons "/usr/local/ant/bin" exec-path))
+(setq exec-path (cons "/usr/local/oracle-instantclient" exec-path))
+(setenv "PATH" (concat "/usr/local/oracle-instantclient:/usr/local/ant/bin:" (getenv "PATH")))
+(setenv "SQLPATH" (concat "/Users/rchristie/sqlstuff:" (getenv "SQLPATH")))
+
+
+
+;;============================================================
+;; This removes unsightly ^M characters that would otherwise
+;; appear in the output of java applications.
+;;============================================================
+(add-hook 'comint-output-filter-functions
+          'comint-strip-ctrl-m)
+
+;; the following ignores ^M characters in all buffers
+;; (standard-display-ascii ?\r "")
+
+;;============================================================
+;; pc-like textmarking
+;;============================================================
+(pc-selection-mode)
+
+;;============================================================
+;; window/buffer movement with arrow keys
+;; overrides a few things and must be below pc-selection-mode
+;;============================================================
+(windmove-default-keybindings 'meta)
+
+
+
+;;============================================================
+;; pastie support
+;;============================================================
+(load "pastie")
+
+
+;;============================================================
+;; loads my custom macros
+;;============================================================
+(load-file "~/dev/sandbox/macros.el")
+
+
+
+;;=========================================================
+;; filecache
+;;=========================================================
+(require 'filecache)
+(load "iswitchb-fc")
+
+(defun rails-add-proj-to-file-cache (dir)
+  "Adds all the ruby and rhtml files recursively in the current directory to the file-cache"
+  (interactive "DAdd directory: ")
+  (file-cache-clear-cache)
+  (file-cache-add-directory-recursively dir (regexp-opt (list ".rb" ".rhtml" ".xml" ".js" ".yml")))
+  (file-cache-delete-file-regexp "\\.svn")
+  ;;   (file-cache-delete-file-list (find-lisp-find-files (concat dir "/vendor/rails/") ".*"))
+  )
+
+
+(defun java-add-proj-to-file-cache (dir)
+  "Adds all the java and jsp files recursively in the current directory to the file-cache"
+  (interactive "DAdd directory: ")
+  (file-cache-clear-cache)
+  (file-cache-add-directory-recursively (concat dir "/src") "\\(jsp\\|html\\|xml\\|js\\|java\\|properties\\|cfg\\|vm\\)")
+  (file-cache-add-directory-recursively (concat dir "/web") "\\(jsp\\|html\\|xml\\|js\\|java\\|properties\\|cfg\\|vm\\)")
+  (file-cache-add-file (concat dir "/build.xml"))
+  ;;    (file-cache-add-directory-recursively (concat dir "/test") "\\(jsp\\|html\\|xml\\|js\\|java\\|properties\\|cfg\\|vm\\)")
+  (file-cache-delete-file-regexp "\\.svn")
+  (file-cache-delete-file-list (find-lisp-find-files (concat dir "/build") ".*")))
+
+
+
+
+
+
+
+(defun zoom-way-out() (interactive)
+  (set-selective-display 0))
+(defun zoom-way-in() (interactive)
+  (set-selective-display 2))
+(defun zoom-out() (interactive)
+  (set-selective-display
+   (if selective-display
+       (if (or (= selective-display 0) (= selective-display 10))
+           0
+         (+ selective-display 2))
+     0)))
+(defun zoom-in() (interactive)
+  (set-selective-display
+   (if selective-display
+       (if (= selective-display 0)
+           10
+         (if (= selective-display 2)
+             2
+           (- selective-display 2)))
+     10)))
+
+;; Define our own function to deal with the possibility that the newer
+;; stuff in the gutter code may not be present -- i.e. we're running
+;; an older XEmacs.  Note that we avoid trying to "helpfully" define a
+;; function that is present in new versions of XEmacs, but not in
+;; older ones.  That can very easily screw up code trying to determine
+;; what functionality is present using `fboundp' checks.  See above,
+;; near `emacs-version>=', for a full discussion of this.
+
+(defun Init-buffers-tab-omit (buf)
+  ;; a function specifying the buffers to omit from the buffers tab.
+  ;; This is passed a buffer and should return non-nil if the buffer
+  ;; should be omitted.  If the standard buffers-tab functionality is
+  ;; there, we just call it to do things "right".  Otherwise we just
+  ;; omit invisible buffers, snarfing the code from
+  ;; `buffers-menu-omit-invisible-buffers'.
+  (if (boundp 'buffers-tab-omit-function)
+      (funcall buffers-tab-omit-function buf)
+    (not (null (string-match "\\` " (buffer-name buf))))))
+
+(defun switch-to-next-buffer (&optional n)
+  "Switch to the next-most-recent buffer.
+This essentially rotates the buffer list forward.
+N (interactively, the prefix arg) specifies how many times to rotate
+forward, and defaults to 1.  Buffers whose name begins with a space
+\(i.e. \"invisible\" buffers) are ignored."
+  ;; Here is a different interactive spec.  Look up the function
+  ;; `interactive' (i.e. `C-h f interactive') to understand how this
+  ;; all works.
+  (interactive "p")
+  (dotimes (n (or n 1))
+    (loop
+     do (bury-buffer (car (buffer-list)))
+     while (Init-buffers-tab-omit (car (buffer-list))))
+    (switch-to-buffer (car (buffer-list)))))
+
+(defun buffers-menu-omit-invisible-buffers (buf)
+  "For use as a value of `buffers-menu-omit-function'.
+Omits normally invisible buffers (those whose name begins with a space)."
+  (not (null (string-match "\\` " (buffer-name buf)))))
+
+(defvar Init-buffers-tab-grouping-regexp
+  '("^\\(gnus-\\|message-mode\\|mime/viewer-mode\\)"
+    "^\\(emacs-lisp-\\|lisp-\\)")
+  ;; If non-nil, a list of regular expressions for buffer grouping.
+  ;; Each regular expression is applied to the current major-mode symbol
+  ;; name and mode-name, if it matches then any other buffers that match
+  ;; the same regular expression be added to the current group.  This is
+  ;; a copy of `buffers-tab-grouping-regexp'.
+  )
+
+(defun Init-select-buffers-tab-buffers (buffer-to-select buf1)
+  ;; Specifies the buffers to select from the buffers tab.  This is
+  ;; passed two buffers and should return non-nil if the second buffer
+  ;; should be selected.  If the standard buffers-tab functionality is
+  ;; there, we just call it to do things "right".  Otherwise, we group
+  ;; buffers by major mode and by `Init-buffers-tab-grouping-regexp'.
+  ;; [We've copied `select-buffers-tab-buffers-by-mode' and
+  ;; `buffers-tab-grouping-regexp'.]
+  (if (boundp 'buffers-tab-selection-function)
+      (funcall buffers-tab-selection-function buffer-to-select buf1)
+    (let ((mode1 (symbol-name (symbol-value-in-buffer 'major-mode buf1)))
+          (mode2 (symbol-name (symbol-value-in-buffer 'major-mode
+                                                      buffer-to-select)))
+          (modenm1 (symbol-value-in-buffer 'mode-name buf1))
+          (modenm2 (symbol-value-in-buffer 'mode-name buffer-to-select)))
+      (cond ((or (eq mode1 mode2)
+                 (eq modenm1 modenm2)
+                 (and (string-match "^[^-]+-" mode1)
+                      (string-match
+                       (concat "^" (regexp-quote
+                                    (substring mode1 0 (match-end 0))))
+                       mode2))
+                 (and Init-buffers-tab-grouping-regexp
+                      (find-if #'(lambda (x)
+                                   (or
+                                    (and (string-match x mode1)
+                                         (string-match x mode2))
+                                    (and (string-match x modenm1)
+                                         (string-match x modenm2))))
+                               Init-buffers-tab-grouping-regexp)))
+             t)
+            (t nil)))))
+
+(defun switch-to-previous-buffer (&optional n)
+  "Switch to the previously most-recent buffer.
+This essentially rotates the buffer list backward.
+N (interactively, the prefix arg) specifies how many times to rotate
+backward, and defaults to 1.  Buffers whose name begins with a space
+\(i.e. \"invisible\" buffers) are ignored."
+  (interactive "p")
+  (dotimes (n (or n 1))
+    (loop
+     do (switch-to-buffer (car (last (buffer-list))))
+     while (Init-buffers-tab-omit (car (buffer-list))))))
+
+(defun switch-to-next-buffer-in-group (&optional n)
+  "Switch to the next-most-recent buffer in the current group.
+This essentially rotates the buffer list forward.
+N (interactively, the prefix arg) specifies how many times to rotate
+forward, and defaults to 1.  Buffers whose name begins with a space
+\(i.e. \"invisible\" buffers) are ignored."
+  (interactive "p")
+  (dotimes (n (or n 1))
+    (let ((curbuf (car (buffer-list))))
+      (loop
+       do (bury-buffer (car (buffer-list)))
+       while (or (Init-buffers-tab-omit (car (buffer-list)))
+                 (not (Init-select-buffers-tab-buffers
+                       curbuf (car (buffer-list)))))))
+    (switch-to-buffer (car (buffer-list)))))
+
+(defun switch-to-previous-buffer-in-group (&optional n)
+  "Switch to the previously most-recent buffer in the current group.
+This essentially rotates the buffer list backward.
+N (interactively, the prefix arg) specifies how many times to rotate
+backward, and defaults to 1.  Buffers whose name begins with a space
+\(i.e. \"invisible\" buffers) are ignored."
+  (interactive "p")
+  (dotimes (n (or n 1))
+    (let ((curbuf (car (buffer-list))))
+      (loop
+       do (switch-to-buffer (car (last (buffer-list))))
+       while (or (Init-buffers-tab-omit (car (buffer-list)))
+                 (not (Init-select-buffers-tab-buffers
+                       curbuf (car (buffer-list)))))))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+(defconst my-c-style
+  '((c-basic-offset . 4)
+    (c-comment-only-line-offset 0 . 0)
+    (c-offsets-alist
+     (string . c-lineup-dont-change)
+     (c . c-lineup-C-comments)
+     (defun-open . 0)
+     (defun-close . 0)
+     (defun-block-intro . +)
+     (class-open . 0)
+     (class-close . 0)
+     (inline-close . 0)
+     (func-decl-cont . +)
+     (knr-argdecl . 0)
+     (topmost-intro . 0)
+     (topmost-intro-cont . 0)
+     (member-init-intro . +)
+     (member-init-cont . c-lineup-multi-inher)
+     (inher-intro . +)
+     (inher-cont . +)
+     (block-open . -)
+     (block-close . 0)
+     (brace-list-open . 0)
+     (brace-list-close . 0)
+     (brace-list-intro . +)
+     (brace-list-entry . 0)
+     (brace-entry-open . 0)
+     (statement . 0)
+     (statement-case-intro . +)
+     (substatement . +)
+     (case-label . 0)
+     (access-label . -)
+     (do-while-closure . 0)
+     (else-clause . 0)
+     (catch-clause . 0)
+     (comment-intro . c-lineup-comment)
+     (arglist-cont . 0)
+     (arglist-cont-nonempty . c-lineup-arglist)
+     (stream-op . c-lineup-streamop)
+     (inclass . +)
+     (cpp-macro .
+                [0])
+     (cpp-macro-cont . c-lineup-dont-change)
+     (friend . 0)
+     (objc-method-intro .
+                        [0])
+     (objc-method-args-cont . c-lineup-ObjC-method-args)
+     (objc-method-call-cont . c-lineup-ObjC-method-call)
+     (extern-lang-open . 0)
+     (extern-lang-close . 0)
+     (inextern-lang . +)
+     (namespace-open . 0)
+     (namespace-close . 0)
+     (innamespace . +)
+     (template-args-cont c-lineup-template-args +)
+     (inlambda . 0)
+     (lambda-intro-cont . +)
+     (inexpr-statement . 0)
+     (inexpr-class . +)
+     (statement-block-intro . +)
+     (knr-argdecl-intro . 0)
+     (substatement-open . 0)
+     (label . 0)
+     (statement-case-open . +)
+     (statement-cont . +)
+     (arglist-intro . +)
+     (arglist-close . 0)
+     (inline-open . 0))
+    (c-special-indent-hook . c-gnu-impose-minimum)
+    (c-comment-continuation-stars . "* ")
+    (c-hanging-comment-ender-p . t))
+  "My C Programming Style")
+
+
+
+
+
+
+;;==================================================
+;; tab fix
+;;==================================================
+;; Use the text around point as a cue what it is that we want from the
+;; editor. Allowance has to be made for the case that point is at the
+;; edge of a buffer.
+(defun indent-or-expand (arg)
+  "Either indent according to mode, or expand the word preceding
+point."
+  (interactive "*P")
+  (cond
+   ;; snippet
+   ((and (boundp 'snippet)
+         snippet)
+    (snippet-next-field))
+
+   ((and
+     (or (bobp) (= ?w (char-syntax (char-before))))
+     (or (eobp) (not (= ?w (char-syntax (char-after))))))
+    (hippie-expand arg))
+   (t (indent-according-to-mode))))
+
+
+;;===============================
+;; add the tab -> indent-or-expand mapping to the mode hooks that you want
+;; to use it in, e.g.
+;; ===============================
+
+(defun my-tab-fix ()
+  ;;  (c-add-style "PERSONAL" my-c-style t)
+  ;;  (setq c-basic-offset 4)
+  (setq tab-width 4)
+  (setq indent-tabs-mode nil)
+  (local-set-key [(tab)] 'indent-or-expand)
+  )
+
+
+(add-hook 'c-mode-hook 'my-tab-fix)
+(add-hook 'c++-mode-hook 'my-tab-fix)
+(add-hook 'sql-mode-hook 'my-tab-fix)
+(add-hook 'jde-mode-hook 'my-tab-fix)
+(add-hook 'java-mode-hook 'my-tab-fix)
+;; (add-hook 'csharp-mode-hook 'my-tab-fix)
+(add-hook 'html-helper-mode-hook 'my-tab-fix)
+(add-hook 'text-mode-hook 'my-tab-fix)
+(add-hook 'sh-mode-hook 'my-tab-fix)
+(add-hook 'shell-script-mode-hook 'my-tab-fix)
+(add-hook 'nroff-mode-hook 'my-tab-fix)
+(add-hook 'outline-mode-hook 'my-tab-fix)
+(add-hook 'nxml-mode-hook 'my-tab-fix)
+(add-hook 'css-mode-hook 'my-tab-fix)
+(add-hook 'javascript-mode-hook 'my-tab-fix)
+(add-hook 'plsql-mode-hook 'my-tab-fix)
+(add-hook 'conf-javaprop-mode-hook 'my-tab-fix)
+(add-hook 'conf-mode-hook 'my-tab-fix)
+(add-hook 'sql-interactive-mode 'my-tab-fix)
+;; (add-hook 'ruby-mode-hook 'my-tab-fix)
+
+;;============================================================
+;; defuns
+;;============================================================
+
+
+
+(defun iwb() "indent whole buffer"  (interactive)
+  (indent-region (point-min) (point-max) nil)
+  (delete-trailing-whitespace)
+  (untabify (point-min) (point-max)))
+
+
+(defun match-paren (arg)
+  "Go to the matching parenthesis if on parenthesis otherwise insert %."
+  (interactive "p")
+  (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
+        ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
+        (t (self-insert-command (or arg 1)))))
+
+
+(defun sql-login-personal ()
+  "Automatically log me in to my work development environment and open my sqlbuffer"
+  (sql-oracle)
+  (interactive)
+  (find-file "~/dev/sandbox/sqlbuffer.sql")
+  )
+
+(defun dos2unix (buffer)
+  "Automate M-% C-q C-m RET C-q C-j RET"
+  (interactive "*b")
+  (save-excursion
+    (goto-char (point-min))
+    (while (search-forward (string ?\C-m) nil t)
+      (replace-match (string ?\C-j) nil t))))
+
+
+(defun create-scratch-buffer nil
+  "create a scratch buffer"
+  (interactive)
+  (switch-to-buffer (get-buffer-create "*scratch*"))
+  (lisp-interaction-mode))
+
+(defun laptop-maximize-window nil
+  "maximizes the emacs window on my laptop"
+  (interactive)
+  (set-frame-position (selected-frame) 0 0)
+  (set-frame-size (selected-frame) 200 48))
+
+(defun desktop-maximize-window nil
+  "maximizes the emacs window on my laptop"
+  (interactive)
+  (set-frame-position (selected-frame) 0 0)
+  (set-frame-size (selected-frame) 237 65))
+
+
+(defun quick-tidy-buffer ()
+  "Run Tidy HTML parser on current buffer."
+  (interactive)
+  (if (get-buffer "tidy-errs") (kill-buffer "tidy-errs"))
+  (shell-command-on-region (point-min) (point-max)
+                           "tidy -f /tmp/tidy-errs -q -i -wrap 72 -c" t)
+  (find-file-other-window "/tmp/tidy-errs")
+  (other-window 1)
+  (delete-file "/tmp/tidy-errs")
+  (message "buffer tidy'ed")
+  )
+
+(defun my-switch-to-bookmark (bname)
+  "Interactively switch to bookmark as `iswitchb' does."
+  (interactive (list (flet ((iswitchb-make-buflist
+                             (default)
+                             (setq iswitchb-buflist (bookmark-all-names))))
+                       (iswitchb-read-buffer "Jump to bookmark: "))))
+  (bookmark-jump bname))
+
+
+(defun totd ()
+  (interactive)
+  (with-output-to-temp-buffer "*Tip of the day*"
+    (let* ((commands (loop for s being the symbols
+                           when (commandp s) collect s))
+           (command (nth (random (length commands)) commands)))
+      (princ
+       (concat "Your tip for the day is:\n"
+               "========================\n\n"
+               (describe-function command)
+               "\n\nInvoke with:\n\n"
+               (with-temp-buffer
+                 (where-is command t)
+                 (buffer-string)))))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;; templates
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'tempo)
+
+
+(tempo-define-template
+ "logger-fine" ;; template name
+ '("logger.fine("
+   (p "Enter debug message: ") ;; Prompts for debug message
+   ");")
+ "lf"                                       ;; abbreviation
+ "Inserts a logger fine grained message")   ;; template documentation
+
+(tempo-define-template
+ "logger-warning" ;; template name
+ '("logger.warning("
+   (p "Enter debug message: ") ;; Prompts for debug message
+   ");")
+ "lw"                                          ;; abbreviation
+ "Inserts a logger warning grained message") ;; template documentation
+
+;;  '(bsh-jar "C:\\emacs-21.3\\site-lisp\\jde\\java\\lib\\bsh.jar")
+
+
+
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(Info-additional-directory-list (quote ("~/site-lisp/info")))
+ '(backup-directory-alist (quote (("." . "~/backups"))))
+ '(bm-recenter t)
+ '(case-fold-search t)
+ '(comint-move-point-for-output (quote all))
+ '(compilation-scroll-output t)
+ '(compilation-skip-threshold 2)
+ '(current-language-environment "Latin-1")
+ '(default-input-method "latin-1-prefix")
+ '(ecb-compile-window-height nil)
+ '(ecb-directories-menu-user-extension-function (quote ignore))
+ '(ecb-display-image-icons-for-semantic-tags t)
+ '(ecb-history-menu-user-extension-function (quote ignore))
+ '(ecb-layout-name "left6")
+ '(ecb-layout-window-sizes (quote (("left6" (0.1452513966480447 . 0.16666666666666666) (0.1452513966480447 . 0.5833333333333334) (0.1452513966480447 . 0.18333333333333332)) ("left8" (0.17318435754189945 . 0.25396825396825395) (0.17318435754189945 . 0.2222222222222222) (0.17318435754189945 . 0.2698412698412698) (0.17318435754189945 . 0.19047619047619047)))))
+ '(ecb-methods-menu-user-extension-function (quote ignore))
+ '(ecb-options-version "2.32")
+ '(ecb-sources-menu-user-extension-function (quote ignore))
+ '(ecb-tree-buffer-style (quote image))
+ '(ediff-split-window-function (quote split-window-horizontally))
+ '(flymake-allowed-file-name-masks (quote (("\\.c\\'" flymake-simple-make-init) ("\\.cpp\\'" flymake-simple-make-init) ("\\.xml\\'" flymake-xml-init) ("\\.html?\\'" flymake-xml-init) ("\\.cs\\'" flymake-simple-make-init) ("\\.pl\\'" flymake-perl-init) ("\\.h\\'" flymake-master-make-header-init flymake-master-cleanup) ("\\.java\\'" jde-ecj-server-flymake-init jde-ecj-flymake-cleanup) ("[0-9]+\\.tex\\'" flymake-master-tex-init flymake-master-cleanup) ("\\.tex\\'" flymake-simple-tex-init) ("\\.idl\\'" flymake-simple-make-init))))
+ '(flyspell-abbrev-p t)
+ '(flyspell-use-global-abbrev-table-p t)
+ '(flyspell-use-meta-tab nil)
+ '(global-font-lock-mode t nil (font-lock))
+ '(global-semantic-decoration-mode nil nil (semantic-decorate-mode))
+ '(global-semantic-highlight-edits-mode nil nil (semantic-util-modes))
+ '(global-semantic-idle-completions-mode nil nil (semantic-idle))
+ '(global-semantic-idle-scheduler-mode nil nil (semantic-idle))
+ '(global-semantic-idle-summary-mode nil nil (semantic-idle))
+ '(global-semantic-show-parser-state-mode nil nil (semantic-util-modes))
+ '(global-semantic-show-tag-boundaries-mode nil nil (semantic-util-modes))
+ '(global-semantic-show-unmatched-syntax-mode nil nil (semantic-util-modes))
+ '(global-semantic-stickyfunc-mode nil nil (semantic-util-modes))
+ '(global-senator-minor-mode nil nil (senator))
+ '(grep-find-command "find . -path '*/.svn/*' -or -path '*/build/*' -prune -o -type f -print0 | xargs -0 grep -nH -e ")
+ '(hippie-expand-try-functions-list (quote (yas/hippie-try-expand try-complete-abbrev try-complete-file-name-partially try-complete-file-name try-expand-all-abbrevs try-expand-list try-expand-dabbrev try-expand-dabbrev-all-buffers try-expand-dabbrev-from-kill try-complete-lisp-symbol-partially try-complete-lisp-symbol try-expand-line senator-try-expand-semantic)))
+ '(html-helper-mode-uses-JDE t nil (html-helper-mode))
+ '(icicle-download-dir "~/site-lisp/icicles")
+ '(inferior-lisp-program "clisp")
+ '(isearch-allow-scroll t)
+ '(iswitchb-max-to-show 40)
+ '(jde-ant-args "-emacs -Dbuild.compiler=org.eclipse.jdt.core.JDTCompilerAdapter -Dant.build.javac.target=1.5 -Dant.build.javac.source=1.5")
+ '(jde-ant-build-hook (quote (jde-compile-finish-refresh-speedbar jde-compile-finish-update-class-info)))
+ '(jde-ant-enable-find t)
+ '(jde-ant-invocation-method (quote ("Script")))
+ '(jde-ant-read-args t)
+ '(jde-ant-read-target t)
+ '(jde-build-function (quote (jde-ant-build)))
+ '(jde-built-class-path (quote ("C:\\dev\\_build_staging\\classes\\")))
+ '(jde-compile-finish-hook (quote (jde-compile-finish-refresh-speedbar jde-compile-finish-update-class-info)))
+ '(jde-compile-option-command-line-args nil)
+ '(jde-compile-option-sourcepath (quote ("C:\\dev\\femaweb\\src" "c:\\dev\\femaweb-java\\src\\java")))
+ '(jde-compiler (quote (("eclipse java compiler server" "/Users/rchristie/eclipse/plugins/org.eclipse.jdt.core_3.2.1.v_677_R32x.jar"))))
+ '(jde-db-option-connect-socket (quote (nil "8000")))
+ '(jde-debugger (quote ("JDEbug")))
+ '(jde-electric-return-p t)
+ '(jde-enable-abbrev-mode t)
+ '(jde-gen-code-templates (quote (("Get Set Pair" . jde-gen-get-set) ("toString method" . jde-gen-to-string-method) ("Action Listener" . jde-gen-action-listener) ("Window Listener" . jde-gen-window-listener) ("Mouse Listener" . jde-gen-mouse-listener) ("Mouse Motion Listener" . jde-gen-mouse-motion-listener) ("Inner Class" . jde-gen-inner-class) ("println" . jde-gen-println) ("beep" . jde-gen-beep) ("property change support" . jde-gen-property-change-support) ("EJB Entity Bean" . jde-gen-entity-bean) ("EJB Session Bean" . jde-gen-session-bean) ("Logger Fine" . tempo-template-logger-fine) ("Logger Warning" . tempo-template-logger-warning))))
+ '(jde-gen-final-arguments nil)
+ '(jde-gen-final-methods nil)
+ '(jde-global-classpath (quote ("/System/Library/Frameworks/JavaVM.framework/Versions/1.5/Classes/classes.jar" "/usr/local/tomcat/common/lib/servlet-api.jar" "~/dev/kajeet/lib/struts-1.2.8/struts.jar" "~/dev/kajeet/lib/struts-1.2.8/struts-el.jar" "~/dev/kajeet/lib/junit3.8.1/junit.jar" "~/dev/kajeet/lib/jmock-1.0.1/jmock-1.0.1.jar" "~/dev/kajeet/lib/spring-1.2.6/spring.jar" "~/dev/kajeet/lib/spring-1.2.6/acegi-security-1.0.0-RC1.jar" "~/dev/kajeet/lib/spring-1.2.6/spring-mock.jar" "~/dev/kajeet/lib/hibernate-3.1.3/hibernate3.jar" "~/dev/kajeet/lib/jakarta-commons/commons-beanutils.jar" "~/dev/kajeet/lib/jakarta-commons/commons-collections.jar" "~/dev/kajeet/lib/jakarta-commons/commons-dbcp.jar" "~/dev/kajeet/lib/jakarta-commons/commons-digester.jar" "~/dev/kajeet/lib/jakarta-commons/commons-fileupload.jar" "~/dev/kajeet/lib/jakarta-commons/commons-lang.jar" "~/dev/kajeet/lib/jakarta-commons/commons-logging.jar" "~/dev/kajeet/lib/jakarta-commons/commons-pool.jar" "~/dev/kajeet/lib/jakarta-commons/commons-validator.jar" "~/dev/kajeet/lib/jakarta-commons/jakarta-oro.jar" "~/dev/kajeet/lib/joda-time-1.2.1/joda-time-1.2.1.jar" "~/dev/kajeet/lib/joda-time-hibernate-0.8/joda-time-hibernate-0.8.jar" "~/dev/kajeet/build/dao/classes/" "~/dev/kajeet/build/service/classes" "~/dev/kajeet/build/util/classes" "~/dev/kajeet/build/web/classes" "~/dev/kajeet/build/test/dao/classes" "~/dev/kajeet/build/test/service/classes" "~/dev/kajeet/build/test/web/classes" "~/eclipse/plugins/org.eclipse.jdt.core_3.2.1.v_677_R32x.jar")))
+ '(jde-help-browser-function "browse-url")
+ '(jde-help-docsets (quote (("JDK API" "http://java.sun.com/j2se/1.5.0/docs/api/" nil) ("User (javadoc)" "http://jakarta.apache.org/commons/beanutils/api" nil) ("User (javadoc)" "http://tomcat.apache.org/tomcat-5.0-doc/catalina/docs/api/" nil) ("User (javadoc)" "http://struts.apache.org/1.2.8/api/" nil) ("User (javadoc)" "http://www.hibernate.org/hib_docs/v3/api/" nil) ("User (javadoc)" "http://static.springframework.org/spring/docs/1.2.x/api/" nil) ("User (javadoc)" "http://java.sun.com/webservices/docs/1.5/api/" nil) ("User (javadoc)" "http://www.jmock.org/javadoc/2.2.0/" nil) ("User (javadoc)" "http://www.jmock.org/javadoc/1.2.0/" nil))))
+ '(jde-imenu-sort (quote asc))
+ '(jde-import-auto-sort t)
+ '(jde-import-auto-sort-function (quote jde-import-organize))
+ '(jde-import-collapse-imports-threshold 0)
+ '(jde-import-group-of-rules (quote (("^javax?\\.") ("^org?\\.") ("^gov?\\."))))
+ '(jde-import-reverse-sort-group nil)
+ '(jde-import-sorted-groups (quote asc))
+ '(jde-java-font-lock-max-names-by-regexp -1)
+ '(jde-javadoc-version-tag-template "\"* @version $Id$\"")
+ '(jde-jdk (quote ("1.5.0_06")))
+ '(jde-jdk-doc-url "http://java.sun.com/j2se/1.5.0/docs/api/")
+ '(jde-jdk-registry (quote (("1.5.0_06" . "/System/Library/Frameworks/JavaVM.framework/Versions/1.5"))))
+ '(jde-junit-tester-name-tag (cons "Test" nil))
+ '(jde-run-read-app-args t)
+ '(jde-sourcepath (quote ("~/dev/kajeet/src" "~/dev/store/src")))
+ '(jde-wiz-get-set-static-members nil)
+ '(jde-xref-cache-size 4)
+ '(jde-xref-db-base-directory "~/dev/xrefdb")
+ '(jde-xref-store-prefixes (quote ("gov.fema")))
+ '(max-lisp-eval-depth 1024)
+ '(max-specpdl-size 15000)
+ '(mf-display-padding-height 115)
+ '(mumamo-chunk-coloring (quote submode-colored))
+ '(mumamo-major-modes (quote ((xml-pi-php php-mode) (inlined-css-mode css-mode) (jsp-java-mode jde-mode) (eruby-mode ruby-mode) (inlined-javascript-mode javascript-mode ecmascript-mode))))
+ '(python-jython-command "jython")
+ '(rails-webrick:use-mongrel t)
+ '(rails-ws:default-server-type "mongrel")
+ '(rng-schema-locating-files (quote ("schemas.xml" "~/site-lisp//nxhtml-0.84-070125/nxml-mode-20041004/schema/schemas.xml" "~/dev/schemas/schemas.xml")))
+ '(ruby-program-name "/opt/local/bin/irb --inf-ruby-mode" t)
+ '(semantic-decoration-styles (quote (("semantic-decoration-on-protected-members" . t) ("semantic-decoration-on-private-members" . t) ("semantic-tag-boundary"))))
+ '(semanticdb-default-save-directory "~/.semantic-cache")
+ '(semanticdb-global-mode nil nil (semanticdb))
+ '(sql-database "labrob")
+ '(sql-oracle-program "/usr/local/oracle-instantclient/sqlplus")
+ '(sql-pop-to-buffer-after-send-region t)
+ '(sql-user "system")
+ '(svn-status-default-diff-arguments (quote ("-x -wbu --ignore-eol-style")))
+ '(tempo-interactive t)
+ '(tidy-shell-command "/usr/bin/tidy")
+ '(user-full-name "Rob Christie")
+ '(user-mail-address "rob.christie@eyestreet.com")
+ '(vc-cvs-stay-local nil t)
+ '(w3m-icon-directory "~/site-lisp/emacs-w3m-1.4.3/icons/")
+ '(which-function-mode t)
+ '(xslt-process-xml-xslt-associations (quote (("c:/dev/gigviz/web/flash/testworld.svg" . "c:/dev/gigviz/web/flash/svg-to-rvml.xsl") ("c:/dev/gigviz/web/flash/input.xml" . "c:/dev/gigviz/web/flash/rvml-sdo-geometry.xsl") ("c:/dev/SVG_GT_UnitedStates/world files/input.xml" . "c:/dev/SVG_GT_UnitedStates/world files/rvml-sdo-geometry.xsl")))))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(diff-added ((t (:inherit diff-changed :background "#70FB67" :foreground "black"))))
+ '(diff-file-header ((((class color) (min-colors 88) (background dark)) (:background "#5686E2" :weight bold))))
+ '(diff-header ((((class color) (min-colors 88) (background dark)) (:background "#3469D0"))))
+ '(diff-hunk-header ((t (:inherit diff-header :background "#3469D0"))))
+ '(diff-index ((t (:inherit diff-file-header :background "#5686E2"))))
+ '(diff-removed ((t (:inherit diff-changed :background "#FF453C"))))
+ '(flymake-errline ((((class color)) (:background "#330000" :overline "red" :underline "red"))))
+ '(flymake-warnline ((((class color)) (:background "#333300" :overline "yellow" :underline "yellow"))))
+ '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)) nil)))
+ '(mumamo-background-chunk-submode ((((class color) (min-colors 88) (background dark)) (:background "gray28"))))
+ '(nxml-attribute-local-name-face ((t (:inherit nxml-name-face :foreground "blue" :weight semi-bold))))
+ '(nxml-attribute-prefix-face ((t (:inherit nxml-name-face :foreground "blue" :weight semi-bold))))
+ '(nxml-comment-content-face ((t (:foreground "purple" :slant italic))))
+ '(nxml-element-local-name-face ((t (:inherit nxml-name-face :foreground "red" :weight bold))))
+ '(nxml-element-prefix-face ((t (:inherit nxml-name-face :weight bold))))
+ '(nxml-name-face ((((class color) (background light)) (:foreground "green"))))
+ '(nxml-tag-slash-face ((t (:inherit nxml-name-face :foreground "green"))))
+ '(rng-error-face ((t (:background "#080808" :overline "red" :underline "red")))))
+
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
+
+(put 'set-goal-column 'disabled nil)
+
+;; Beginning of the el4r block:
+;; RCtool generated this block automatically. DO NOT MODIFY this block!
+;; (add-to-list 'load-path "/opt/local/share/emacs/site-lisp")
+;; (require 'el4r)
+;; (el4r-boot)
+;; End of the el4r block.
+;; User-setting area is below this line.

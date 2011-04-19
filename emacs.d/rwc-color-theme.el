@@ -1,0 +1,6 @@
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/color-theme-6.6.0"))
+(require 'color-theme)
+;; (load-file "~/.emacs.d/vendor/color-theme-arjen/color-theme-arjen.el")
+(load-file "~/.emacs.d/vendor/color-theme-ir-black/color-theme-ir-black.el")
+;; (require 'color-theme-arjen)
+(color-theme-ir-black)

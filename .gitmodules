@@ -1,0 +1,39 @@
+[submodule "emacs.d/vendor/maxframe"]
+	path = emacs.d/vendor/maxframe
+	url = git://github.com/rmm5t/maxframe-el.git
+[submodule "emacs.d/vendor/color-theme-arjen"]
+	path = emacs.d/vendor/color-theme-arjen
+	url = git://github.com/credmp/color-theme-arjen.git
+[submodule "emacs.d/vendor/ri-emacs"]
+	path = emacs.d/vendor/ri-emacs
+	url = git://github.com/technomancy/ri-emacs.git
+[submodule "emacs.d/vendor/gist.el"]
+	path = emacs.d/vendor/gist.el
+	url = git://github.com/defunkt/gist.el.git
+[submodule "emacs.d/vendor/magit"]
+	path = emacs.d/vendor/magit
+	url = git://github.com/philjackson/magit.git
+[submodule "emacs.d/vendor/rinari"]
+	path = emacs.d/vendor/rinari
+	url = git://github.com/eschulte/rinari.git
+[submodule "emacs.d/vendor/markdown"]
+	path = emacs.d/vendor/markdown
+	url = git://jblevins.org/git/markdown-mode.git
+[submodule "emacs.d/vendor/emacs-rails-reloaded"]
+	path = emacs.d/vendor/emacs-rails-reloaded
+	url = git://github.com/rwc9u/emacs-rails-reloaded.git
+[submodule "emacs.d/vendor/color-theme-ir-black"]
+	path = emacs.d/vendor/color-theme-ir-black
+	url = git://github.com/burke/color-theme-ir-black.git
+[submodule "emacs.d/vendor/rvm.el"]
+	path = emacs.d/vendor/rvm.el
+	url = git://github.com/senny/rvm.el.git
+[submodule "emacs.d/vendor/rsense"]
+	path = emacs.d/vendor/rsense
+	url = git://github.com/m2ym/rsense.git
+[submodule "emacs.d/vendor/textmate.el"]
+	path = emacs.d/vendor/textmate.el
+	url = https://github.com/defunkt/textmate.el.git
+[submodule "emacs.d/vendor/yasnippets-rspec"]
+	path = emacs.d/vendor/yasnippets-rspec
+	url = https://github.com/kavu/yasnippets-rspec.git

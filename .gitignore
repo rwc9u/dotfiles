@@ -1,0 +1,6 @@
+emacs.d/auto-save-list
+emacs.d/yasnippets-shoulda
+*.svn
+*.elc
+.DS_Store
+emacs.d/private.el

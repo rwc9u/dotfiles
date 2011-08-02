@@ -6,3 +6,10 @@
 (setq js2-basic-offset 2)
 ;; (setq js2-use-font-lock-faces t)
 (setq js2-highlight-level 3)
+
+
+(add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
+(require 'coffee-mode)
+
+(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))

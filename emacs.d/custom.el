@@ -25,6 +25,8 @@
  '(html-helper-mode-uses-JDE t nil (html-helper-mode))
  '(isearch-allow-scroll t)
  '(iswitchb-max-to-show 40)
+ '(markdown-command "/usr/local/bin/markdown")
+ '(markdown-css-path (quote https://gist\.github\.com/raw/516763/632b066c7c18edc91485ba13b37ba50a9b2caac7/screen\.css))
  '(max-lisp-eval-depth 1024)
  '(max-specpdl-size 15000)
  '(mf-display-padding-height 115)

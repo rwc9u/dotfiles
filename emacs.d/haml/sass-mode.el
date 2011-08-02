@@ -4,8 +4,11 @@
 
 ;; Author: Nathan Weizenbaum
 ;; URL: http://github.com/nex3/haml/tree/master
-;; Version: 1.0
-;; Keywords: markup, language
+;; Version: 3.0.15
+;; Created: 2007-03-15
+;; By: Nathan Weizenbaum
+;; Keywords: markup, language, css
+;; Package-Requires: ((haml-mode "3.0.15"))
 
 ;;; Commentary:
 
@@ -17,6 +20,8 @@
 ;; your .emacs file:
 ;;
 ;; (require 'sass-mode)
+
+;; sass-mode requires haml-mode, which can be found at http://github.com/nex3/haml-mode.
 
 ;;; Code:
 
@@ -40,8 +45,10 @@
   :group 'sass)
 
 (defvar sass-non-block-openers
-  '("^ *:[^ \t]+[ \t]+[^ \t]"
-    "^ *[^ \t:]+[ \t]*[=:][ \t]*[^ \t]")
+  '("^.*,$" ;; Continued selectors
+    "^ *@\\(extend\\|debug\\|warn\\|include\\|import\\)" ;; Single-line mixins
+    "^ *[$!]" ;; Variables
+    )
   "A list of regexps that match lines of Sass that couldn't have
 text nested beneath them.")
 
@@ -93,18 +100,18 @@ text nested beneath them.")
     ("\\(\\w+\\)\s*="  1 font-lock-variable-name-face sass-highlight-script-after-match)
     ("\\(:\\w+\\)\s*=" 1 font-lock-variable-name-face sass-highlight-script-after-match)
     (".*"      sass-highlight-selector))
-  "A list of full-line Sass syntax to highlight,
-used by `sass-highlight-line'.
+  "A list of full-line Sass syntax to highlight, used by `sass-highlight-line'.
 
 Each item is either of the form (REGEXP SUBEXP FACE), (REGEXP FN),
-or (REGEXP SUBEXP FACE FN). Each REGEXP is run successively on the
+or (REGEXP SUBEXP FACE FN).  Each REGEXP is run successively on the
 beginning of non-whitespace on the current line until one matches.
 If it has SUBEXP and FACE, then SUBEXP is highlighted using FACE.
 If it has FN, FN is run.")
 
 (defun sass-highlight-line (limit)
-  "Highlight a single line using some Sass single-line syntax,
-taken from `sass-line-keywords'."
+  "Highlight a single line using some Sass single-line syntax.
+This syntax is taken from `sass-line-keywords'.
+LIMIT is the limit of the search."
   (save-match-data
     (when (re-search-forward "^ *\\(.+\\)$" limit t)
       (goto-char (match-beginning 1))
@@ -121,8 +128,7 @@ taken from `sass-line-keywords'."
             (return t)))))))
 
 (defun sass-highlight-selector ()
-  "Highlight a CSS selector starting at `point'
-and ending at `end-of-line'."
+  "Highlight a CSS selector starting at `point' and ending at `end-of-line'."
   (let ((font-lock-keywords sass-selector-font-lock-keywords)
         font-lock-multiline)
     (font-lock-fontify-region
@@ -139,10 +145,12 @@ and ending at `end-of-line'."
         (font-lock-fontify-region beg end)))))
 
 (defun sass-highlight-script-after-match ()
+  "Highlight a section of SassScript after the last match."
   (end-of-line)
   (sass-highlight-script (match-end 0) (point)))
 
 (defun sass-highlight-directive ()
+  "Highlight a Sass directive."
   (goto-char (match-end 0))
   (block nil
     (case (intern (match-string 1))
@@ -179,8 +187,8 @@ and ending at `end-of-line'."
   (set-syntax-table sass-syntax-table)
   (setq font-lock-extend-region-functions
         '(font-lock-extend-region-wholelines font-lock-extend-region-multiline))
-  (setq font-lock-multiline nil)
-  (setq comment-start "/*")
+  (set (make-local-variable 'font-lock-multiline) nil)
+  (set (make-local-variable 'comment-start) "/*")
   (set (make-local-variable 'haml-indent-function) 'sass-indent-p)
   (set (make-local-variable 'haml-indent-offset) sass-indent-offset)
   (setq font-lock-defaults '(sass-font-lock-keywords t t)))
@@ -188,10 +196,10 @@ and ending at `end-of-line'."
 ;; Indentation
 
 (defun sass-indent-p ()
-  "Returns t if the current line can have lines nested beneath it."
+  "Return non-nil if the current line can have lines nested beneath it."
   (loop for opener in sass-non-block-openers
-        unless (looking-at opener) return t
-        return nil))
+        if (looking-at opener) return nil
+        finally return t))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))

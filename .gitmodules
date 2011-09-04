@@ -12,7 +12,7 @@
 	url = git://github.com/defunkt/gist.el.git
 [submodule "emacs.d/vendor/magit"]
 	path = emacs.d/vendor/magit
-	url = git://github.com/philjackson/magit.git
+	url = git://github.com/magit/magit.git
 [submodule "emacs.d/vendor/rinari"]
 	path = emacs.d/vendor/rinari
 	url = git://github.com/eschulte/rinari.git

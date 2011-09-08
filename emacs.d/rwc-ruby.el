@@ -253,6 +253,21 @@ through a terminal."
 ;;==============================
 (require 'rcov)
 
+
+
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/rvm.el"))
 (require 'rvm)
 
+
+;;==============================
+;; apidock integration
+;; http://simple-and-basic.com/2009/02/emacs-apidock-integration.html
+;;==============================
+(defun search-apidock-rails ()
+  "Search current word in apidock for rails"
+  (interactive)
+  (let* ((word-at-point (thing-at-point 'symbol))
+		(word (read-string "Search apidock for? " word-at-point)))
+	(browse-url (concat "http://apidock.com/rails/" word))))
+
+(define-key ruby-mode-map (kbd "C-c d") 'search-apidock-rails)

@@ -4,6 +4,9 @@
 (setq exec-path (cons "/opt/local/lib/postgresql83/bin" exec-path))
 (setenv "PATH" (concat "/opt/local/lib/postgresql83/bin:" (getenv "PATH")))
 
+(setq exec-path (cons "/usr/local/bin" exec-path))
+(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+
 
 ;; (setq exec-path (cons "~/bin" exec-path))
 ;; (setenv "PATH" (concat "~/bin:" (getenv "PATH")))

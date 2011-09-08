@@ -167,3 +167,8 @@ alias bi="b install --path vendor --binstubs"
 alias bu="b update"
 alias be="b exec"
 alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
+
+############################################################
+## coffee
+############################################################
+alias emacs_coffee="export NODE_NO_READLINE=1 && coffee"

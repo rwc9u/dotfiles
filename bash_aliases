@@ -151,7 +151,7 @@ alias passenger_urlstalker='passenger start -a 127.0.0.1 -p 3001 -d'
 alias passenger_case='passenger start -a 127.0.0.1 -p 3002 -d'
 
 alias mongod_start='sudo mongod --fork --logpath /var/log/mongodb.log --logappend'
-
+alias mongod_cleanup="sudo rm /data/db/mongod.lock && sudo mongod --repair"
 ############################################################
 ## postgres
 ############################################################

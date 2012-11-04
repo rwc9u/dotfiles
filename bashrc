@@ -16,10 +16,6 @@ if [ -d ~/bin ] ; then
   PATH="~/bin:${PATH}"
 fi
 
-if [ -d /usr/local/bin ] ; then
-  PATH="${PATH}:/usr/local/bin"
-fi
-
 # DarwinPorts
 if [ -d /opt/local/bin ] ; then
   PATH="/opt/local/bin:${PATH}"
@@ -27,6 +23,11 @@ fi
 if [ -d /opt/local/sbin ] ; then
   PATH="/opt/local/sbin:${PATH}"
 fi
+
+if [ -d /usr/local/bin ] ; then
+  PATH="/usr/local/bin:${PATH}"
+fi
+
 
 # MySql
 if [ -d /usr/local/mysql/bin ] ; then
@@ -38,6 +39,13 @@ if [ -d /opt/local/lib/postgresql91/bin ] ; then
   PATH="${PATH}:/opt/local/lib/postgresql91/bin"
 fi
 
+# Python
+PATH=${PATH}:/usr/local/share/python
+
+# Heroku
+if [ -d /usr/local/heroku/bin ] ; then
+  PATH="${PATH}:/usr/local/heroku/bin"
+fi
 
 PATH=.:${PATH}
 
@@ -159,3 +167,5 @@ fi
 ############################################################
 if [[ -s /Users/rchristie/.rvm/scripts/rvm ]] ; then source /Users/rchristie/.rvm/scripts/rvm ; fi
 [[ -r $rvm_path/scripts/completion ]] && source $rvm_path/scripts/completion
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

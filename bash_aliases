@@ -145,13 +145,15 @@ alias sha2="openssl dgst -sha256"
 alias nginx_restart='nginx_stop; nginx_start'
 alias nginx_start='sudo /opt/nginx/sbin/nginx'
 alias nginx_stop='sudo kill `cat /opt/nginx/logs/nginx.pid `'
-alias passenger_cast='passenger start -a 127.0.0.1 -p 3003 -d'
-alias passenger_cast_stop='passenger stop --port 3003'
+alias passenger_qryptograph='passenger start -a 127.0.0.1 -p 3003 -d'
+alias passenger_qryptograph_stop='passenger stop --port 3003'
 alias passenger_urlstalker='passenger start -a 127.0.0.1 -p 3001 -d'
-alias passenger_case='passenger start -a 127.0.0.1 -p 3002 -d'
+alias passenger_retirehq='passenger start -a 127.0.0.1 -p 3004 -d'
 
-alias mongod_start='sudo mongod --fork --logpath /var/log/mongodb.log --logappend'
-alias mongod_cleanup="sudo rm /data/db/mongod.lock && sudo mongod --repair"
+alias mongod_start= 'mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.conf'
+# mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.conf
+# alias mongod_start='sudo mongod --fork --logpath /var/log/mongodb.log --logappend'
+# alias mongod_cleanup="sudo rm /data/db/mongod.lock && sudo mongod --repair"
 ############################################################
 ## postgres
 ############################################################
@@ -163,7 +165,7 @@ alias pgstatus="sudo su postgres -c '/opt/local/lib/postgresql91/bin/pg_ctl stat
 ## bundler 
 ############################################################
 alias b="bundle"
-alias bi="b install --path vendor --binstubs"
+alias bi="b install --path vendor"
 alias bu="b update"
 alias be="b exec"
 alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
@@ -172,3 +174,14 @@ alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
 ## coffee
 ############################################################
 alias emacs_coffee="export NODE_NO_READLINE=1 && coffee"
+
+alias E="SUDO_EDITOR=\"emacsclient -c -a emacs\" sudo -e"
+# slightly modified version which takes care of relative paths:
+# function E() {
+# filename=$1
+# without_beg_slash="${1##/}"
+# if [[ $without_beg_slash == $1 ]];then
+# filename="${PWD%//}/$1"
+# fi
+# emacsclient -c -a emacs "/sudo:root@localhost:$filename"
+# }

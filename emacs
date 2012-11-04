@@ -141,6 +141,8 @@
 ;;============================================================
 ;; test area
 ;;============================================================
+(load "rwc-deft")
+(load "rwc-el-get")
 
 ;;============================================================
 ;; autoinstall
@@ -164,3 +166,11 @@
     (load
      (expand-file-name "~/.emacs.d/elpa/package.el"))
   (package-initialize))
+
+;; Beginning of the el4r block:
+;; RCtool generated this block automatically. DO NOT MODIFY this block!
+(add-to-list 'load-path "/Users/rchristie/.rvm/rubies/ruby-1.9.3-p194/share/emacs/site-lisp")
+(require 'el4r)
+(el4r-boot)
+;; End of the el4r block.
+;; User-setting area is below this line.

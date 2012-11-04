@@ -8,6 +8,8 @@
 	st = status
 	br = branch
         w = whatchanged
+        ribbon = tag --force _ribbon origin/master
+        catchup = log --patch --reverse --topo-order _ribbon..origin/master
 [apply]
 	whitespace = nowarn
 [color]

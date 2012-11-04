@@ -3,7 +3,7 @@ require 'rubygems'
 require 'pp'
 require 'wirble'
 require 'hirb'
-require 'ap'
+# require 'ap'
 if RUBY_VERSION[0..2] == "1.9"
   require 'flyrb'
 else
@@ -73,6 +73,28 @@ end
 # getting rails logs in the console
 # ActiveRecord::Base.logger = Logger.new(STDOUT)
 # ActiveRecord::Base.clear_active_connections!
+
+
+history_file = File.join Dir.pwd, '.console_history'
+if !IRB.conf[:PROMPT][:RVM]
+  IRB.conf[:HISTORY_FILE] = history_file
+else # RVM workaround, code from ~/.rvm/scripts/irbrc.rb
+  # NOTE: messes up your ~/.irb-history
+  # consider editing the rvm script directly
+  if File.exists?(history_file)
+    lines = IO.readlines(history_file).collect { |line| line.chomp }
+    Readline::HISTORY.clear
+    Readline::HISTORY.push(*lines)
+  end
+
+  Kernel::at_exit do
+    maxhistsize = IRB.conf[:SAVE_HISTORY] || 100
+    history_file = File.join Dir.pwd, ".console_history"
+    lines = Readline::HISTORY.to_a.reverse.uniq.reverse
+    lines = lines[-maxhistsize, maxhistsize] if lines.compact.length > maxhistsize
+    File::open(history_file, "w+") { |io| io.puts lines.join("\n") }
+  end
+end
 
 
 def hist

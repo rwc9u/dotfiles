@@ -9,6 +9,11 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
+;;============================================================
+;; package managers
+;;============================================================
+(load "rwc-package")
+
 ;; (setq debug-on-error t)
 
 ;;============================================================
@@ -31,6 +36,11 @@
 ;; depends: color theme
 ;;============================================================
 (load "rwc-highlight-line")
+
+;;============================================================
+;; powerline
+;;============================================================
+(load "rwc-powerline")
 
 ;;============================================================
 ;; various configs
@@ -143,6 +153,7 @@
 ;;============================================================
 (load "rwc-deft")
 (load "rwc-el-get")
+(load "rwc-tty-format")
 
 ;;============================================================
 ;; autoinstall
@@ -162,10 +173,10 @@
 ;;; interfacing with ELPA, the package archive.
 ;;; Move this code earlier if you want to reference
 ;;; packages in your .emacs.
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))
+;; (when
+;;     (load
+;;      (expand-file-name "~/.emacs.d/elpa/package.el"))
+;;   (package-initialize))
 
 ;; Beginning of the el4r block:
 ;; RCtool generated this block automatically. DO NOT MODIFY this block!

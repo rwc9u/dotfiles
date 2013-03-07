@@ -55,29 +55,29 @@
 ;;============================================================
 ;; setting fonts for the mac
 ;;============================================================
-(and (eq window-system 'mac)
-     (create-fontset-from-fontset-spec
-      (concat
-       "-apple-monaco-medium-r-normal--11-*-*-*-*-*-fontset-monaco,"
-       "ascii:-apple-monaco-medium-r-normal--11-100-*-*-m-100-mac-roman,"
-       "latin-iso8859-1:-apple-monaco-medium-r-normal--11-100-*-*-m-100-mac-roman"))
-     (create-fontset-from-fontset-spec
-      (concat
-       "-apple-monaco-medium-r-normal--12-*-*-*-*-*-fontset-monaco,"
-       "ascii:-apple-monaco-medium-r-normal--12-100-*-*-m-100-mac-roman,"
-       "latin-iso8859-1:-apple-monaco-medium-r-normal--12-100-*-*-m-100-mac-roman"))
-     (create-fontset-from-fontset-spec
-      (concat
-       "-apple-monaco-medium-r-normal--16-*-*-*-*-*-fontset-monaco,"
-       "ascii:-apple-monaco-medium-r-normal--16-100-*-*-m-100-mac-roman,"
-       "latin-iso8859-1:-apple-monaco-medium-r-normal--16-100-*-*-m-100-mac-roman"))
-     (create-fontset-from-fontset-spec
-      (concat
-       "-apple-monaco-medium-r-normal--20-*-*-*-*-*-fontset-monaco,"
-       "ascii:-apple-monaco-medium-r-normal--20-100-*-*-m-100-mac-roman,"
-       "latin-iso8859-1:-apple-monaco-medium-r-normal--20-100-*-*-m-100-mac-roman"))
-     (setq default-frame-alist '((font . "fontset-monaco")))
-     )
+;; (and (eq window-system 'mac)
+;;      (create-fontset-from-fontset-spec
+;;       (concat
+;;        "-apple-monaco-medium-r-normal--11-*-*-*-*-*-fontset-monaco,"
+;;        "ascii:-apple-monaco-medium-r-normal--11-100-*-*-m-100-mac-roman,"
+;;        "latin-iso8859-1:-apple-monaco-medium-r-normal--11-100-*-*-m-100-mac-roman"))
+;;      (create-fontset-from-fontset-spec
+;;       (concat
+;;        "-apple-monaco-medium-r-normal--12-*-*-*-*-*-fontset-monaco,"
+;;        "ascii:-apple-monaco-medium-r-normal--12-100-*-*-m-100-mac-roman,"
+;;        "latin-iso8859-1:-apple-monaco-medium-r-normal--12-100-*-*-m-100-mac-roman"))
+;;      (create-fontset-from-fontset-spec
+;;       (concat
+;;        "-apple-monaco-medium-r-normal--16-*-*-*-*-*-fontset-monaco,"
+;;        "ascii:-apple-monaco-medium-r-normal--16-100-*-*-m-100-mac-roman,"
+;;        "latin-iso8859-1:-apple-monaco-medium-r-normal--16-100-*-*-m-100-mac-roman"))
+;;      (create-fontset-from-fontset-spec
+;;       (concat
+;;        "-apple-monaco-medium-r-normal--20-*-*-*-*-*-fontset-monaco,"
+;;        "ascii:-apple-monaco-medium-r-normal--20-100-*-*-m-100-mac-roman,"
+;;        "latin-iso8859-1:-apple-monaco-medium-r-normal--20-100-*-*-m-100-mac-roman"))
+;;      (setq default-frame-alist '((font . "fontset-monaco")))
+;;      )
 
 ;; Turn on auto fill for text-modes
 (add-hook 'text-mode-hook 'turn-on-auto-fill)

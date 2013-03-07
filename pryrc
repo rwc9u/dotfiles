@@ -20,3 +20,22 @@ if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
     warn "[WARN] cannot load Rails console commands (Not on Rails2 or Rails3?)"
   end
 end
+
+Pry::Commands.block_command "load-factory-girl", "Load factory girl in the console for testing" do
+  if Rails.env.test?
+    require 'factory_girl_rails'
+    require 'rspec'
+    require 'rspec-rails'
+    require 'rspec/mocks/standalone' # => if factories need stubs (for remote services for example)
+
+    class Object
+       include FactoryGirl::Syntax::Methods # make FG methods available at top level, so you can do `> create :user`
+    end
+
+    def reload_factories!
+      FactoryGirl.instance_variable_set(:@factories, nil) # => clear loaded factories/sequences
+      # FactoryGirl.instance_variable_set(:@sequences, nil)
+      load Rails.root.join('spec/factories.rb') # => loads factories again
+    end
+  end
+end

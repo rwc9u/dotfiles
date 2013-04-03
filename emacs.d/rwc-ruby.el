@@ -161,6 +161,15 @@
 (add-to-list 'auto-mode-alist '("html\\.haml$" . haml-mode))
 (add-to-list 'auto-mode-alist '("\\.html\\.haml$" . haml-mode))
 (add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
+(add-hook 'haml-mode-hook
+          (lambda()
+            (add-hook 'local-write-file-hooks
+                      '(lambda()
+                         (save-excursion
+                           (delete-trailing-whitespace)
+                           )))
+            ))
+
 
 ;;============================================================
 ;; flymake

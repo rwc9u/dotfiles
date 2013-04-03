@@ -12,10 +12,6 @@
              (setq global-hl-line-mode nil)
              ))
 
-;; the older git-status mode very similar to psvn
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/git"))
-(require 'git)
-
 ;; paste to gist
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/gist.el"))
 (require 'gist)

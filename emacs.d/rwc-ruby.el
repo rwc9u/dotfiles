@@ -23,17 +23,21 @@
 ;;============================================================
 ;; ruby
 ;;============================================================
-;; (add-to-list 'load-path "~/.emacs.d/ruby")
-(autoload 'ruby-mode "ruby-mode"
-  "Mode for editing ruby source files" t)
-;; Rake files are ruby, too, as are gemspecs.
-(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.autotest$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.sake$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
+(autoload 'ruby-mode "ruby-mode"  "Mode for editing ruby source files" t)
+
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("autotest$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("irbrc$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("sake$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("rake$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("god$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("thor$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("gemspec$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("jbuilder$" . ruby-mode))
+
 
 (setq interpreter-mode-alist (append '(("ruby" . ruby-mode))
                                      interpreter-mode-alist))
@@ -48,11 +52,21 @@
           '(lambda ()
              (inf-ruby-keys)
              ))
+
 (add-hook 'ruby-mode-hook 'ansi-color-for-comint-mode-on)
 (add-hook 'compilation-shell-minor-mode-hook 'ansi-color-for-comint-mode-on)
 (add-hook 'compilation-minor-mode-hook 'ansi-color-for-comint-mode-on)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 ;; (require 'ruby-electric)
+
+
+(defun ruby-insert-end ()
+  "Insert \"end\" at point and reindent current line."
+  (interactive)
+  (insert "end")
+  (ruby-indent-line t)
+  (end-of-line))
+
 
 (add-hook 'ruby-mode-hook
           (lambda()
@@ -65,8 +79,8 @@
             (set (make-local-variable 'indent-tabs-mode) 'nil)
             (set (make-local-variable 'tab-width) 2)
             (imenu-add-to-menubar "IMENU")
-            ;; (require 'ruby-electric)
-            ;; (ruby-electric-mode t)
+            (local-set-key [(control c) (control e)] 'ruby-insert-end)
+            (local-set-key (kbd "TAB") 'smart-tab)
             ))
 
 

@@ -2,18 +2,15 @@
 ;; Ruby when rails reloaded in use
 ;; or now when I want to use a newer version
 ;;============================================================
-;;(add-to-list 'load-path (expand-file-name "~/dev/dotfiles/emacs.d/vendor/ruby-mode/"))
 (require 'ruby-mode)
 (require 'inf-ruby)
-;; (require 'ruby-compilation)
+(require 'ruby-compilation)
 
 
 
 ;;============================================================
 ;; Rinari
 ;;============================================================
-;; this is currently first because it also contains a ruby mode
-;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/rinari"))
 (require 'rinari)
 (setq rinari-tags-file-name "TAGS")
 
@@ -77,10 +74,6 @@
             (imenu-add-to-menubar "IMENU")
             (local-set-key [(control c) (control e)] 'ruby-insert-end)
             (local-set-key (kbd "TAB") 'smart-tab)
-            ;; make ruby-electric play nice with autopair
-            ;; (substitute-key-definition 'ruby-electric-curlies nil ruby-mode-map)
-            ;; (substitute-key-definition 'ruby-electric-matching-char nil ruby-mode-map)
-            ;; (substitute-key-definition 'ruby-electric-close-matching-char nil ruby-mode-map)
             (substitute-key-definition 'ruby-electric-brace nil ruby-mode-map)
             ))
 

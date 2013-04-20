@@ -38,7 +38,7 @@
 (load "rwc-highlight-line")
 
 ;;============================================================
-;; powerline
+;; powerline - prettifying the modeline
 ;;============================================================
 (load "rwc-powerline")
 

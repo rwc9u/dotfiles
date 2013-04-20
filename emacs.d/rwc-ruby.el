@@ -13,7 +13,7 @@
 ;; Rinari
 ;;============================================================
 ;; this is currently first because it also contains a ruby mode
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/rinari"))
+;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/rinari"))
 (require 'rinari)
 (setq rinari-tags-file-name "TAGS")
 
@@ -44,20 +44,16 @@
 (add-hook 'ruby-mode-hook 'turn-on-font-lock)
 
 
-(autoload 'run-ruby "inf-ruby"
-  "Run an inferior Ruby process")
-(autoload 'inf-ruby-keys "inf-ruby"
-  "Set local key defs for inf-ruby in ruby-mode")
-(add-hook 'ruby-mode-hook
-          '(lambda ()
-             (inf-ruby-keys)
-             ))
+(autoload 'inf-ruby "inf-ruby" "Run an inferior Ruby process" t)
+(autoload 'inf-ruby-setup-keybindings "inf-ruby" "" t)
+(eval-after-load 'ruby-mode
+  '(add-hook 'ruby-mode-hook 'inf-ruby-setup-keybindings))
+
 
 (add-hook 'ruby-mode-hook 'ansi-color-for-comint-mode-on)
 (add-hook 'compilation-shell-minor-mode-hook 'ansi-color-for-comint-mode-on)
 (add-hook 'compilation-minor-mode-hook 'ansi-color-for-comint-mode-on)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-;; (require 'ruby-electric)
 
 
 (defun ruby-insert-end ()
@@ -130,11 +126,11 @@
 ;; (load-file "~/site-lisp/ri-emacs/ri-ruby.el")
 
 
+
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/ri-emacs"))
 (require 'ri)
 (setq ri-repl-executable "/Users/rchristie/.emacs.d/vendor/ri-emacs/ri_repl")
 ;; (setq ri-ruby-script "/Users/rchristie/.emacs.d/vendor/ri-emacs/ri-emacs.rb")
-;; (setq ri-ruby-program "/opt/local/bin/ruby")
 
 ;; (load-file "~/.emacs.d/vendor/ri-emacs/ri-ruby.el")
 
@@ -160,10 +156,15 @@
               (local-set-key "\C-c\C-c" 'ido-ruby-complete-or-tab)
 ))
 
+
 ;;============================================================
-;; autotest
+;; robe
 ;;============================================================
-(require 'autotest)
+(add-hook 'ruby-mode-hook 'robe-mode)
+(autoload 'company-mode "company" nil t)
+(company-mode)
+(push 'company-robe company-backends)
+(add-hook 'after-init-hook 'global-company-mode)
 
 ;;============================================================
 ;; rcode tools
@@ -280,8 +281,6 @@ through a terminal."
 ;; rcov integration
 ;;==============================
 (require 'rcov)
-
-
 
 ;;==============================
 ;; rvm integration

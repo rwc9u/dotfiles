@@ -29,7 +29,7 @@
 (add-hook 'c++-mode-common-hook 'flyspell-prog-mode)
 (add-hook 'emacs-lisp-mode-hook 'flyspell-prog-mode)
 (add-hook 'c++-mode-hook 'flyspell-prog-mode)
-(add-hook 'ruby-mode-hook 'flyspell-prog-mode)
+;;(add-hook 'ruby-mode-hook 'flyspell-prog-mode)
 (add-to-list 'flyspell-prog-text-faces 'nxml-text-face)
 
 

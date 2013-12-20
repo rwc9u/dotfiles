@@ -185,3 +185,35 @@ alias E="SUDO_EDITOR=\"emacsclient -c -a emacs\" sudo -e"
 # fi
 # emacsclient -c -a emacs "/sudo:root@localhost:$filename"
 # }
+
+############################################################
+## elasticpath
+############################################################
+alias ep="elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
+
+
+############################################################
+## JobOn
+############################################################
+## Staging
+alias jobon-staging-ssh-wowza='ssh ec2-user@ec2-23-20-229-103.compute-1.amazonaws.com'
+alias jobon-staging-ssh-solr='ssh ec2-user@ec2-107-22-148-36.compute-1.amazonaws.com'
+alias jobon-staging-redis='redis-cli -h tetra.redistogo.com -p 9210 -a 3deae8694cf3b9eb7548b7ff213239af'
+alias jobon-staging-logs-tail='heroku logs -t --app jobon-staging'
+alias jobon-staging-console='heroku run console --app jobon-staging'
+alias jobon-staging-psql='heroku pg:psql --app jobon-staging'
+alias jobon-staging-config='heroku config --app jobon-staging'
+
+## Production
+alias jobon-production-ssh-wowza='ssh ec2-user@174.129.31.138'
+alias jobon-production-ssh-solr='ssh ec2-user@107.21.99.188'
+alias jobon-production-redis='redis-cli -h barracuda.redistogo.com -p 9149 -a 52116ab441654d629e6641ba59cceb8c'
+alias jobon-production-logs-tail='heroku logs -t --app jobon'
+alias jobon-production-console='heroku run console --app jobon'
+alias jobon-production-psql='heroku pg:psql --app jobon'
+alias jobon-production-config='heroku config --app jobon'
+
+
+alias socialv="source .powenv && be foreman start"
+
+alias browserstack="java -jar BrowserStackTunnel.jar u8YSVjSTSO7ny5XqQ75z diamond.dev,80,0"

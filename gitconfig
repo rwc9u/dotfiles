@@ -7,9 +7,10 @@
 	co = checkout
 	st = status
 	br = branch
-        w = whatchanged
-        ribbon = tag --force _ribbon origin/master
-        catchup = log --patch --reverse --topo-order _ribbon..origin/master
+  w = whatchanged
+  ribbon = tag --force _ribbon origin/master
+  catchup = log --patch --reverse --topo-order _ribbon..origin/master
+  daily-report = !git --no-pager log --author=Rob --since='yesterday' --format='%s' --no-merges
 [apply]
 	whitespace = nowarn
 [color]
@@ -21,3 +22,8 @@
         pager = true
 [merge]
 	summary = true
+[pull]
+	rebase = true
+[core]
+	excludesfile = /Users/rchristie/.gitignore_global
+

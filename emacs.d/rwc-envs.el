@@ -26,3 +26,4 @@
 
 ;; for latex to use texlive
 (setenv "PATH" (concat "/usr/texbin:" (getenv "PATH")))
+

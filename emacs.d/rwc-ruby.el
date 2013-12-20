@@ -147,15 +147,26 @@
 ;;               (local-set-key "\C-c\C-a" 'ri-ruby-show-args)
               (local-set-key [(control tab)] 'ido-ruby-complete-or-tab)
               (local-set-key "\C-c\C-c" 'ido-ruby-complete-or-tab)
+              (setenv "PAGER" (executable-find "cat"))
 ))
 
 
 ;;============================================================
 ;; robe
 ;;============================================================
-(add-hook 'ruby-mode-hook 'robe-mode)
 (autoload 'company-mode "company" nil t)
 (company-mode)
+
+(add-to-list 'load-path  (expand-file-name "~/.emacs.d/vendor/robe"))
+(autoload 'robe-mode "robe" "\
+Improved navigation for Ruby
+
+\(fn &optional ARG)" t nil)
+(autoload 'company-robe "robe-company" "\
+A `company-mode' completion back-end for `robe-mode'.
+
+\(fn COMMAND &optional ARG)" t nil)
+(add-hook 'ruby-mode-hook 'robe-mode)
 (push 'company-robe company-backends)
 (add-hook 'after-init-hook 'global-company-mode)
 
@@ -278,6 +289,7 @@ through a terminal."
 ;;==============================
 ;; rvm integration
 ;;==============================
+(add-to-list 'load-path  (expand-file-name "~/.emacs.d/vendor/rvm"))
 (require 'rvm)
 (add-hook 'ruby-mode-hook
           (lambda () (rvm-activate-corresponding-ruby)))

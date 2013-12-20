@@ -19,6 +19,7 @@ Wirble.init
 Wirble.colorize
 
 # load hirb
+Hirb.enable pager: !(ENV['PAGER'] && "cat" == ENV['PAGER'].split(File::SEPARATOR).last)
 Hirb::View.enable
 
 IRB.conf[:AUTO_INDENT] = true

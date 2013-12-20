@@ -3,9 +3,9 @@
 ;;============================================================
 
 ;; magit
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/magit"))
+;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/magit"))
 (require 'magit)
-(require 'magit-svn) 
+;; (require 'magit-svn) 
 (add-hook 'magit-mode-hook
           '(lambda () 
              (make-variable-buffer-local 'global-hl-line-mode)

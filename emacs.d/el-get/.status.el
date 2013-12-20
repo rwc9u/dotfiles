@@ -1,1 +1,1 @@
-(:el-get "installed" :magithub "installed" :growl "installed")
+(:el-get "installed" :magithub "removed" :growl "installed")

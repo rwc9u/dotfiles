@@ -2,7 +2,7 @@
 ;; Ruby when rails reloaded in use
 ;; or now when I want to use a newer version
 ;;============================================================
-(require 'ruby-mode)
+(require 'enh-ruby-mode)
 (require 'inf-ruby)
 (require 'ruby-compilation)
 
@@ -20,34 +20,34 @@
 ;;============================================================
 ;; ruby
 ;;============================================================
-(autoload 'ruby-mode "ruby-mode"  "Mode for editing ruby source files" t)
+(autoload 'enh-ruby-mode "enh-ruby-mode"  "Mode for editing ruby source files" t)
 
-(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("autotest$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("irbrc$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("sake$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("rake$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("god$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("thor$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("gemspec$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("jbuilder$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Rakefile$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Capfile$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Guardfile$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("autotest$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("irbrc$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("sake$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("rake$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("god$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("thor$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("gemspec$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("jbuilder$" . enh-ruby-mode))
 
 
-(setq interpreter-mode-alist (append '(("ruby" . ruby-mode))
+(setq interpreter-mode-alist (append '(("ruby" . enh-ruby-mode))
                                      interpreter-mode-alist))
-(add-hook 'ruby-mode-hook 'turn-on-font-lock)
+(add-hook 'enh-ruby-mode-hook 'turn-on-font-lock)
 
 
 (autoload 'inf-ruby "inf-ruby" "Run an inferior Ruby process" t)
 (autoload 'inf-ruby-setup-keybindings "inf-ruby" "" t)
-(eval-after-load 'ruby-mode
-  '(add-hook 'ruby-mode-hook 'inf-ruby-setup-keybindings))
+(eval-after-load 'enh-ruby-mode
+  '(add-hook 'enh-ruby-mode-hook 'inf-ruby-setup-keybindings))
 
 
-(add-hook 'ruby-mode-hook 'ansi-color-for-comint-mode-on)
+(add-hook 'enh-ruby-mode-hook 'ansi-color-for-comint-mode-on)
 (add-hook 'compilation-shell-minor-mode-hook 'ansi-color-for-comint-mode-on)
 (add-hook 'compilation-minor-mode-hook 'ansi-color-for-comint-mode-on)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
@@ -61,7 +61,7 @@
   (end-of-line))
 
 
-(add-hook 'ruby-mode-hook
+(add-hook 'enh-ruby-mode-hook
           (lambda()
             (add-hook 'local-write-file-hooks
                       '(lambda()
@@ -160,13 +160,11 @@
 (add-to-list 'load-path  (expand-file-name "~/.emacs.d/vendor/robe"))
 (autoload 'robe-mode "robe" "\
 Improved navigation for Ruby
-
 \(fn &optional ARG)" t nil)
 (autoload 'company-robe "robe-company" "\
 A `company-mode' completion back-end for `robe-mode'.
-
 \(fn COMMAND &optional ARG)" t nil)
-(add-hook 'ruby-mode-hook 'robe-mode)
+(add-hook 'enh-ruby-mode-hook 'robe-mode)
 (push 'company-robe company-backends)
 (add-hook 'after-init-hook 'global-company-mode)
 
@@ -291,7 +289,7 @@ through a terminal."
 ;;==============================
 (add-to-list 'load-path  (expand-file-name "~/.emacs.d/vendor/rvm"))
 (require 'rvm)
-(add-hook 'ruby-mode-hook
+(add-hook 'enh-ruby-mode-hook
           (lambda () (rvm-activate-corresponding-ruby)))
 
 ;;==============================
@@ -305,4 +303,4 @@ through a terminal."
 		(word (read-string "Search apidock for? " word-at-point)))
 	(browse-url (concat "http://apidock.com/rails/" word))))
 
-(define-key ruby-mode-map (kbd "C-c d") 'search-apidock-rails)
+(define-key enh-ruby-mode-map (kbd "C-c d") 'search-apidock-rails)

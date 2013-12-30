@@ -42,10 +42,7 @@
 
 
 (autoload 'inf-ruby "inf-ruby" "Run an inferior Ruby process" t)
-(autoload 'inf-ruby-setup-keybindings "inf-ruby" "" t)
-(eval-after-load 'enh-ruby-mode
-  '(add-hook 'enh-ruby-mode-hook 'inf-ruby-setup-keybindings))
-
+(add-hook 'enh-ruby-mode-hook 'inf-ruby-minor-mode)
 
 (add-hook 'enh-ruby-mode-hook 'ansi-color-for-comint-mode-on)
 (add-hook 'compilation-shell-minor-mode-hook 'ansi-color-for-comint-mode-on)

@@ -59,6 +59,7 @@
  '(diff-index ((t (:inherit diff-file-header :background "#5686E2"))))
  '(diff-removed ((t (:inherit diff-changed :background "#FF453C"))))
  '(enh-ruby-op-face ((t (:foreground "gray69"))))
+ '(enh-ruby-string-delimiter-face ((t (:foreground "#259185"))))
  '(flymake-errline ((((class color)) (:background "#330000" :overline "red" :underline "red"))))
  '(flymake-warnline ((((class color)) (:background "#333300" :overline "yellow" :underline "yellow"))))
  '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)) nil)))

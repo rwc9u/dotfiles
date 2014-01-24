@@ -212,7 +212,7 @@ alias jobon-production-logs-tail='heroku logs -t --app jobon'
 alias jobon-production-console='heroku run console --app jobon'
 alias jobon-production-psql='heroku pg:psql --app jobon'
 alias jobon-production-config='heroku config --app jobon'
-
+alias ware-production-ssh-wowza='ssh -l ec2-user -i ~/.ssh/jobon_production.pem 54.225.120.17'
 
 alias socialv="source .powenv && be foreman start"
 

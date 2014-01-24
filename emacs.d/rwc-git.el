@@ -3,7 +3,6 @@
 ;;============================================================
 
 ;; magit
-;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/magit"))
 (require 'magit)
 ;; (require 'magit-svn) 
 (add-hook 'magit-mode-hook

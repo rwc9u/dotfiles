@@ -33,15 +33,24 @@ module Robe
 
       def self.method_struct(method)
         # https://github.com/pry/pry-doc/issues/16
-        if method.owner == Kernel && defined?(Pry::MethodInfo) &&
-           !method.source_location && !Pry::MethodInfo.cached?(method)
+        if [Kernel, Kernel.singleton_class].include?(method.owner) &&
+           defined?(Pry::MethodInfo) && !method.source_location &&
+           !Pry::MethodInfo.cached?(method)
           return OpenStruct.new(docstring: "")
         end
 
         begin
           info = Pry::Method.new(method)
-          OpenStruct.new(docstring: info.doc,
-                         source: (info.source? ? info.source : "# Not available"),
+
+          if info.dynamically_defined?
+            doc = ""
+            source = "# This method was defined outside of a source file."
+          else
+            doc = info.doc
+            source = (info.source? ? info.source : "# Not available.")
+          end
+
+          OpenStruct.new(docstring: doc, source: source,
                          aliases: info.aliases.map(&:to_sym))
         rescue Pry::CommandError
           message = $!.message =~ /pry-doc/ ? $!.message : ""

@@ -52,7 +52,6 @@
 (require 'json)
 (require 'url)
 (require 'url-http)
-(require 'ido)
 (require 'cl)
 (require 'thingatpt)
 (require 'eldoc)
@@ -95,17 +94,26 @@ have constants, methods and arguments highlighted in color."
 (defun robe-completing-read (&rest args)
   (apply robe-completing-read-func args))
 
-(defun robe-start (&optional arg)
-  "Start Robe server if it isn't already running."
-  (interactive "p")
-  (when (not (get-buffer-process inf-ruby-buffer))
-    (setq robe-running nil)
-    (if (yes-or-no-p "No Ruby console running. Launch automatically?")
-        (let ((conf (current-window-configuration)))
-          (inf-ruby-console-auto)
-          (set-window-configuration conf))
-      (error "Aborted")))
-  (when (or arg (not robe-running))
+(defun robe-start (&optional force)
+  "Start Robe server if it isn't already running.
+When called with a prefix argument, kills the current Ruby
+process, if any, and starts a new console for the current
+project."
+  (interactive "P")
+  (let ((process (get-buffer-process inf-ruby-buffer)))
+    (when (or force (not process))
+      (setq robe-running nil)
+      (when process
+        (delete-process process))
+      (when (buffer-live-p inf-ruby-buffer)
+        (kill-buffer inf-ruby-buffer))
+      (if (or force
+              (yes-or-no-p "No Ruby console running. Launch automatically?"))
+          (let ((conf (current-window-configuration)))
+            (inf-ruby-console-auto)
+            (set-window-configuration conf))
+        (error "Aborted"))))
+  (when (not robe-running)
     (let* ((proc (inf-ruby-proc))
            started failed
            (comint-filter (process-filter proc))

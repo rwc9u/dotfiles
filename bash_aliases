@@ -150,7 +150,7 @@ alias passenger_qryptograph_stop='passenger stop --port 3003'
 alias passenger_urlstalker='passenger start -a 127.0.0.1 -p 3001 -d'
 alias passenger_retirehq='passenger start -a 127.0.0.1 -p 3004 -d'
 
-alias mongod_start= 'mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.conf'
+alias mongod_start='mongod run --config /usr/local/etc/mongod.conf'
 # mongod run --config /usr/local/Cellar/mongodb/2.0.2-x86_64/mongod.conf
 # alias mongod_start='sudo mongod --fork --logpath /var/log/mongodb.log --logappend'
 # alias mongod_cleanup="sudo rm /data/db/mongod.lock && sudo mongod --repair"

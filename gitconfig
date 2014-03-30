@@ -27,3 +27,5 @@
 [core]
 	excludesfile = /Users/rchristie/.gitignore_global
 
+[push]
+	default = matching

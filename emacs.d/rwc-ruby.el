@@ -179,6 +179,7 @@ A `company-mode' completion back-end for `robe-mode'.
 (require 'sass-mode)
 (add-to-list 'auto-mode-alist '("html\\.haml$" . haml-mode))
 (add-to-list 'auto-mode-alist '("\\.html\\.haml$" . haml-mode))
+(add-to-list 'auto-mode-alist '("\\.hamlbars$" . haml-mode))
 (add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
 (add-hook 'haml-mode-hook
           (lambda()
@@ -207,6 +208,15 @@ A `company-mode' completion back-end for `robe-mode'.
 (require 'flymake-haml)
 (add-hook 'haml-mode-hook 'flymake-haml-load)
 (add-hook 'sass-mode-hook 'flymake-sass-load)
+
+(defun shell-command-on-region-to-string (beg end command)
+  (with-output-to-string
+    (shell-command-on-region beg end command standard-output)))
+
+(defun hamlify-region ()
+  (interactive)
+  (kill-new (shell-command-on-region-to-string (region-beginning) (region-end) "html2haml -s --erb")))
+
 
 ;; thanks to Dmitry Galinsky - this was taken from emacs-rails
 ;; (defconst flymake-allowed-ruby-file-name-masks

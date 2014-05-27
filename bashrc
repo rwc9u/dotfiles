@@ -13,7 +13,7 @@ fi
 ############################################################
 
 if [ -d ~/bin ] ; then
-  PATH="~/bin:${PATH}"
+  PATH="~/bin:./bin:${PATH}"
 fi
 
 # DarwinPorts

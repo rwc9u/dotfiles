@@ -10,3 +10,8 @@ if [ -e ~/.bash_env ] ; then
   . ~/.bash_env
 fi
 
+# private customizations go below
+if [ -e ~/.bash_priv_env ] ; then
+  . ~/.bash_priv_env
+fi
+

@@ -5,3 +5,4 @@ emacs.d/yasnippets-shoulda
 .DS_Store
 emacs.d/private.el
 emacs.d/url
+bash_priv_env

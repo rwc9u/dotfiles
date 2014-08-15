@@ -174,7 +174,6 @@ A `company-mode' completion back-end for `robe-mode'.
 ;;============================================================
 ;; haml templating
 ;;============================================================
-(add-to-list 'load-path  (expand-file-name "~/.emacs.d/haml"))
 (require 'haml-mode)
 (require 'sass-mode)
 (add-to-list 'auto-mode-alist '("html\\.haml$" . haml-mode))

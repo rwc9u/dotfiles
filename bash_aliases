@@ -186,11 +186,6 @@ alias E="SUDO_EDITOR=\"emacsclient -c -a emacs\" sudo -e"
 # emacsclient -c -a emacs "/sudo:root@localhost:$filename"
 # }
 
-############################################################
-## elasticpath
-############################################################
-alias ep="elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
-
 
 ############################################################
 ## JobOn
@@ -217,3 +212,5 @@ alias ware-production-ssh-wowza='ssh -l ec2-user -i ~/.ssh/jobon_production.pem 
 alias socialv="source .powenv && be foreman start"
 
 alias browserstack="java -jar BrowserStackTunnel.jar u8YSVjSTSO7ny5XqQ75z diamond.dev,80,0"
+
+alias elasticsearch_start"=elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"

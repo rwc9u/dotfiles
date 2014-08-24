@@ -1,0 +1,1 @@
+(require 'handlebars-sgml-mode)

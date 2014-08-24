@@ -20,3 +20,10 @@ Additionally, consider adding
 
 to your init file to easily switch from common Ruby compilation
 modes to interact with a debugger.
+
+To call `inf-ruby-console-auto' more easily, you can, for example,
+replace the original `inf-ruby' binding:
+
+  (eval-after-load 'inf-ruby
+    '(define-key inf-ruby-minor-mode-map
+       (kbd "C-c C-s") 'inf-ruby-console-auto))

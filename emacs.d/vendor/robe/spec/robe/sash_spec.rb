@@ -7,22 +7,8 @@ describe Robe::Sash do
 
   context "#modules" do
     it "returns module names" do
-      mock_space = BlindVisor.new(*%w(A B C).map { |n| OpenStruct.new(name: n) })
+      mock_space = BlindVisor.new(*%w(A B C).map { |n| OpenStruct.new(__name__: n) })
       expect(klass.new(mock_space).modules).to eq %w(A B C)
-    end
-
-    it "ignores misbehaving ones" do
-      m = Module.new do
-        def self.name
-          raise :hell
-        end
-      end
-      n = Module.new do
-        def self.name
-          "dilbert"
-        end
-      end
-      expect(klass.new(BlindVisor.new(m, n)).modules).to eq ["dilbert"]
     end
   end
 
@@ -113,6 +99,27 @@ describe Robe::Sash do
                 __FILE__, anything])
     end
 
+    it "ignores overridden name method" do
+      # Celluloid::Actor in celluloid <~ 0.15
+      # https://github.com/celluloid/celluloid/issues/354
+
+      m = Module.new do
+        def self.name
+          raise TooCoolForSchoolError
+        end
+
+        def self.__name__
+          "baa"
+        end
+
+        def qux
+        end
+      end
+
+      expect(k.method_spec(m.instance_method(:qux)))
+        .to eq(["baa", true, :qux, [], __FILE__, anything])
+    end
+
     context "eigenclass" do
       let(:c) do
         Class.new do
@@ -143,6 +150,8 @@ describe Robe::Sash do
           end
         end
 
+        stub_const("Record", arc)
+
         expect(k.method_spec(arc.singleton_class.instance_method(:bar))[0]).to eq("Record")
       end
     end
@@ -156,7 +165,16 @@ describe Robe::Sash do
 
       it "substitutes anonymous module with including class name" do
         stub_const("C", Class.new.send(:include, m) )
-        expect(k.method_spec(m.instance_method(:foo))[0]).to eq("C")
+        spec = k.method_spec(m.instance_method(:foo))
+        expect(spec[0]).to eq("C")
+        expect(spec[1]).to eq(true)
+      end
+
+      it "substitutes anonymous modules with extending module name" do
+        stub_const("M", Module.new.send(:extend, m) )
+        spec = k.method_spec(m.instance_method(:foo))
+        expect(spec[0]).to eq("M")
+        expect(spec[1]).to eq(nil)
       end
     end
   end

@@ -57,7 +57,6 @@
 (require 'eldoc)
 (require 'help-mode)
 (require 'ruby-mode)
-(require 'ansi-color)
 
 (defgroup robe nil
   "Code navigation, documentation lookup and completion for Ruby"
@@ -119,8 +118,7 @@ project."
            (comint-filter (process-filter proc))
            (tmp-filter (lambda (p s)
                          (cond
-                          ((string-match-p "\"robe on\""
-                                           (ansi-color-filter-apply s))
+                          ((string-match-p "robe on" s)
                            (setq started t))
                           ((string-match-p "Error" s)
                            (setq failed t)))
@@ -375,7 +373,6 @@ Only works with Rails, see e.g. `rinari-console'."
   'help-echo "mouse-2, RET: toggle source")
 
 (defun robe-show-doc (spec)
-  (interactive)
   (let* ((doc (robe-doc-for spec))
          (buffer (get-buffer-create "*robe-doc*"))
          (inhibit-read-only t)
@@ -478,36 +475,38 @@ Only works with Rails, see e.g. `rinari-console'."
 (defun robe-signature (spec &optional arg-num)
   (concat
    (mapconcat (lambda (s) (propertize s 'face font-lock-type-face))
-              (split-string (robe-spec-module spec) "::" t) "::")
+              (split-string (or (robe-spec-module spec) "?") "::" t) "::")
    (if (robe-spec-inst-p spec) "#" ".")
    (propertize (robe-spec-method spec) 'face font-lock-function-name-face)
    (robe-signature-params (robe-spec-params spec) arg-num)))
 
 (defun robe-signature-params (params &optional arg-num)
-  (let ((cnt 0) args)
-    (dolist (pair params)
-      (let ((kind (intern (first pair)))
-            (name (second pair)))
-        (incf cnt)
-        (unless name
-          (setq name
-                (case kind
-                  (rest "args")
-                  (block "block")
-                  (t (format "arg%s" cnt)))))
-        (push (propertize (format (case kind
-                                    (rest "%s...")
-                                    (block "&%s")
-                                    (opt "[%s]")
-                                    (t "%s")) name)
-                          'face (if (and arg-num
-                                         (or (= arg-num cnt)
-                                             (and (eq kind 'rest)
-                                                  (> arg-num cnt))))
-                                    (list robe-em-face 'bold)
-                                  robe-em-face))
-              args)))
-    (concat "(" (mapconcat #'identity (nreverse args) ", ") ")")))
+  (if (not params)
+      ""
+    (let ((cnt 0) args)
+      (dolist (pair params)
+        (let ((kind (intern (first pair)))
+              (name (second pair)))
+          (incf cnt)
+          (unless name
+            (setq name
+                  (case kind
+                    (rest "args")
+                    (block "block")
+                    (t (format "arg%s" cnt)))))
+          (push (propertize (format (case kind
+                                      (rest "%s...")
+                                      (block "&%s")
+                                      (opt "[%s]")
+                                      (t "%s")) name)
+                            'face (if (and arg-num
+                                           (or (= arg-num cnt)
+                                               (and (eq kind 'rest)
+                                                    (> arg-num cnt))))
+                                      (list robe-em-face 'bold)
+                                    robe-em-face))
+                args)))
+      (concat "(" (mapconcat #'identity (nreverse args) ", ") ")"))))
 
 (defun robe-doc-for (spec)
   (apply 'robe-request "doc_for" (subseq spec 0 3)))
@@ -605,17 +604,29 @@ Only works with Rails, see e.g. `rinari-console'."
                      (msg (format "%s %s" sig summary)))
                 (substring msg 0 (min (frame-width) (length msg)))))))))))
 
+(defun robe-complete-symbol-p (beginning)
+  (not (or (eq (char-before beginning) ?@)
+           (eq (char-after beginning) ?:)
+           (memq (get-text-property beginning 'face)
+                 (list font-lock-keyword-face
+                       font-lock-function-name-face
+                       font-lock-comment-face
+                       font-lock-string-face)))))
+
 (defun robe-complete-at-point ()
-  (when (get-buffer-process inf-ruby-buffer)
+  (when robe-running
     (let ((bounds (bounds-of-thing-at-point 'symbol))
           (fn (if (fboundp 'completion-table-with-cache)
                   (completion-table-with-cache #'robe-complete-thing)
                 (completion-table-dynamic #'robe-complete-thing))))
-      (if bounds
-          (list (car bounds) (cdr bounds) fn
+      (when (robe-complete-symbol-p (or (car bounds) (point)))
+        (if bounds
+            (list (car bounds) (cdr bounds) fn
+                  :annotation-function #'robe-complete-annotation
+                  :exit-function #'robe-complete-exit)
+          (list (point) (point) fn
                 :annotation-function #'robe-complete-annotation
-                :exit-function #'robe-complete-exit)
-        (list (point) (point) fn)))))
+                :exit-function #'robe-complete-exit))))))
 
 (defvar robe-specs-cache nil)
 
@@ -634,7 +645,6 @@ Only works with Rails, see e.g. `rinari-console'."
   (setq robe-specs-cache nil))
 
 (defun robe-complete-thing (thing)
-  (setq this-command 'robe-complete-thing)
   (robe-start)
   (if (robe-const-p thing)
       (progn
@@ -675,7 +685,6 @@ The following commands are available:
   (add-hook 'completion-at-point-functions 'robe-complete-at-point nil t)
   (when robe-turn-on-eldoc
     (set (make-local-variable 'eldoc-documentation-function) 'robe-eldoc)
-    (eldoc-add-command 'robe-complete-thing)
     (turn-on-eldoc-mode)))
 
 (provide 'robe)

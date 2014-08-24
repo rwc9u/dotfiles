@@ -8,6 +8,9 @@ Generally, you'll want to start with `M-x inf-ruby-console-auto`.
 If there's no Ruby console running, most interactive commands provided
 by Robe will offer to launch it automatically.
 
+The exceptions are code completion and eldoc, which only work if the
+server is already running. To launch it, type `M-x robe-start`.
+
 As you change the code in your project, you'll want to update the
 running process. To load the current file, type <kbd>C-c C-l</kbd>
 (`ruby-load-file`), see [inf-ruby](https://github.com/nonsequitur/inf-ruby/)
@@ -60,14 +63,14 @@ In the init file:
 ## Dependencies
 
 * `pry`
-* `pry-doc` (on MRI)
+* `pry-doc >= 0.6.0` (on MRI)
 * `method_source >= 0.8.2` (for compatibility with the latest Rubinius)
 
 Note that if your project is using `Bundler`, the dependencies have to be added to the `Gemfile`.
 
 ## Completion
 
-### [company-mode](http://company-mode.github.com/) ([screenshot](robe-company.png)):
+### [company-mode](http://company-mode.github.com/) ([screenshot](screenshots/company-robe.png)):
 
 ```lisp
 (push 'company-robe company-backends)
@@ -76,7 +79,7 @@ Note that if your project is using `Bundler`, the dependencies have to be added 
 ### [auto-complete](http://auto-complete.org/):
 
 ```lisp
-(add-hook 'robe-mode-hook 'robe-ac-setup)
+(add-hook 'robe-mode-hook 'ac-robe-setup)
 ```
 
 Both of the above work only when the connection to the Ruby subprocess has
@@ -102,7 +105,7 @@ rvm automatically.
 
 ## Compatibility
 
-* Tested in Emacs 24.3+, with Ruby 1.9.3 and 2.0.0, on GNU/Linux.
+* Tested in Emacs 24.3+, with Ruby 1.9.3-2.1.1, on GNU/Linux.
 * Essential features work with JRuby and the latest Rubinius.
   JRuby has longer startup, Rubinius is noticeably slower at runtime
   ([rubinius/rubinius#2390](https://github.com/rubinius/rubinius/issues/2390)).

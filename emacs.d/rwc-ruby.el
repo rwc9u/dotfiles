@@ -13,7 +13,7 @@
 ;;============================================================
 (require 'rinari)
 (setq rinari-tags-file-name "TAGS")
-
+(global-rinari-mode)
 
 
 

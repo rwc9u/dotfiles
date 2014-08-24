@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <13/11/12 12:16:39 /Users/rchristie/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <14/08/23 22:54:18 /Users/rchristie/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -18,5 +18,5 @@
   ("gid-integer" 0)
   ("file-exists" "test -e")
   ("uid-integer" 0))
- (["scp" "seeker_status?email=john.doe" "fema-production-irl" nil nil]
+ (["scp" nil "c" nil nil]
   nil))

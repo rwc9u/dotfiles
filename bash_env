@@ -113,3 +113,6 @@ export PATH=./node_modules/.bin:$PATH
 
 # AWS CLI config
 export AWS_CONFIG_FILE=/Users/rchristie/.aws/awsconfig.txt
+
+# Android Dev
+export ANDROID_HOME=/usr/local/opt/android-sdk

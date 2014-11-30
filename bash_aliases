@@ -213,4 +213,6 @@ alias socialv="source .powenv && be foreman start"
 
 alias browserstack="java -jar BrowserStackTunnel.jar u8YSVjSTSO7ny5XqQ75z diamond.dev,80,0"
 
-alias elasticsearch_start"=elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
+alias elasticsearch_start="elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
+
+alias kill-sidekiq="killall -9 -m sidekiq"

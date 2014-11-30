@@ -3,10 +3,10 @@
 ;;============================================================
 ;; default load directory
 ;;============================================================
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
-(setq custom-file "~/.emacs.d/custom.el")
+(setq custom-file "~/.emacs.d/lisp/custom.el")
 (load custom-file)
 
 ;;============================================================

@@ -11,31 +11,9 @@
 (setq sh-basic-offset 2)
 (set-default 'javascript-indent-level 2)
 
-;; ;; Tab completion everywhere with hippie expand
-;; (defun indent-or-expand (arg)
-;;   "Either indent according to mode, or expand the word preceding
-;; point."
-;;   (interactive "*P")
-;;   (if (and
-;;        (or (bobp) (= ?w (char-syntax (char-before))))
-;;        (or (eobp) (not (= ?w (char-syntax (char-after))))))
-;;       (hippie-expand arg)
-;;     (indent-according-to-mode)))
-
 ;; (global-set-key (kbd "TAB") 'indent-or-expand)
 ;; ;; Revert minibuffer tab completion back to its default
 ;; (define-key minibuffer-local-map (kbd "TAB") 'minibuffer-complete)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Hippie expand.  Groovy vans with tie-dyes.
-
-(setq hippie-expand-try-functions-list
-      '(yas-hippie-try-expand
-        try-expand-dabbrev
-        try-expand-dabbrev-all-buffers
-        try-expand-dabbrev-from-kill
-        try-complete-file-name
-        try-complete-lisp-symbol))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Smart Tab

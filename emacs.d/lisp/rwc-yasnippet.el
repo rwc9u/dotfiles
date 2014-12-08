@@ -1,10 +1,10 @@
-(require 'yasnippet)
-(require 'dropdown-list)
-(setq yas-prompt-functions '( yas-dropdown-prompt
-                              yas-ido-prompt
-                              yas-completing-prompt))
-;; (yas--initialize)
-(yas-global-mode 1)
+;; (require 'yasnippet)
+;; (require 'dropdown-list)
+;; (setq yas-prompt-functions '( yas-dropdown-prompt
+;;                               yas-ido-prompt
+;;                               yas-completing-prompt))
+;; ;; (yas--initialize)
+;; (yas-global-mode 1)
 
 ;; (yas-load-directory "~/.emacs.d/yasnippet/snippets")
 ;; (yas-load-directory "~/.emacs.d/yasnippet/extras/imported")

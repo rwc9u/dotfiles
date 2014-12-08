@@ -1,4 +1,5 @@
 ;;; applescript-mode.el --- major mode for editing AppleScript source
+;; Version: 20090320.2332
 
 ;; Copyright (C) 2004  MacEmacs JP Project
 

@@ -28,8 +28,7 @@
 ;; (yas-load-directory "~/dev/yasnippets-rails/rails-mode")
 ;; (load "~/dev/yasnippets-rails/rails-mode/.yas-setup.el")
 
-(require 'autopair)
-(autopair-global-mode) ;; enable autopair in all buffers 
+
 
 ;; Removed and relying on yasnippet to enable my indent or expand
 ;; Hippie expand.  Groovy vans with tie-dyes.

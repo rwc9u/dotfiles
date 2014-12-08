@@ -17,7 +17,6 @@
 ;; (load "~/dev/yasnippets-rails/rails-mode/.yas-setup.el")
 
 
-
 ;; Removed and relying on yasnippet to enable my indent or expand
 ;; Hippie expand.  Groovy vans with tie-dyes.
 ;; (add-to-list 'hippie-expand-try-functions-list 'yas-hippie-try-expand)

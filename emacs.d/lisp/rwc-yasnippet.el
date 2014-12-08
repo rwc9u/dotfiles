@@ -1,23 +1,11 @@
-;; (require 'yasnippet)
+(require 'yasnippet)
 ;; (require 'dropdown-list)
 ;; (setq yas-prompt-functions '( yas-dropdown-prompt
 ;;                               yas-ido-prompt
 ;;                               yas-completing-prompt))
 ;; ;; (yas--initialize)
-;; (yas-global-mode 1)
+(yas-global-mode 1)
 
-;; (yas-load-directory "~/.emacs.d/yasnippet/snippets")
-;; (yas-load-directory "~/.emacs.d/yasnippet/extras/imported")
-;; (yas-load-directory "~/dev/yasnippet/extras/imported/LaTeX-mode")
-;; (yas-load-directory "~/dev/yasnippet/extras/imported/c-mode")
-;; (yas-load-directory "~/dev/yasnippet/extras/imported/css-mode")
-;; (yas-load-directory "~/dev/yasnippet/extras/imported/html-mode")
-;; (yas-load-directory "~/dev/yasnippet/extras/imported/lisp-mode")
-;; (yas-load-directory "~/dev/yasnippet/extras/imported/markdown-mode")
-;; (yas-load-directory "~/dev/yasnippet/extras/imported/shell-script-mode")
-;; (yas-load-directory "~/dev/yasnippet/extras/imported/text-mode")
-;; (yas-load-directory "~/dev/yasnippet/extras/imported/yaml-mode")
-;; (yas-load-directory "~/dev/yasnippet/snippets/snippet-mode") 
 ;; ;; (load "~/dev/yasnippets-ruby/setup.el")  ;; used by ruby snippets
 ;; ;; (yas-load-directory "~/dev/yasnippets-ruby")
 ;; (load "~/dev/yasnippet/extras/imported/ruby-mode/.yas-setup.el")

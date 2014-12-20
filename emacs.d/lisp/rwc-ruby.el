@@ -194,18 +194,22 @@ A `company-mode' completion back-end for `robe-mode'.
 ;;============================================================
 ;; flymake ruby support 
 (require 'flymake)
-(add-to-list 'load-path  (expand-file-name "~/.emacs.d/vendor/flymake-ruby"))
+
 (require 'flymake-ruby)
+(add-hook 'ruby-mode-hook 'flymake-ruby-load)
 ;; (add-hook 'ruby-mode-hook 
 ;;           '(lambda()
 ;;              (flymake-ruby-load)
 ;;              (local-set-key (kbd "\C-c d") 
 ;;                             'flymake-display-err-menu-for-current-line)
 ;;              ))
-(add-to-list 'load-path  (expand-file-name "~/.emacs.d/vendor/flymake-haml"))
 (require 'flymake-haml)
 (add-hook 'haml-mode-hook 'flymake-haml-load)
+
+(require 'flymake-sass)
 (add-hook 'sass-mode-hook 'flymake-sass-load)
+(add-hook 'scss-mode-hook 'flymake-sass-load)
+
 
 (defun shell-command-on-region-to-string (beg end command)
   (with-output-to-string

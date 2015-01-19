@@ -25,9 +25,6 @@
 [submodule "emacs.d/vendor/deft"]
 	path = emacs.d/vendor/deft
 	url = git://jblevins.org/git/deft.git
-[submodule "emacs.d/vendor/emacs-powerline"]
-	path = emacs.d/vendor/emacs-powerline
-	url = git://github.com/jonathanchu/emacs-powerline.git
 [submodule "emacs.d/robe"]
 	path = emacs.d/robe
 	url = git@github.com:rwc9u/robe.git

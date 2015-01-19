@@ -1,6 +1,3 @@
-[submodule "emacs.d/vendor/maxframe"]
-	path = emacs.d/vendor/maxframe
-	url = git://github.com/rmm5t/maxframe-el.git
 [submodule "emacs.d/vendor/color-theme-arjen"]
 	path = emacs.d/vendor/color-theme-arjen
 	url = git://github.com/credmp/color-theme-arjen.git

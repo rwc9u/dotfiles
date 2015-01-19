@@ -296,7 +296,6 @@ through a terminal."
 ;;==============================
 ;; rvm integration
 ;;==============================
-(add-to-list 'load-path  (expand-file-name "~/.emacs.d/vendor/rvm"))
 (require 'rvm)
 (add-hook 'ruby-mode-hook
           (lambda () (rvm-activate-corresponding-ruby)))

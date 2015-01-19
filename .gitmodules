@@ -16,9 +16,6 @@
 [submodule "emacs.d/vendor/yasnippets-rspec"]
 	path = emacs.d/vendor/yasnippets-rspec
 	url = https://github.com/kavu/yasnippets-rspec.git
-[submodule "emacs.d/vendor/crazycode-rinari"]
-	path = emacs.d/vendor/crazycode-rinari
-	url = https://github.com/crazycode/rinari.git
 [submodule "emacs.d/vendor/coffee-mode"]
 	path = emacs.d/vendor/coffee-mode
 	url = git://github.com/defunkt/coffee-mode.git

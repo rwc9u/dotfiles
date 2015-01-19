@@ -12,7 +12,6 @@
              ))
 
 ;; paste to gist
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/gist.el"))
 (require 'gist)
 
 ;;(if (eq background 'dark)

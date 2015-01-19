@@ -7,9 +7,6 @@
 [submodule "emacs.d/vendor/markdown"]
 	path = emacs.d/vendor/markdown
 	url = git://jblevins.org/git/markdown-mode.git
-[submodule "emacs.d/vendor/rvm.el"]
-	path = emacs.d/vendor/rvm.el
-	url = git://github.com/senny/rvm.el.git
 [submodule "emacs.d/vendor/rsense"]
 	path = emacs.d/vendor/rsense
 	url = git://github.com/m2ym/rsense.git

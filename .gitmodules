@@ -1,21 +1,9 @@
 [submodule "emacs.d/vendor/ri-emacs"]
 	path = emacs.d/vendor/ri-emacs
 	url = git://github.com/technomancy/ri-emacs.git
-[submodule "emacs.d/vendor/rsense"]
-	path = emacs.d/vendor/rsense
-	url = git://github.com/m2ym/rsense.git
-[submodule "emacs.d/vendor/textmate.el"]
-	path = emacs.d/vendor/textmate.el
-	url = https://github.com/defunkt/textmate.el.git
 [submodule "emacs.d/vendor/yasnippets-rspec"]
 	path = emacs.d/vendor/yasnippets-rspec
 	url = https://github.com/kavu/yasnippets-rspec.git
-[submodule "emacs.d/vendor/coffee-mode"]
-	path = emacs.d/vendor/coffee-mode
-	url = git://github.com/defunkt/coffee-mode.git
-[submodule "emacs.d/vendor/deft"]
-	path = emacs.d/vendor/deft
-	url = git://jblevins.org/git/deft.git
 [submodule "emacs.d/robe"]
 	path = emacs.d/robe
 	url = git@github.com:rwc9u/robe.git

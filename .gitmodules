@@ -1,15 +1,9 @@
-[submodule "emacs.d/vendor/color-theme-arjen"]
-	path = emacs.d/vendor/color-theme-arjen
-	url = git://github.com/credmp/color-theme-arjen.git
 [submodule "emacs.d/vendor/ri-emacs"]
 	path = emacs.d/vendor/ri-emacs
 	url = git://github.com/technomancy/ri-emacs.git
 [submodule "emacs.d/vendor/gist.el"]
 	path = emacs.d/vendor/gist.el
 	url = git://github.com/defunkt/gist.el.git
-[submodule "emacs.d/vendor/rinari"]
-	path = emacs.d/vendor/rinari
-	url = git://github.com/eschulte/rinari.git
 [submodule "emacs.d/vendor/markdown"]
 	path = emacs.d/vendor/markdown
 	url = git://jblevins.org/git/markdown-mode.git

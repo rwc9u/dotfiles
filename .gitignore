@@ -4,6 +4,7 @@ emacs.d/yasnippets-shoulda
 *.elc
 .DS_Store
 emacs.d/private.el
+emacs.d/lisp/private.el
 emacs.d/url
 bash_priv_env
 emacs.d/ido.last

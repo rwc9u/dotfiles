@@ -1,6 +1,5 @@
 (setq svn-status-ediff-delete-temporary-files t)
 
-
 (add-hook 'svn-pre-parse-status-hook 'svn-status-parse-fixup-externals-full-path)
 
 (defun svn-status-parse-fixup-externals-full-path ()

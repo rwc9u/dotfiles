@@ -1,7 +1,7 @@
 
-;; (add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
 (require 'powerline)
 (powerline-default-theme)
+
 
 ;; (custom-set-faces
 ;;  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))

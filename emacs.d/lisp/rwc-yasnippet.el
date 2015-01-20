@@ -17,7 +17,8 @@
 ;; (yas-load-directory "~/dev/yasnippet/extras/imported/ruby-mode")
 ;; ;; (yas-load-directory "~/dev/yasnippet/extras/imported/rails-mode")
 ;; (yas-load-directory "~/.emacs.d/yasnippets-shoulda")
-(yas-load-directory "~/dev/yasnippets-rspec/rspec-snippets")
+
+;; (yas-load-directory "~/dev/yasnippets-rspec/rspec-snippets")
 ;; (yas-load-directory "~/dev/yasnippets-rails/rails-mode")
 ;; (load "~/dev/yasnippets-rails/rails-mode/.yas-setup.el")
 

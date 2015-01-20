@@ -116,9 +116,9 @@
 
 
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/ri-emacs"))
-(require 'ri)
-(setq ri-repl-executable "/Users/rchristie/.emacs.d/vendor/ri-emacs/ri_repl")
+;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/ri-emacs"))
+;; (require 'ri)
+;; (setq ri-repl-executable "/Users/rchristie/.emacs.d/vendor/ri-emacs/ri_repl")
 ;; (setq ri-ruby-script "/Users/rchristie/.emacs.d/vendor/ri-emacs/ri-emacs.rb")
 
 ;; (load-file "~/.emacs.d/vendor/ri-emacs/ri-ruby.el")

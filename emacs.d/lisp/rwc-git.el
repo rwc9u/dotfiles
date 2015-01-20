@@ -12,7 +12,7 @@
              ))
 
 ;; paste to gist
-(require 'gist)
+;; (require 'gist)
 
 ;;(if (eq background 'dark)
 (set-face-background 'magit-item-highlight "gray15")

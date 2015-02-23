@@ -1,1 +1,1 @@
-("~/dev/dotfiles/" "~/dev/dam/" "~/")
+("~/dev/dotfiles/" "~/dev/dam/" "~/dev/thrive/" "~/" "~/dev/" "~/dev/fema-dashboard/" "~/dev/fema_mobile_alerts/" "~/dev/jobon/" "~/dev/shortswitch/" "/usr/local/" "~/dev/vrcompliance/")

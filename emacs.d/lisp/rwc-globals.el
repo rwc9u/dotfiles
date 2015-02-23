@@ -92,3 +92,6 @@
 
 ;; Turn on auto fill for text-modes
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
+
+;; Turn on flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)

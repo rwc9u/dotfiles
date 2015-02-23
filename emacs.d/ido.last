@@ -2,6 +2,33 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/rchristie/dev/fema-dashboard/app/models/" . "concerns/")
+ ("/Users/rchristie/dev/fema-dashboard/app/" . "models/")
+ ("/Users/rchristie/dev/fema-dashboard/config/" . "deploy/")
+ ("/Users/rchristie/dev/fema-dashboard/" . "app/")
+ ("/Users/rchristie/dev/fema_mobile_alerts/app/" . "models/")
+ ("/Users/rchristie/dev/fema_mobile_alerts/lib/" . "tasks/")
+ ("/Users/rchristie/dev/fema_mobile_alerts/config/" . "deploy/")
+ ("/Users/rchristie/dev/fema_mobile_alerts/" . "config/")
+ ("/Users/rchristie/dev/shortswitch/lib/" . "workers/")
+ ("/Users/rchristie/dev/shortswitch/config/" . "rubber/")
+ ("/Users/rchristie/dev/shortswitch/app/" . "models/")
+ ("/Users/rchristie/dev/shortswitch/" . "lib/")
+ ("/Users/rchristie/dev/dam/app/views/" . "organizations/")
+ ("/Users/rchristie/dev/dam/lib/utils/" . "fema/")
+ ("/Users/rchristie/dev/dam/lib/" . "tasks/")
+ ("/Users/rchristie/dev/dam/config/" . "deploy/")
+ ("/Users/rchristie/dev/dam/db/" . "migrate/")
+ ("/Users/rchristie/dev/dam/app/" . "workers/")
+ ("/Users/rchristie/dev/dam/" . "app/")
+ ("/Users/rchristie/dev/vrcompliance/app/assets/" . "javascripts/")
+ ("/Users/rchristie/dev/vrcompliance/app/" . "assets/")
+ ("/Users/rchristie/dev/vrcompliance/" . "app/")
+ ("/Users/rchristie/.emacs.d/" . "lisp/")
+ ("/Users/rchristie/dev/dotfiles/emacs.d/" . "lisp/")
+ ("/Users/rchristie/dev/dotfiles/" . "emacs.d/")
+ ("/Users/rchristie/dev/" . "dotfiles/")
+ ("/Users/rchristie/" . "dev/")
  ("/Users/90053/dev/investors_mobile-tmp/config/" . "initializers/")
  ("/Users/90053/dev/investors_mobile-tmp/spec/" . "acceptance/")
  ("/Users/90053/dev/investors_mobile-tmp/app/views/funds/" . "landing/")
@@ -26,6 +53,42 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/rchristie/dev/dam/"
+ "/Users/rchristie/dev/dotfiles/emacs.d/lisp/"
+ "/Users/rchristie/dev/dam/app/models/"
+ "/Users/rchristie/"
+ "/Users/rchristie/dev/dam/lib/tasks/"
+ "/Users/rchristie/dev/dam/app/views/organizations/"
+ "/Users/rchristie/dev/dam/config/"
+ "/Users/rchristie/dev/dam/app/controllers/"
+ "/Users/rchristie/dev/fema-dashboard/app/models/concerns/"
+ "/Users/rchristie/dev/fema-dashboard/"
+ "/Users/rchristie/dev/fema_mobile_alerts/config/deploy/"
+ "/Users/rchristie/dev/dam/config/deploy/"
+ "/Users/rchristie/dev/dam/db/"
+ "/Users/rchristie/dev/jobon/"
+ "/Users/rchristie/dev/fema_mobile_alerts/config/"
+ "/Users/rchristie/dev/fema_mobile_alerts/"
+ "/Users/rchristie/dev/fema-dashboard/config/deploy/"
+ "/Users/rchristie/dev/fema_mobile_alerts/app/models/"
+ "/Users/rchristie/dev/fema_mobile_alerts/lib/tasks/"
+ "/Users/rchristie/dev/dam/app/workers/"
+ "/Users/rchristie/dev/shortswitch/app/models/"
+ "/Users/rchristie/dev/shortswitch/lib/workers/"
+ "/Users/rchristie/dev/shortswitch/lib/tasks/"
+ "/Users/rchristie/dev/shortswitch/"
+ "/Users/rchristie/dev/technotes/"
+ "/Users/rchristie/dev/dam/doc/"
+ "/Users/rchristie/.ssh/"
+ "/Users/rchristie/dev/dam/app/views/pages/"
+ "/Users/rchristie/dev/dam/tmp/"
+ "/Users/rchristie/Desktop/"
+ "/Users/rchristie/dev/dam/app/lib/"
+ "/Users/rchristie/dev/dam/app/uploaders/"
+ "/Users/rchristie/dev/dam/config/environments/"
+ "/Users/rchristie/dev/dotfiles/"
+ "/Users/rchristie/dev/vrcompliance/app/assets/javascripts/"
+ "/Users/rchristie/.emacs.d/lisp/"
  "/Users/90053/dev/dotfiles/"
  "/Users/90053/dev/dotfiles/emacs.d/lisp/"
  "/Users/90053/"
@@ -40,37 +103,164 @@
  "/Users/90053/dev/investors_mobile-tmp/app/decorators/funds/"
  "/Users/90053/dev/investors_mobile-tmp/app/views/funds/distributions/"
  "/Users/90053/dev/investors_mobile-tmp/app/views/funds/historical_prices/"
- "/Users/90053/dev/investors_mobile-tmp/app/controllers/funds/"
- "/Users/90053/dev/investors_mobile-tmp/app/views/historical_prices/"
- "/Users/90053/dev/investors_mobile-tmp/config/"
- "/Users/90053/dev/investors_mobile-tmp/app/views/funds/morningstar/"
- "/Users/90053/dev/mongo/"
- "/Users/90053/dev/investors_mobile-tmp/app/decorators/"
- "/Users/90053/dev/investors_mobile-tmp/app/decorators/article/"
- "/Users/90053/dev/investors_mobile-tmp/app/models/article/"
- "/Users/90053/dev/investors_mobile-tmp/app/views/articles/"
- "/Users/90053/dev/advisors_mobile/config/settings/"
- "/Users/90053/dev/advisors_mobile/config/"
- "/Users/90053/dev/repos/dam/"
- "/Users/90053/dev/notes/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- ".gitignore"
- "private.el"
+ ".rubocop.yml"
+ "Gemfile"
+ "rwc-globals.el"
+ "album.rb"
+ "agency_code.rb"
+ ".rubocop_todo.yml"
+ "ability.rb"
  ".emacs"
- "README.md"
- "article.rb"
- "README.rdoc"
- "closed_fund_snapshot.rb"
- "accolade.rb"
- "accent_term_label.rb"
- ".gitmodules"
+ "rwc-ruby.el"
+ "fema.rake"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/rchristie/dev/dam/" (21737 27518 0 0) "VERSION" "vendor/" "tmp/" "test/" "TAGS" "spec/" "solr/" "script/" "README.md" "Rakefile" "public/" "Procfile" "log/" "lib/" "Guardfile" "Gemfile.lock" "Gemfile" "doc/" "diamond.sublime-workspace" "diamond.sublime-project" "db/" "config.ru" "config/" "Capfile" "bower.json" "bin/" "app/" ".slugignore" ".ruby-version" ".rubocop_todo.yml" ".rubocop.yml" ".rspec" ".powrc" ".powenv" ".gitignore" ".git/" ".DS_Store" ".bundle/" ".bowerrc" "../" "./")
+
+ ("/Users/rchristie/dev/dam/app/workers/" (21737 27042 0 0) "virus_scan_worker.rb" "virin_file_name_worker.rb" "update_metadata_worker.rb" "remove_cover_worker.rb" "post_to_youtube_worker.rb" "post_to_flickr_worker.rb" "post_to_dvids_worker.rb" "external_file_copy_worker.rb" "album_cover_worker.rb" "../" "./")
+
+ ("/Users/rchristie/dev/dotfiles/emacs.d/lisp/" (21737 24247 0 0) "unit-test.el" "twittering-mode.el" "rwc-yasnippet.el" "rwc-yaml.el" "rwc-xhtml.el" "rwc-twitter.el" "rwc-tty-format.el" "rwc-textile.el" "rwc-tabs.el" "rwc-svn.el" "rwc-ruby.el" "rwc-rails-reloaded.el" "rwc-projectile.el" "rwc-powerline.el" "rwc-package.el" "rwc-nxml.el" "rwc-mode-line-bell.el" "rwc-markdown.el" "rwc-linemark.el" "rwc-key-maps.el" "rwc-javascript.el" "rwc-ido.el" "rwc-html.el" "rwc-highlight-line.el" "rwc-globals.el" "rwc-git.el" "rwc-flyspell.el" "rwc-eol-conversion.el" "rwc-envs.el" "rwc-el-get.el" "rwc-defuns.el" "rwc-deft.el" "rwc-css.el" "rwc-comint.el" "rwc-color-theme.el" "rwc-c.el" "rwc-bash.el" "rwc-auctex.el" "custom.el" "auto-install.el" "../" "./")
+
+ ("/Users/rchristie/dev/dotfiles/emacs.d/" (21737 24307 0 0) "yasnippets-shoulda/" "vendor/" "var/" "url/" "tutorial/" "tramp" "semanticdb/" "rcodetools/" "projectile-bookmarks.eld" "menu_log.notes" "lisp/" "ido.last" "games/" "find-recursive/" "eol-conversion/" "elpa/" "el-get/" "console_log.notes" "auto-save-list/" "auto-install/" ".DS_Store" "../" "./")
+
+ ("/Users/rchristie/" (21737 24270 0 0) "vmwarevms/" "vmware_tmp/" "VirtualBox VMs/" "tmp/" "Timeline 2.0.key/" "test.abbrev_defs" "test-soapui-project.xml" "Ten Thumbs Students/" "store/" "sqlstuff/" "soapUI-Tutorials/" "soapui-settings.xml" "Snapshots/" "Sites/" "site-lisp/" "semantic.cache" "rubber-secret.yml" "rails3-templates/" "Public/" "Pictures/" "oracle_notes.txt" "NetBeansProjects/" "myports.txt" "myactive_ports.txt" "Music/" "Movies" "mke.1" "mke" "Mingle/" "menu/" "mbox" "Mail/" "linux_notes.txt" "Library/" "java/" "isus/" "installs/" "Incompatible Software/" "Dropbox (Personal)/" "Dropbox (Eye Street Solutions)/" "Dropbox/" "Downloads/" "Documents/" "dmps/" "dev/" "Desktop/" "default-soapui-workspace.xml" "bin/" "bash-completion.d/" "backups/" "backup/" "avon.numbers" "auto/" "Applications/" "Adobe Creative Suite Cleaner Tool.log" "a.tmp/" "2  VRC Signage.docm" ".zshrc" ".z" ".yjp/" ".yarg" ".XcodeDefaultPerspective.mode1v3" ".Xcode/" ".Xauthority" ".vulcan" ".virtualenvs/" ".viminfo" ".vim/" ".vegas/" ".vagrant.d/" ".tunnel.yml" ".Trash/" ".tramp_history" ".tor/" ".tmux.conf" ".thumbnails/" ".thor/" ".texlive2008/" ".terminitor/" ".svn/" ".subversion/" ".ssh/" ".sqlplus_history" ".sqlite_history" ".sqldeveloper/" ".siegerc" ".sh_history" ".semantic-cache/" ".sake" ".s3cfg" ".rvmrc" ".rvm/" ".ruby_inline/" ".rsense" ".rnd" ".riece/" ".ri/" ".rediscli_history" ".recently-used" ".recentf" ".README.md" ".rdebug_hist" ".rake_task_cache/" ".rake/" ".rails.d" ".rails-plugin-sources" ".qt/" ".pwsafe.dat~" ".pwsafe.dat" ".putty/" ".psql_history" ".pryrc" ".pry_history" ".projects.ede" ".profile" ".pow/" ".port_history" ".pip/" ".pgpass" ".passenger/" ".parallels_settings" ".npmrc" ".npm/" ".notes" ".node-gyp/" ".netrc" ".netbeans/" ".mysql_history" ".mongorc.js" ".mini_exiftool/" ".macports/" ".m2/" ".local/" ".lesshst" ".langhelp/" ".labrador/" ".keystore" ".kde/" ".kajeet-build.properties" ".jswat/" ".jruby/" ".jobon-android/" ".jets3t/" ".itmstransporter/" ".ispell_english" ".irbrc" ".irb_history" ".irb-history" ".ido.last" ".idlerc/" ".ICEauthority" ".htaccess" ".hoerc" ".heroku/" ".guard_history" ".gnupg/" ".gitk" ".gitignore_global" ".gitconfig" ".gimp-2.2/" ".gemrc" ".gem/" ".gdb_history" ".fonts.cache-1" ".fontconfig/" ".fastri-index" ".eshell/" ".emacs.old" ".emacs.d/" ".emacs.bmk" ".emacs" ".el4rrc.rb" ".el4r/" ".ehdc/" ".editedhistory" ".eclipse_keyring" ".ecb-tip-of-day.el" ".ec2/" ".DS_Store" ".drush/" ".dropbox/" ".distlib/" ".dbvis/" ".dbshell" ".cvspass" ".cups/" ".crv2008/" ".cordova/" ".config/" ".COLReg" ".coffee_history" ".clickatell" ".cim_install_log" ".cheat/" ".CFUserTextEncoding" ".cache/" ".bzr.log" ".bundle/" ".bm-repository~" ".bm-repository" ".basilisk_ii_prefs" ".bashrc" ".bash_profile" ".bash_history" ".bash_env" ".bash_aliases" ".aws/" ".autotest.d/" ".autotest" ".atom/" ".aspell.en.pws" ".aspell.en.prepl" ".AppData/" ".ant/" ".android/" ".adobe/" ".abbrev_defs_old" ".abbrev_defs" "../" "./")
+
+ ("/Users/rchristie/.emacs.d/" (21737 24132 0 0) "yasnippets-shoulda/" "vendor/" "var/" "url/" "tutorial/" "tramp" "semanticdb/" "rcodetools/" "projectile-bookmarks.eld" "menu_log.notes" "lisp/" "ido.last" "games/" "find-recursive/" "eol-conversion/" "elpa/" "el-get/" "console_log.notes" "auto-save-list/" "auto-install/" ".DS_Store" "../" "./")
+
+ ("/Users/rchristie/.emacs.d/elpa/" (21737 23928 0 0) "zenburn-theme-1.5/" "yasnippet-readme.txt" "yasnippet-20141117.327/" "yari-readme.txt" "yari-0.5/" "yaml-mode-readme.txt" "yaml-mode-20141125.37/" "textmate-readme.txt" "textmate-5/" "scss-mode-readme.txt" "scss-mode-20130105.1411/" "sauron-readme.txt" "sass-mode-readme.txt" "sass-mode-20141010.1236/" "s-20140910.334/" "rvm-readme.txt" "rvm-20150105.110/" "ruby-refactor-readme.txt" "ruby-compilation-readme.txt" "ruby-compilation-20140620.217/" "ruby-compilation-0.12/" "robe-readme.txt" "rinari-readme.txt" "rinari-20141021.827/" "rinari-20140523.440/" "rainbow-mode-readme.txt" "rainbow-mode-0.9/" "psvn-20120401.1440/" "projectile-readme.txt" "projectile-20150123.242/" "powerline-readme.txt" "powerline-20141125.726/" "pkg-info-20140610.630/" "pcache-20131201.1159/" "nodejs-repl-readme.txt" "nodejs-repl-20130520.842/" "memory-usage-readme.txt" "memory-usage-0.2/" "markdown-mode-readme.txt" "markdown-mode-20140914.1012/" "main-line-readme.txt" "magit-readme.txt" "magit-gitflow-readme.txt" "magit-20140816.1125/" "logito-20120225.1255/" "let-alist-1.0.3.signed" "let-alist-1.0.3/" "jump-readme.txt" "jump-2.2/" "js3-mode-readme.txt" "js2-refactor-readme.txt" "js2-mode-readme.txt" "inflections-1.1/" "inf-ruby-readme.txt" "inf-ruby-20140428.201/" "hexrgb-20131226.1855/" "heroku-1.1.0/" "handlebars-sgml-mode-20130623.1633/" "haml-mode-readme.txt" "haml-mode-20141119.628/" "gnupg/" "git-rebase-mode-20131013.553/" "git-commit-mode-readme.txt" "git-commit-mode-20131124.1840/" "gist-readme.txt" "gist-20141230.158/" "gh-readme.txt" "gh-20141230.158/" "flymake-sass-readme.txt" "flymake-sass-20140308.325/" "flymake-ruby-readme.txt" "flymake-ruby-20121104.1059/" "flymake-haml-readme.txt" "flymake-haml-20130324.351/" "flymake-easy-20140818.55/" "flycheck-readme.txt" "flycheck-20150207.329/" "flx-ido-readme.txt" "flx-ido-20140821.2033/" "flx-20140921.739/" "findr-0.7/" "f-20150113.24/" "eyedropper-20131226.1838/" "es-mode-readme.txt" "es-mode-20140424.1427/" "epl-20140823.609/" "enh-ruby-mode-readme.txt" "dsvn-readme.txt" "deft-readme.txt" "deft-20141101.909/" "dash-20141220.1452/" "company-readme.txt" "company-0.6.6/" "color-theme-solarized-20120301/" "color-theme-sanityinc-solarized-readme.txt" "color-theme-6.5.5/" "coffee-mode-20141207.500/" "browse-kill-ring-1.3.1/" "autopair-20131206.1059/" "archives/" "applescript-mode-readme.txt" "applescript-mode-20090320.2332/" "ag-readme.txt" "ag-20150105.1314/" "../" "./")
+
+ ("/Users/rchristie/.emacs.d/elpa/flycheck-20150207.329/" (21737 23927 0 0) "flycheck.info-2" "flycheck.info-1" "flycheck.info" "flycheck.elc" "flycheck.el" "flycheck-pkg.el" "flycheck-ert.elc" "flycheck-ert.el" "flycheck-autoloads.el" "dir" "../" "./")
+
+ ("/Users/rchristie/Desktop/" (21733 29501 0 0) "vmshare/" "tmp/" "test_assets/" "test.md" "smile.png" "riding-on-rails.md" "review/" "music/" "images/" "February PTA Newsleter 2015.pdf" "docs/" "Bluebook.pdf" "asset_to_digital_asset_id.csv" "assert_select.pdf" ".localized" ".jpg" ".DS_Store" ".#url_validation.csv" ".#map-template.html" "../" "./")
+
+ ("/Users/rchristie/.ssh/" (21730 20105 0 0) "known_hosts" "jobon_production.pem" "identity.heroku.personal.pub" "identity.heroku.personal" "id_rsa.pub" "id_rsa" "github_rsa_bak-github" "github_rsa.pub_bak-github" "github_rsa.pub" "github_rsa" "fema.pem" "config" "../" "./")
+
+ ("/Users/rchristie/dev/dam/doc/" (21734 53798 0 0) "user_discussion.md" "README_FOR_APP" "ora2pg_photo_library.conf" "ora2pg_multimedia.conf" "ora2pg_library.conf" "ora2pg_common_data.conf" "CORS" "background_jobs.md" "api_v2.md" "../" "./")
+
+ ("/Users/rchristie/dev/fema_mobile_alerts/app/models/" (21729 16865 0 0) "user.rb" "state.rb" "resource.rb" "polygon.rb" "point.rb" "parameter.rb" "name_value_pair.rb" "local_alert.rb" "ipaws_feed.rb" "info.rb" "geocode.rb" "forecast_zone_choice.rb" "forecast_zone.rb" "event_code.rb" "device.rb" "concerns/" "circle.rb" "area.rb" "alert.rb" "ability.rb" ".keep" "../" "./")
+
+ ("/Users/rchristie/dev/dam/db/" (21734 53798 0 0) "seeds.rb" "schema.rb" "migrate/" "../" "./")
+
+ ("/Users/rchristie/dev/fema_mobile_alerts/config/deploy/" (21729 17269 0 0) "staging.rb" "production.rb" "../" "./")
+
+ ("/Users/rchristie/dev/dam/app/controllers/" (21737 22199 0 0) "widgets_controller.rb" "video_container_assets_controller.rb" "versions_controller.rb" "users_controller.rb" "users/" "searches_controller.rb" "pick_lists_controller.rb" "pick_list_items_controller.rb" "pages_controller.rb" "other_assets_controller.rb" "organizations_controller.rb" "notes_controller.rb" "locations_controller.rb" "languages_controller.rb" "document_container_assets_controller.rb" "document_assets_controller.rb" "digital_assets_controller.rb" "daily_stats_items_controller.rb" "contacts_controller.rb" "categories_controller.rb" "audio_container_assets_controller.rb" "application_controller.rb" "api/" "albums_controller.rb" "accounts_controller.rb" "a/" "../" "./")
+
+ ("/Users/rchristie/dev/dam/lib/tasks/" (21734 53798 0 0) "utilities.rake" "fema.rake" "deploy.rake" "dam.rake" "ckeditor.rake" ".gitkeep" "../" "./")
+
+ ("/Users/rchristie/dev/dam/app/views/organizations/" (21737 21957 0 0) "show.html.haml" "new.html.haml" "index.html.haml" "edit.html.haml" "dvids_callback.html.haml" "_organization.html.haml" "_form.html.haml" "../" "./")
+
+ ("/Users/rchristie/dev/dam/app/views/" (21734 53798 0 0) "widgets/" "video_container_assets/" "versions/" "users/" "shared/" "searches/" "pick_lists/" "pick_list_items/" "pages/" "organizations/" "notes/" "locations/" "layouts/" "languages/" "document_container_assets/" "document_assets/" "digital_assets/" "devise/" "daily_stats_items/" "contacts/" "categories/" "audio_container_assets/" "api/" "albums/" "accounts/" "a/" "../" "./")
+
+ ("/Users/rchristie/dev/dam/config/" (21734 53798 0 0) "unicorn.rb" "sunspot.yml.example" "sunspot.yml" "sidekiq.yml" "schedule.rb" "routes.rb" "production-unicorn.rb" "newrelic.yml" "mactag.rb" "locales/" "initializers/" "environments/" "environment.rb" "deploy.rb" "deploy/" "database.yml.example" "database.yml" "boot.rb" "application.rb" "app_config.yml.example" "app_config.yml" "../" "./")
+
+ ("/Users/rchristie/dev/dam/app/models/" (21734 53798 0 0) "video_container_asset.rb" "video_asset.rb" "user.rb" "transcript_asset.rb" "track.rb" "text_asset.rb" "state.rb" "social_medium.rb" "search.rb" "screenshot_asset.rb" "role.rb" "pick_list_item.rb" "pick_list.rb" "other_asset.rb" "organizational_user.rb" "organizational_contact.rb" "organizational_asset.rb" "organizational_album.rb" "organization.rb" "note.rb" "location.rb" "language.rb" "image_asset.rb" "fema/" "document_container_asset.rb" "document_asset.rb" "digital_asset.rb" "daily_stats_item.rb" "cover_photo_asset.rb" "contact_digital_asset_sequence.rb" "contact.rb" "concerns/" "category.rb" "audio_container_asset.rb" "audio_asset.rb" "asset_type.rb" "album.rb" "agency_code.rb" "ability.rb" ".gitkeep" "../" "./")
+
+ ("/Users/rchristie/dev/dam/app/" (21734 53798 0 0) "workers/" "views/" "uploaders/" "models/" "mailers/" "lib/" "helpers/" "datatables/" "controllers/" "assets/" ".DS_Store" "../" "./")
+
+ ("/Users/rchristie/dev/fema-dashboard/app/models/concerns/" (21647 22298 0 0) ".keep" "../" "./")
+
+ ("/Users/rchristie/dev/fema-dashboard/app/models/" (21647 22298 0 0) "user.rb" "concerns/" ".keep" "../" "./")
+
+ ("/Users/rchristie/dev/fema-dashboard/app/" (21647 22298 0 0) "views/" "models/" "mailers/" "helpers/" "controllers/" "assets/" "../" "./")
+
+ ("/Users/rchristie/dev/fema_mobile_alerts/config/" (21729 16865 0 0) "unicorn.rb" "schedule.rb" "routes.rb" "redis.yml" "production-unicorn.rb" "locales/" "initializers/" "environments/" "environment.rb" "deploy.rb" "deploy/" "database.yml.example" "boot.rb" "application.rb" "../" "./")
+
+ ("/Users/rchristie/dev/fema_mobile_alerts/" (21729 16865 0 0) "VERSION" "vendor/" "test/" "README.md" "Rakefile" "public/" "Procfile.development" "Procfile" "log/" "lib/" "Gemfile.lock" "Gemfile" "db/" "config.ru" "config/" "Capfile" "bin/" "app/" ".ruby-version" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/rchristie/dev/dam/lib/utils/fema/" (21722 50183 0 0) "verify_s3_items.rb" "remove_space_encodings_from_file_names.rb" "remove-cd-on-demand-pick-list.rb" "move_subdocuments.rb" "migrate_asset_hazard_types_to_disaster_types.rb" "merge_contacts_redux.rb" "merge_contacts.rb" "irl_file_server/" "fix_missing_file_sizes.rb" "fix_inactive_acls_for_existing_files.rb" "fix_headlines_with_spaces.rb" "fix_files_with_spaces_in_filenames.rb" "fix_files.rb" "fix_content_type_for_assets.rb" "fix_chaptitle.rb" "find_urls_for_sub_docs_based_on_asset_url.rb" "find_files_with_encodings.rb" "direct_links.rb" "deactivate_missing.rb" "create_list_assets_with_locations.rb" "create_failed_validations_report.rb" "check_files.rb" "add_values_to_program_pick_list.rb" "../" "./")
+
+ ("/Users/rchristie/dev/dam/app/lib/" (21722 50161 0 0) "unknown_mime_type_error.rb" "mime_type_checks.rb" "fileless_io.rb" "file_type_error.rb" "dam_redis_connection.rb" "custom_failure.rb" "../" "./")
+
+ ("/Users/rchristie/dev/dam/app/views/pages/" (21722 50161 0 0) "index.html.haml" "api.html.haml" "_popular_photos.html.haml" "_popular_photo.html.haml" "_most_recent_photo.html.haml" "../" "./")
+
+ ("/Users/rchristie/dev/technotes/" (21724 22674 0 0) "xcode.txt" "vrcompliance.txt" "usps.txt" "upgrading_from_rails_2_to_rails_3.txt" "ubuntu-install-notes.txt" "todo.org" "tinalondon.html" "thrive.org" "textmate.txt" "sublime_text.md" "socialvision.txt" "shortswitch_notes.txt" "salary.txt" "retirehq.txt" "requirements.txt" "rails_talk.txt" "rails_oracle_improvements.txt" "rails_conf_2011.org" "rails_conf_2010.txt" "rails.txt" "potential_internal_esr_work.txt" "postgresql.txt" "oracle_notes.txt" "nice_css.txt" "New User OSX.txt" "mysql_shortswitch.txt" "mynotes.txt" "mobiled.txt" "mac.txt" "kajeet-prod-env.txt" "jquery.txt" "jobon.txt" "investing.txt" "hotspot_tax.txt" "git.txt" "git-cheat-sheet-medium.png" "geotagging.textile" "gentoo.txt" "foo.txt" "fema.txt" "explainplan.htm" "emacs_notes.txt" "elasticsearch.txt" "eclipse.txt" "diamond.txt" "debugging_mongrel.txt" "debug_factory_girl.rb" "debug_emacs.txt" "debian-tips.txt" "dam_notes.txt" "character_conversions.txt" "cast_notes.txt" "buildingemacs.txt" "arel.txt" "arel.rb" "app_ideas.txt" ".DS_Store" ".#upgrading_from_rails_2_to_rails_3.txt" ".#solid.txt" ".#sidekiq.txt" ".#kajeet-prod-env.txt" ".#introhive.txt" "#xcode.txt#" "#upgrading_from_rails_2_to_rails_3.txt#" "#solid.txt#" "#sidekiq.txt#" "#kajeet-prod-env.txt#" "#introhive.txt#" "#git.txt#" "#buildingemacs.txt#" "../" "./")
+
+ ("/Users/rchristie/dev/dam/config/deploy/" (21390 254 0 0) "staging.rb" "production.rb" "../" "./")
+
+ ("/Users/rchristie/dev/jobon/" (21679 65117 0 0) "VERSION" "vendor/" "Vagrantfile" "tmp/" "test/" "startupEC2/" "solr/" "script/" "RELEASE_NOTES" "README.markdown" "Rakefile" "public/" "Procfile.dev" "Procfile" "log/" "lib/" "kitchen/" "jobon.sublime-workspace" "jobon.sublime-project" "Guardfile" "Gemfile.lock" "Gemfile" "doc/" "db/" "config.ru" "config/" "bin/" "artwork/" "app/" ".slugignore" ".settings/" ".ruby-version" ".project" ".powrc" ".gitignore" ".git/" ".flexProperties" ".env" ".DS_Store" ".bundle/" ".autotest" ".actionScriptProperties" "../" "./")
+
+ ("/Users/rchristie/dev/fema-dashboard/config/deploy/" (21649 10992 0 0) "staging.rb" "production.rb" "../" "./")
+
+ ("/Users/rchristie/dev/fema-dashboard/config/" (21648 49402 0 0) "unicorn/" "routes.rb" "locales/" "initializers/" "environments/" "environment.rb" "deploy.rb" "deploy/" "database.yml.example" "database.yml" "boot.rb" "application.rb" "../" "./")
+
+ ("/Users/rchristie/dev/fema-dashboard/" (21649 44575 0 0) "vendor/" "tmp/" "testcode.txt" "test/" "README.md" "Rakefile" "public/" "log/" "lib/" "Gemfile.lock" "Gemfile" "db/" "config.ru" "config/" "Capfile" "bin/" "app/" ".ruby-version" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/rchristie/dev/fema_mobile_alerts/app/" (21416 8662 0 0) "workers/" "views/" "models/" "mailers/" "helpers/" "controllers/" "assets/" "../" "./")
+
+ ("/Users/rchristie/dev/fema_mobile_alerts/lib/tasks/" (21717 38206 0 0) "version.rake" "tasks.rake" ".keep" "../" "./")
+
+ ("/Users/rchristie/dev/fema_mobile_alerts/lib/" (21717 38206 0 0) "tasks/" "push/" "assets/" "../" "./")
+
+ ("/Users/rchristie/dev/dam/db/migrate/" (21722 50161 0 0) "20150128034324_add_refresh_token_to_social_media.rb" "20150128034203_add_youtube_id_to_digital_assets.rb" "20150121171717_add_organization_id_to_social_media.rb" "20150121171058_add_has_photo_and_has_video_and_has_audio_and_has_document_to_social_media.rb" "20150121162510_drop_organizational_social_media.rb" "20150121005344_create_organizational_social_media.rb" "20150121004456_create_social_media.rb" "20150109185524_add_user_multirole_enabled_to_organizations.rb" "20141224164547_add_flickr_id_to_digital_assets.rb" "20141206062543_add_vision_id_to_contact_digital_asset_sequences.rb" "20141205161558_add_taken_on_to_contact_digital_asset_sequences.rb" "20141107174333_add_previous_publication_state_to_digital_assets.rb" "20141103231912_add_organization_id_to_categories.rb" "20141102225854_add_use_virin_filenames_to_organizations.rb" "20141031173430_add_rewrite_metadata_to_organization.rb" "20141031144016_add_keywords_enabled_to_organizations.rb" "20141010203144_add_sequence_number_to_contact_digital_asset_sequences.rb" "20141010201246_create_contact_digital_asset_sequences.rb" "20141010025637_create_agency_codes.rb" "20141010023129_add_agency_code_to_organizations.rb" "20141007235549_add_vision_id_enabled_to_organizations.rb" "20141003192547_add_vision_id_to_contacts.rb" "20141003163434_add_contact_allowed_to_organizations.rb" "20140926161809_add_disabled_to_users.rb" "20140911164154_old_passwords.rb" "20140827175924_drop_digital_asset_iptc_subject_codes.rb" "20140827175919_drop_digital_asset_iptc_scene_codes.rb" "20140827175457_drop_digital_asset_iptc_genres.rb" "20140827174058_drop_iptc_subject_codes.rb" "20140827174035_drop_iptc_scene_codes.rb" "20140827174024_drop_iptc_genres.rb" "20140725200342_add_published_at_to_digital_assets.rb" "20140709182247_remove_total_asset_count_from_daily_stats_items.rb" "20140707165449_create_daily_stats_items.rb" "20140609194610_add_additional_attributes_index.rb" "20140513190836_change_invitation_token_limit_for_users.rb" "20140513185735_add_invitation_create_at_to_users.rb" "20140407171851_add_taggings_counter_cache_to_tags.acts_as_taggable_on_engine.rb" "20140407171850_add_missing_unique_indices.acts_as_taggable_on_engine.rb" "20140312230100_add_map_toggle_to_searches.rb" "20140207174550_add_taken_on_filters_to_searches.rb" "20140205175042_add_created_at_filters_to_searches.rb" "20140127215624_add_heading_and_altitude_to_locations.rb" "20131205182149_add_creator_to_searches.rb" "20131023213154_add_pick_lists_to_searches.rb" "20130904220624_add_devise_password_changed_at_to_users.rb" "20130904200651_add_devise_lockable_to_users.rb" "20130904152856_add_itunes_feed_ids_to_albums.rb" "20130903234110_change_close_captions_to_assetable.rb" "20130828163507_add_note_type_to_notes.rb" "20130816065821_create_tracks.rb" "20130813061635_add_view_to_searches.rb" "20130719172040_remove_accessible508_url_from_digital_assets.rb" "20130626201926_change_digital_assets_headline_to_text.rb" "20130626042459_add_document_support_to_searches.rb" "20130624145537_change_contacts_users_relationship.rb" "20130619180400_devise_invitable_add_to_users.rb" "20130608164858_add_additional_attributes_to_pick_list_items.rb" "20130607210600_create_digital_assets_languages_join_table.rb" "20130607194459_create_languages.rb" "20130606202229_remove_accessible508_file_from_document_assets.rb" "20130606174243_add_user_email_to_versions.rb" "20130606142616_add_508_attributes_to_document_assets.rb" "20130604204954_remove_uneditable_asset_types.rb" "20130604184212_add_audio_container_asset_type_for_pick_lists.rb" "20130603201741_add_fema_metadata_to_document_assets.rb" "20130531210739_add_document_container_asset_type_for_pick_lists.rb" "20130530162056_add_position_to_digital_asset.rb" "20130521191311_add_metadata_to_pick_list_items.rb" "20130520183202_add_country_to_locations.rb" "20130520180656_add_taken_at_to_digital_assets.rb" "20130515172459_add_show_territories_to_organizations.rb" "20130515162819_create_states.rb" "20130513205119_add_is_valid_to_digital_assets.rb" "20130503200207_delete_caption_from_digital_assets.rb" "20130502044222_change_from_title_to_headline_for_digital_assets.rb" "20130426204656_change_column_default_for_searches.rb" "20130424072054_add_iptc_status_fields_to_digital_assets.rb" "20130424002109_create_digital_assets_pick_lists_join_table.rb" "20130422211053_create_pick_list_items.rb" "20130422194709_create_asset_types_pick_lists_join_table.rb" "20130422172950_create_asset_types.rb" "20130422103854_create_pick_lists.rb" "20130419224633_add_alt_text_to_digital_assets.rb" "20130419182432_add_caption_to_digital_assets.rb" "20130419164151_add_caption_writer_to_digital_assets.rb" "20130418064743_change_taken_on_for_digital_assets.rb" "20130415065137_add_contact_id_to_digital_assets.rb" "20130415061052_create_contacts.rb" "20130408202624_create_locations.rb" "20130408190626_remove_thumbnail_id_from_digitial_assets.rb" "20130403162627_add_additional_attributes_to_digital_assets.rb" "20130402231754_add_assetable_to_assets.rb" "20130322063208_change_default_for_searches.rb" "20130314164144_change_role_names.rb" "20130312215539_add_logo_to_organizations.rb" "20130310000357_add_album_id_to_searches.rb" "20130226223616_create_organizational_albums.rb" "20130226141528_add_cover_to_albums.rb" "20130225184847_create_albums_digital_assets.rb" "20130225143335_create_albums.rb" "20130220062829_add_asset_attributes_to_digital_assets.rb" "20130109213458_add_additional_filters_to_searches.rb" "20130108072010_add_asset_processed_to_digital_assets.rb" "20130104080847_create_searches.rb" "20121221173053_add_token_authentication_to_users.rb" "20121210154928_create_notes.rb" "20121128172101_add_user_id_to_digital_assets.rb" "20121125162253_create_organizational_users.rb" "20121116163032_create_organizational_assets.rb" "20121114175300_create_organizations.rb" "20121113191423_add_asset_to_digital_assets.rb" "20121105165847_create_categories.rb" "20121029170933_add_close_caption_id_to_digital_assets.rb" "20121016200415_acts_as_taggable_on_migration.rb" "20121016175037_add_publication_state_to_digital_asset.rb" "20121016164759_digital_asset_self_reference.rb" "20121015183119_add_attributes_to_digital_assets.rb" "20120830204332_create_digital_assets.rb" "20120829194918_create_versions.rb" "20120829003826_create_roles_users_join_table.rb" "20120829003033_create_roles.rb" "20120828223911_devise_create_users.rb" "../" "./")
+
+ ("/Users/rchristie/dev/dam/tmp/" (21719 33589 0 0) "testfiles/" "test_files/" "test/" "sockets/" "sessions/" "restart.txt" "pids/" "old_files/" "mmedia/" "miniprofiler/" "metric_fu/" "invalid_approved_and_public_assets.csv" "images/" "files/" "docindex.html" "cache/" "assets_with_filenames_with_spaces.csv" "asset_to_digital_asset_id.csv" ".DS_Store" "../" "./")
+
+ ("/Users/rchristie/dev/shortswitch/" (21720 12483 0 0) "VERSION" "vendor/" "tmp/" "test/" "TAGS" "stories/" "spec/" "script/" "rvmrc" "README.md" "Rakefile" "public/" "log/" "LICENSE" "lib/" "Gemfile.lock" "Gemfile" "doc/" "db/" "coverage/" "config/" "Capfile" "artwork/" "app/" ".ruby-version" ".gitignore" ".git/" ".DS_Store" ".bundle/" "../" "./")
+
+ ("/Users/rchristie/dev/shortswitch/lib/workers/" (21374 58753 0 0) "warm_cache_worker.rb" "daily_mailer_worker.rb" "add_visit_worker.rb" "account_links_cache_clear_worker.rb" "../" "./")
+
+ ("/Users/rchristie/dev/shortswitch/lib/tasks/" (20658 65005 0 0) "utils.rake" "shortswitch.rake" "rspec.rake" "resque.rake" "rcov.rake" "populate_account_stat.rake" "hoptoad_notifier_tasks.rake" "db.rake" "cron.rake" "cache.rake" "bootstrap.rake" "../" "./")
+
+ ("/Users/rchristie/dev/shortswitch/lib/" (21554 13130 0 0) "workers/" "token_generator.rb" "tasks/" "subscription_system.rb" "ssl_requirement.rb" "short_switch/" "model_controller_methods.rb" "guid.rb" "google_measurement_api.rb" "core_extensions.rb" "base58.rb" "authenticated_test_helper.rb" "authenticated_system.rb" "admin_controller_methods.rb" "active_record_extensions.rb" "../" "./")
+
+ ("/Users/rchristie/dev/shortswitch/config/rubber/role/" (20595 3687 0 0) "web_tools/" "resque_worker/" "resque_web/" "redis/" "passenger_nginx/" "mysql/" "monit/" "haproxy/" "graphite_web/" "graphite_server/" "db/" "cron/" "collectd/" "../" "./")
+
+ ("/Users/rchristie/dev/shortswitch/config/rubber/role/cron/" (21720 11753 0 0) "crontab" "../" "./")
+
+ ("/Users/rchristie/dev/shortswitch/config/rubber/" (21685 19903 0 0) "rubber.yml" "rubber-secret.yml.example" "rubber-secret-staging.yml" "rubber-secret-production.yml" "rubber-rvm.yml" "rubber-resque.yml" "rubber-redis.yml" "rubber-passenger_nginx.yml" "rubber-mysql.yml" "rubber-monit.yml" "rubber-haproxy.yml" "rubber-graphite.yml" "rubber-dns.yml" "rubber-cron.yml" "rubber-complete.yml" "rubber-collectd.yml" "role/" "instance-staging.yml" "instance-production.yml" "instance-patgeorge.yml" "deploy-util.rb" "deploy-setup.rb" "deploy-resque.rb" "deploy-redis.rb" "deploy-passenger_nginx.rb" "deploy-mysql.rb" "deploy-monit.rb" "deploy-haproxy.rb" "deploy-graphite.rb" "deploy-cron.rb" "deploy-collectd.rb" "common/" "../" "./")
+
+ ("/Users/rchristie/dev/shortswitch/config/" (21720 11707 0 0) "shortswitch.com.key" "shortswitch.com.crt" "shortrouter.com.key" "shortrouter.com.crt" "rubber/" "routes.rb" "resque.yml" "resque-web.ru" "resque-pool.yml" "preinitializer.rb" "paypal.yml" "nginx/" "newrelic.yml" "locales/" "initializers/" "gateway.yml.example" "gateway.yml" "environments/" "environment.rb" "deploy.rb" "database.yml.example" "database.yml" "config.yml.example" "config.yml" "compass.config" "boot.rb" "../" "./")
+
+ ("/Users/rchristie/dev/shortswitch/app/models/" (21568 35732 0 0) "user.rb" "twitter_mention.rb" "subscription_plan.rb" "subscription_payment.rb" "subscription_notifier.rb" "subscription_discount.rb" "subscription_affiliate.rb" "subscription_address.rb" "subscription.rb" "password_reset.rb" "nil_object.rb" "link.rb" "daily_visit.rb" "account_stat.rb" "account.rb" "../" "./")
+
+ ("/Users/rchristie/dev/shortswitch/app/" (19442 7569 0 0) "views/" "stylesheets/" "models/" "middlewares/" "javascripts/" "helpers/" "controllers/" "../" "./")
+
+ ("/Users/rchristie/dev/test_flash_crud/" (19630 40545 0 0) "test.txt" "EyestreetREST.zip" "EyestreetREST/" "crossdomain_root.xml" "crossdomain.xml" ".DS_Store" "../" "./")
+
+ ("/Users/rchristie/dev/dam/app/mailers/" (20589 51681 0 0) ".gitkeep" "../" "./")
+
+ ("/Users/rchristie/dev/dam/lib/utils/" (21615 37124 0 0) "repmgr/" "fema/" "exports/" "dhs/" "../" "./")
+
+ ("/Users/rchristie/dev/dam/lib/" (21276 9929 0 0) "utils/" "tasks/" "modules/" "custom_logger.rb" "assets_precompile.rb" "assets/" "../" "./")
+
+ ("/Users/rchristie/dev/dam/config/initializers/" (21704 19942 0 0) "wrap_parameters.rb" "sunspot.rb" "state_machine_patch.rb" "sidekiq.rb" "session_store.rb" "secret_token.rb" "rails_admin.rb" "preload_sti_models.rb" "paper_trail.rb" "mini_profiler.rb" "mime_types.rb" "kaminari_config.rb" "inflections.rb" "handlebars_assets.rb" "geocoder.rb" "force_tempfile_usage.rb" "flickr.rb" "devise_token_authenticatable.rb" "devise.rb" "custom_logger.rb" "carrierwave.rb" "cancancan.rb" "cache_digests.rb" "bower_rails.rb" "backtrace_silencers.rb" "app_config.rb" "airbrake.rb" "acts_as_taggable.rb" "../" "./")
+
+ ("/Users/rchristie/dev/dam/config/environments/" (21615 37124 0 0) "test.rb" "staging.rb" "production.rb" "development.rb" "../" "./")
+
+ ("/Users/rchristie/dev/dotfiles/" (21701 58527 0 0) "tmux.conf" "README.md" "pryrc" "irbrc" "install.rb" "gitconfig" "emacs.old" "emacs.d/" "emacs" "bashrc" "bash_profile" "bash_priv_env" "bash_env" "bash_aliases" "autotest.d/" "autotest" ".gitmodules" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/rchristie/dev/dam/spec/" (21615 37124 0 0) "workers/" "views/" "uploaders/" "support/" "spec_helper.rb" "routing/" "requests/" "models/" "helpers/" "fixtures/" "features/" "factories/" "controllers/" "../" "./")
+
+ ("/Users/rchristie/dev/dam/app/uploaders/" (21677 39269 0 0) "video_uploader.rb" "text_uploader.rb" "logo_uploader.rb" "image_uploader.rb" "document_uploader.rb" "audio_uploader.rb" "asset_uploader.rb" "../" "./")
+
+ ("/Users/rchristie/.emacs.d/lisp/" (21700 37024 0 0) "unit-test.el" "twittering-mode.el" "rwc-yasnippet.el" "rwc-yaml.el" "rwc-xhtml.el" "rwc-twitter.el" "rwc-tty-format.el" "rwc-textile.el" "rwc-tabs.el" "rwc-svn.el" "rwc-ruby.el" "rwc-rails-reloaded.el" "rwc-projectile.el" "rwc-powerline.el" "rwc-package.el" "rwc-nxml.el" "rwc-mode-line-bell.el" "rwc-markdown.el" "rwc-linemark.el" "rwc-key-maps.el" "rwc-javascript.el" "rwc-ido.el" "rwc-html.el" "rwc-highlight-line.el" "rwc-globals.el" "rwc-git.el" "rwc-flyspell.el" "rwc-eol-conversion.el" "rwc-envs.el" "rwc-el-get.el" "rwc-defuns.el" "rwc-deft.el" "rwc-css.el" "rwc-comint.el" "rwc-color-theme.el" "rwc-c.el" "rwc-bash.el" "rwc-auctex.el" "custom.el" "auto-install.el" "../" "./")
+
+ ("/Users/rchristie/dev/domainatrix/" (20296 37918 0 0) "spec/" "README.textile" "Rakefile" "lib/" "Gemfile.lock" "Gemfile" "domainatrix.gemspec" ".rvmrc" ".git/" "../" "./")
+
+ ("/Users/rchristie/dev/vrcompliance/app/assets/javascripts/" (21700 37035 0 0) "property.js" "properties.js" "listings.js" "compliancies.js" "compliance_actions.js" "compliance.js" "bing_search.js" "audits.js.coffee" "audits.js" "application.js" "advertisers.js" "admin/" ".gitkeep" "../" "./")
+
+ ("/Users/rchristie/dev/dotfiles/emacs.d/elpa/" (21700 34501 0 0) "zenburn-theme-1.5/" "yasnippet-readme.txt" "yasnippet-20141117.327/" "yari-readme.txt" "yari-0.5/" "yaml-mode-readme.txt" "yaml-mode-20141125.37/" "textmate-readme.txt" "textmate-5/" "scss-mode-readme.txt" "scss-mode-20130105.1411/" "sauron-readme.txt" "sass-mode-readme.txt" "sass-mode-20141010.1236/" "s-20140910.334/" "rvm-readme.txt" "rvm-20150105.110/" "ruby-refactor-readme.txt" "ruby-compilation-readme.txt" "ruby-compilation-20140620.217/" "ruby-compilation-0.12/" "robe-readme.txt" "rinari-readme.txt" "rinari-20141021.827/" "rinari-20140523.440/" "rainbow-mode-readme.txt" "rainbow-mode-0.9/" "psvn-20120401.1440/" "projectile-readme.txt" "projectile-20150123.242/" "powerline-readme.txt" "powerline-20141125.726/" "pkg-info-20140610.630/" "pcache-20131201.1159/" "nodejs-repl-readme.txt" "nodejs-repl-20130520.842/" "memory-usage-readme.txt" "memory-usage-0.2/" "markdown-mode-readme.txt" "markdown-mode-20140914.1012/" "main-line-readme.txt" "magit-readme.txt" "magit-gitflow-readme.txt" "magit-20140816.1125/" "logito-20120225.1255/" "jump-readme.txt" "jump-2.2/" "js3-mode-readme.txt" "js2-refactor-readme.txt" "js2-mode-readme.txt" "inflections-1.1/" "inf-ruby-readme.txt" "inf-ruby-20140428.201/" "hexrgb-20131226.1855/" "heroku-1.1.0/" "handlebars-sgml-mode-20130623.1633/" "haml-mode-readme.txt" "haml-mode-20141119.628/" "gnupg/" "git-rebase-mode-20131013.553/" "git-commit-mode-readme.txt" "git-commit-mode-20131124.1840/" "gist-readme.txt" "gist-20141230.158/" "gh-readme.txt" "gh-20141230.158/" "flymake-sass-readme.txt" "flymake-sass-20140308.325/" "flymake-ruby-readme.txt" "flymake-ruby-20121104.1059/" "flymake-haml-readme.txt" "flymake-haml-20130324.351/" "flymake-easy-20140818.55/" "flx-ido-readme.txt" "flx-ido-20140821.2033/" "flx-20140921.739/" "findr-0.7/" "f-20150113.24/" "eyedropper-20131226.1838/" "es-mode-readme.txt" "es-mode-20140424.1427/" "epl-20140823.609/" "enh-ruby-mode-readme.txt" "dsvn-readme.txt" "deft-readme.txt" "deft-20141101.909/" "dash-20141220.1452/" "company-readme.txt" "company-0.6.6/" "color-theme-solarized-20120301/" "color-theme-sanityinc-solarized-readme.txt" "color-theme-6.5.5/" "coffee-mode-20141207.500/" "browse-kill-ring-1.3.1/" "autopair-20131206.1059/" "archives/" "applescript-mode-readme.txt" "applescript-mode-20090320.2332/" "../" "./")
+
+ ("/Users/rchristie/dev/dotfiles/emacs.d/elpa/textmate-5/" (21700 38018 0 0) "textmate.elc" "textmate.el" "textmate-pkg.elc" "textmate-pkg.el" "textmate-autoloads.el" "../" "./")
+
+ ("/usr/local/Cellar/emacs-mac/emacs-24.4-mac-5.1/share/emacs/24.4/lisp/progmodes/" (21660 64432 0 0) "xscheme.elc" "xscheme.el.gz" "which-func.elc" "which-func.el.gz" "vhdl-mode.elc" "vhdl-mode.el.gz" "verilog-mode.elc" "verilog-mode.el.gz" "vera-mode.elc" "vera-mode.el.gz" "tcl.elc" "tcl.el.gz" "subword.elc" "subword.el.gz" "sql.elc" "sql.el.gz" "simula.elc" "simula.el.gz" "sh-script.elc" "sh-script.el.gz" "scheme.elc" "scheme.el.gz" "ruby-mode.elc" "ruby-mode.el.gz" "python.elc" "python.el.gz" "ps-mode.elc" "ps-mode.el.gz" "prolog.elc" "prolog.el.gz" "prog-mode.elc" "prog-mode.el.gz" "perl-mode.elc" "perl-mode.el.gz" "pascal.elc" "pascal.el.gz" "opascal.elc" "opascal.el.gz" "octave.elc" "octave.el.gz" "modula2.elc" "modula2.el.gz" "mixal-mode.elc" "mixal-mode.el.gz" "meta-mode.elc" "meta-mode.el.gz" "mantemp.elc" "mantemp.el.gz" "make-mode.elc" "make-mode.el.gz" "m4-mode.elc" "m4-mode.el.gz" "ld-script.elc" "ld-script.el.gz" "js.elc" "js.el.gz" "inf-lisp.elc" "inf-lisp.el.gz" "idlwave.elc" "idlwave.el.gz" "idlw-toolbar.elc" "idlw-toolbar.el.gz" "idlw-shell.elc" "idlw-shell.el.gz" "idlw-help.elc" "idlw-help.el.gz" "idlw-complete-structtag.elc" "idlw-complete-structtag.el.gz" "icon.elc" "icon.el.gz" "hideshow.elc" "hideshow.el.gz" "hideif.elc" "hideif.el.gz" "gud.elc" "gud.el.gz" "grep.elc" "grep.el.gz" "glasses.elc" "glasses.el.gz" "gdb-mi.elc" "gdb-mi.el.gz" "fortran.elc" "fortran.el.gz" "flymake.elc" "flymake.el.gz" "f90.elc" "f90.el.gz" "executable.elc" "executable.el.gz" "etags.elc" "etags.el.gz" "ebrowse.elc" "ebrowse.el.gz" "ebnf2ps.elc" "ebnf2ps.el.gz" "ebnf-yac.elc" "ebnf-yac.el.gz" "ebnf-otz.elc" "ebnf-otz.el.gz" "ebnf-iso.elc" "ebnf-iso.el.gz" "ebnf-ebx.elc" "ebnf-ebx.el.gz" "ebnf-dtd.elc" "ebnf-dtd.el.gz" "ebnf-bnf.elc" "ebnf-bnf.el.gz" "ebnf-abn.elc" "ebnf-abn.el.gz" "dcl-mode.elc" "dcl-mode.el.gz" "cwarn.elc" "cwarn.el.gz" "cpp.elc" "cpp.el.gz" "cperl-mode.elc" "cperl-mode.el.gz" "compile.elc" "compile.el.gz" "cmacexp.elc" "cmacexp.el.gz" "cfengine.elc" "cfengine.el.gz" "cc-vars.elc" "cc-vars.el.gz" "cc-styles.elc" "cc-styles.el.gz" "cc-mode.elc" "cc-mode.el.gz" "cc-menus.elc" "cc-menus.el.gz" "cc-langs.elc" "cc-langs.el.gz" "cc-guess.elc" "cc-guess.el.gz" "cc-fonts.elc" "cc-fonts.el.gz" "cc-engine.elc" "cc-engine.el.gz" "cc-defs.elc" "cc-defs.el.gz" "cc-compat.elc" "cc-compat.el.gz" "cc-cmds.elc" "cc-cmds.el.gz" "cc-bytecomp.elc" "cc-bytecomp.el.gz" "cc-awk.elc" "cc-awk.el.gz" "cc-align.elc" "cc-align.el.gz" "cap-words.elc" "cap-words.el.gz" "bug-reference.elc" "bug-reference.el.gz" "bat-mode.elc" "bat-mode.el.gz" "autoconf.elc" "autoconf.el.gz" "asm-mode.elc" "asm-mode.el.gz" "antlr-mode.elc" "antlr-mode.el.gz" "ada-xref.elc" "ada-xref.el.gz" "ada-stmt.elc" "ada-stmt.el.gz" "ada-prj.elc" "ada-prj.el.gz" "ada-mode.elc" "ada-mode.el.gz" "../" "./")
+
+ ("/Users/rchristie/dev/vrcompliance/app/assets/" (20587 13617 0 0) "stylesheets/" "javascripts/" "images/" ".DS_Store" "../" "./")
+
+ ("/Users/rchristie/dev/vrcompliance/app/" (20587 13612 0 0) "views/" "uploaders/" "models/" "mailers/" "helpers/" "controllers/" "assets/" ".DS_Store" "../" "./")
+
+ ("/Users/rchristie/dev/vrcompliance/" (21554 13901 0 0) "VERSION" "vendor/" "Vagrantfile" "tmp/" "TAGS" "spec/" "solr/" "script/" "README.md" "Rakefile" "public/" "Procfile" "log/" "lib/" "kitchen/" "Guardfile" "Gemfile.lock" "Gemfile" "doc/" "db/" "data/" "coverage/" "config.ru" "config/" "autotest/" "artwork/" "archives/" "app/" ".vagrant/" ".slugignore" ".ruby-version" ".rspec" ".rsense" ".powrc" ".gitignore" ".git/" ".DS_Store" ".console_history" ".bundle/" "../" "./")
+
+ ("/Users/rchristie/dev/adminUsers/" (18739 45532 0 0) "web/" "src/" "docs/" "dist/" "db/" "conf/" "build.xml" "build.properties" "build.priority.properties" "build/" ".svn/" "../" "./")
+
+ ("/Users/rchristie/dev/" (21692 48842 0 0) "yasnippets-shoulda/" "yasnippets-ruby/" "yasnippets-rspec/" "yasnippets-rails/" "yasnippet/" "xfrefdb/" "workspace_old/" "workspace/" "vrcompliance-vagrant/" "vrcompliance/" "veporter_ios/" "vendor/" "userValidationModule/" "urlstalker/" "uploader/" "tmsnippet_to_yasnippet/" "tmp/" "tilda-bin/" "thrive-master/" "thrive/" "the-perfect-gem/" "testurlstalker/" "testsvn/" "testrc/" "testqr/" "testphonegap/" "testninesixty/" "testmysql/" "testmobileapp/" "testfoo/" "testapp/" "test_new/" "test_git/" "test_flash_crud/" "temp/" "technotes/" "switch/" "subscriptions/" "student-directory/" "starter-kit-1.4.0/" "speedtouch/" "socialvision/" "shoulda/" "shortswitch_widget/" "shortswitch-before-big-change/" "shortswitch/" "shelter_service/" "sexy_layouts/" "schemas/" "savon/" "sandbox/" "runout_placards/" "rubyurl/" "rubber/" "rsim-oracle-enhanced/" "rmm5t_dotfiles/" "retirehq_rails2/" "retirehq/" "research.eyestreet.com/" "reports/" "rdoc/" "railsconf_workshops/" "rails3docs/" "rails3_template/" "rails/" "radioAdmin/" "radio/" "qryptograph/" "qr_catapult/" "qb_paypal_importer/" "profile_builder/" "pragstudio-advrails/" "pragAdvRails/" "portal/" "ping-localhost.html" "photolibraryAdmin/" "photolibrary/" "phone_bone_services/" "phone_bone/" "pcsoffers/" "pb2/" "paystubhq/" "password_policy/" "parmalee_pta/" "panther/" "otg_alerting_web/" "otg_alerting_ios/" "OSX-Dashboard-widget-kit/" "oracle-enhanced/" "old/" "octopress/" "nimcast/" "newsAdmin/" "news/" "narms-api-faker/" "narms/" "mytestsaccount/" "my_app/" "multimedia_orig/" "multimedia_admin_orig/" "multimedia_admin/" "multimedia/" "mongo_test/" "mobiled_archive/" "mobile_discovery/" "mmedia_admin/" "mmedia/" "mitigationss/" "md_nginx_conf/" "md/" "mactag/" "mac/" "langhelp-0.9.8/" "kajeet-projects/" "kajeet-branch/" "jobon-working/" "jobon-vb/" "jobon/" "iyp/" "irlAdmin/" "irl/" "iphone_pragstudio/" "iphone/" "introhive-old/" "introhive/" "interns/" "insight/" "innovectra/" "hubot-scripts/" "hotspot_net/" "hmt_accepts_nested_attrs_ex/" "heroku-buildpack-ruby/" "good_guidance/" "gistr/" "gist-test/" "gist-428275/" "gems/" "gemini/" "fullcontact-api-ruby/" "fliptop-api-ruby/" "fizzbuzz/" "fitfreak/" "fit/" "femaweb-shared/" "femaweb-java/" "femaweb/" "fema_mobile_alerts/" "fema_media/" "fema_encryptor/" "fema_authentication/" "fema_application_configuration/" "fema-dashboard/" "facebox/" "eyestreet.com-drupal/" "eyestreet.com/" "eyestreet-java/" "eyestreet-docs/" "eyestreet-ant/" "eyebot/" "enterprise_video/" "emacsbook/" "emacs_nostarch/" "emacs-rails/" "emacs/" "el4r-1.0.4/" "eightball/" "dotfiles/" "domainatrix/" "dhs_sms_integration/" "dhs_sms_demo/" "deepdive/" "dam/" "crypt_keeper/" "CPC_Full File for SV Processing_with additional data.csv" "cordovatest/" "composite_primary_keys/" "compinvest/" "compass_test/" "common-lib/" "cmdb/" "classes/" "cave/" "case/" "cap_web/" "cap_ios/" "campfire-bot/" "bootstrap_demo/" "blueeye/" "autotest_railsplugin/" "auto/" "artest/" "app_name/" "android/" "analytics_goo/" "AdvRuby/" "adminUsers/" "acts_as_audited_customized/" "acts_as_audited/" "activtmp/" "active_record_oracle_extensions/" ".semantic-cache/" ".gitignore" ".git/" ".DS_Store" "#dot#" "../" "./")
+
  ("/Users/90053/dev/dotfiles/emacs.d/lisp/" (21694 35564 0 0) "unit-test.el" "twittering-mode.el" "rwc-yasnippet.el" "rwc-yaml.el" "rwc-xhtml.el" "rwc-twitter.el" "rwc-tty-format.el" "rwc-textile.el" "rwc-tabs.el" "rwc-svn.el" "rwc-ruby.el" "rwc-rails-reloaded.el" "rwc-powerline.el" "rwc-package.el" "rwc-nxml.el" "rwc-mode-line-bell.el" "rwc-markdown.el" "rwc-linemark.el" "rwc-key-maps.el" "rwc-javascript.el" "rwc-ido.el" "rwc-html.el" "rwc-highlight-line.el" "rwc-globals.el" "rwc-git.el" "rwc-flyspell.el" "rwc-eol-conversion.el" "rwc-envs.el" "rwc-el-get.el" "rwc-defuns.el" "rwc-deft.el" "rwc-css.el" "rwc-comint.el" "rwc-color-theme.el" "rwc-c.el" "rwc-bash.el" "rwc-auctex.el" "private.el" "custom.el" "auto-install.el" "../" "./")
 
  ("/Users/90053/dev/dotfiles/emacs.d/" (21694 35325 0 0) "vendor/" "tutorial/" "tramp" "semanticdb/" "rcodetools/" "menu_log.notes" "lisp/" "ido.last" "games/" "find-recursive/" "eol-conversion/" "elpa/" "el-get/" "console_log.notes" "auto-save-list/" "auto-install/" "../" "./")
@@ -130,40 +320,6 @@
  ("/Users/90053/dev/investors_mobile-tmp/app/views/funds/.svn/" (21688 13116 0 0) "tmp/" "text-base/" "props/" "prop-base/" "entries" "all-wcprops" "../" "./")
 
  ("/Users/90053/dev/investors_mobile-tmp/app/views/funds/morningstar/" (21688 13116 0 0) "index.html.haml" "index.html+phone.haml" "_quick_facts.html+phone.haml" "_morningstar.html.haml" "_filters.html.haml" ".svn/" "../" "./")
-
- ("/Users/90053/dev/mongo/" (21686 62457 0 0) "qa1-web/" "mongo_dmp.sh" "edist-funds-dump/" "../" "./")
-
- ("/Users/90053/dev/investors_mobile-tmp/app/decorators/article/" (21686 58074 0 0) "right_rail_section_decorator.rb" "body_section_decorator.rb" ".svn/" "../" "./")
-
- ("/Users/90053/dev/investors_mobile-tmp/app/decorators/" (21688 3285 0 0) "video_decorator.rb" "transactions/" "team_decorator.rb" "search/" "retirement/" "resource_decorator.rb" "quick_facts_decorator.rb" "profile/" "portfolio_summary/" "planning_decorator.rb" "personality_decorator.rb" "metrics_only_decorator.rb" "meta_only_decorator.rb" "literature_center/" "literature/" "link_decorator.rb" "insight_decorator.rb" "insight_article_decorator.rb" "home_decorator.rb" "holding_decorator.rb" "historical_price_decorator.rb" "hero_decorator.rb" "funds/" "fund_snapshot_decorator.rb" "fund_manager_landing_decorator.rb" "forgot_password_decorator.rb" "email_share_decorator.rb" "digital_asset_decorator.rb" "data_services/" "common/" "cdsc_calculator_decorator.rb" "bene/" "bank_account_decorator.rb" "auto_txns/" "article_decorator.rb" "article/" ".svn/" "../" "./")
-
- ("/Users/90053/dev/investors_mobile-tmp/app/models/article/" (21686 58073 0 0) "right_rail_section.rb" "quote_element.rb" "metrics.rb" "carousel.rb" "body_section.rb" ".svn/" "../" "./")
-
- ("/Users/90053/dev/investors_mobile-tmp/app/models/" (21688 3285 0 0) "video.rb" "user.rb" "tweet.rb" "trending.rb" "transactions/" "topic.rb" "tey_struct.rb" "tey_calculation.rb" "team.rb" "static_seo_container.rb" "solr_response.rb" "social_media.rb" "site_monitor.rb" "site_monitor/" "site_maintenance.rb" "session.rb" "search_title_struct.rb" "search_index.rb" "retirement/" "resource.rb" "remembered_state_cookie.rb" "quick_facts.rb" "press_room.rb" "portfolio_summary/" "planning.rb" "personality.rb" "metrics_only.rb" "literature_center/" "link.rb" "internal_user.rb" "insight_article.rb" "insight.rb" "image.rb" "home.rb" "hero.rb" "funds_landing.rb" "funds_landing/" "fund_snapshot.rb" "fund_snapshot/" "fund_personality_profile.rb" "fund_manager_landing.rb" "fund_details/" "fund_detail_landing.rb" "footnote.rb" "email_share.rb" "digital_asset.rb" "degree.rb" "data_services/" "content_folder.rb" "content.rb" "contact_us_form.rb" "contact_us.rb" "concerns/" "common/" "closed_fund_snapshot.rb" "article.rb" "article/" "accolade.rb" "accent_term_label.rb" ".svn/" ".keep" "../" "./")
-
- ("/Users/90053/dev/investors_mobile-tmp/app/views/" (21686 58075 0 0) "user_mailer/" "unsupported_browser/" "transactions/" "transaction_history/" "tey_calculator/" "tealeaf/" "sitemaps/" "shared/" "sessions/" "search/" "retirement/" "restore_access/" "registrations/" "registration/" "profiles/" "press_rooms/" "portfolio_summary/" "planning/" "personality/" "pages/" "my_profile/" "method/" "maintenance/" "literature_center/" "layouts/" "kaminari/" "insights/" "home/" "historical_prices/" "funds/" "fund_managers/" "forgot_user_ids/" "forgot_user_id/" "forgot_password/" "faq/" "errors/" "email_share_mailer/" "email_share/" "digital_assets/" "contact_us_mailer/" "contact_us/" "calculators/" "articles/" "application/" "admin/" ".svn/" "../" "./")
-
- ("/Users/90053/dev/investors_mobile-tmp/app/" (21686 58074 0 0) "views/" "validators/" "services/" "serializers/" "models/" "middleware/" "mailers/" "inputs/" "helpers/" "factories/" "decorators/" "controllers/" "assets/" ".svn/" "../" "./")
-
- ("/Users/90053/dev/" (21688 2612 0 0) "repos/" "notes/" "mongo/" "investors_mobile-tmp/" "investors/" "dotfiles/" "advisors_mobile/" ".DS_Store" "../" "./")
-
- ("/Users/90053/dev/advisors_mobile/" (21688 2919 0 0) "vendor/" "tmp/" "spec/" "shared/" "script/" "retirement/" "README.rdoc" "Rakefile" "public/" "log/" "lib/" "Guardfile" "Gemfile.lock" "Gemfile" "features/" "db/" "config.ru" "config/" "Capfile" "bin/" "app/" ".svn/" ".ruby-version" ".ruby-gemset" ".rspec" ".gitignore" "../" "./")
-
- ("/Users/90053/dev/advisors_mobile/config/" (21688 2303 0 0) "web.xml" "warble.rb" "settings.yml" "settings/" "secrets.yml" "routes.rb" "routes/" "mongoid.yml" "locales/" "initializers/" "environments/" "environment.rb" "deploy.rb" "deploy/" "databases/" "cucumber.yml" "boot.rb" "auto_transactions_add_new_purchase_confirm.html.haml" "application.rb" ".svn/" "../" "./")
-
- ("/Users/90053/dev/investors/trunk/app/views/articles/" (21687 57161 0 0) "show.html.haml" "index.html.haml" "article_bare.html.haml" "_tool.html.haml" "_share.html.haml" "_related_funds.html.haml" "_related_articles_sidebar.html.haml" "_related_articles.html.haml" "_pdf_version.html.haml" "_modal_overlay.html.haml" "_media_video_modal.html.haml" "_media_video_inline.html.haml" "_media_quote.html.haml" "_media_image.html.haml" "_media_carousel.html.haml" "_highlights.html.haml" "_group_nav.html.haml" "_generic_modal.html.haml" "_floodlight_tagging.html.erb" "_floodlight_bonds.html.erb" "_email_share_success_modal.html.haml" "_email_share_modal_form.html.haml" "_email_share_modal.html.haml" "_document_download.html.haml" "_contributors.html.haml" "_body.html.haml" "_article_content.html.haml" ".svn/" "../" "./")
-
- ("/Users/90053/dev/investors/trunk/app/views/" (21687 57165 0 0) "user_mailer/" "unsupported_browser/" "transactions/" "transaction_history/" "tey_calculator/" "tealeaf/" "sitemaps/" "shared/" "sessions/" "search/" "retirement/" "restore_access/" "registrations/" "registration/" "profiles/" "press_rooms/" "portfolio_summary/" "planning/" "personality/" "pages/" "my_profile/" "method/" "maintenance/" "literature_center/" "layouts/" "kaminari/" "insights/" "home/" "historical_prices/" "funds/" "fund_managers/" "forgot_user_ids/" "forgot_user_id/" "forgot_password/" "faq/" "errors/" "email_share_mailer/" "email_share/" "digital_assets/" "contact_us_mailer/" "contact_us/" "calculators/" "articles/" "application/" "admin/" ".svn/" "../" "./")
-
- ("/Users/90053/dev/investors/trunk/app/" (21687 57165 0 0) "views/" "validators/" "services/" "serializers/" "models/" "middleware/" "mailers/" "inputs/" "helpers/" "factories/" "decorators/" "controllers/" "assets/" ".svn/" "../" "./")
-
- ("/Users/90053/dev/investors/trunk/" (21687 57650 0 0) "vendor/" "tmp/" "spec/" "shared/" "script/" "retirement/" "README.rdoc" "Rakefile" "public/" "log/" "lib/" "Guardfile" "Gemfile.lock" "Gemfile" "features/" "db/" "config.ru" "config/" "Capfile" "bin/" "app/" ".svn/" ".ruby-version" ".ruby-gemset" ".rspec" ".gitignore" "../" "./")
-
- ("/Users/90053/dev/repos/dam/" (21687 24898 0 0) "VERSION" "vendor/" "test/" "TAGS" "spec/" "solr/" "script/" "README.md" "Rakefile" "public/" "Procfile" "lib/" "Guardfile" "Gemfile.lock" "Gemfile" "doc/" "diamond.sublime-project" "db/" "config.ru" "config/" "Capfile" "bower.json" "bin/" "app/" ".slugignore" ".ruby-version" ".gitignore" ".git/" ".bowerrc" "../" "./")
-
- ("/Users/90053/dev/repos/" (21687 56907 0 0) "socialvision/" "jobon/" "dam/" ".DS_Store" "../" "./")
-
- ("/Users/90053/dev/notes/" (21687 24378 0 0) "upgrading_from_rails_2_to_rails_3.txt" "sublime_text.md" "oracle_notes.txt" "mynotes.txt" "mongo_queries.js" "emacs_notes.txt" "debug_factory_girl.rb" "debug_emacs.txt" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----

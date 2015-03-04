@@ -193,22 +193,22 @@ A `company-mode' completion back-end for `robe-mode'.
 ;; flymake
 ;;============================================================
 ;; flymake ruby support 
-(require 'flymake)
+;; (require 'flymake)
 
-(require 'flymake-ruby)
-(add-hook 'ruby-mode-hook 'flymake-ruby-load)
-;; (add-hook 'ruby-mode-hook 
-;;           '(lambda()
-;;              (flymake-ruby-load)
-;;              (local-set-key (kbd "\C-c d") 
-;;                             'flymake-display-err-menu-for-current-line)
-;;              ))
-(require 'flymake-haml)
-(add-hook 'haml-mode-hook 'flymake-haml-load)
+;; (require 'flymake-ruby)
+;; (add-hook 'ruby-mode-hook 'flymake-ruby-load)
+;; ;; (add-hook 'ruby-mode-hook 
+;; ;;           '(lambda()
+;; ;;              (flymake-ruby-load)
+;; ;;              (local-set-key (kbd "\C-c d") 
+;; ;;                             'flymake-display-err-menu-for-current-line)
+;; ;;              ))
+;; (require 'flymake-haml)
+;; (add-hook 'haml-mode-hook 'flymake-haml-load)
 
-(require 'flymake-sass)
-(add-hook 'sass-mode-hook 'flymake-sass-load)
-(add-hook 'scss-mode-hook 'flymake-sass-load)
+;; (require 'flymake-sass)
+;; (add-hook 'sass-mode-hook 'flymake-sass-load)
+;; (add-hook 'scss-mode-hook 'flymake-sass-load)
 
 
 (defun shell-command-on-region-to-string (beg end command)
@@ -273,7 +273,7 @@ A `company-mode' completion back-end for `robe-mode'.
 ;;====================
 (defun ido-ruby-complete-or-tab (&optional command)
   "Either complete the ruby code at point or call
-`indent-for-tab-command' if no completion is available.  Relies
+ `indent-for-tab-command' if no completion is available.  Relies
 on the irb/completion Module used by readline when running irb
 through a terminal."
   (interactive (list (let* ((curr (thing-at-point 'line))
@@ -301,6 +301,11 @@ through a terminal."
           (lambda () (rvm-activate-corresponding-ruby)))
 
 ;;==============================
+;; ruby tools
+;;==============================
+(require 'ruby-tools)
+
+;;==============================
 ;; apidock integration
 ;; http://simple-and-basic.com/2009/02/emacs-apidock-integration.html
 ;;==============================
@@ -312,3 +317,16 @@ through a terminal."
 	(browse-url (concat "http://apidock.com/rails/" word))))
 
 (define-key ruby-mode-map (kbd "C-c d") 'search-apidock-rails)
+
+
+(defun convert-hash-rocket (BEG END)
+  "Convert hash rocket syntax to JSON syntax"
+  (interactive "r")
+  (if (not (region-active-p))
+    (message "mark not active")
+    (save-excursion
+      (goto-char BEG)
+      (while (re-search-forward ":\\([^\s]+\\)\s*=>\s*\\([^\s]+\\)" END t)
+        (replace-match "\\1: \\2")))))
+
+

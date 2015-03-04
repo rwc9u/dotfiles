@@ -1,6 +1,8 @@
 (global-set-key [delete] 'delete-char)
 (global-set-key "\M-%" 'query-replace-regexp)
 (global-set-key [f3] 'projectile-grep)
+(global-set-key [S-f3] 'grep-find)
+
 (global-set-key [(control f3)] 'gse-locate)
 ;; (global-set-key [(control f4)] 'semantic-tag-folding-fold-block)
 ;; (global-set-key [(control meta f4)] 'semantic-tag-folding-show-block)

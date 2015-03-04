@@ -1,6 +1,6 @@
 (setq svn-status-ediff-delete-temporary-files t)
 
-(add-hook 'svn-pre-parse-status-hook 'svn-status-parse-fixup-externals-full-path)
+;; (add-hook 'svn-pre-parse-status-hook 'svn-status-parse-fixup-externals-full-path)
 
 (defun svn-status-parse-fixup-externals-full-path ()
  "Subversion 1.7 adds the full path to externals.  This

@@ -92,3 +92,10 @@
 
 ;; Turn on auto fill for text-modes
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
+
+;;============================================================
+;; setting turn on column marking
+;;============================================================
+(require 'fill-column-indicator)
+
+

@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <14/11/03 23:18:44 /Users/rchristie/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <15/08/18 08:35:18 /Users/90053/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -18,7 +18,5 @@
   ("gid-integer" 0)
   ("file-exists" "test -e")
   ("uid-integer" 0))
- (["scpc" nil "cast" nil nil]
-  nil)
- (["scpc" nil "carnivale.kajeet.local" nil nil]
+ (["scp" nil "adb" nil nil]
   nil))

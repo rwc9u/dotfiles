@@ -33,8 +33,8 @@
 
 (require 'mumamo-fun)
 (setq mumamo-chunk-coloring 'submode-colored)
-(add-to-list 'auto-mode-alist '("\\.rhtml\\'" . eruby-nxhtml-mumamo))
-(add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo))
+;; (add-to-list 'auto-mode-alist '("\\.rhtml\\'" . eruby-nxhtml-mumamo))
+;; (add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo))
 
 
 (defun bf-pretty-print-xml-region (begin end)

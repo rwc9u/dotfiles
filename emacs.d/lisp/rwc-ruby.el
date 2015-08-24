@@ -153,7 +153,7 @@
 (autoload 'company-mode "company" nil t)
 (company-mode)
 
-(add-to-list 'load-path  (expand-file-name "~/.emacs.d/vendor/robe"))
+;; (add-to-list 'load-path  (expand-file-name "~/.emacs.d/vendor/robe"))
 (autoload 'robe-mode "robe" "\
 Improved navigation for Ruby
 \(fn &optional ARG)" t nil)
@@ -161,7 +161,9 @@ Improved navigation for Ruby
 A `company-mode' completion back-end for `robe-mode'.
 \(fn COMMAND &optional ARG)" t nil)
 (add-hook 'ruby-mode-hook 'robe-mode)
-(push 'company-robe company-backends)
+(eval-after-load 'company
+  '(push 'company-robe company-backends))
+;; (push 'company-robe company-backends)
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;;============================================================
@@ -304,6 +306,16 @@ through a terminal."
 ;; ruby tools
 ;;==============================
 (require 'ruby-tools)
+
+;;==============================
+;; testing web-mode
+''==============================
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(setq web-mode-markup-indent-offset 2)
+(setq web-mode-css-indent-offset 2)
+(setq web-mode-code-indent-offset 2)
+(setq web-mode-indent-style 2)
 
 ;;==============================
 ;; apidock integration

@@ -70,14 +70,6 @@
   (message "buffer tidy'ed")
   )
 
-(defun my-switch-to-bookmark (bname)
-  "Interactively switch to bookmark as `iswitchb' does."
-  (interactive (list (flet ((iswitchb-make-buflist
-                             (default)
-                             (setq iswitchb-buflist (bookmark-all-names))))
-                       (iswitchb-read-buffer "Jump to bookmark: "))))
-  (bookmark-jump bname))
-
 (defun lorem ()
   "Insert a lorem ipsum."
   (interactive)

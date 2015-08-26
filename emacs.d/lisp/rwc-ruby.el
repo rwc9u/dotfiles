@@ -153,7 +153,6 @@
 (autoload 'company-mode "company" nil t)
 (company-mode)
 
-;; (add-to-list 'load-path  (expand-file-name "~/.emacs.d/vendor/robe"))
 (autoload 'robe-mode "robe" "\
 Improved navigation for Ruby
 \(fn &optional ARG)" t nil)
@@ -163,14 +162,14 @@ A `company-mode' completion back-end for `robe-mode'.
 (add-hook 'ruby-mode-hook 'robe-mode)
 (eval-after-load 'company
   '(push 'company-robe company-backends))
-;; (push 'company-robe company-backends)
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;;============================================================
 ;; rcode tools
 ;;============================================================
-(add-to-list 'load-path  (expand-file-name "~/.emacs.d/rcodetools"))
-(require 'rcodetools)
+;; commented out because it was slowing down ruby file load
+;; (add-to-list 'load-path  (expand-file-name "~/.emacs.d/rcodetools"))
+;; (require 'rcodetools)
 
 ;;============================================================
 ;; haml templating
@@ -191,26 +190,6 @@ A `company-mode' completion back-end for `robe-mode'.
             ))
 
 
-;;============================================================
-;; flymake
-;;============================================================
-;; flymake ruby support 
-;; (require 'flymake)
-
-;; (require 'flymake-ruby)
-;; (add-hook 'ruby-mode-hook 'flymake-ruby-load)
-;; ;; (add-hook 'ruby-mode-hook 
-;; ;;           '(lambda()
-;; ;;              (flymake-ruby-load)
-;; ;;              (local-set-key (kbd "\C-c d") 
-;; ;;                             'flymake-display-err-menu-for-current-line)
-;; ;;              ))
-;; (require 'flymake-haml)
-;; (add-hook 'haml-mode-hook 'flymake-haml-load)
-
-;; (require 'flymake-sass)
-;; (add-hook 'sass-mode-hook 'flymake-sass-load)
-;; (add-hook 'scss-mode-hook 'flymake-sass-load)
 
 
 (defun shell-command-on-region-to-string (beg end command)

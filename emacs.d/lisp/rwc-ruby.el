@@ -106,36 +106,6 @@
              (delete-region (point-min) (point-max))))))
      (ad-activate 'ruby-do-run-w/compilation)))
 
-;;============================================================
-;; emacs ri
-;;===========================================================
-;; (add-to-list 'load-path  (expand-file-name "~/site-lisp/ri-emacs"))
-;; (setq ri-ruby-script "/Users/rchristie/site-lisp/ri-emacs/ri-emacs.rb")
-;; (setq ri-ruby-program "/opt/local/bin/ruby")
-;; (load-file "~/site-lisp/ri-emacs/ri-ruby.el")
-
-
-
-;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/ri-emacs"))
-;; (require 'ri)
-;; (setq ri-repl-executable "/Users/rchristie/.emacs.d/vendor/ri-emacs/ri_repl")
-;; (setq ri-ruby-script "/Users/rchristie/.emacs.d/vendor/ri-emacs/ri-emacs.rb")
-
-;; (load-file "~/.emacs.d/vendor/ri-emacs/ri-ruby.el")
-
-;; (add-hook 'ruby-mode-hook
-;;           '(lambda ()
-;;              (define-key ruby-mode-map [?\C-c ?\C-v ?\C-.]
-;;                'ri-ruby-complete-symbol)))
-;; (add-hook 'ruby-mode-hook
-;;           '(lambda ()
-;;              (define-key ruby-mode-map [?\C-c ?\C-v ?\C-w]
-;;                'rails-browse-api-at-point)))
-
-;; (add-hook 'ruby-mode-hook
-;;           '(lambda ()
-;;              (local-set-key "\C-c\C-a" 'ri-ruby-show-args)))
-
 
  (add-hook 'inf-ruby-mode-hook
            '(lambda ()
@@ -199,54 +169,6 @@ A `company-mode' completion back-end for `robe-mode'.
 (defun hamlify-region ()
   (interactive)
   (kill-new (shell-command-on-region-to-string (region-beginning) (region-end) "html2haml -s --erb")))
-
-
-;; thanks to Dmitry Galinsky - this was taken from emacs-rails
-;; (defconst flymake-allowed-ruby-file-name-masks
-;;   '(("\\.rb\\'"      flymake-ruby-init)
-;;     ("\\.rxml\\'"    flymake-ruby-init)
-;;     ("\\.builder\\'" flymake-ruby-init)
-;;     ("\\.rjs\\'"     flymake-ruby-init))
-;;   "Filename extensions that switch on flymake-ruby mode syntax checks.")
-
-;; (defconst flymake-ruby-error-line-pattern-regexp
-;;   '("^\\([^:]+\\):\\([0-9]+\\): *\\([\n]+\\)" 1 2 nil 3)
-;;   "Regexp matching ruby error messages.")
-
-;; (defun flymake-ruby-init ()
-;;   (condition-case er
-;;       (let* ((temp-file (flymake-init-create-temp-buffer-copy
-;;                          'flymake-create-temp-inplace))
-;;              (local-file  (file-relative-name
-;;                            temp-file
-;;                            (file-name-directory buffer-file-name))))
-;;         (list "/opt/local/bin/ruby" (list "-c" local-file)))
-;;     ('error ())))
-
-;; ;; TODO - pull these out to my rwc-defuns file.
-;; (defun strings-join (separator strings)
-;;   "Join all STRINGS using a SEPARATOR."
-;;   (mapconcat 'identity strings separator))
-
-;; (defalias 'string-join 'strings-join)
-
-;; (defun flymake-ruby-load ()
-;;   (when (and (buffer-file-name)
-;;              (string-match
-;;               (format "\\(%s\\)"
-;;                       (string-join
-;;                        "\\|"
-;;                        (mapcar 'car flymake-allowed-ruby-file-name-masks)))
-;;               (buffer-file-name)))
-;;     (setq flymake-allowed-file-name-masks
-;;           (append flymake-allowed-file-name-masks flymake-allowed-ruby-file-name-masks))
-;;     (setq flymake-err-line-patterns
-;;           (cons flymake-ruby-error-line-pattern-regexp flymake-err-line-patterns))
-;;     (flymake-mode t)
-;;     (local-set-key (kbd "\C-c d") 'flymake-display-err-menu-for-current-line)))
-
-;; (when (featurep 'flymake)
-;;   (add-hook 'ruby-mode-hook 'flymake-ruby-load))
 
 
 ;;====================

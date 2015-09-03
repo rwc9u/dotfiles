@@ -1,8 +1,9 @@
 ;;; flycheck-ert.el --- Flycheck: ERT extensions  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2013-2015  Sebastian Wiesner <swiesner@lunaryorn.com>
+;; Copyright (C) 2013-2015 Sebastian Wiesner and Flycheck contributors
 
 ;; Author: Sebastian Wiesner <swiesner@lunaryorn.com>
+;; Maintainer: Sebastian Wiesner <swiesner@lunaryorn.com>
 ;; URL: https://github.com/flycheck/flycheck
 
 ;; This file is not part of GNU Emacs.
@@ -45,8 +46,8 @@
   (unless flycheck-ert-ert-can-skip
     ;; Fake skipping
 
-    (put 'flycheck-ert-skipped 'error-message "Test skipped")
-    (put 'flycheck-ert-skipped 'error-conditions '(error))
+    (setf (get 'flycheck-ert-skipped 'error-message) "Test skipped")
+    (setf (get 'flycheck-ert-skipped 'error-conditions) '(error))
 
     (defun ert-skip (data)
       (signal 'flycheck-ert-skipped data))
@@ -123,7 +124,7 @@ After BODY, restore the old state of Global Flycheck Mode."
          (progn
            (global-flycheck-mode 1)
            ,@body)
-       (global-flycheck-mode old-state))))
+       (global-flycheck-mode (if old-state 1 -1)))))
 
 (defmacro flycheck-ert-with-env (env &rest body)
   "Add ENV to `process-environment' in BODY.
@@ -278,7 +279,7 @@ assertions and setup code."
                      ,(plist-get keys :tags))
        ,@(mapcar (lambda (c) `(skip-unless
                                ;; Ignore non-command checkers
-                               (or (not (get ',c 'flycheck-command))
+                               (or (not (flycheck-checker-get ',c 'command))
                                    (executable-find (flycheck-checker-executable ',c)))))
                  checkers)
        ,@body)))
@@ -375,7 +376,9 @@ ERROR is a Flycheck error object."
                    fringe-icon))
     (should (eq (overlay-get overlay 'category) category))
     (should (equal (overlay-get overlay 'flycheck-error) error))
-    (should (string= (overlay-get overlay 'help-echo) message))))
+    (save-excursion
+      (goto-char (overlay-start overlay))
+      (should (string= (help-at-pt-string) message)))))
 
 (defun flycheck-ert-should-errors (&rest errors)
   "Test that the current buffers has ERRORS.
@@ -427,7 +430,7 @@ resource directory."
     (flycheck-ert-with-resource-buffer resource-file
       (funcall mode)
       ;; Configure config file locating for unit tests
-      (dolist (fn '(flycheck-locate-config-file-absolute-path
+      (dolist (fn '(flycheck-locate-config-file-by-path
                     flycheck-ert-locate-config-file))
         (add-hook 'flycheck-locate-config-file-functions fn 'append 'local))
       (let ((process-hook-called 0))

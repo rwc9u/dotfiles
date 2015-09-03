@@ -1,7 +1,7 @@
 ;;; robe.el --- Code navigation, documentation lookup and completion for Ruby
 
 ;; Copyright © 2012 Phil Hagelberg
-;; Copyright © 2012, 2013 Dmitry Gutov
+;; Copyright © 2012-2015 Dmitry Gutov
 
 ;; Author: Dmitry Gutov
 ;; URL: https://github.com/dgutov/robe
@@ -77,21 +77,11 @@ have constants, methods and arguments highlighted in color."
     (expand-file-name "lib" (file-name-directory current)))
   "Path to the backend Ruby code.")
 
-(defvar robe-port 24969)
+(defvar robe-port nil)
 
 (defvar robe-jump-conservative nil)
 
 (defvar robe-running nil)
-
-(defcustom robe-completing-read-func 'ido-completing-read
-  "Function to call for completing read."
-  :type '(choice (const :tag "Ido" ido-completing-read)
-                 (const :tag "Plain" completing-read)
-                 (function :tag "Other function"))
-  :group 'robe)
-
-(defun robe-completing-read (&rest args)
-  (apply robe-completing-read-func args))
 
 (defun robe-start (&optional force)
   "Start Robe server if it isn't already running.
@@ -106,11 +96,11 @@ project."
       (setq robe-running nil)
       (when process
         (delete-process process))
-      (when (buffer-live-p ruby-buffer)
-        (kill-buffer ruby-buffer))
       (if (or force
               (yes-or-no-p "No Ruby console running. Launch automatically?"))
           (let ((conf (current-window-configuration)))
+            (when (buffer-live-p ruby-buffer)
+              (kill-buffer ruby-buffer))
             (inf-ruby-console-auto)
             (set-window-configuration conf))
         (error "Aborted"))))
@@ -120,8 +110,10 @@ project."
            (comint-filter (process-filter proc))
            (tmp-filter (lambda (p s)
                          (cond
-                          ((string-match-p "robe on" s)
-                           (setq started t))
+                          ((string-match "robe on \\([0-9]+\\)" s)
+                           (setq started t)
+                           (setq robe-port (string-to-number
+                                            (match-string 1 s))))
                           ((string-match-p "Error" s)
                            (setq failed t)))
                          (funcall comint-filter p s)))
@@ -130,9 +122,9 @@ project."
                                         "  $:.unshift '%s'"
                                         "  require 'robe'"
                                         "end"
-                                        "Robe.start(%d)\n")
+                                        "Robe.start\n")
                                       ";")
-                           robe-ruby-path robe-port)))
+                           robe-ruby-path)))
       (unwind-protect
           (progn
             (set-process-filter proc tmp-filter)
@@ -162,6 +154,7 @@ project."
                                          (t "-")))
                                  args "/")))
          (response-buffer (robe-retrieve url)))
+    (message nil) ;; So "Contacting host" message is cleared
     (if response-buffer
         (prog1
             (with-current-buffer response-buffer
@@ -190,11 +183,11 @@ project."
 
 (defun robe-ask-prompt ()
   (let* ((modules (robe-request "modules"))
-         (module (robe-completing-read "Module: " modules))
+         (module (completing-read "Module: " modules))
          (targets (robe-request "targets" module))
          (_ (unless targets (error "No methods found")))
          (alist (robe-decorate-methods (cdr targets))))
-    (cdr (assoc (robe-completing-read "Method: " alist nil t)
+    (cdr (assoc (completing-read "Method: " alist nil t)
                 alist))))
 
 (defun robe-decorate-methods (list)
@@ -226,7 +219,7 @@ If invoked with a prefix or no symbol at point, delegate to `robe-ask'."
     (unless alist (error "Method not found"))
     (if (= 1 (length alist))
         (cdar alist)
-      (cdr (assoc (robe-completing-read "Module: " alist nil t)
+      (cdr (assoc (completing-read "Module: " alist nil t)
                   alist)))))
 
 (defun robe-jump-modules (thing)
@@ -238,9 +231,6 @@ If invoked with a prefix or no symbol at point, delegate to `robe-ask'."
         (when (string= thing "super")
           (setq thing (third ctx)
                 super t)))
-      (when (and target (string= thing "new"))
-        (setq thing "initialize"
-              instance t))
       (when (and target (save-excursion
                           (end-of-thing 'symbol)
                           (looking-at " *=[^=]")))
@@ -276,13 +266,13 @@ If invoked with a prefix or no symbol at point, delegate to `robe-ask'."
 
 (defun robe-jump-to-module (name)
   "Prompt for module, jump to a file where it has method definitions."
-  (interactive `(,(robe-completing-read "Module: " (robe-request "modules"))))
+  (interactive `(,(completing-read "Module: " (robe-request "modules"))))
   (let ((paths (robe-request "class_locations" name (car (robe-context)))))
     (when (null paths) (error "Can't find the location"))
     (let ((file (if (= (length paths) 1)
                     (car paths)
                   (let ((alist (robe-to-abbr-paths paths)))
-                    (cdr (assoc (robe-completing-read "File: " alist nil t)
+                    (cdr (assoc (completing-read "File: " alist nil t)
                                 alist))))))
       (robe-find-file file)
       (goto-char (point-min))

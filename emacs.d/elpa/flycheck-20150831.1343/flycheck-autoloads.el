@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "flycheck" "flycheck.el" (21731 27628 0 0))
+;;;### (autoloads nil "flycheck" "flycheck.el" (21992 33387 0 0))
 ;;; Generated autoloads from flycheck.el
 
 (autoload 'flycheck-info "flycheck" "\
@@ -65,6 +65,16 @@ The following PROPERTIES constitute an error level:
      The severity is used by `flycheck-error-level-<' to
      determine the ordering of errors according to their levels.
 
+`:compilation-level LEVEL'
+
+     A number indicating the broad class of messages that errors
+     at this level belong to: one of 0 (info), 1 (warning), or
+     2 or nil (error).  Defaults to nil.
+
+     This is used by `flycheck-checker-pattern-to-error-regexp'
+     to map error levels into `compilation-mode''s hierarchy and
+     to get proper highlighting of errors in `compilation-mode'.
+
 `:overlay-category CATEGORY'
      A symbol denoting the overlay category to use for error
      highlight overlays for this level.  See Info
@@ -72,11 +82,9 @@ The following PROPERTIES constitute an error level:
      overlay categories.
 
      A category for an error level overlay should at least define
-     the `face' property, for error highlighting.  Other useful
-     properties for error level categories are `priority' to
-     influence the stacking of multiple error level overlays, and
-     `help-echo' to define a default error messages for errors
-     without messages.
+     the `face' property, for error highlighting.  Another useful
+     property for error level categories is `priority', to
+     influence the stacking of multiple error level overlays.
 
 `:fringe-bitmap BITMAP'
      A fringe bitmap symbol denoting the bitmap to use for fringe
@@ -94,7 +102,7 @@ The following PROPERTIES constitute an error level:
 
 \(fn LEVEL &rest PROPERTIES)" nil nil)
 
-(function-put 'flycheck-define-error-level 'lisp-indent-function '1)
+(put 'flycheck-define-error-level 'lisp-indent-function '1)
 
 (autoload 'flycheck-define-command-checker "flycheck" "\
 Define SYMBOL as syntax checker which runs a command.
@@ -162,15 +170,14 @@ of command checkers is `flycheck-sanitize-errors'.
 
 Note that you may not give `:start', `:interrupt', and
 `:print-doc' for a command checker.  You can give a custom
-`:verify' function, but you should take care to call
-`flycheck-verify-command-checker' in a custom `:verify'
-function.
+`:verify' function, though, whose results will be appended to the
+default `:verify' function of command checkers.
 
 \(fn SYMBOL DOCSTRING &rest PROPERTIES)" nil nil)
 
-(function-put 'flycheck-define-command-checker 'lisp-indent-function '1)
+(put 'flycheck-define-command-checker 'lisp-indent-function '1)
 
-(function-put 'flycheck-define-command-checker 'doc-string-elt '2)
+(put 'flycheck-define-command-checker 'doc-string-elt '2)
 
 (autoload 'flycheck-def-config-file-var "flycheck" "\
 Define SYMBOL as config file variable for CHECKER, with default FILE-NAME.
@@ -187,7 +194,7 @@ argument to `flycheck-define-checker'.
 
 \(fn SYMBOL CHECKER &optional FILE-NAME &rest CUSTOM-ARGS)" nil t)
 
-(function-put 'flycheck-def-config-file-var 'lisp-indent-function '3)
+(put 'flycheck-def-config-file-var 'lisp-indent-function '3)
 
 (autoload 'flycheck-def-option-var "flycheck" "\
 Define SYMBOL as option variable with INIT-VALUE for CHECKER.
@@ -203,14 +210,14 @@ Use this together with the `option', `option-list' and
 
 \(fn SYMBOL INIT-VALUE CHECKER DOCSTRING &rest CUSTOM-ARGS)" nil t)
 
-(function-put 'flycheck-def-option-var 'lisp-indent-function '3)
+(put 'flycheck-def-option-var 'lisp-indent-function '3)
 
-(function-put 'flycheck-def-option-var 'doc-string-elt '4)
+(put 'flycheck-def-option-var 'doc-string-elt '4)
 
 ;;;***
 
-;;;### (autoloads nil nil ("flycheck-ert.el" "flycheck-pkg.el") (21731
-;;;;;;  27628 208614 0))
+;;;### (autoloads nil nil ("flycheck-ert.el" "flycheck-pkg.el") (21992
+;;;;;;  33387 358119 0))
 
 ;;;***
 

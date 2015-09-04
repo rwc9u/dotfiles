@@ -109,8 +109,6 @@
 
  (add-hook 'inf-ruby-mode-hook
            '(lambda ()
-;;               (local-set-key [?\C-c ?\C-v ?\C-.] 'ri-ruby-complete-symbol)
-;;               (local-set-key "\C-c\C-a" 'ri-ruby-show-args)
               (local-set-key [(control tab)] 'ido-ruby-complete-or-tab)
               (local-set-key "\C-c\C-c" 'ido-ruby-complete-or-tab)
               (setenv "PAGER" (executable-find "cat"))
@@ -134,12 +132,12 @@ A `company-mode' completion back-end for `robe-mode'.
   '(push 'company-robe company-backends))
 (add-hook 'after-init-hook 'global-company-mode)
 
-;;============================================================
-;; rcode tools
-;;============================================================
-;; commented out because it was slowing down ruby file load
-;; (add-to-list 'load-path  (expand-file-name "~/.emacs.d/rcodetools"))
-;; (require 'rcodetools)
+;; ;;============================================================
+;; ;; rcode tools
+;; ;;============================================================
+;; ;; commented out because it was slowing down ruby file load
+;; ;; (add-to-list 'load-path  (expand-file-name "~/.emacs.d/rcodetools"))
+;; ;; (require 'rcodetools)
 
 ;;============================================================
 ;; haml templating
@@ -191,17 +189,18 @@ through a terminal."
     (kill-line 1)
     (insert command)))
 
-;;==============================
-;; rcov integration
-;;==============================
-(require 'rcov)
+;; ;;==============================
+;; ;; rcov integration
+;; ;;==============================
+;; (require 'rcov)
 
 ;;==============================
 ;; rvm integration
 ;;==============================
 (require 'rvm)
-(add-hook 'ruby-mode-hook
-          (lambda () (rvm-activate-corresponding-ruby)))
+;; this seems to be slowing down ruby file opening
+;; (add-hook 'ruby-mode-hook
+;;           (lambda () (rvm-activate-corresponding-ruby)))
 
 ;;==============================
 ;; ruby tools
@@ -241,5 +240,4 @@ through a terminal."
       (goto-char BEG)
       (while (re-search-forward ":\\([^\s]+\\)\s*=>\s*\\([^\s]+\\)" END t)
         (replace-match "\\1: \\2")))))
-
 

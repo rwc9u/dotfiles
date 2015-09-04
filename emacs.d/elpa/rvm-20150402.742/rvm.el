@@ -4,8 +4,8 @@
 
 ;; Author: Yves Senn <yves.senn@gmx.ch>
 ;; URL: http://www.emacswiki.org/emacs/RvmEl
-;; Version: 20150105.110
-;; X-Original-Version: 1.3.0
+;; Package-Version: 20150402.742
+;; Version: 1.4.0
 ;; Created: 5 April 2010
 ;; Keywords: ruby rvm
 ;; EmacsWiki: RvmEl
@@ -297,7 +297,9 @@ function."
                      ruby-current-version
                      (not filtered-gemset)
                      (string-match rvm--gemset-list-regexp gemset))
-                (add-to-list 'parsed-gemsets (match-string 2 gemset) t))))
+                ;; replace-regexp is to handle default gemset which is returned with
+                ;; wrapping parens but is referred to without them in rvm use command
+                (add-to-list 'parsed-gemsets (replace-regexp-in-string "^(\\|)$" "" (match-string 2 gemset)) t))))
     parsed-gemsets))
 
 (defun rvm/info (&optional ruby-version)

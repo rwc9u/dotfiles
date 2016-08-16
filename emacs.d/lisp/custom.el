@@ -23,6 +23,7 @@
  '(ediff-split-window-function (quote split-window-horizontally))
  '(fill-column 120)
  '(flx-ido-threshold 100)
+ '(flycheck-eslintrc nil)
  '(flymake-allowed-file-name-masks
    (quote
     (("\\.c\\'" flymake-simple-make-init)
@@ -70,6 +71,7 @@
  '(rails-ws:default-server-type "mongrel")
  '(rng-schema-locating-files (quote ("schemas.xml" "~/dev/schemas/schemas.xml")))
  '(ruby-program-name "/opt/local/bin/irb --inf-ruby-mode" t)
+ '(scss-compile-at-save nil)
  '(sql-oracle-program "/usr/local/bin/sqlplus")
  '(sql-pop-to-buffer-after-send-region t)
  '(svn-status-default-diff-arguments (quote ("-x -wbu --ignore-eol-style")))

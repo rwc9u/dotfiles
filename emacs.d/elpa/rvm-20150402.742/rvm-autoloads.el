@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "rvm" "rvm.el" (21992 45790 0 0))
-;;; Generated autoloads from rvm.el
+;;;### (autoloads nil "rvm" "../../../../../.emacs.d/elpa/rvm-20150402.742/rvm.el"
+;;;;;;  "98bf3ac29febe7909f35cbe6b0e5b351")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/rvm-20150402.742/rvm.el
 
 (autoload 'rvm-use-default "rvm" "\
 use the rvm-default ruby as the current ruby version
@@ -27,6 +28,12 @@ switch the current ruby version to any ruby, which is installed with rvm
 
 
 \(fn GEMHOME)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/rvm-20150402.742/rvm-autoloads.el"
+;;;;;;  "../../../../../.emacs.d/elpa/rvm-20150402.742/rvm.el") (22090
+;;;;;;  50764 314038 0))
 
 ;;;***
 

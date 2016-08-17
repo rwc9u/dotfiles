@@ -2,6 +2,14 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/90053/dev/plan-admin/config/" . "settings/")
+ ("/Users/90053/dev/plan-admin/" . "config/")
+ ("/Users/90053/dev/investors/app/controllers/investors/" . "funds/")
+ ("/Users/90053/dev/investors/app/services/" . "sitemaps/")
+ ("/Users/90053/dev/investors/app/models/advisors/" . "sitemap/")
+ ("/Users/90053/dev/investors/app/models/international/" . "sitemap/")
+ ("/Users/90053/dev/investors/app/models/uhnw/" . "sitemap/")
+ ("/Users/90053/dev/investors/app/models/private_banks/" . "sitemap/")
  ("/Users/90053/dev/investors/app/decorators/funds/" . "fund_details/")
  ("/Users/90053/dev/investors/app/views/ofi/scaffolding/funds/" . "documents/")
  ("/Users/90053/dev/investors/app/controllers/advisors/" . "funds/")
@@ -36,7 +44,7 @@
  ("/Users/90053/dev/investors/spec/controllers/investors/" . "retirement/")
  ("/Users/90053/dev/investors/spec/controllers/uhnw/" . "private_banks/")
  ("/Users/90053/dev/investors/spec/controllers/" . "advisors/")
- ("/Users/90053/dev/investors/app/views/international/" . "funds/")
+ ("/Users/90053/dev/investors/app/views/international/" . "base/")
  ("/Users/90053/dev/investors/lib/ofi/" . "middleware/")
  ("/Users/90053/dev/investors/lib/" . "ofi/")
  ("/Users/90053/dev/investors/.git/" . "rebase-apply/")
@@ -50,7 +58,7 @@
  ("/Users/90053/dev/investors-svn/release/app/" . "models/")
  ("/Users/90053/dev/investors-svn/release/" . "app/")
  ("/Users/90053/dev/investors-svn/" . "release/")
- ("/Users/90053/dev/investors/app/models/data_services/" . "indexing/")
+ ("/Users/90053/dev/investors/app/models/data_services/" . "sitemap/")
  ("/Users/90053/dev/investors/app/views/uhnw/" . "base/")
  ("/Users/90053/dev/investors/app/assets/javascripts/_new/modules/" . "open/")
  ("/Users/90053/dev/investors/app/assets/javascripts/_new/" . "modules/")
@@ -58,7 +66,7 @@
  ("/Users/90053/dev/investors/app/assets/stylesheets/themes/" . "uhnw/")
  ("/Users/90053/dev/investors/app/assets/stylesheets/" . "modules/")
  ("/Users/90053/dev/investors/app/controllers/ofi/" . "admin/")
- ("/Users/90053/dev/investors/config/" . "routes/")
+ ("/Users/90053/dev/investors/config/" . "initializers/")
  ("/Users/90053/dev/investors/app/controllers/concerns/ofi/" . "scaffolding/")
  ("/Users/90053/dev/investors/app/views/ofi/scaffolding/" . "funds/")
  ("/Users/90053/dev/investors/app/views/ofi/" . "scaffolding/")
@@ -69,7 +77,7 @@
  ("/Users/90053/dev/advisors/app/" . "models/")
  ("/Users/90053/dev/advisors/db/" . "seeds/")
  ("/Users/90053/dev/investors/app/controllers/concerns/" . "ofi/")
- ("/Users/90053/dev/investors/app/controllers/" . "concerns/")
+ ("/Users/90053/dev/investors/app/controllers/" . "advisors/")
  ("/Users/90053/dev/investors/app/assets/javascripts/uhnw/components/" . "global/")
  ("/Users/90053/dev/investors/app/assets/javascripts/uhnw/" . "components/")
  ("/Users/90053/dev/investors/app/assets/javascripts/" . "_new/")
@@ -78,14 +86,14 @@
  ("/Users/90053/dev/coco/db/" . "migrate/")
  ("/Users/90053/dev/coco/app/views/" . "personalities/")
  ("/Users/90053/dev/coco/app/" . "models/")
- ("/Users/90053/dev/investors/app/decorators/" . "international_location/")
+ ("/Users/90053/dev/investors/app/decorators/" . "common/")
  ("/Users/90053/dev/advisors/config/" . "databases/")
  ("/Users/90053/dev/coco-svn/dev/config/" . "initializers/")
  ("/Users/90053/dev/coco-svn/dev/" . "db/")
  ("/Users/90053/dev/coco-svn/" . "dev/")
- ("/Users/90053/dev/investors/app/models/" . "daengine/")
- ("/Users/90053/dev/investors/app/views/" . "application/")
- ("/Users/90053/dev/investors/app/" . "views/")
+ ("/Users/90053/dev/investors/app/models/" . "common/")
+ ("/Users/90053/dev/investors/app/views/" . "international/")
+ ("/Users/90053/dev/investors/app/" . "models/")
  ("/Users/90053/dev/coco/dev/app/views/" . "shared/")
  ("/Users/90053/dev/coco/dev/app/" . "views/")
  ("/Users/90053/dev/investors/investors_dev_20160922/app/decorators/" . "interior_landing/")
@@ -1340,7 +1348,7 @@
  ("/Users/90053/dev/investors/trunk/app/views/" . "investors/")
  ("/Users/90053/dev/investors/trunk/app/" . "views/")
  ("/Users/90053/dev/investors/trunk/" . "app/")
- ("/Users/90053/dev/investors/" . "app/")
+ ("/Users/90053/dev/investors/" . "config/")
  ("/Users/90053/dev/repos/" . "socialvision/")
  ("/Users/90053/dev/dotfiles/emacs.d/" . "lisp/")
  ("/Users/90053/dev/dotfiles/" . "emacs.d/")
@@ -1350,97 +1358,241 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/90053/dev/investors/app/views/application/ui_components/"
- "/Users/90053/dev/investors/app/decorators/"
+ "/Users/90053/dev/investors/spec/models/data_services/"
+ "/Users/90053/dev/investors/app/models/"
+ "/Users/90053/dev/investors/"
+ "/Users/90053/dev/dotfiles/emacs.d/lisp/"
+ "/Users/90053/dev/dotfiles/"
+ "/Users/90053/dev/investors/app/controllers/international/"
+ "/Users/90053/dev/investors/app/controllers/advisors/"
+ "/Users/90053/dev/investors/app/controllers/international/funds/"
+ "/Users/90053/dev/sandbox/"
+ "/Users/90053/dev/investors/app/models/common/"
+ "/Users/90053/dev/investors/app/decorators/common/"
+ "/Users/90053/dev/plan-admin/config/settings/"
+ "/Users/90053/dev/investors/app/controllers/concerns/ofi/scaffolding/"
+ "/Users/90053/dev/investors/app/controllers/institutional_investors/"
+ "/Users/90053/dev/investors/app/controllers/concerns/ofi/scaffolding/funds/"
+ "/Users/90053/dev/investors/app/controllers/investors/funds/"
+ "/Users/90053/dev/investors/app/services/sitemaps/"
+ "/Users/90053/dev/investors/app/controllers/ofi/"
+ "/Users/90053/dev/investors/app/models/data_services/sitemap/"
+ "/Users/90053/dev/investors/app/models/data_services/indexing/"
+ "/Users/90053/dev/investors/app/decorators/data_services/"
+ "/Users/90053/dev/investors/app/models/advisors/sitemap/"
+ "/Users/90053/dev/investors/app/models/international/sitemap/"
+ "/Users/90053/dev/investors/app/models/institutional_investors/sitemap/"
+ "/Users/90053/dev/investors/app/models/uhnw/sitemap/"
+ "/Users/90053/dev/investors/app/models/private_banks/sitemap/"
+ "/Users/90053/dev/investors/config/routes/"
  "/Users/90053/dev/investors/app/services/"
+ "/Users/90053/dev/investors/app/controllers/concerns/ofi/"
+ "/Users/90053/dev/investors/app/views/international/base/"
+ "/Users/90053/dev/investors/app/decorators/"
+ "/Users/90053/dev/investors/app/decorators/funds/"
+ "/Users/90053/dev/investors/app/decorators/literature_center/"
+ "/Users/90053/dev/notes/"
+ "/Users/90053/dev/investors/app/views/application/ui_components/"
  "/Users/90053/dev/investors/app/decorators/international_location/"
  "/Users/90053/dev/investors/db/"
  "/Users/90053/dev/investors/app/models/daengine/"
  "/Users/90053/dev/investors/app/views/international/funds/funds/"
- "/Users/90053/dev/investors/app/models/"
- "/Users/90053/dev/investors/app/decorators/funds/"
  "/Users/90053/dev/investors/app/decorators/funds/fund_details/"
- "/Users/90053/dev/investors/app/controllers/international/funds/"
- "/Users/90053/dev/investors/app/controllers/concerns/ofi/"
- "/Users/90053/dev/investors/app/controllers/international/"
  "/Users/90053/dev/investors/app/views/ofi/scaffolding/strategies/"
  "/Users/90053/dev/investors/app/models/strategy/"
  "/Users/90053/dev/coco/app/models/"
  "/Users/90053/dev/investors/app/models/fund_snapshot/"
  "/Users/90053/dev/investors/app/controllers/advisors/funds/"
- "/Users/90053/dev/investors/config/routes/"
  "/Users/90053/dev/investors/lib/ofi/services/"
  "/Users/90053/dev/investors/lib/ofi/middleware/"
  "/Users/90053/dev/investors/app/decorators/interior_landing/"
  "/Users/90053/dev/investors/app/views/unknown/"
  "/Users/90053/dev/investors/lib/ofi/"
- "/Users/90053/dev/investors/"
- "/usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/gems/bundler-unload-1.0.2/lib/"
- "/usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/"
- "/Users/90053/dev/investors/app/decorators/common/"
- "/Users/90053/dev/investors/app/controllers/concerns/ofi/scaffolding/"
- "/Users/90053/dev/investors/app/views/application/"
- "/Users/90053/dev/investors/app/controllers/concerns/ofi/scaffolding/funds/"
- "/Users/90053/dev/investors/app/controllers/institutional_investors/"
- "/Users/90053/.bundle/"
- "/Users/90053/dev/investors/app/views/international/base/"
- "/Users/90053/dev/investors/app/assets/javascripts/_new/modules/open/"
- "/Users/90053/dev/coco/db/migrate/"
- "/Users/90053/dev/coco/db/seeds/"
- "/Users/90053/dev/investors/app/models/concerns/international/"
- "/Users/90053/dev/investors/app/decorators/international/"
- "/Users/90053/dev/coco/app/views/personalities/"
- "/Users/90053/dev/investors/app/views/international/contact_us/"
- "/Users/90053/dev/investors/app/ui_components/fixtures/"
- "/Users/90053/dev/investors/app/views/layouts/"
- "/Users/90053/dev/investors/app/models/concerns/institutional/"
- "/Users/90053/dev/investors/app/decorators/institutional/"
- "/Users/90053/dev/coco/app/controllers/personalities/"
- "/Users/90053/dev/coco/config/"
- "/usr/local/rvm/gems/ruby-2.3.1@investor/gems/carmen-1.0.2/"
- "/Users/90053/dev/investors/app/models/international_location/"
- "/Users/90053/dev/advisors/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "_hero_layout_7.html.haml"
- "channel_selector_service_decorator.rb"
- "channel_selector_service.rb"
- "sub_channel_decorator.rb"
- "seeds.rb"
- "digital_asset.rb"
- "show.html.haml"
- "fund_document_decorator.rb"
- "composite_fund_decorator.rb"
- "index.html.haml"
+ "index_spec.rb"
+ "page_seo.rb"
+ "README.rdoc"
+ "rwc-git.el"
+ "rwc-ruby.el"
+ "emacs"
+ "rwc-projectile.el"
+ "about_us_controller.rb"
+ "contact_us_controller.rb"
+ "base_controller.rb"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/90053/dev/investors/app/views/application/ui_components/" (22436 60218 0 0) "helpers/" "_view_all_link.html.haml" "_tooltip_wrapper.html.haml" "_tooltip_wrapper.html+phone.haml" "_title_color_chip.html.haml" "_sparkline.html.haml" "_solution_container.html.haml" "_share_it.html.haml" "_section_uhnw_insights_layout_1.html.haml" "_section_theme_layout_5.html.haml" "_section_theme_layout_5.html+phone.haml" "_section_theme_layout_4.html.haml" "_section_theme_layout_4.html+phone.haml" "_section_theme_layout_3.html.haml" "_section_theme_layout_3.html+phone.haml" "_section_theme_layout_2.html.haml" "_section_theme_layout_2.html+phone.haml" "_section_theme_layout_1.html.haml" "_section_theme_layout_1.html+phone.haml" "_section_strategy_risk_assessment_layout.html.haml" "_section_strategy_investment_team_members.html.haml" "_section_strategy_investment_approach_layout.html.haml" "_section_strategy_facts_and_charts_layout.html.haml" "_section_strategy_available_vehicles_layout.html.haml" "_section_ria_contact_cards_layout.html.haml" "_section_private_client_contact_cards_layout.html.haml" "_section_private_bank_homepage_contact_cards_layout.html.haml" "_section_private_bank_capabilities_cards_layout.html.haml" "_section_presidential_election_growth_layout.html.haml" "_section_layout_table_links.html.haml" "_section_layout_table_digital_assets.html.haml" "_section_layout_stacked_resource_small.html.haml" "_section_layout_stacked_resource_medium.html.haml" "_section_layout_resource_video_container.html.haml" "_section_layout_resource_theme.html.haml" "_section_layout_resource_text.html.haml" "_section_layout_resource_tab_section_tab_layout_5.html.haml" "_section_layout_resource_tab_section_tab_layout_3.html.haml" "_section_layout_resource_tab_section_tab_layout_2.html.haml" "_section_layout_resource_tab_section_tab_layout_1.html.haml" "_section_layout_resource_tab_section.html.haml" "_section_layout_resource_strategy_link.html.haml" "_section_layout_resource_strategy_fund.html.haml" "_section_layout_resource_strategy_detail_page.html.haml" "_section_layout_resource_strategy.html.haml" "_section_layout_resource_sparkline.html.haml" "_section_layout_resource_quote.html.haml" "_section_layout_resource_personality.html.haml" "_section_layout_resource_main_video.html.haml" "_section_layout_resource_link.html.haml" "_section_layout_resource_interactive_content_object.html.haml" "_section_layout_resource_fund.html.haml" "_section_layout_resource_event.html.haml" "_section_layout_resource_digital_asset.html.haml" "_section_layout_resource_article.html.haml" "_section_layout_resource.html.haml" "_section_layout_9.html.haml" "_section_layout_8.html.haml" "_section_layout_7.html.haml" "_section_layout_6.html.haml" "_section_layout_5.html.haml" "_section_layout_4.html.haml" "_section_layout_3.html.haml" "_section_layout_21.html.haml" "_section_layout_20.html.haml" "_section_layout_2.html.haml" "_section_layout_19.html.haml" "_section_layout_18.html.haml" "_section_layout_17.html.haml" "_section_layout_16.html.haml" "_section_layout_15.html.haml" "_section_layout_14.html.haml" "_section_layout_13.html.haml" "_section_layout_12.html.haml" "_section_layout_11.html.haml" "_section_layout_11.html+phone.haml" "_section_layout_10.html.haml" "_section_layout_1.html.haml" "_section_latest_insights_layout.html.haml" "_section_interactive_presidential_election_layout.html.haml" "_section_family_office_selector_layout.html.haml" "_section_container_wrapper.html.haml" "_section_collections_layout.html.haml" "_section_capabilities_layout_1.html.haml" "_section_bank_trust_map_cards_layout.html.haml" "_search_box.html.haml" "_progress_bar.html.haml" "_product_tile.html.haml" "_pin_delivery_options.html.haml" "_personality_card.html.haml" "_personality.html.haml" "_pdf_download.html.haml" "_page_title.html.haml" "_modal_wrapper.html.haml" "_modal_link.html.haml" "_menu_list.html.haml" "_jump_pagination.html.haml" "_interior_landing_hero.html.haml" "_info_block_wrapper.html.haml" "_iframe.html.haml" "_icon_block_wrapper.html.haml" "_highlights.html.haml" "_hide_show_wrapper.html.haml" "_hide_show_table_wrapper.html.haml" "_hero_strategy_detail.html.haml" "_hero_site_preference.html.haml" "_hero_site_preference.html+phone.haml" "_hero_login.html.haml" "_hero_layout_7.html.haml" "_hero_layout_6.html.haml" "_hero_layout_5.html.haml" "_hero_layout_5.html+phone.haml" "_hero_layout_4.html.haml" "_hero_layout_3.html.haml" "_hero_layout_2.html.haml" "_hero_layout_1.html.haml" "_hero_institutional_strategy_detail.html.haml" "_hero_consultants.html.haml" "_hero_block_wrapper.html.haml" "_fund_tile.html.haml" "_featured_event_tile.html.haml" "_election_timeline.html.haml" "_election_map.html.haml" "_election_event_description.html.haml" "_election_delegates.html.haml" "_election_days_until.html.haml" "_data_list.html.haml" "_cross_channel_login_form.html.haml" "_core_tab_triggers.html.haml" "_core_tab_panels.html.haml" "_contact_us_block_wrapper.html.haml" "_consultant_tile.html.haml" "_consultant_contact.html.haml" "_component_container_wrapper.html.haml" "_client_list.html.haml" "_cancel_modal.html.haml" "_audio_player.html.haml" "_article_summary.html.haml" "_article_footnotes.html.haml" "_article_block_wrapper.html.haml" "_article_block.html.haml" "_article_block.html+phone.haml" "_alert_box_wrapper.html.haml" "_alert_box.html.haml" "_action_link_list.html.haml" "../" "./")
+ ("/Users/90053/dev/investors/config/initializers/" (22422 31387 0 0) "wrap_parameters.rb" "warden.rb" "translations.rb" "simple_form_foundation.rb" "simple_form.rb" "set_mailer_options.rb" "session_store.rb" "rack_profiler.rb" "ofi_auth.rb" "ofi.rb" "notifications.rb" "nested_try.rb" "mongodb_fund_database.rb" "mime_types.rb" "middleware.rb" "local_f5_rewrites.rb" "kaminari_config.rb" "inflections.rb" "generators.rb" "fiscali.rb" "filter_parameter_logging.rb" "exceptions_app.rb" "enable_webmock_mocks.rb" "cookies_serializer.rb" "blank_safe_image_tag.rb" "blacklists.rb" "backtrace_silencers.rb" "assets.rb" "aaa_string_patch.rb" "aaa_request_patch.rb" "aaa_redisstore_patch.rb" "aaa_hash_patch.rb" "../" "./")
 
- ("/Users/90053/dev/investors/app/views/application/" (22436 45881 0 0) "ui_components/" "spoofing/" "area_maintenance.html.haml" "_spoof_header.html.haml" "_small_menu_search.html.haml" "_small_header_navigation_list.html.haml" "_small_hamburger.html.haml" "_side_feedback_button.html.haml" "_search_overlay.html.haml" "_search_launcher.html.haml" "_privacy_and_security.haml" "_modals.html.haml" "_meta_tags.html.haml" "_messages.html.haml" "_logo_small.html.haml" "_logo.html.haml" "_login_form.html.haml" "_location_audience_channel_selector.html.haml" "_link_to_full_site.html.haml" "_header_secondary_nav.html.haml" "_header_primary_nav.html.haml" "_header.html.haml" "_head.html.haml" "_footer.html.haml" "_edit_password_and_questions.html.haml" "_edit_password_and_questions.html+phone.haml" "_consultants_map2.html.haml" "_consultants_map.html.haml" "_channel_selector.html.haml" "_base_errors.html.haml" "_back_to_top.html.haml" "_authentication_action.html.haml" "_area_maintenance.html.haml" "../" "./")
+ ("/Users/90053/dev/investors/config/" (22452 53083 0 0) "web.xml" "warble.rb" "settings.yml" "settings/" "secrets.yml" "routes.rb" "routes/" "mongoid.yml" "locales/" "initializers/" "environments/" "environment.rb" "deploy.rb" "deploy/" "databases/" "cucumber.yml" "boot.rb" "auto_transactions_add_new_purchase_confirm.html.haml" "application.rb" "../" "./")
 
- ("/Users/90053/dev/investors/app/services/" (22435 47074 0 0) "transactions/" "token_service.rb" "team_service.rb" "sitemaps/" "service_model.rb" "seo/" "security_question_service.rb" "retirement/" "restore_access.rb" "remembered_state_service.rb" "profile_data_service.rb" "profile/" "products_service.rb" "portfolio_builder_service.rb" "persisted_state_service.rb" "ofi/" "money_market_history_service.rb" "literature_center/" "investors/" "interior_landing/" "income_dividends_service.rb" "holdings_breakdowns_service.rb" "historical_fund_price_service.rb" "fund_details_service.rb" "fund_aum_service.rb" "forgot_user_id.rb" "forgot_password.rb" "facades/" "excluded_funds_service.rb" "cumulative_returns_service.rb" "cost_basis_service.rb" "contact_us.rb" "channel_selector_service.rb" "cdsc_calculator_service.rb" "bene/" "bank_account.rb" "auto_txns/" "advisors/" "../" "./")
+ ("/Users/90053/dev/investors/spec/models/data_services/" (22422 31387 0 0) "sitemap/" "indexing/" "index_spec.rb" "../" "./")
 
- ("/Users/90053/dev/investors/app/decorators/international_location/" (22435 31277 0 0) "sub_channel_decorator.rb" "../" "./")
+ ("/Users/90053/dev/investors/spec/models/" (22450 19410 0 0) "transactions/" "snapshot_spec.rb" "search/" "retirement/" "resource_spec.rb" "quick_facts_spec.rb" "portfolio_spec.rb" "planning_spec.rb" "ofi/" "investors/" "interior_landing/" "image_spec.rb" "holding_spec.rb" "fund_details/" "footnote_spec.rb" "email_share_spec.rb" "data_services/" "daengine/" "content_spec.rb" "article_spec.rb" "alerts/" "advisors/" "../" "./")
 
- ("/Users/90053/dev/investors/app/decorators/" (22436 55129 0 0) "video_decorator.rb" "uhnw/" "ucit_fund_snapshot_decorator.rb" "transactions/" "team_decorator.rb" "team_decoratable.rb" "strategy_snapshot_decorator.rb" "strategy/" "seo_data_hack_decorator.rb" "search/" "retirement/" "resource_decorator.rb" "quick_facts_decorator.rb" "profile/" "product_decoratable.rb" "portfolio_summary/" "planning_decorator.rb" "personality_decorator.rb" "personality_decoratable.rb" "ofi/" "meta_only_decorator.rb" "literature_center/" "link_decorator.rb" "international_location_decorator.rb" "international_location/" "international/" "interior_landing_page_decorator.rb" "interior_landing/" "institutional/" "insight_decorator.rb" "insight_article_decorator.rb" "home_decorator.rb" "holding_decorator.rb" "historical_price_decorator.rb" "hero_decorator.rb" "funds/" "fund_snapshot_decorator.rb" "fund_manager_landing_decorator.rb" "faq_decorator.rb" "faq/" "event_decorator.rb" "event/" "email_share_decorator.rb" "document_decoratable.rb" "digital_asset_decorator.rb" "degree_decorator.rb" "data_services/" "common/" "channel_selector_service_decorator.rb" "cdsc_calculator_decorator.rb" "bene/" "bank_account_decorator.rb" "auto_txns/" "article_decorator.rb" "article/" "api/" "advisors/" "accolade_decorator.rb" "../" "./")
+ ("/Users/90053/dev/investors/spec/" (22422 31387 0 0) "teaspoon_env.rb" "support/" "spec_helper.rb" "services/" "routing/" "policies/" "models/" "mixins/" "lib/" "javascripts/" "initializers/" "helpers/" "forms/" "features/" "factories/" "decorators/" "data/" "controllers/" "connectors/" "../" "./")
 
- ("/Users/90053/dev/investors/app/models/daengine/" (22435 47074 0 0) "digital_asset.rb" "content_folder.rb" "../" "./")
+ ("/Users/90053/" (22452 57571 0 0) "VirtualBox VMs/" "tmp/" "rvm-installer.asc" "rvm-installer" "Public/" "Pictures/" "perl5/" "Music/" "Movies/" "Library/" "Downloads/" "Documents/" "dev/" "Desktop/" "backups/" "Applications/" "90053.pub" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".rediscli_history" ".pryrc" ".pry_history" ".pow/" ".nvm/" ".npm/" ".node-gyp/" ".mongorc.js" ".mini_exiftool/" ".m2/" ".local/" ".lesshst" ".irbrc" ".irb-history" ".hgignore_global" ".guard_history" ".gnupg/" ".gitignore_global" ".gitconfig" ".gemrc" ".gem/" ".emacs.d/" ".emacs" ".DS_Store" ".dbshell" ".cups/" ".cpan/" ".config/" ".chef/" ".CFUserTextEncoding" ".cache/" ".bundle/" ".bm-repository" ".bashrc" ".bash_sessions/" ".bash_profile" ".bash_history" ".bash_env" ".bash_aliases" ".atom/" ".account" "#.irbrc#" "../" "./")
 
- ("/Users/90053/dev/investors/" (22436 52691 0 0) "vendor/" "tmp/" "spec/" "shared/" "script/" "README.rdoc" "Rakefile" "public/" "log/" "lib/" "Guardfile" "Gemfile.lock" "Gemfile" "db/" "cucumber/" "config.ru" "config/" "Capfile" "bin/" "app/" ".sass-lint.yml" ".ruby-version" ".ruby-gemset" ".rubocop_todo.yml" ".rubocop.yml" ".rspec" ".projectile" ".gitignore" ".git/" ".eslintrc.json" "../" "./")
+ ("/Users/90053/dev/dotfiles/emacs.d/lisp/" (22452 57362 0 0) "unit-test.el" "twittering-mode.el" "rwc-yasnippet.el" "rwc-yaml.el" "rwc-xhtml.el" "rwc-twitter.el" "rwc-tty-format.el" "rwc-textile.el" "rwc-tabs.el" "rwc-svn.el" "rwc-ruby.el" "rwc-rails-reloaded.el" "rwc-projectile.el" "rwc-powerline.el" "rwc-package.el" "rwc-nxml.el" "rwc-mode-line-bell.el" "rwc-markdown.el" "rwc-linemark.el" "rwc-key-maps.el" "rwc-javascript.el" "rwc-ido.el" "rwc-html.el" "rwc-highlight-line.el" "rwc-globals.el" "rwc-git.el" "rwc-flyspell.el" "rwc-flycheck.el" "rwc-eol-conversion.el" "rwc-envs.el" "rwc-el-get.el" "rwc-defuns.el" "rwc-deft.el" "rwc-css.el" "rwc-comint.el" "rwc-color-theme.el" "rwc-c.el" "rwc-bash.el" "rwc-auctex.el" "private.el" "custom.el" "auto-install.el" "../" "./")
 
- ("/Users/90053/dev/investors/app/views/international/funds/funds/" (22436 47760 0 0) "show.html.haml" "index.html.haml" "../" "./")
+ ("/Users/90053/dev/dotfiles/emacs.d/" (22452 57396 0 0) "vendor/" "tutorial/" "tramp" "snippets/" "semanticdb/" "rcodetools/" "projectile.cache" "projectile-bookmarks.eld" "menu_log.notes" "lisp/" "ido.last" "games/" "find-recursive/" "eol-conversion/" "elpa/" "el-get/" "console_log.notes" "auto-save-list/" "auto-install/" "../" "./")
+
+ ("/Users/90053/dev/dotfiles/" (22452 56075 0 0) "tmux.conf" "README.md" "pryrc" "irbrc" "install.rb" "gitconfig" "emacs.old" "emacs.d/" "emacs" "bashrc" "bash_profile" "bash_env" "bash_aliases" "autotest.d/" "autotest" ".gitmodules" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/90053/dev/investors/app/controllers/international/" (22452 51845 0 0) "sitemaps_controller.rb" "interior_landing_controller.rb" "insights_controller.rb" "home_controller.rb" "funds/" "errors_controller.rb" "digital_assets_controller.rb" "contact_us_controller.rb" "base_controller.rb" "audiences_controller.rb" "articles_controller.rb" "about_us_controller.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/controllers/international/funds/" (22452 51535 0 0) "funds_controller.rb" "base_controller.rb" "../" "./")
+
+ ("/Users/90053/dev/sandbox/" (22321 1865 0 0) "test.rb" "test.coffee" "foo/" "dump_heaps.rake" "../" "./")
+
+ ("/Users/90053/dev/investors/app/controllers/concerns/ofi/scaffolding/" (22452 40238 0 0) "uhnw/" "transactions/" "tey_calculator.rb" "strategies.rb" "site_mapping.rb" "seo_title_metadata.rb" "search.rb" "press_rooms.rb" "portfolio_summary/" "planning.rb" "personalities.rb" "outlooks.rb" "mobile_desktop_preferences.rb" "literature_center/" "interior_landing_pages.rb" "interactive_content_objects.rb" "insights.rb" "home.rb" "historical_prices.rb" "funds/" "fund_managers.rb" "faq.rb" "events.rb" "errors.rb" "email_shares.rb" "digital_assets.rb" "base.rb" "auth/" "articles.rb" "account_contact_information.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/common/" (22422 31387 0 0) "seo_data.rb" "image_roles.rb" "footnote.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/" (22452 40238 0 0) "web_activity/" "video_asset.rb" "video.rb" "vanity_url_map.rb" "uhnw_insight_article.rb" "uhnw/" "ucit_fund_snapshot.rb" "tweet.rb" "trending.rb" "transactions/" "topic.rb" "tey_struct.rb" "tey_calculation.rb" "text.rb" "team.rb" "strategy_snapshot.rb" "strategy_seo_metadata.rb" "strategy_detail_cache.rb" "strategy_cache.rb" "strategy/" "static_seo_container.rb" "social_media.rb" "site_monitor.rb" "site_monitor/" "site_maintenance.rb" "session.rb" "seo_data_hack.rb" "security_question.rb" "searchable.rb" "search_title_struct.rb" "search/" "retirement/" "resource.rb" "registered_investment_advisors/" "redirect.rb" "quick_facts.rb" "private_client_groups/" "private_banks/" "press_room.rb" "portfolio_summary/" "planning.rb" "personality.rb" "page_seo.rb" "ofi/" "news_landing.rb" "merrill_lynch_document.rb" "literature_center/" "link.rb" "investors/" "international_location.rb" "international_location/" "international/" "interior_landing/" "interactive_content_object.rb" "institutional_investors/" "insight_article.rb" "insight.rb" "image.rb" "home.rb" "hero.rb" "funds_landing.rb" "funds_landing/" "fund_watch_list.rb" "fund_snapshot.rb" "fund_snapshot/" "fund_personality_profile.rb" "fund_manager_landing.rb" "fund_details/" "fund_detail_landing.rb" "footnote.rb" "feature_map.rb" "family_offices/" "event.rb" "event/" "email_share.rb" "election_growth_data.rb" "election_data.rb" "elasticsearch/" "digital_assets_linkage.rb" "digital_asset.rb" "degree.rb" "data_services/" "daengine/" "conversation_column.rb" "conversation.rb" "content_folder.rb" "content.rb" "contact_us_form.rb" "contact_us.rb" "concerns/" "common/" "closed_fund_snapshot.rb" "bank_trusts/" "article.rb" "article/" "alerts/" "advisors/" "accolade.rb" "accent_term_label.rb" "../" "./")
+
+ ("/Users/90053/dev/plan-admin/" (22452 39270 0 0) "vendor/" "tmp/" "spec/" "shared/" "README.rdoc" "Rakefile" "public/" "log/" "lib/" "Gemfile.lock" "Gemfile" "db/" "config.ru" "config/" "Capfile" "bin/" "app/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/90053/dev/plan-admin/config/settings/" (22452 38984 0 0) "test.yml" "qa.yml" "prod_staging_ny.yml" "prod_staging.yml" "prod_ny.yml" "prod.yml" "local.yml" "dev.yml" "../" "./")
+
+ ("/Users/90053/dev/investors/app/controllers/advisors/funds/" (22422 31387 0 0) "morningstar_hypothetical_controller.rb" "morningstar_highlights_controller.rb" "morningstar_comparison_controller.rb" "landing_controller.rb" "historical_prices_controller.rb" "funds_controller.rb" "fund_watch_lists_controller.rb" "documents_controller.rb" "distributions_controller.rb" "base_controller.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/assets/javascripts/_new/modules/open/" (22451 24096 0 0) "remembered_open_state.js" "opener.js" "openable.js" "open_toggle.js" "open-history.js" "load-on-open.js" "dropdownable.js" "dropdown_closer.js" "closer.js" "campaign_ad.js" "../" "./")
+
+ ("/Users/90053/dev/investors/app/views/application/" (22451 24096 0 0) "ui_components/" "spoofing/" "area_maintenance.html.haml" "_spoof_header.html.haml" "_small_menu_search.html.haml" "_small_header_navigation_list.html.haml" "_small_hamburger.html.haml" "_side_feedback_button.html.haml" "_search_overlay.html.haml" "_search_launcher.html.haml" "_privacy_and_security.haml" "_modals.html.haml" "_meta_tags.html.haml" "_messages.html.haml" "_logo_small.html.haml" "_logo.html.haml" "_login_form.html.haml" "_location_audience_channel_selector.html.haml" "_link_to_full_site.html.haml" "_header_secondary_nav.html.haml" "_header_primary_nav.html.haml" "_header.html.haml" "_head.html.haml" "_footer.html.haml" "_edit_password_and_questions.html.haml" "_edit_password_and_questions.html+phone.haml" "_consultants_map2.html.haml" "_consultants_map.html.haml" "_channel_selector.html.haml" "_base_errors.html.haml" "_back_to_top.html.haml" "_authentication_action.html.haml" "_area_maintenance.html.haml" "../" "./")
+
+ ("/Users/90053/dev/investors/app/decorators/common/" (22450 19437 0 0) "seo_decoratable.rb" "retail_distribution_decoratable.rb" "phone_number_decoratable.rb" "meta_only_decoratable.rb" "json_decoratable.rb" "images_decoratable.rb" "fund_footnotes_decoratable.rb" "footnotes_decoratable.rb" "event_display_decoratable.rb" "../" "./")
+
+ ("/usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/" (22331 13164 0 0) "version_option.rb" "version.rb" "validator.rb" "util.rb" "util/" "user_interaction.rb" "uri_formatter.rb" "uninstaller.rb" "text.rb" "test_utilities.rb" "test_case.rb" "syck_hack.rb" "stub_specification.rb" "ssl_certs/" "specification.rb" "spec_fetcher.rb" "source_specific_file.rb" "source_local.rb" "source_list.rb" "source.rb" "source/" "server.rb" "security.rb" "security/" "resolver.rb" "resolver/" "requirement.rb" "request_set.rb" "request_set/" "request.rb" "request/" "remote_fetcher.rb" "rdoc.rb" "psych_tree.rb" "psych_additions.rb" "platform.rb" "path_support.rb" "package_task.rb" "package.rb" "package/" "name_tuple.rb" "mock_gem_ui.rb" "local_remote_options.rb" "installer_test_case.rb" "installer.rb" "install_update_options.rb" "install_message.rb" "install_default_message.rb" "indexer.rb" "gemcutter_utilities.rb" "gem_runner.rb" "ext.rb" "ext/" "exceptions.rb" "errors.rb" "doctor.rb" "deprecate.rb" "dependency_list.rb" "dependency_installer.rb" "dependency.rb" "defaults.rb" "core_ext/" "config_file.rb" "compatibility.rb" "commands/" "command_manager.rb" "command.rb" "basic_specification.rb" "available_set.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/lib/ofi/" (22451 27336 0 0) "warden.rb" "warden/" "sins_to_haunt_us/" "services/" "scope_defs.rb" "routing.rb" "routing/" "request.rb" "middleware.rb" "middleware/" "errors_controller_resolver.rb" "domain_abstraction.rb" "device_experience.rb" "device_experience/" "constraints/" "blacklist.rb" "blacklist/" "authorization/" "application_scope.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/views/unknown/" (22450 19437 0 0) "_wealth_management_body.html.haml" "_sidebar_footer.html.haml" "_locale_trigger.html.haml" "_locale_selector.html.haml" "_hero_featured_article_preview.html.haml" "_hero_featured_article_body.html.haml" "_audience_trigger.html.haml" "_audience_body.html.haml" "../" "./")
+
+ ("/Users/90053/dev/investors/app/decorators/interior_landing/" (22450 19437 0 0) "strategy_detail_page_decorator.rb" "section_uhnw_insights_layout1_decorator.rb" "section_theme_layout5_decorator.rb" "section_theme_layout4_decorator.rb" "section_theme_layout3_decorator.rb" "section_theme_layout2_decorator.rb" "section_theme_layout1_decorator.rb" "section_tab_layout5_decorator.rb" "section_tab_layout3_decorator.rb" "section_tab_layout2_decorator.rb" "section_tab_layout1_decorator.rb" "section_strategy_investment_team_members_decorator.rb" "section_strategy_facts_and_charts_layout_decorator.rb" "section_strategy_available_vehicles_layout_decorator.rb" "section_ria_contact_cards_layout_decorator.rb" "section_private_client_contact_cards_layout_decorator.rb" "section_private_bank_homepage_contact_cards_layout_decorator.rb" "section_private_bank_capabilities_cards_layout_decorator.rb" "section_layout9_decorator.rb" "section_layout8_decorator.rb" "section_layout7_decorator.rb" "section_layout6_decorator.rb" "section_layout5_decorator.rb" "section_layout4_decorator.rb" "section_layout3_decorator.rb" "section_layout2_decorator.rb" "section_layout21_decorator.rb" "section_layout20_decorator.rb" "section_layout1_decorator.rb" "section_layout19_decorator.rb" "section_layout18_decorator.rb" "section_layout17_decorator.rb" "section_layout16_decorator.rb" "section_layout15_decorator.rb" "section_layout14_decorator.rb" "section_layout13_decorator.rb" "section_layout12_decorator.rb" "section_layout11_decorator.rb" "section_layout10_decorator.rb" "section_latest_insights_layout_decorator.rb" "section_collections_layout_decorator.rb" "section_bank_trust_map_cards_layout_decorator.rb" "resources/" "page_section_decorator.rb" "page_decorator.rb" "page_decoratable.rb" "hero_strategy_detail_decorator.rb" "hero_section_decorator.rb" "hero_layout7_decorator.rb" "hero_layout5_decorator.rb" "hero_layout4_decorator.rb" "hero_layout3_decorator.rb" "hero_layout2_decorator.rb" "hero_layout1_decorator.rb" "hero_institutional_strategy_detail_decorator.rb" "hero_consultants_decorator.rb" "consultant_cards_decoratable.rb" "call_to_action_decorator.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/lib/ofi/middleware/" (22450 19437 0 0) "visitor_type_identification.rb" "visitor_identification.rb" "vanity_redirection.rb" "user_identification.rb" "post_data_logger.rb" "internal_user_cookie.rb" "heartbeat_identification.rb" "external_monitor_identification.rb" "device_detection.rb" "cookie_manager.rb" "base.rb" "app_identification.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/lib/ofi/services/" (22450 19410 0 0) "vanity_redirection_target.rb" "vanity_redirection_macros.rb" "vanity_redirection_container.rb" "vanity_redirection.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/fund_snapshot/" (22450 19437 0 0) "taxes.rb" "taxes/" "quick_fact.rb" "price.rb" "performance.rb" "performance/" "name.rb" "morningstar.rb" "investment.rb" "expense_ratio.rb" "capital_gains.rb" "capital_gains/" "../" "./")
+
+ ("/Users/90053/dev/investors/app/views/ofi/scaffolding/strategies/" (22450 19410 0 0) "index.html.haml" "_hero_overlay.html.haml" "../" "./")
+
+ ("/Users/90053/dev/investors/app/decorators/funds/fund_details/" (22450 19410 0 0) "yield_decorator.rb" "secondary_holding_decorator.rb" "primary_holding_decorator.rb" "portfolio_holding_decorator.rb" "fund_manager_decorator.rb" "fund_class_decorator.rb" "composite_fund_decorator.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/views/international/funds/funds/" (22450 19437 0 0) "show.html.haml" "index.html.haml" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/daengine/" (22450 19437 0 0) "digital_asset.rb" "content_folder.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/db/" (22450 19437 0 0) "seeds.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/decorators/international_location/" (22450 19437 0 0) "sub_channel_decorator.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/views/application/ui_components/" (22450 19437 0 0) "helpers/" "_view_all_link.html.haml" "_tooltip_wrapper.html.haml" "_tooltip_wrapper.html+phone.haml" "_title_color_chip.html.haml" "_sparkline.html.haml" "_solution_container.html.haml" "_share_it.html.haml" "_section_uhnw_insights_layout_1.html.haml" "_section_theme_layout_5.html.haml" "_section_theme_layout_5.html+phone.haml" "_section_theme_layout_4.html.haml" "_section_theme_layout_4.html+phone.haml" "_section_theme_layout_3.html.haml" "_section_theme_layout_3.html+phone.haml" "_section_theme_layout_2.html.haml" "_section_theme_layout_2.html+phone.haml" "_section_theme_layout_1.html.haml" "_section_theme_layout_1.html+phone.haml" "_section_strategy_risk_assessment_layout.html.haml" "_section_strategy_investment_team_members.html.haml" "_section_strategy_investment_approach_layout.html.haml" "_section_strategy_facts_and_charts_layout.html.haml" "_section_strategy_available_vehicles_layout.html.haml" "_section_ria_contact_cards_layout.html.haml" "_section_private_client_contact_cards_layout.html.haml" "_section_private_bank_homepage_contact_cards_layout.html.haml" "_section_private_bank_capabilities_cards_layout.html.haml" "_section_presidential_election_growth_layout.html.haml" "_section_layout_table_links.html.haml" "_section_layout_table_digital_assets.html.haml" "_section_layout_stacked_resource_strategy_detail_page.html.haml" "_section_layout_stacked_resource_fund.html.haml" "_section_layout_stacked_resource_event.html.haml" "_section_layout_stacked_resource_default.html.haml" "_section_layout_stacked_resource.html.haml" "_section_layout_resource_video_container.html.haml" "_section_layout_resource_theme.html.haml" "_section_layout_resource_text.html.haml" "_section_layout_resource_tab_section_tab_layout_5.html.haml" "_section_layout_resource_tab_section_tab_layout_3.html.haml" "_section_layout_resource_tab_section_tab_layout_2.html.haml" "_section_layout_resource_tab_section_tab_layout_1.html.haml" "_section_layout_resource_tab_section.html.haml" "_section_layout_resource_strategy_link.html.haml" "_section_layout_resource_strategy_fund.html.haml" "_section_layout_resource_strategy_detail_page.html.haml" "_section_layout_resource_strategy.html.haml" "_section_layout_resource_sparkline.html.haml" "_section_layout_resource_quote.html.haml" "_section_layout_resource_personality.html.haml" "_section_layout_resource_main_video.html.haml" "_section_layout_resource_link.html.haml" "_section_layout_resource_interactive_content_object.html.haml" "_section_layout_resource_fund.html.haml" "_section_layout_resource_event.html.haml" "_section_layout_resource_digital_asset.html.haml" "_section_layout_resource_article.html.haml" "_section_layout_resource.html.haml" "_section_layout_9.html.haml" "_section_layout_8.html.haml" "_section_layout_7.html.haml" "_section_layout_6.html.haml" "_section_layout_5.html.haml" "_section_layout_4.html.haml" "_section_layout_3.html.haml" "_section_layout_21.html.haml" "_section_layout_20.html.haml" "_section_layout_2.html.haml" "_section_layout_19.html.haml" "_section_layout_18.html.haml" "_section_layout_17.html.haml" "_section_layout_16.html.haml" "_section_layout_15.html.haml" "_section_layout_14.html.haml" "_section_layout_13.html.haml" "_section_layout_12.html.haml" "_section_layout_11.html.haml" "_section_layout_11.html+phone.haml" "_section_layout_10.html.haml" "_section_layout_1.html.haml" "_section_latest_insights_layout.html.haml" "_section_interactive_presidential_election_layout.html.haml" "_section_family_office_selector_layout.html.haml" "_section_container_wrapper.html.haml" "_section_collections_layout.html.haml" "_section_capabilities_layout_1.html.haml" "_section_bank_trust_map_cards_layout.html.haml" "_search_box.html.haml" "_progress_bar.html.haml" "_product_tile.html.haml" "_pin_delivery_options.html.haml" "_personality_card.html.haml" "_personality.html.haml" "_pdf_download.html.haml" "_page_title.html.haml" "_modal_wrapper.html.haml" "_modal_link.html.haml" "_menu_list.html.haml" "_jump_pagination.html.haml" "_interior_landing_hero.html.haml" "_info_block_wrapper.html.haml" "_iframe.html.haml" "_icon_block_wrapper.html.haml" "_highlights.html.haml" "_hide_show_wrapper.html.haml" "_hide_show_table_wrapper.html.haml" "_hero_strategy_detail.html.haml" "_hero_login.html.haml" "_hero_layout_7.html.haml" "_hero_layout_6.html.haml" "_hero_layout_5.html.haml" "_hero_layout_5.html+phone.haml" "_hero_layout_4.html.haml" "_hero_layout_3.html.haml" "_hero_layout_2.html.haml" "_hero_layout_1.html.haml" "_hero_institutional_strategy_detail.html.haml" "_hero_consultants.html.haml" "_hero_block_wrapper.html.haml" "_fund_tile.html.haml" "_featured_event_tile.html.haml" "_election_timeline.html.haml" "_election_map.html.haml" "_election_event_description.html.haml" "_election_delegates.html.haml" "_election_days_until.html.haml" "_data_list.html.haml" "_cross_channel_login_form.html.haml" "_core_tab_triggers.html.haml" "_core_tab_panels.html.haml" "_contact_us_block_wrapper.html.haml" "_consultant_tile.html.haml" "_consultant_contact.html.haml" "_component_container_wrapper.html.haml" "_client_list.html.haml" "_cancel_modal.html.haml" "_audio_player.html.haml" "_article_summary.html.haml" "_article_footnotes.html.haml" "_article_block_wrapper.html.haml" "_article_block.html.haml" "_article_block.html+phone.haml" "_alert_box_wrapper.html.haml" "_alert_box.html.haml" "_action_link_list.html.haml" "../" "./")
+
+ ("/Users/90053/dev/investors/app/decorators/funds/" (22451 24096 0 0) "va_share_class_mapper.rb" "morningstar_meta_only_decorator.rb" "landing_meta_only_decorator.rb" "historical_prices_meta_only_decorator.rb" "funds_watch_list_filter.rb" "funds_replace_decorator.rb" "funds_print_decorator.rb" "funds_morningstar_landing_decorator.rb" "funds_morningstar_filter.rb" "funds_landing_filter.rb" "funds_landing_decorator.rb" "funds_landing_decoratable.rb" "funds_historical_prices_landing_decorator.rb" "funds_historical_prices_filter.rb" "funds_filter.rb" "funds_documents_filter.rb" "funds_distributions_filter.rb" "fund_watch_list_decorator.rb" "fund_watch_list_decoratable.rb" "fund_tile_decorator.rb" "fund_meta_only_decorator.rb" "fund_list_decorator.rb" "fund_document_decorator.rb" "fund_details/" "fund_decoratable.rb" "fund_api_decoratable.rb" "documents_meta_only_decorator.rb" "distributions_meta_only_decorator.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/decorators/" (22451 24096 0 0) "video_decorator.rb" "uhnw/" "ucit_fund_snapshot_decorator.rb" "transactions/" "team_decorator.rb" "team_decoratable.rb" "strategy_snapshot_decorator.rb" "strategy/" "seo_data_hack_decorator.rb" "search/" "retirement/" "resource_decorator.rb" "quick_facts_decorator.rb" "profile/" "product_decoratable.rb" "portfolio_summary/" "planning_decorator.rb" "personality_decorator.rb" "personality_decoratable.rb" "ofi/" "meta_only_decorator.rb" "literature_center/" "link_decorator.rb" "international_location_decorator.rb" "international_location/" "international/" "interior_landing_page_decorator.rb" "interior_landing/" "institutional/" "insight_decorator.rb" "insight_article_decorator.rb" "home_decorator.rb" "holding_decorator.rb" "historical_price_decorator.rb" "hero_decorator.rb" "funds/" "fund_snapshot_decorator.rb" "fund_manager_landing_decorator.rb" "faq_decorator.rb" "faq/" "event_decorator.rb" "event/" "email_share_decorator.rb" "document_decoratable.rb" "digital_asset_decorator.rb" "degree_decorator.rb" "data_services/" "common/" "channel_selector_service_decorator.rb" "cdsc_calculator_decorator.rb" "bene/" "bank_account_decorator.rb" "auto_txns/" "article_decorator.rb" "article/" "api/" "advisors/" "accolade_decorator.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/views/international/base/" (22451 39094 0 0) "_terms_and_conditions_modal.html.haml" "_header_primary_nav.html.haml" "_footer.html.haml" "_channel_selector_modal.html.haml" "../" "./")
+
+ ("/Users/90053/dev/investors/app/decorators/data_services/" (22451 24096 0 0) "video_data_decorator.rb" "ucit_fund_snapshot_data_decorator.rb" "tey_data_decorator.rb" "tax_info_data_decorator.rb" "tax_center_data_decorator.rb" "strategy_detail_page_data_decorator.rb" "strategy_data_decorator.rb" "slug_landing_page_data_decorator.rb" "slug_data_decorator.rb" "seo_sitemap_decoratable.rb" "searchable_data_decorator.rb" "professional_development_data_decorator.rb" "product_page_data_decorator.rb" "press_room_data_decorator.rb" "planning_data_decorator.rb" "personality_data_decorator.rb" "news_data_decorator.rb" "morningstar_data_decorator.rb" "market_outlook_decorator.rb" "literature_center_data_decorator.rb" "landing_page_data_decorator.rb" "interior_landing_page_data_decorator.rb" "insights_landing_data_decorator.rb" "insight_data_decorator.rb" "image_data_decorator.rb" "home_data_decorator.rb" "fund_snapshot_data_decorator.rb" "fund_manager_data_decorator.rb" "faq_data_decorator.rb" "executive_profile_data_decorator.rb" "event_data_decorator.rb" "edist_reroute_ugliness.rb" "digital_asset_data_decorator.rb" "contact_us_data_decorator.rb" "article_data_decorator.rb" "about_us_data_decorator.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/services/sitemaps/" (22451 27336 0 0) "xml_sitemap.rb" "video_sitemap.rb" "sitemap_data.rb" "page_sitemap.rb" "index_sitemap.rb" "image_sitemap.rb" "html_sitemap.rb" "../" "./")
+
+ ("/Users/90053/dev/plan-admin/config/" (22452 38984 0 0) "web.xml" "warble.rb" "settings.yml" "settings/" "secrets.yml" "routes.rb" "mongoid.yml" "locales/" "initializers/" "environments/" "environment.rb" "deploy.rb" "deploy/" "databases/" "boot.rb" "application.rb" "../" "./")
+
+ ("/Users/90053/dev/" (22452 38983 0 0) "ws-edist/" "testapp/" "standalone-cucumber/" "solr/" "saturn/" "sandbox/" "ruby-batch-fork/" "ruby-batch/" "repos/" "plan-admin/" "pb_client_wrapper/" "oplog_watcher/" "notes/" "mongo/" "learn-chef/" "investors-svn/" "investors/" "gems/" "event_manager/" "dotfiles/" "cwmc/" "coco-svn/" "coco/" "chef-fork/" "chef/" "advisors-svn/" "advisors/" "account_information_client_trunk/" "account_information_client/" ".DS_Store" "../" "./")
+
+ ("/Users/90053/dev/investors/app/controllers/institutional_investors/" (22450 19410 0 0) "themes_controller.rb" "strategies_controller.rb" "sitemaps_controller.rb" "search_controller.rb" "press_rooms_controller.rb" "personality_controller.rb" "interior_landing_controller.rb" "insights_controller.rb" "home_controller.rb" "fund_managers_controller.rb" "events_controller.rb" "errors_controller.rb" "digital_assets_controller.rb" "contact_us_controller.rb" "consultant_controller.rb" "base_controller.rb" "articles_controller.rb" "about_us_controller.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/services/seo/" (22451 29369 0 0) "metatag_service.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/controllers/concerns/ofi/scaffolding/funds/" (22450 19437 0 0) "morningstar_hypothetical.rb" "morningstar_highlights.rb" "morningstar_comparison.rb" "landing.rb" "historical_prices.rb" "funds.rb" "fund_watch_lists.rb" "documents.rb" "distributions.rb" "base.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/controllers/investors/funds/" (22422 31387 0 0) "morningstar_highlights_controller.rb" "landing_controller.rb" "historical_prices_controller.rb" "funds_controller.rb" "fund_watch_lists_controller.rb" "documents_controller.rb" "distributions_controller.rb" "base_controller.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/controllers/investors/" (22450 19410 0 0) "transactions/" "tey_calculator_controller.rb" "sitemaps_controller.rb" "search_controller.rb" "search_autosuggest_controller.rb" "retirement/" "restore_access_controller.rb" "press_rooms_controller.rb" "portfolio_summary/" "planning_controller.rb" "personality_controller.rb" "pages_controller.rb" "outlooks_controller.rb" "my_profile/" "mobile_desktop_preferences_controller.rb" "loans_controller.rb" "literature_center/" "interior_landing_controller.rb" "insights_controller.rb" "home_controller.rb" "historical_prices_controller.rb" "funds/" "fund_managers_controller.rb" "faq_controller.rb" "external_controller.rb" "errors_controller.rb" "email_shares_controller.rb" "digital_assets_controller.rb" "contact_us_controller.rb" "calculators_controller.rb" "cache_controller.rb" "base_controller.rb" "auth/" "articles_controller.rb" "accounts/" "../" "./")
+
+ ("/Users/90053/dev/investors/app/controllers/ofi/" (22450 19437 0 0) "unsupported_browser_controller.rb" "tealeaf_controller.rb" "styleguide_controller.rb" "sitemaps_controller.rb" "oppenheimerfunds/" "ofiglobal/" "monitors/" "maintenance_controller.rb" "developer/" "dcio_consultant_controller.rb" "base_controller.rb" "auth/" "admin/" "../" "./")
+
+ ("/Users/90053/dev/investors/app/controllers/concerns/ofi/" (22451 24096 0 0) "zipped_resources.rb" "view_path_loader.rb" "translation_helpers.rb" "strategy_helpers.rb" "spoofing_helpers.rb" "site_preference/" "site_maintenance.rb" "session_services.rb" "seo_metatag_management.rb" "scaffolding/" "portfolio_summary/" "param_sanitizer.rb" "internal_users.rb" "interior_landing_page_helpers.rb" "home_page_redirect_management.rb" "dynamic_layout_switcher.rb" "distribution_channel_management.rb" "device_detection_helpers.rb" "developer/" "channel_selection.rb" "audiences.rb" "analytics.rb" "account_information_prefetch.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/international/" (22451 24096 0 0) "sitemap/" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/international/sitemap/" (22451 24096 0 0) "video_data.rb" "page_data.rb" "image_data.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/data_services/indexing/" (22450 19410 0 0) "tey_index.rb" "strategy_detail_index.rb" "searchable_index.rb" "product_index.rb" "personality_index.rb" "morningstar_index.rb" "landing_index.rb" "investor_faq_index.rb" "fund_snapshot_index.rb" "faq_index.rb" "executive_profile_index.rb" "event_index.rb" "digital_asset_index.rb" "autosuggest_landing_index.rb" "article_index.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/advisors/sitemap/" (22450 19410 0 0) "video_data.rb" "page_data.rb" "image_data.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/advisors/" (22422 31387 0 0) "user_profile.rb" "user.rb" "sitemap/" "presentation.rb" "portfolio_builder/" "home.rb" "holdings.rb" "holding.rb" "forgot_password.rb" "firm.rb" "email_subscription.rb" "dual_factor_exception.rb" "contact_us_form.rb" "contact_info.rb" "consultants/" "consultant_form.rb" "clients/" "client_contact_info.rb" "book.rb" "account_transaction.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/institutional_investors/sitemap/" (22450 19410 0 0) "video_data.rb" "page_data.rb" "image_data.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/institutional_investors/" (22422 31387 0 0) "sitemap/" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/uhnw/sitemap/" (22450 19410 0 0) "page_data.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/uhnw/" (22422 31387 0 0) "sitemap/" "insight.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/private_banks/" (22422 31387 0 0) "sitemap/" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/private_banks/sitemap/" (22422 31387 0 0) "video_data.rb" "page_data.rb" "image_data.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/data_services/sitemap/" (22422 31387 0 0) "video_data.rb" "page_data.rb" "index_data.rb" "image_data.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/data_services/" (22450 19410 0 0) "sitemap/" "interior_landing_page_data.rb" "indexing/" "index.rb" "continuance.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/controllers/advisors/" (22450 19410 0 0) "wealth_conversations_controller.rb" "tsr_admin_controller.rb" "themes_controller.rb" "tey_calculator_controller.rb" "sitemaps_controller.rb" "search_controller.rb" "search_autosuggest_controller.rb" "profile/" "professional_development_landing_controller.rb" "professional_development_controller.rb" "press_rooms_controller.rb" "portfolio_builder/" "planning_controller.rb" "personality_controller.rb" "outlooks_controller.rb" "my_book/" "morningstar_controller.rb" "mobile_desktop_preferences_controller.rb" "merrill_lynch_controller.rb" "literature_center/" "interior_landing_controller.rb" "insights_controller.rb" "home_controller.rb" "historical_prices_controller.rb" "funds/" "fund_managers_controller.rb" "faq_controller.rb" "events_controller.rb" "errors_controller.rb" "email_shares_controller.rb" "dual_factor_exception_controller.rb" "digital_assets_controller.rb" "contact_us_controller.rb" "consultant_controller.rb" "cache_controller.rb" "base_controller.rb" "auth/" "articles_controller.rb" "api/" "../" "./")
+
+ ("/Users/90053/dev/investors/config/routes/" (22450 19437 0 0) "uhnw.routes.rb" "styleguide.routes.rb" "site_monitor.routes.rb" "myofi.routes.rb" "investor.routes.rb" "international.routes.rb" "institutional.routes.rb" "developer.routes.rb" "daengine.routes.rb" "cross_channel.routes.rb" "advisor.routes.rb" "admin.routes.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/services/" (22450 19437 0 0) "transactions/" "token_service.rb" "team_service.rb" "sitemaps/" "service_model.rb" "seo/" "security_question_service.rb" "retirement/" "restore_access.rb" "remembered_state_service.rb" "profile_data_service.rb" "profile/" "products_service.rb" "portfolio_builder_service.rb" "persisted_state_service.rb" "ofi/" "money_market_history_service.rb" "literature_center/" "investors/" "interior_landing/" "income_dividends_service.rb" "holdings_breakdowns_service.rb" "historical_fund_price_service.rb" "fund_details_service.rb" "fund_aum_service.rb" "forgot_user_id.rb" "forgot_password.rb" "facades/" "excluded_funds_service.rb" "cumulative_returns_service.rb" "cost_basis_service.rb" "contact_us.rb" "channel_selector_service.rb" "cdsc_calculator_service.rb" "bene/" "bank_account.rb" "auto_txns/" "advisors/" "../" "./")
+
+ ("/Users/90053/dev/investors/app/controllers/concerns/" (22422 31387 0 0) "ofi/" "form_token.rb" "authenticated.rb" "advisors/" ".keep" "../" "./")
+
+ ("/Users/90053/dev/investors/app/controllers/" (22422 31387 0 0) "uhnw/" "ofi/" "myofi/" "investors/" "international/" "institutional_investors/" "daengine/" "concerns/" "application_controller.rb" "advisors/" "../" "./")
+
+ ("/Users/90053/dev/investors/app/views/international/" (22450 19437 0 0) "funds/" "errors/" "contact_us/" "base/" "audiences/" "about_us/" "../" "./")
+
+ ("/Users/90053/dev/investors/app/views/" (22450 19437 0 0) "unknown/" "uhnw/" "shared/" "ofi/" "myofi/" "layouts/" "kaminari/" "investors_mail/" "investors/" "international/" "institutional_investors/" "daengine/" "application/" "advisors_mail/" "advisors/" "../" "./")
+
+ ("/Users/90053/dev/investors/app/" (22422 31387 0 0) "views/" "value_objects/" "validators/" "ui_components/" "services/" "policies/" "models/" "mixins/" "mailers/" "inputs/" "helpers/" "forms/" "factories/" "decorators/" "controllers/" "connectors/" "blacklists/" "assets/" "../" "./")
+
+ ("/Users/90053/dev/investors/" (22450 19459 0 0) "vendor/" "tmp/" "spec/" "shared/" "script/" "README.rdoc" "Rakefile" "public/" "log/" "lib/" "Guardfile" "Gemfile.lock" "Gemfile" "db/" "cucumber/" "config.ru" "config/" "Capfile" "bin/" "app/" ".sass-lint.yml" ".ruby-version" ".ruby-gemset" ".rubocop_todo.yml" ".rubocop.yml" ".rspec" ".projectile" ".gitignore" ".git/" ".eslintrc.json" "../" "./")
+
+ ("/Users/90053/dev/coco/app/controllers/personalities/" (22413 37797 0 0) "thought_leaders_controller.rb" "research_analysts_controller.rb" "portfolio_managers_controller.rb" "institutional_consultants_controller.rb" "deleted_personalities_controller.rb" "consultants_controller.rb" "advisor_consultants_controller.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/decorators/institutional/" (22450 16434 0 0) "consultant_decorator.rb" "consultant_decoratable.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/models/concerns/institutional/" (22422 31387 0 0) "consultant.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/views/layouts/" (22449 54030 0 0) "uhnw.html.haml" "uhnw.html+phone.haml" "print.html.haml" "ofi/" "myofi.html.haml" "multi_step_process.haml" "merrill_lynch.html.haml" "marketing.html.haml" "marketing.html+phone.haml" "mailer.html.haml" "digital_asset.html.haml" "application.html.haml" "application.html+phone.haml" "../" "./")
+
+ ("/Users/90053/dev/investors/app/ui_components/fixtures/" (22450 16434 0 0) "view_all_link.yml" "tooltip.yml" "title_color_chip.yml" "solution_container.yml" "smart-select.yml" "share_it.yml" "section_theme_layout_5.yml" "section_theme_layout_4.yml" "section_theme_layout_3.yml" "section_theme_layout_2.yml" "section_theme_layout_1.yml" "section_ria_contact_cards_layout.yml" "section_private_bank_homepage_contact_cards_layout.yml" "section_private_bank_capabilities_cards_layout.yml" "section_layout_table_links.yml" "section_layout_table_digital_assets.yml" "section_layout_solutions.yml" "section_layout_private_client_group.yml" "section_layout_private_bank_home.yml" "section_layout_private_bank_capabilities.yml" "section_layout_consultant_channel_selector.yml" "section_layout_9.yml" "section_layout_8.yml" "section_layout_7.yml" "section_layout_6.yml" "section_layout_5.yml" "section_layout_4.yml" "section_layout_3.yml" "section_layout_21.yml" "section_layout_2.yml" "section_layout_16.yml" "section_layout_15.yml" "section_layout_14.yml" "section_layout_13.yml" "section_layout_12.yml" "section_layout_11.yml" "section_layout_10.yml" "section_layout_1.yml" "section_container.yml" "section_capabilities_layout_1.yml" "section_bank_trust_map_cards_layout.yml" "search_box.yml" "sample.yml" "progress_bar.yml" "personality_card.yml" "personality.yml" "pdf_download.yml" "page_title_collection.yml" "page_title.yml" "modal_link.yml" "menu_list.yml" "jump_pagination.yml" "info_block.yml" "iframe.yml" "icon_block.yml" "highlights.yml" "hide_show_table.yml" "hide_show.yml" "hero_layout_7.yml" "hero_layout_6.yml" "hero_layout_5.yml" "hero_layout_4.yml" "hero_layout_3.yml" "hero_layout_2.yml" "hero_layout_1.yml" "hero_consultants.yml" "hero_block.yml" "fund_tile.yml" "event_tile.yml" "contact_us_block.yml" "consultant_tile.yml" "consultant_contact.yml" "component_container.yml" "client_list.yml" "cascading_select.yml" "cancel_modal.yml" "article_summary.yml" "article_block.yml" "alert_box.yml" "action_link_list.yml" "../" "./")
+
+ ("/Users/90053/dev/coco/app/views/personalities/" (22431 47891 0 0) "thought_leaders/" "show.html.erb" "research_analysts/" "portfolio_managers/" "personality_images.js.erb" "new.html.erb" "institutional_consultants/" "index.html.haml" "index.html.erb" "edit.html.erb" "deleted_personalities/" "delete.html.erb" "consultants/" "advisor_consultants/" "_social.html.haml" "_region_firm_entries.html.haml" "_personality_image.erb" "_layout_media.html.haml" "_form_section.html.haml" "_form.html.haml" "_featured_articles.html.haml" "_enterprise_data.html.haml" "_deprecated_layout_media.html.erb" "_bio_accolades_article.html.erb" "_bio_accolades.html.haml" "_article_selected.html.erb" "../" "./")
+
+ ("/Users/90053/dev/coco/db/seeds/" (22433 4403 0 0) "theme.rb" "quarterly_review_cycle.rb" "interior_landing_page.rb" "eyebrow.rb" "event_type.rb" "distribution_channel.rb" "capabilities_landing_page.rb" "_vanity_url_map.rb" "_territory.rb" "_section_layout.rb" "_institutional_firm_type.rb" "_hero_layout.rb" "_ceo_advisor_institute_segment.rb" "../" "./")
+
+ ("/Users/90053/dev/coco/db/migrate/" (22433 4367 0 0) "20160802212953_add_international_institutional_firm_type.rb" "20160705224605_add_full_screen_hero.rb" "20160208145838_add_institutional_strategies_page_sections.rb" "20160122191414_add_presidential_election_layout.rb" "20160112015742_add_video_eyebrow.rb" "20151230154626_remove_uhnw_hero.rb" "20151229194343_remove_uhnw_insight_layout.rb" "20151229001817_add_eye_brow_for_election.rb" "20151228212742_add_eye_brow_for_teams_module.rb" "20151215171856_remove_pdlayout.rb" "20151201163720_update_layouts.rb" "20151105171022_add_prof_dev_collection_layout.rb" "20151020161351_update_ref.rb" "20150916164733_add_strategy_layouts.rb" "../" "./")
+
+ ("/Users/90053/dev/notes/" (22449 59817 0 0) "urls.txt" "upgrading_from_rails_2_to_rails_3.txt" "sublime_text.md" "solr.txt" "potention_security_list.txt" "oracle_notes.txt" "mynotes.txt" "mongo_queries.js" "hotketys.txt" "emacs_notes.txt" "elasticsearch.md" "debug_factory_girl.rb" "debug_emacs.txt" "../" "./")
+
+ ("/Users/90053/dev/investors/app/decorators/literature_center/" (22422 31387 0 0) "tab_decorator.rb" "meta_only_decorator.rb" "fund_decorator.rb" "folder_decorator.rb" "cart_item_decorator.rb" "cart_decorator.rb" "base_decorator.rb" "../" "./")
+
+ ("/Users/90053/dev/investors/app/controllers/concerns/ofi/scaffolding/literature_center/" (22422 31387 0 0) "orders.rb" "home.rb" "../" "./")
+
+ ("/Users/90053/Documents/" (22406 43255 0 0) "timesheets/" "test_users/" "SouthParkAvatar.jpeg" "search-presentation/" "Screen Shot 2015-02-02 at 9.11.01 AM.png" "response.pdf" "RDC Connections/" "notes.txt" "Microsoft User Data/" "Medical-release-form.pdf" "Medical-release-form-signed.pdf" "Medical-release-form-signed-copy.pdf" "Medical-release-form-copy.pdf" "Medical-release-form-copy-copy.pdf" "Manual Timesheets.xlsx" "license.dash-license" "ios/" "investors_mobile.sublime-workspace" "investors_mobile.sublime-project" "iChats" "Developer Workflow – Moving from SVN to Git.docx" "dev-notes/" "Caching Strategies.docx" "avatars/" "24_08_2015_Client Portfolio_MVP.pdf" "09_06_2015_Client Portfolio.pdf" ".localized" ".DS_Store" "../" "./")
 
  ("/Users/90053/dev/investors/app/views/ofi/scaffolding/funds/funds/retail/fund_details/" (22435 31277 0 0) "_yields.html.haml" "_total_assets.html.haml" "_tertiary_holding_section.html.haml" "_tertiary_breakdown.html.haml" "_tax.html.haml" "_standardized_performance.html.haml" "_sparkline_phone.html.haml" "_sparkline.html.haml" "_share_price.html.haml" "_secondary_holding_tile.html.haml" "_secondary_holding_groups.html.haml" "_secondary_breakdown.html.haml" "_risk_measurements.html.haml" "_primary_holding_tile.html.haml" "_primary_holding_details.html.haml" "_primary_breakdown.html.haml" "_portfolio_statistics.html.haml" "_net_flow_data.html.haml" "_net_flow_data.html+phone.haml" "_morningstar.html.haml" "_money_market_nav_data.html.haml" "_money_market_nav_data.html+phone.haml" "_money_market_history_results.html.haml" "_money_market_history_modal.html.haml" "_money_market_history_accordian.html+phone.haml" "_liquid_assets_data_weekly.html.haml" "_liquid_assets_data_weekly.html+phone.haml" "_liquid_assets_data_daily.html.haml" "_liquid_assets_data_daily.html+phone.haml" "_lipper_rating.html.haml" "_investment_minimum.html.haml" "_income_dividend_chart.html.haml" "_fund_performance_modal.html.haml" "_fund_manager.html.haml" "_fund_documents.html.haml" "_fund_documents.html+phone.haml" "_expense_ratio.html.haml" "_equity_style.html.haml" "_equity_style.html+phone.haml" "_dividend.html.haml" "_distribution_sources.html.haml" "_cumulative_returns_chart.html.haml" "_column_1.html.haml" "_capital_gains_distributions.html.haml" "_capital_gains_distributions.html+phone.haml" "_calendar_year_returns.html.haml" "_calendar_year_returns.html+phone.haml" "_avg_total_returns.html.haml" "_analyst_rating.html.haml" "../" "./")
-
- ("/Users/90053/dev/investors/app/models/" (22436 47760 0 0) "web_activity/" "video_asset.rb" "video.rb" "vanity_url_map.rb" "uhnw_insight_article.rb" "uhnw/" "ucit_fund_snapshot.rb" "tweet.rb" "trending.rb" "transactions/" "topic.rb" "tey_struct.rb" "tey_calculation.rb" "text.rb" "team.rb" "strategy_snapshot.rb" "strategy_seo_metadata.rb" "strategy_detail_cache.rb" "strategy_cache.rb" "strategy/" "static_seo_container.rb" "social_media.rb" "site_monitor.rb" "site_monitor/" "site_maintenance.rb" "session.rb" "seo_data_hack.rb" "security_question.rb" "searchable.rb" "search_title_struct.rb" "search/" "retirement/" "resource.rb" "registered_investment_advisors/" "redirect.rb" "quick_facts.rb" "private_client_groups/" "private_banks/" "press_room.rb" "portfolio_summary/" "planning.rb" "personality.rb" "page_seo.rb" "ofi/" "news_landing.rb" "merrill_lynch_document.rb" "literature_center/" "link.rb" "investors/" "international_location.rb" "international_location/" "interior_landing/" "interactive_content_object.rb" "institutional_investors/" "insight_article.rb" "insight.rb" "image.rb" "home.rb" "hero.rb" "funds_landing.rb" "funds_landing/" "fund_watch_list.rb" "fund_snapshot.rb" "fund_snapshot/" "fund_personality_profile.rb" "fund_manager_landing.rb" "fund_details/" "fund_detail_landing.rb" "footnote.rb" "feature_map.rb" "family_offices/" "event.rb" "event/" "email_share.rb" "election_growth_data.rb" "election_data.rb" "elasticsearch/" "digital_assets_linkage.rb" "digital_asset.rb" "degree.rb" "data_services/" "daengine/" "conversation_column.rb" "conversation.rb" "content_folder.rb" "content.rb" "contact_us_form.rb" "contact_us.rb" "concerns/" "common/" "closed_fund_snapshot.rb" "bank_trusts/" "article.rb" "article/" "alerts/" "advisors/" "accolade.rb" "accent_term_label.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/decorators/funds/fund_details/" (22435 31277 0 0) "yield_decorator.rb" "secondary_holding_decorator.rb" "primary_holding_decorator.rb" "portfolio_holding_decorator.rb" "fund_manager_decorator.rb" "fund_class_decorator.rb" "composite_fund_decorator.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/decorators/funds/" (22435 31277 0 0) "va_share_class_mapper.rb" "morningstar_meta_only_decorator.rb" "landing_meta_only_decorator.rb" "historical_prices_meta_only_decorator.rb" "funds_watch_list_filter.rb" "funds_replace_decorator.rb" "funds_print_decorator.rb" "funds_morningstar_landing_decorator.rb" "funds_morningstar_filter.rb" "funds_landing_filter.rb" "funds_landing_decorator.rb" "funds_landing_decoratable.rb" "funds_historical_prices_landing_decorator.rb" "funds_historical_prices_filter.rb" "funds_filter.rb" "funds_documents_filter.rb" "funds_distributions_filter.rb" "fund_watch_list_decorator.rb" "fund_watch_list_decoratable.rb" "fund_tile_decorator.rb" "fund_meta_only_decorator.rb" "fund_list_decorator.rb" "fund_document_decorator.rb" "fund_details/" "fund_decoratable.rb" "fund_api_decoratable.rb" "documents_meta_only_decorator.rb" "distributions_meta_only_decorator.rb" "../" "./")
 
  ("/Users/90053/dev/investors/app/views/ofi/scaffolding/funds/funds/" (22435 31277 0 0) "show.html.haml" "retail/" "print.html.haml" "../" "./")
 
@@ -1451,8 +1603,6 @@
  ("/Users/90053/dev/investors/app/views/ofi/scaffolding/funds/documents/" (22422 31387 0 0) "index.html.haml" "_quick_facts.html.haml" "_documents.html.haml" "../" "./")
 
  ("/Users/90053/dev/investors/app/views/ofi/scaffolding/funds/" (22422 31387 0 0) "morningstar_hypothetical/" "morningstar_highlights/" "morningstar_comparison/" "landing/" "historical_prices/" "funds/" "fund_watch_lists/" "documents/" "distributions/" "base/" "../" "./")
-
- ("/Users/90053/dev/investors/db/" (22436 47760 0 0) "seeds.rb" "../" "./")
 
  ("/usr/local/rvm/gems/ruby-2.3.1@investor/gems/carmen-1.0.2/" (22333 54987 0 0) "README.md" "MIT-LICENSE" "locale/" "lib/" "iso_data/" "CHANGELOG.md" "../" "./")
 
@@ -1475,148 +1625,6 @@
  ("/Users/90053/dev/coco/app/controllers/" (22431 47891 0 0) "welcome_controller.rb" "video_articles_controller.rb" "vanity_urls_controller.rb" "uhnw_insights_controller.rb" "tweets_controller.rb" "topics_controller.rb" "themes_controller.rb" "text_resource_controller.rb" "tab_sections_controller.rb" "strategy_detail_pages_controller.rb" "strategies_controller.rb" "searchables_controller.rb" "recent_activity_controller.rb" "publish_set_carts_controller.rb" "publish_controller.rb" "professional_development_landing_pages_controller.rb" "personalities_controller.rb" "personalities/" "page_seos_controller.rb" "packaged_conversations_controller.rb" "omniauth_callbacks_controller.rb" "mediapoller_controller.rb" "media_controller.rb" "links_controller.rb" "linkedin_controller.rb" "landing_pages_controller.rb" "international_locations_controller.rb" "interior_landing_pages_controller.rb" "interactive_content_objects_controller.rb" "insights_landing_pages_controller.rb" "home_landing_pages_controller.rb" "groups_controller.rb" "general_alerts_controller.rb" "funds_controller.rb" "fund_landing_page_controller.rb" "events_controller.rb" "entity_reference_controller.rb" "efm_personalities_controller.rb" "efm_composite_funds_controller.rb" "conversations_controller.rb" "contents_controller.rb" "concerns/" "capabilities_landing_pages_controller.rb" "articles_controller.rb" "application_controller.rb" "admin_controller.rb" "admin/" "../" "./")
 
  ("/Users/90053/dev/coco/app/models/international_location/" (22415 41330 0 0) "sub_channel.rb" "../" "./")
-
- ("/Users/90053/dev/advisors/" (22415 41932 0 0) "vendor/" "tmp/" "test.html" "test/" "settings/" "script/" "rubocop-todo.yml" "README" "Rakefile" "public/" "misc/" "log/" "lib/" "Guardfile" "Gemfile.lock" "Gemfile" "factory_defs/" "development_proxy/" "db/" "config.ru" "config/" "Capfile" "app/" "ai-stuff.xml" ".ruby-version" ".ruby-gemset" ".rubocop.yml" ".rails_footnotes" ".projectile" ".gitignore" ".git/" "../" "./")
-
- ("/Users/90053/dev/investors/app/models/international_location/" (22435 31277 0 0) "sub_channel.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/controllers/concerns/ofi/" (22435 52550 0 0) "zipped_resources.rb" "view_path_loader.rb" "translation_helpers.rb" "strategy_helpers.rb" "spoofing_helpers.rb" "site_preference/" "site_maintenance.rb" "session_services.rb" "seo_metatag_management.rb" "scaffolding/" "portfolio_summary/" "param_sanitizer.rb" "internal_users.rb" "interior_landing_page_helpers.rb" "home_page_redirect_management.rb" "dynamic_layout_switcher.rb" "distribution_channel_management.rb" "device_detection_helpers.rb" "developer/" "channel_selection.rb" "audiences.rb" "analytics.rb" "account_information_prefetch.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/decorators/institutional/" (22435 31277 0 0) "consultant_decorator.rb" "consultant_decoratable.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/views/layouts/" (22435 47074 0 0) "uhnw.html.haml" "uhnw.html+phone.haml" "print.html.haml" "ofi/" "myofi.html.haml" "multi_step_process.haml" "merrill_lynch.html.haml" "marketing.html.haml" "marketing.html+phone.haml" "mailer.html.haml" "application.html.haml" "application.html+phone.haml" "../" "./")
-
- ("/Users/90053/dev/investors/app/ui_components/fixtures/" (22435 31277 0 0) "view_all_link.yml" "tooltip.yml" "title_color_chip.yml" "solution_container.yml" "smart-select.yml" "share_it.yml" "section_theme_layout_5.yml" "section_theme_layout_4.yml" "section_theme_layout_3.yml" "section_theme_layout_2.yml" "section_theme_layout_1.yml" "section_ria_contact_cards_layout.yml" "section_private_bank_homepage_contact_cards_layout.yml" "section_private_bank_capabilities_cards_layout.yml" "section_layout_table_links.yml" "section_layout_table_digital_assets.yml" "section_layout_solutions.yml" "section_layout_private_client_group.yml" "section_layout_private_bank_home.yml" "section_layout_private_bank_capabilities.yml" "section_layout_consultant_channel_selector.yml" "section_layout_9.yml" "section_layout_8.yml" "section_layout_7.yml" "section_layout_6.yml" "section_layout_5.yml" "section_layout_4.yml" "section_layout_3.yml" "section_layout_21.yml" "section_layout_2.yml" "section_layout_16.yml" "section_layout_15.yml" "section_layout_14.yml" "section_layout_13.yml" "section_layout_12.yml" "section_layout_11.yml" "section_layout_10.yml" "section_layout_1.yml" "section_container.yml" "section_capabilities_layout_1.yml" "section_bank_trust_map_cards_layout.yml" "search_box.yml" "sample.yml" "progress_bar.yml" "personality_card.yml" "personality.yml" "pdf_download.yml" "page_title_collection.yml" "page_title.yml" "modal_link.yml" "menu_list.yml" "jump_pagination.yml" "info_block.yml" "iframe.yml" "icon_block.yml" "highlights.yml" "hide_show_table.yml" "hide_show.yml" "hero_layout_7.yml" "hero_layout_6.yml" "hero_layout_5.yml" "hero_layout_4.yml" "hero_layout_3.yml" "hero_layout_2.yml" "hero_layout_1.yml" "hero_consultants.yml" "hero_block.yml" "fund_tile.yml" "event_tile.yml" "contact_us_block.yml" "consultant_tile.yml" "consultant_contact.yml" "component_container.yml" "client_list.yml" "cascading_select.yml" "cancel_modal.yml" "article_summary.yml" "article_block.yml" "alert_box.yml" "action_link_list.yml" "../" "./")
-
- ("/Users/90053/dev/investors/app/views/international/contact_us/" (22435 31277 0 0) "show.html.haml" "_consultants.html.haml" "../" "./")
-
- ("/Users/90053/dev/investors/app/decorators/international/" (22435 31277 0 0) "consultant_decorator.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/models/concerns/international/" (22435 31277 0 0) "consultant.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/assets/javascripts/_new/modules/open/" (22435 47074 0 0) "remembered_open_state.js" "opener.js" "openable.js" "open_toggle.js" "open_exclusive.js" "open-selector.js" "open-history.js" "load-on-open.js" "dropdownable.js" "dropdown_closer.js" "closer.js" "campaign_ad.js" "../" "./")
-
- ("/Users/90053/dev/investors/app/views/international/base/" (22435 47074 0 0) "_terms_and_conditions_modal.html.haml" "_header_primary_nav.html.haml" "_footer.html.haml" "_channel_selector_modal.html.haml" "../" "./")
-
- ("/Users/90053/.bundle/" (22434 23099 0 0) "config" "cache/" "../" "./")
-
- ("/Users/90053/dev/investors/app/controllers/institutional_investors/" (22435 31277 0 0) "themes_controller.rb" "strategies_controller.rb" "sitemaps_controller.rb" "search_controller.rb" "press_rooms_controller.rb" "personality_controller.rb" "interior_landing_controller.rb" "insights_controller.rb" "home_controller.rb" "fund_managers_controller.rb" "events_controller.rb" "errors_controller.rb" "digital_assets_controller.rb" "contact_us_controller.rb" "consultant_controller.rb" "base_controller.rb" "articles_controller.rb" "about_us_controller.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/views/ofi/scaffolding/strategies/" (22435 31277 0 0) "index.html.haml" "_hero_overlay.html.haml" "../" "./")
-
- ("/Users/90053/dev/investors/app/controllers/concerns/ofi/scaffolding/funds/" (22435 31277 0 0) "morningstar_hypothetical.rb" "morningstar_highlights.rb" "morningstar_comparison.rb" "landing.rb" "historical_prices.rb" "funds.rb" "fund_watch_lists.rb" "documents.rb" "distributions.rb" "base.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/decorators/common/" (22435 34252 0 0) "seo_decoratable.rb" "retail_distribution_decoratable.rb" "phone_number_decoratable.rb" "meta_only_decoratable.rb" "json_decoratable.rb" "images_decoratable.rb" "fund_footnotes_decoratable.rb" "footnotes_decoratable.rb" "event_display_decoratable.rb" "../" "./")
-
- ("/usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/gems/bundler-unload-1.0.2/lib/" (22435 34111 0 0) "bundler-unload.rb" "bundler-unload/" "../" "./")
-
- ("/Users/90053/dev/investors/app/views/unknown/" (22435 52550 0 0) "_wealth_management_body.html.haml" "_sidebar_footer.html.haml" "_locale_trigger.html.haml" "_locale_selector.html.haml" "_hero_featured_article_preview.html.haml" "_hero_featured_article_body.html.haml" "_audience_trigger.html.haml" "_audience_body.html.haml" "../" "./")
-
- ("/Users/90053/dev/investors/app/decorators/interior_landing/" (22435 47074 0 0) "strategy_detail_page_decorator.rb" "section_uhnw_insights_layout1_decorator.rb" "section_theme_layout5_decorator.rb" "section_theme_layout4_decorator.rb" "section_theme_layout3_decorator.rb" "section_theme_layout2_decorator.rb" "section_theme_layout1_decorator.rb" "section_strategy_investment_team_members_decorator.rb" "section_strategy_facts_and_charts_layout_decorator.rb" "section_strategy_available_vehicles_layout_decorator.rb" "section_ria_contact_cards_layout_decorator.rb" "section_private_client_contact_cards_layout_decorator.rb" "section_private_bank_homepage_contact_cards_layout_decorator.rb" "section_private_bank_capabilities_cards_layout_decorator.rb" "section_layout9_decorator.rb" "section_layout8_decorator.rb" "section_layout7_decorator.rb" "section_layout6_decorator.rb" "section_layout5_decorator.rb" "section_layout4_decorator.rb" "section_layout3_decorator.rb" "section_layout2_decorator.rb" "section_layout21_decorator.rb" "section_layout20_decorator.rb" "section_layout1_decorator.rb" "section_layout19_decorator.rb" "section_layout18_decorator.rb" "section_layout17_decorator.rb" "section_layout16_decorator.rb" "section_layout15_decorator.rb" "section_layout14_decorator.rb" "section_layout13_decorator.rb" "section_layout12_decorator.rb" "section_layout11_decorator.rb" "section_layout10_decorator.rb" "section_latest_insights_layout_decorator.rb" "section_collections_layout_decorator.rb" "section_bank_trust_map_cards_layout_decorator.rb" "resources/" "page_section_decorator.rb" "page_decorator.rb" "page_decoratable.rb" "hero_strategy_detail_decorator.rb" "hero_section_decorator.rb" "hero_layout7_decorator.rb" "hero_layout5_decorator.rb" "hero_layout4_decorator.rb" "hero_layout3_decorator.rb" "hero_layout2_decorator.rb" "hero_layout1_decorator.rb" "hero_institutional_strategy_detail_decorator.rb" "hero_consultants_decorator.rb" "consultant_cards_decoratable.rb" "call_to_action_decorator.rb" "../" "./")
-
- ("/Users/90053/dev/investors/lib/ofi/middleware/" (22435 47074 0 0) "visitor_type_identification.rb" "visitor_identification.rb" "vanity_redirection.rb" "user_identification.rb" "post_data_logger.rb" "internal_user_cookie.rb" "heartbeat_identification.rb" "external_monitor_identification.rb" "device_detection.rb" "cookie_manager.rb" "base.rb" "app_identification.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/controllers/international/funds/" (22435 52550 0 0) "funds_controller.rb" "base_controller.rb" "../" "./")
-
- ("/Users/90053/dev/investors/config/routes/" (22435 52550 0 0) "uhnw.routes.rb" "styleguide.routes.rb" "site_monitor.routes.rb" "myofi.routes.rb" "investor.routes.rb" "international.routes.rb" "institutional.routes.rb" "developer.routes.rb" "daengine.routes.rb" "cross_channel.routes.rb" "advisor.routes.rb" "admin.routes.rb" "../" "./")
-
- ("/Users/90053/dev/coco/app/models/" (22431 47891 0 0) "video_linkage.rb" "video.rb" "vanity_url_map.rb" "user.rb" "uhnw_strategy.rb" "uhnw_insight.rb" "tweet.rb" "topic.rb" "thought_leader.rb" "theme.rb" "textile.rb" "text.rb" "strategy.rb" "standard_footnote.rb" "side_nav_config.rb" "service/" "searchable.rb" "sac_personality.rb" "resource.rb" "research_analyst.rb" "ref_data/" "recent_activity.rb" "publish_set_cart.rb" "professional_development_landing_page.rb" "portfolio_manager.rb" "play_list.rb" "personality_image.rb" "personality.rb" "page_seo.rb" "page_section.rb" "packaged_conversation.rb" "media.rb" "linkedin_company_update.rb" "link.rb" "landing_page.rb" "international_location.rb" "international_location/" "interior_landing_page.rb" "interactive_content_object.rb" "institutional_consultant.rb" "insights_landing_page.rb" "image_linkage.rb" "image.rb" "holdings.rb" "group.rb" "group/" "general_alert.rb" "fund_landing_page.rb" "fund.rb" "event.rb" "efm_personality.rb" "efm_composite_fund.rb" "digital_asset.rb" "deployment_package.rb" "conversation.rb" "content_service_resource.rb" "content_image.rb" "content.rb" "consultants_landing_page.rb" "consultant.rb" "concerns/" "asset_class_filter.rb" "article.rb" "article/" "advisor_consultant.rb" "accolade_linkage.rb" ".gitkeep" "../" "./")
-
- ("/Users/90053/dev/coco/app/" (22413 37797 0 0) "views/" "models/" "mediapoller/" "mailers/" "helpers/" "factories/" "controllers/" "assets/" "../" "./")
-
- ("/Users/90053/dev/coco/" (22431 47891 0 0) "vendor/" "tmp/" "spec/" "script/" "README" "Rakefile" "public/" "log/" "lib/" "Guardfile" "Gemfile.lock" "Gemfile" "features/" "db/" "config.ru" "config/" "Capfile" "bin/" "app/" ".ruby-version" ".ruby-gemset" ".rspec" ".rails_footnotes" ".projectile" ".gitignore" ".git/" "../" "./")
-
- ("/Users/90053/dev/investors/app/models/fund_snapshot/" (22435 54196 0 0) "taxes.rb" "taxes/" "quick_fact.rb" "price.rb" "performance.rb" "performance/" "name.rb" "morningstar.rb" "investment.rb" "expense_ratio.rb" "capital_gains.rb" "capital_gains/" "../" "./")
-
- ("/Users/90053/dev/investors/app/models/strategy/" (22422 31387 0 0) "quick_facts.rb" "float_coercer.rb" "details.rb" "date_coercer.rb" "composite_performance.rb" "completeness.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/controllers/advisors/funds/" (22422 31387 0 0) "morningstar_hypothetical_controller.rb" "morningstar_highlights_controller.rb" "morningstar_comparison_controller.rb" "landing_controller.rb" "historical_prices_controller.rb" "funds_controller.rb" "fund_watch_lists_controller.rb" "documents_controller.rb" "distributions_controller.rb" "base_controller.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/controllers/advisors/" (22435 31277 0 0) "wealth_conversations_controller.rb" "tsr_admin_controller.rb" "themes_controller.rb" "tey_calculator_controller.rb" "sitemaps_controller.rb" "search_controller.rb" "search_autosuggest_controller.rb" "profile/" "professional_development_landing_controller.rb" "professional_development_controller.rb" "press_rooms_controller.rb" "portfolio_builder/" "planning_controller.rb" "personality_controller.rb" "outlooks_controller.rb" "my_book/" "morningstar_controller.rb" "mobile_desktop_preferences_controller.rb" "merrill_lynch_controller.rb" "literature_center/" "interior_landing_controller.rb" "insights_controller.rb" "home_controller.rb" "historical_prices_controller.rb" "funds/" "fund_managers_controller.rb" "faq_controller.rb" "events_controller.rb" "errors_controller.rb" "email_shares_controller.rb" "dual_factor_exception_controller.rb" "digital_assets_controller.rb" "contact_us_controller.rb" "consultant_controller.rb" "cache_controller.rb" "base_controller.rb" "auth/" "articles_controller.rb" "api/" "../" "./")
-
- ("/Users/90053/dev/investors/app/views/international/funds/" (22435 47242 0 0) "funds/" "../" "./")
-
- ("/Users/90053/dev/investors/app/views/international/" (22435 47066 0 0) "funds/" "errors/" "contact_us/" "base/" "audiences/" "about_us/" "../" "./")
-
- ("/Users/90053/dev/investors/app/controllers/international/" (22435 31277 0 0) "insights_controller.rb" "home_controller.rb" "funds/" "errors_controller.rb" "digital_assets_controller.rb" "contact_us_controller.rb" "base_controller.rb" "audiences_controller.rb" "articles_controller.rb" "about_us_controller.rb" "../" "./")
-
- ("/Users/90053/dev/investors/config/" (22435 47242 0 0) "web.xml" "warble.rb" "settings.yml" "settings/" "secrets.yml" "routes.rb" "routes/" "mongoid.yml" "locales/" "initializers/" "environments/" "environment.rb" "deploy.rb" "deploy/" "databases/" "cucumber.yml" "boot.rb" "auto_transactions_add_new_purchase_confirm.html.haml" "application.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/assets/stylesheets/modules/" (22435 31277 0 0) "watchlist_row/" "watchlist_item/" "watchlist_container/" "video/" "smart_select/" "quick_filters_content_container/" "quick_filters/" "openable/" "multiselect/" "highcharts/" "fixed_header/" "dropdown-header/" "disable_submit_until_valid/" "channel_selector/" "body/" "ajax_content_container/" "../" "./")
-
- ("/Users/90053/dev/investors/app/assets/stylesheets/" (22435 31277 0 0) "themes/" "styleguide.css" "styleguide/" "modules/" "investor/" "developer.css" "developer/" "common_application.scss" "common_application+phone.scss" "application.scss" "application/" "advisor/" "../" "./")
-
- ("/Users/90053/dev/investors/lib/ofi/services/" (22435 31277 0 0) "vanity_redirection_target.rb" "vanity_redirection_macros.rb" "vanity_redirection_container.rb" "vanity_redirection.rb" "../" "./")
-
- ("/Users/90053/" (22435 42334 0 0) "VirtualBox VMs/" "tmp/" "rvm-installer.asc" "rvm-installer" "Public/" "Pictures/" "perl5/" "Music/" "Movies/" "Library/" "Downloads/" "Documents/" "dev/" "Desktop/" "backups/" "Applications/" "90053.pub" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".rediscli_history" ".pryrc" ".pry_history" ".pow/" ".nvm/" ".npm/" ".node-gyp/" ".mongorc.js" ".mini_exiftool/" ".m2/" ".local/" ".lesshst" ".irbrc" ".irb-history" ".hgignore_global" ".guard_history" ".gnupg/" ".gitignore_global" ".gitconfig" ".gemrc" ".gem/" ".emacs.d/" ".emacs" ".DS_Store" ".dbshell" ".cups/" ".cpan/" ".config/" ".chef/" ".CFUserTextEncoding" ".cache/" ".bundle/" ".bm-repository" ".bashrc" ".bash_sessions/" ".bash_profile" ".bash_history" ".bash_env" ".bash_aliases" ".atom/" ".account" "#.irbrc#" "../" "./")
-
- ("/Users/90053/dev/investors/app/views/" (22435 31277 0 0) "unknown/" "uhnw/" "shared/" "ofi/" "myofi/" "layouts/" "kaminari/" "investors_mail/" "investors/" "international/" "institutional_investors/" "daengine/" "application/" "advisors_mail/" "advisors/" "../" "./")
-
- ("/Users/90053/dev/investors/lib/ofi/" (22435 33451 0 0) "warden.rb" "warden/" "sins_to_haunt_us/" "services/" "scope_defs.rb" "routing.rb" "routing/" "request.rb" "middleware.rb" "middleware/" "errors_controller_resolver.rb" "domain_abstraction.rb" "device_experience.rb" "device_experience/" "constraints/" "blacklist.rb" "blacklist/" "authorization/" "application_scope.rb" "../" "./")
-
- ("/usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/gems/bundler-unload-1.0.2/" (22331 13168 0 0) "README.md" "LICENCE" "lib/" "bundler-unload.gemspec" ".ruby-version" ".gitignore" "../" "./")
-
- ("/usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/gems/" (22331 13169 0 0) "test-unit-3.1.5/" "rvm-1.11.3.9/" "rubygems-bundler-1.4.4/" "rdoc-4.2.1/" "rake-10.4.2/" "power_assert-0.2.6/" "net-telnet-0.1.1/" "minitest-5.8.3/" "gem-wrappers-1.2.7/" "executable-hooks-1.3.2/" "did_you_mean-1.0.0/" "bundler-unload-1.0.2/" "../" "./")
-
- ("/usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/" (22331 13166 0 0) "wrappers/" "specifications/" "gems/" "extensions/" "environment" "doc/" "cache/" "build_info/" "bin/" "../" "./")
-
- ("/usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/gems/" (22331 13164 0 0) "2.3.0/" "../" "./")
-
- ("/usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/rubygems/" (22331 13164 0 0) "version_option.rb" "version.rb" "validator.rb" "util.rb" "util/" "user_interaction.rb" "uri_formatter.rb" "uninstaller.rb" "text.rb" "test_utilities.rb" "test_case.rb" "syck_hack.rb" "stub_specification.rb" "ssl_certs/" "specification.rb" "spec_fetcher.rb" "source_specific_file.rb" "source_local.rb" "source_list.rb" "source.rb" "source/" "server.rb" "security.rb" "security/" "resolver.rb" "resolver/" "requirement.rb" "request_set.rb" "request_set/" "request.rb" "request/" "remote_fetcher.rb" "rdoc.rb" "psych_tree.rb" "psych_additions.rb" "platform.rb" "path_support.rb" "package_task.rb" "package.rb" "package/" "name_tuple.rb" "mock_gem_ui.rb" "local_remote_options.rb" "installer_test_case.rb" "installer.rb" "install_update_options.rb" "install_message.rb" "install_default_message.rb" "indexer.rb" "gemcutter_utilities.rb" "gem_runner.rb" "ext.rb" "ext/" "exceptions.rb" "errors.rb" "doctor.rb" "deprecate.rb" "dependency_list.rb" "dependency_installer.rb" "dependency.rb" "defaults.rb" "core_ext/" "config_file.rb" "compatibility.rb" "commands/" "command_manager.rb" "command.rb" "basic_specification.rb" "available_set.rb" "../" "./")
-
- ("/usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/" (22331 13164 0 0) "yaml.rb" "yaml/" "xmlrpc.rb" "xmlrpc/" "x86_64-darwin15/" "webrick.rb" "webrick/" "weakref.rb" "uri.rb" "uri/" "unicode_normalize.rb" "unicode_normalize/" "un.rb" "ubygems.rb" "tsort.rb" "tracer.rb" "tmpdir.rb" "tkwinpkg.rb" "tkvirtevent.rb" "tktext.rb" "tkscrollbox.rb" "tkpalette.rb" "tkmngfocus.rb" "tkmenubar.rb" "tkmacpkg.rb" "tkfont.rb" "tkextlib/" "tkentry.rb" "tkdialog.rb" "tkconsole.rb" "tkclass.rb" "tkcanvas.rb" "tkbgerror.rb" "tkafter.rb" "tk.rb" "tk/" "timeout.rb" "time.rb" "thwait.rb" "tempfile.rb" "tcltk.rb" "syslog/" "sync.rb" "socket.rb" "singleton.rb" "shellwords.rb" "shell.rb" "shell/" "set.rb" "securerandom.rb" "scanf.rb" "rubygems.rb" "rubygems/" "rss.rb" "rss/" "ripper.rb" "ripper/" "rinda/" "rexml/" "resolv.rb" "resolv-replace.rb" "remote-tk.rb" "rdoc.rb" "rdoc/" "rbconfig/" "racc/" "psych_jars.rb" "psych.rb" "psych/" "pstore.rb" "profiler.rb" "profile.rb" "prime.rb" "prettyprint.rb" "pp.rb" "pathname.rb" "ostruct.rb" "optparse.rb" "optparse/" "optionparser.rb" "openssl.rb" "openssl/" "open3.rb" "open-uri.rb" "observer.rb" "net/" "mutex_m.rb" "multi-tk.rb" "monitor.rb" "mkmf.rb" "matrix.rb" "matrix/" "mathn.rb" "logger.rb" "kconv.rb" "json.rb" "json/" "irb.rb" "irb/" "ipaddr.rb" "io/" "getoptlong.rb" "forwardable.rb" "find.rb" "fileutils.rb" "fiddle.rb" "fiddle/" "expect.rb" "erb.rb" "English.rb" "e2mmap.rb" "drb.rb" "drb/" "digest.rb" "digest/" "delegate.rb" "debug.rb" "date.rb" "csv.rb" "cmath.rb" "cgi.rb" "cgi/" "bigdecimal/" "benchmark.rb" "base64.rb" "abbrev.rb" "../" "./")
-
- ("/usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/" (22331 13164 0 0) "vendor_ruby/" "site_ruby/" "gems/" "2.3.0/" "../" "./")
-
- ("/usr/local/rvm/rubies/ruby-2.3.1/lib/" (22331 13164 0 0) "ruby/" "pkgconfig/" "libruby.dylib" "libruby.2.3.dylib" "libruby.2.3.0.dylib" "libruby.2.3.0-static.a" "../" "./")
-
- ("/usr/local/rvm/rubies/ruby-2.3.1/" (22331 13169 0 0) "share/" "lib/" "include/" "config" "bin/" ".irbrc" "../" "./")
-
- ("/usr/local/rvm/rubies/" (22331 13164 0 0) "ruby-2.3.1/" "ruby-2.2.2/" "ruby-2.2.0/" "jruby-9.0.0.0/" "jruby-1.7.24/" "jruby-1.7.20/" "default/" "../" "./")
-
- ("/usr/local/rvm/" (21981 64565 0 0) "wrappers/" "VERSION" "user/" "tmp/" "src/" "share/" "scripts/" "rubies/" "repos/" "RELEASE" "README" "patchsets/" "patches/" "man/" "log/" "LICENSE" "lib/" "java/" "installed.at" "hooks/" "help/" "gemsets/" "gems/" "gem-cache/" "examples/" "environments/" "docs/" "contrib/" "config/" "bin/" "archives/" "../" "./")
-
- ("/usr/local/" (22406 42824 0 0) "var/" "share/" "rvm/" "README.md" "opt/" "LICENSE.txt" "Library/" "lib/" "jamf/" "include/" "etc/" "CODEOFCONDUCT.md" "Cellar/" "bin/" ".yardopts" ".travis.yml" ".gitignore" ".github/" ".git/" ".DS_Store" "../" "./")
-
- ("/usr/" (22302 25898 0 0) "X11R6/" "X11/" "standalone/" "share/" "sbin/" "local/" "libexec/" "lib/" "include/" "bin/" "adic/" "../" "./")
-
- ("/Users/" (22302 18120 0 0) "wdeam/" "Shared/" "ofiadministrator/" "ncsrm/" "ncklb/" "fv2/" "admin/" "90053/" ".localized" "../" "./")
-
- ("/Users/90053/dev/investors/lib/" (22435 31277 0 0) "wrap_it_up.rb" "webmock_support.rb" "utils/" "templates/" "teams.rb" "tasks/" "steelpath.rb" "service_unavailable_error.rb" "ofi_voight_kampff_test.rb" "ofi_logging.rb" "ofi_jsonable.rb" "ofi_formatter.rb" "ofi_faraday_logger.rb" "ofi_config.rb" "ofi.rb" "ofi/" "null_object.rb" "middleware/" "memento.rb" "log_request_bodies.rb" "investors/" "fund_detail_not_found.rb" "formatter.rb" "feature_flag_disabled_error.rb" "feature.rb" "encrypted_id.rb" "dips-styleguide/" "debug_user_middleware.rb" "clean_to_json.rb" "assets/" "asset_class_type.rb" "advisors/" "../" "./")
-
- ("/Users/90053/dev/investors/app/controllers/concerns/ofi/scaffolding/" (22435 31277 0 0) "uhnw/" "transactions/" "tey_calculator.rb" "strategies.rb" "site_mapping.rb" "seo_title_metadata.rb" "search.rb" "press_rooms.rb" "portfolio_summary/" "planning.rb" "personalities.rb" "outlooks.rb" "mobile_desktop_preferences.rb" "literature_center/" "interior_landing_pages.rb" "interactive_content_objects.rb" "insights.rb" "home.rb" "historical_prices.rb" "funds/" "fund_managers.rb" "faq.rb" "events.rb" "errors.rb" "email_shares.rb" "digital_assets.rb" "base.rb" "auth/" "articles.rb" "account_contact_information.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/assets/" (22422 31387 0 0) "templates/" "swf/" "stylesheets/" "javascripts/" "images/" "fonts/" "../" "./")
-
- ("/Users/90053/dev/investors/app/assets/javascripts/" (22434 32354 0 0) "uhnw.js" "uhnw+phone.js" "uhnw/" "styleguide.js" "styleguide/" "print_overrides.js" "morningstar_metrics.js" "modernizr.custom.js" "metrics.js" "metrics+phone.js" "investor.js" "investor+phone.js" "investor/" "digital-application.js" "developer.js" "core.js" "compatability.js" "application.js" "application-marketing.js" "application-marketing+phone.js" "application+phone.js" "application/" "app.js" "advisor.js" "advisor+phone.js" "advisor/" "_new/" "../" "./")
-
- ("/Users/90053/dev/investors/app/assets/javascripts/investor/" (22434 32358 0 0) "page/" "omniture_link_source.js" "mbox_ofi.js" "components/" "account_information_prefetch.js" "../" "./")
-
- ("/Users/90053/dev/investors/app/assets/javascripts/investor/components/" (22422 31387 0 0) "global/" "../" "./")
-
- ("/Users/90053/dev/investors/app/assets/javascripts/investor/components/global/" (22435 28214 0 0) "spoofbar.js" "pjax_events_handler.js" "ofi_form_wizard.js" "modal+phone.js" "header.js" "h5_validate.js" "fly_in.js" "feedback_button.js" "datepicker.js.erb" "calculators.js" "button_groups.js" "ajax_modal.js" "../" "./")
-
- ("/Users/90053/dev/investors/app/controllers/concerns/" (22422 31387 0 0) "ofi/" "form_token.rb" "authenticated.rb" "advisors/" ".keep" "../" "./")
-
- ("/Users/90053/dev/investors/app/views/institutional_investors/strategies/" (22422 31387 0 0) "_campaign_ad.html.haml" "_campaign_ad.html+phone.haml" "../" "./")
-
- ("/Users/90053/dev/investors/app/controllers/" (22422 31387 0 0) "uhnw/" "ofi/" "myofi/" "investors/" "international/" "institutional_investors/" "daengine/" "concerns/" "application_controller.rb" "advisors/" "../" "./")
-
- ("/Users/90053/dev/" (22413 39210 0 0) "ws-edist/" "testapp/" "standalone-cucumber/" "solr/" "saturn/" "sandbox/" "ruby-batch-fork/" "ruby-batch/" "repos/" "plan_admin/" "pb_client_wrapper/" "oplog_watcher/" "notes/" "mongo/" "learn-chef/" "investors-svn/" "investors/" "gems/" "event_manager/" "dotfiles/" "cwmc/" "coco-svn/" "coco/" "chef-fork/" "chef/" "advisors-svn/" "advisors/" "account_information_client_trunk/" "account_information_client/" ".DS_Store" "../" "./")
-
- ("/Users/90053/dev/investors/app/" (22422 31387 0 0) "views/" "value_objects/" "validators/" "ui_components/" "services/" "policies/" "models/" "mixins/" "mailers/" "inputs/" "helpers/" "forms/" "factories/" "decorators/" "controllers/" "connectors/" "blacklists/" "assets/" "../" "./")
-
- ("/Users/90053/dev/investors/app/models/institutional_investors/sitemap/" (22423 45392 0 0) "video_data.rb" "page_data.rb" "image_data.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/models/institutional_investors/" (22422 31387 0 0) "sitemap/" "../" "./")
-
- ("/Users/90053/dev/investors/app/models/funds_landing/" (22423 45392 0 0) "morningstar_title_struct.rb" "historical_prices_title_struct.rb" "funds_landing_title_struct.rb" "asset_class_filter.rb" "../" "./")
-
- ("/Users/90053/dev/investors/spec/models/data_services/indexing/" (22432 64781 0 0) "personality_index_spec.rb" "fund_snapshot_index_spec.rb" "faq_index_spec.rb" "digital_asset_index_spec.rb" "article_index_spec.rb" "../" "./")
-
- ("/Users/90053/dev/investors/app/assets/javascripts/_new/modules/" (22434 18824 0 0) "window/" "watchlist/" "video_playlist.js" "video.js" "uhnw_consultant/" "toggle_switch.js" "site_preference.js" "session_timeout.js" "scrollable.js" "remove_cookie.js" "pb/" "open/" "navigate/" "morningstar-iframe.js" "modals/" "inputs/" "input_group/" "infiniload.js" "infiniload-starter.js" "highcharts/" "hacks/" "gated_content.js" "fund_compare/" "forms/" "filter/" "election/" "dom_enhancements/" "digital_asset.js" "channel_selector/" "calculators/" "body/" "back_to_top.js" "ajax/" "active_section_monitor.js" "active_section.js" "../" "./")
-
- ("/Users/90053/dev/investors/app/views/institutional_investors/base/" (22434 19519 0 0) "_terms_and_conditions_modal.html.haml" "_small_header_navigation_list.html.haml" "_main_areas.html.haml" "_logo_small.html.haml" "_logo.html.haml" "_header_primary_nav.html.haml" "_footer.html.haml" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----

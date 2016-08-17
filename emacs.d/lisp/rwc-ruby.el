@@ -43,9 +43,11 @@
 ;;============================================================
 ;; Rinari
 ;;============================================================
-(require 'rinari)
-(setq rinari-tags-file-name "TAGS")
-(global-rinari-mode)
+;; (require 'rinari)
+;; (setq rinari-tags-file-name "TAGS")
+;; (global-rinari-mode)
+
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
 
 
 

@@ -6,7 +6,7 @@
 ;; ;; (yas--initialize)
 (yas-global-mode 1)
 
-(add-hook 'rinari-minor-mode-hook
+(add-hook 'projectile-rails-mode-hook
           #'(lambda ()
               (yas-activate-extra-mode 'rails-mode)))
 

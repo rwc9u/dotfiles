@@ -1,11 +1,27 @@
-;; (add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/site-lisp/nxhtml/alts")
-(add-to-list 'load-path "~/.emacs.d/vendor/js2/build")
-(autoload 'js2-mode "js2-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
-(setq js2-basic-offset 2)
+(autoload 'js3-mode "js3" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
+
+;; (mode-to-list 'auto-mode-alist '("\\.js\\" . js3-mode))
+;; (add-to-list 'auto-mode-alist (cons (rx ".js" eos) 'js3-mode))
+;; (add-to-list 'auto-mode-alist '("\\.json\\" . js3-mode))
+;; (add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
+(setf (cdr (rassoc 'javascript-mode auto-mode-alist)) 'js3-mode)
+
+;; (setq js2-basic-offset 2)
 ;; (setq js2-use-font-lock-faces t)
-(setq js2-highlight-level 3)
+;; (setq js2-highlight-level 3)
+(custom-set-variables
+ '(js3-lazy-commas t)
+ '(js3-lazy-operators t)
+ ;; '(js3-pretty-vars-spaces 2)
+ ;; '(js3-continued-expr-mult 1)
+ '(js3-expr-indent-offset 2)
+ '(js3-paren-indent-offset 2)
+ '(js3-square-indent-offset 2)
+ '(js3-curly-indent-offset 0)  ;; this seems to fix indentation within functions for me
+ )
+
 
 
 (require 'coffee-mode)

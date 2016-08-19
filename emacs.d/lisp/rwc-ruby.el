@@ -40,15 +40,6 @@
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
 
-;;============================================================
-;; Rinari
-;;============================================================
-(require 'rinari)
-(setq rinari-tags-file-name "TAGS")
-(global-rinari-mode)
-
-
-
 (defun ruby-insert-end ()
   "Insert \"end\" at point and reindent current line."
   (interactive)

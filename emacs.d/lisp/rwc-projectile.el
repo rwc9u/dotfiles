@@ -1,6 +1,7 @@
 
 (require 'projectile)
 (projectile-global-mode)
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
 
 (define-key projectile-mode-map [(meta d)] 'projectile-find-dir)
 (define-key projectile-mode-map [(meta p)] 'projectile-switch-project)

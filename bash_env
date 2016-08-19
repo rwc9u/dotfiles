@@ -105,14 +105,21 @@ fi
 export RUBYOPT=rubygems
 
 # node and coffeescript setup
-export NODE_PATH=/usr/local/lib/node_modules
-export NODE_NO_READLINE=1
+# export NODE_PATH=/usr/local/lib/node_modules
+# export NODE_NO_READLINE=1
 
-export PATH=./node_modules/.bin:$PATH
-
+# export PATH=./node_modules/.bin:$PATH
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
 
 # AWS CLI config
 export AWS_CONFIG_FILE=/Users/rchristie/.aws/awsconfig.txt
 
 # Android Dev
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# Set java version for terminal
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8.0_51)"
+
+
+export HOMEBREW_GITHUB_API_TOKEN="cf177ac30f8b63f4a79130f11fad74bf8a6860dd"

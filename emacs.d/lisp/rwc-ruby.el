@@ -153,7 +153,7 @@
 (autoload 'company-mode "company" nil t)
 (company-mode)
 
-(add-to-list 'load-path  (expand-file-name "~/.emacs.d/vendor/robe"))
+;; (add-to-list 'load-path  (expand-file-name "~/.emacs.d/vendor/robe"))
 (autoload 'robe-mode "robe" "\
 Improved navigation for Ruby
 \(fn &optional ARG)" t nil)

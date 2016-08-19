@@ -2,6 +2,7 @@
 (require 'powerline)
 (powerline-default-theme)
 
+;; (nyan-mode 1)
 
 ;; (custom-set-faces
 ;;  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))

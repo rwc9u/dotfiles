@@ -66,7 +66,7 @@
  ("/Users/rchristie/dev/jobon/app/models/" . "events/")
  ("/Users/rchristie/dev/jobon/app/models/events/" . "seeker/")
  ("/Users/rchristie/dev/vrcompliance/config/" . "initializers/")
- ("/Users/rchristie/dev/jobon/lib/" . "constraints/")
+ ("/Users/rchristie/dev/jobon/lib/" . "pry_commands/")
  ("/Users/rchristie/dev/jobon/config/locales/views/super_admin/" . "companies/")
  ("/Users/rchristie/dev/jobon/config/locales/views/" . "welcome/")
  ("/Users/rchristie/dev/jobon/config/locales/models/" . "company/")
@@ -76,7 +76,7 @@
  ("/Users/rchristie/dev/jobon/app/views/" . "employer/")
  ("/Users/rchristie/dev/jobon/test/" . "functional/")
  ("/Users/rchristie/dev/jobon/db/" . "data/")
- ("/Users/rchristie/dev/jobon/app/" . "flex/")
+ ("/Users/rchristie/dev/jobon/app/" . "models/")
  ("/Users/rchristie/dev/jobon-vb/" . "mobile/")
  ("/Users/rchristie/dev/jobon-new/lib/" . "utils/")
  ("/Users/rchristie/dev/jobon-new/" . "db/")
@@ -94,7 +94,7 @@
  ("/Users/rchristie/dev/EventFinder/app/assets/javascripts/" . "eventfinder/")
  ("/Users/rchristie/dev/EventFinder/app/assets/" . "javascripts/")
  ("/Users/rchristie/dev/EventFinder/app/views/" . "events/")
- ("/Users/rchristie/dev/jobon/" . "config/")
+ ("/Users/rchristie/dev/jobon/" . "lib/")
  ("/Users/rchristie/dev/EventFinder/config/" . "initializers/")
  ("/Users/rchristie/dev/EventFinder/spec/" . "models/")
  ("/Users/rchristie/dev/EventFinder/db/" . "migrate/")
@@ -140,7 +140,7 @@
  ("/Users/rchristie/.emacs.d/" . "lisp/")
  ("/Users/rchristie/dev/dotfiles/emacs.d/" . "lisp/")
  ("/Users/rchristie/dev/dotfiles/" . "emacs.d/")
- ("/Users/rchristie/dev/" . "jobon/")
+ ("/Users/rchristie/dev/" . "dotfiles/")
  ("/Users/rchristie/" . "dev/")
  ("/Users/90053/dev/investors_mobile-tmp/config/" . "initializers/")
  ("/Users/90053/dev/investors_mobile-tmp/spec/" . "acceptance/")
@@ -166,6 +166,10 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/rchristie/dev/dotfiles/emacs.d/lisp/"
+ "/Users/rchristie/dev/jobon/lib/utils/"
+ "/Users/rchristie/dev/technotes/"
+ "/Users/rchristie/dev/jobon/app/models/"
  "/Users/rchristie/dev/jobon/config/"
  "/Users/rchristie/dev/jobon/app/flex/recorder/"
  "/Users/rchristie/dev/narms/config/"
@@ -193,7 +197,6 @@
  "/Users/rchristie/dev/jobon/app/views/positions/"
  "/Users/rchristie/dev/jobon/app/views/layouts/"
  "/Users/rchristie/dev/jobon/app/controllers/"
- "/Users/rchristie/dev/jobon/app/models/"
  "/Users/rchristie/Downloads/uspsdocs/"
  "/Users/rchristie/dev/sandbox/"
  "/usr/local/Cellar/elasticsearch/2.3.2/libexec/config/"
@@ -209,48 +212,73 @@
  "/Users/rchristie/dev/isjonsnowalive/web/controllers/"
  "/Users/rchristie/dev/isjonsnowalive/web/templates/hello/"
  "/Users/rchristie/dev/jobon/config/environments/"
- "/Users/rchristie/dev/technotes/"
  "/Users/rchristie/dev/narms/app/views/employer/accounts/"
  "/Users/rchristie/dev/narms/.git/"
  "/Users/rchristie/dev/narms-api-faker/"
  "/Users/rchristie/dev/narms/config/initializers/"
- "/Users/rchristie/dev/narms/app/controllers/employer/"
- "/Users/rchristie/dev/jobon/app/controllers/concerns/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "rwc-git.el"
+ "employer_copy.rb"
+ "jobon.txt"
+ "user.rb"
  "app_config.yml"
  "RecordingController.as"
  "config.ru"
  "routes.rb"
  "README.markdown"
  "database.yml"
- "user.rb"
- "Application-ware.xml"
- "Application-dev.xml"
- "Server-dev.xml"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/rchristie/dev/dotfiles/emacs.d/lisp/" (22287 6425 0 0) "unit-test.el" "twittering-mode.el" "rwc-yasnippet.el" "rwc-yaml.el" "rwc-xhtml.el" "rwc-twitter.el" "rwc-tty-format.el" "rwc-textile.el" "rwc-tabs.el" "rwc-svn.el" "rwc-ruby.el" "rwc-rails-reloaded.el" "rwc-projectile.el" "rwc-powerline.el" "rwc-package.el" "rwc-nxml.el" "rwc-mode-line-bell.el" "rwc-markdown.el" "rwc-linemark.el" "rwc-key-maps.el" "rwc-javascript.el" "rwc-ido.el" "rwc-html.el" "rwc-highlight-line.el" "rwc-globals.el" "rwc-git.el" "rwc-flyspell.el" "rwc-eol-conversion.el" "rwc-envs.el" "rwc-el-get.el" "rwc-defuns.el" "rwc-deft.el" "rwc-css.el" "rwc-comint.el" "rwc-color-theme.el" "rwc-c.el" "rwc-bash.el" "rwc-auctex.el" "custom.el" "auto-install.el" "../" "./")
+
+ ("/Users/rchristie/dev/dotfiles/emacs.d/" (22454 31825 0 0) "yasnippets-shoulda/" "vendor/" "var/" "url/" "tutorial/" "tramp" "semanticdb/" "rcodetools/" "projectile.cache" "projectile-bookmarks.eld" "menu_log.notes" "lisp/" "ido.last" "games/" "find-recursive/" "eol-conversion/" "elpa/" "el-get/" "console_log.notes" "auto-save-list/" "auto-install/" ".DS_Store" "../" "./")
+
+ ("/Users/rchristie/dev/dotfiles/" (22404 35322 0 0) "tmux.conf" "README.md" "pryrc" "irbrc" "install.rb" "gitconfig" "emacs.old" "emacs.d/" "emacs" "bashrc" "bash_profile" "bash_priv_env" "bash_env" "bash_aliases" "autotest.d/" "autotest" ".gitmodules" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/rchristie/dev/jobon/lib/utils/" (22451 60237 0 0) "update_videos.rb" "solr_tester.rb" "simple_proxy.rb" "saladworks.rb" "reset_sequences.sql" "redis_test.rb" "process.sh" "position_link_cleanup.rb" "position_cleanup.rb" "move_positions.rb" "liberty_tax_import.rb" "liberty_tax_add_accounts.rb" "fix.sh" "employer_copy.rb" "destroy_TGIF.rb" "check_solr.rb" "bulk_add_questions_to_accounts.rb" "account_cleanup.rb" "#reset_sequences.sql#" "../" "./")
+
+ ("/Users/rchristie/Documents/elasticsearch-presentation/" (22434 32189 0 0) "search_architecture.png" "presentation.md" "image2016-6-27 16-15-1.png" "image2016-6-27 16-11-23.png" ".DS_Store" "../" "./")
+
+ ("/Users/rchristie/dev/elasticsearch-demo/db/" (22432 9371 0 0) "seeds.rb" "development.sqlite3" "../" "./")
+
+ ("/Users/rchristie/dev/elasticsearch-demo/app/assets/javascripts/" (22432 9837 0 0) "users.coffee" "application.js" "../" "./")
+
+ ("/Users/rchristie/dev/elasticsearch-demo/config/" (22432 10626 0 0) "secrets.yml" "routes.rb" "mongoid.yml" "locales/" "initializers/" "environments/" "environment.rb" "database.yml" "boot.rb" "application.rb" "../" "./")
+
+ ("/Users/rchristie/dev/elasticsearch-demo/app/views/users/" (22432 11651 0 0) "show.json.jbuilder" "show.html.haml" "new.html.haml" "index.json.jbuilder" "index.html.haml" "edit.html.haml" "_user.json.jbuilder" "_form.html.haml" "../" "./")
+
+ ("/Users/rchristie/dev/narms/app/models/" (22449 19101 0 0) "view.rb" "video_answer.rb" "user.rb" "system_notification.rb" "stats.rb" "role.rb" "required_question.rb" "request_token.rb" "rating.rb" "question.rb" "position.rb" "plan_pak.rb" "occupation.rb" "oauth_token.rb" "oauth_nonce.rb" "oauth2_verifier.rb" "oauth2_token.rb" "narms_api.rb" "job_type.rb" "industry.rb" "external_source.rb" "export.rb" "encoding_job.rb" "company.rb" "client_application.rb" "cart_item.rb" "cart.rb" "application.rb" "answer.rb" "all_users_export.rb" "addressable_pak_position.rb" "address.rb" "account.rb" "access_token.rb" "ability.rb" "../" "./")
+
+ ("/Users/rchristie/dev/narms/" (22450 49999 0 0) "VERSION" "vendor/" "tmp/" "test/" "startupEC2/" "solr/" "script/" "RELEASE_NOTES" "README.markdown" "Rakefile" "public/" "Procfile" "mobile/" "log/" "lib/" "Guardfile" "Gemfile.lock" "Gemfile" "doc/" "db/" "config.ru" "config/" "app/" ".slugignore" ".settings/" ".ruby_inline/" ".ruby-version" ".project" ".powrc" ".gitignore" ".git/" ".flexProperties" ".DS_Store" ".autotest" ".actionScriptProperties" "#config.ru#" "../" "./")
+
+ ("/Users/rchristie/dev/jobon/config/" (22451 57568 0 0) "zencoder_s3_permissions.json" "unicorn.rb" "sunspot.yml" "sitemap.rb" "routes.rb" "newrelic.yml" "mail.yml.example" "mactag.rb" "locales/" "initializers/" "environments/" "environment.rb" "database.yml.example" "database.yml" "compass.rb" "boot.rb" "application.rb" "app_config.yml.example" "app_config.yml" "../" "./")
+
+ ("/Users/rchristie/dev/test_flash_crud/" (19630 40545 0 0) "test.txt" "EyestreetREST.zip" "EyestreetREST/" "crossdomain_root.xml" "crossdomain.xml" ".DS_Store" "../" "./")
+
+ ("/Users/rchristie/dev/jobon/lib/pry_commands/" (22117 14717 0 0) "version.rb" "transcode.rb" "positions-hasher.rb" "position-question-copy.rb" "orphan-finder.rb" "geo-fixer.rb" "applications-hasher.rb" "address-suppressor.rb" "../" "./")
+
+ ("/Users/rchristie/dev/jobon/lib/" (22449 15464 0 0) "validators/" "utils/" "tasks/" "searchable.rb" "redis_store.rb" "pry_commands.rb" "pry_commands/" "middleware/" "jobs/" "geocoder_cache.rb" "devise_security_extension/" "core_ext/" "constraints/" "clock.rb" "active_record_extensions.rb" "action_helper.rb" "../" "./")
+
+ ("/Users/rchristie/dev/jobon/app/models/" (22451 57568 0 0) "view.rb" "video_answer.rb" "user.rb" "text_answer.rb" "support.rb" "stats.rb" "settings.rb" "role.rb" "required_question.rb" "request_token.rb" "rating.rb" "question_set.rb" "question.rb" "position_question_set.rb" "position.rb" "portfolio.rb" "oauth_token.rb" "oauth_nonce.rb" "oauth2_verifier.rb" "oauth2_token.rb" "newsletter.rb" "multiple_choice_option.rb" "minisite.rb" "interview_session.rb" "guest_view_link.rb" "external_source.rb" "export.rb" "events/" "event.rb" "encoding_job.rb" "employment_table.rb" "email_template_preview.rb" "email_template.rb" "custom_question_set_position.rb" "custom_question_set.rb" "custom_question_custom_question_set.rb" "custom_question.rb" "custom_answer.rb" "company.rb" "comment.rb" "client_application.rb" "application_form.rb" "application.rb" "answer.rb" "all_users_export.rb" "address.rb" "account.rb" "access_token.rb" "ability.rb" "../" "./")
+
+ ("/Users/rchristie/dev/jobon/" (22451 57572 0 0) "VERSION" "vendor/" "tmp/" "test/" "solr/" "README.markdown" "Rakefile" "public/" "Procfile" "log/" "lib/" "imports/" "Guardfile" "Gemfile.lock" "Gemfile" "db/" "config.ru" "config/" "CHANGELOG.md" "bin/" "artwork/" "app/" ".slugignore" ".settings/" ".ruby-version" ".projectile" ".project" ".powrc" ".powenv" ".gitignore" ".git/" ".flexProperties" ".env-example" ".env" ".autotest" ".actionScriptProperties" "../" "./")
+
+ ("/Users/rchristie/" (22450 49999 0 0) "vmwarevms/" "vmware_tmp/" "VirtualBox VMs/" "tmp/" "Timeline 2.0.key/" "test.abbrev_defs" "test-soapui-project.xml" "Ten Thumbs Students/" "store/" "sqlstuff/" "soapUI-Tutorials/" "soapui-settings.xml" "Snapshots/" "Sites/" "site-lisp/" "semantic.cache" "rubber-secret.yml" "rails3-templates/" "Public/" "Pictures/" "oracle_notes.txt" "myports.txt" "myactive_ports.txt" "Music/" "Movies" "Mingle/" "menu/" "mbox" "Mail/" "linux_notes.txt" "Library/" "java/" "isus/" "Dropbox (Personal)/" "Dropbox (Eye Street Solutions)/" "Dropbox/" "Downloads/" "Documents/" "dmps/" "dev/" "Desktop/" "DeLorme/" "default-soapui-workspace.xml" "bin/" "bash-completion.d/" "backups/" "backup/" "auto/" "Applications/" "Adobe Creative Suite Cleaner Tool.log" ".zshrc" ".z" ".yjp/" ".yarg" ".XcodeDefaultPerspective.mode1v3" ".Xcode/" ".Xauthority" ".vulcan" ".virtualenvs/" ".viminfo" ".vim/" ".vegas/" ".vagrant.d/" ".tunnel.yml" ".Trash/" ".tramp_history" ".tor/" ".tmux.conf" ".thumbnails/" ".thor/" ".texlive2008/" ".terminitor/" ".svn/" ".subversion/" ".ssh/" ".sqlplus_history" ".sqlite_history" ".sqldeveloper/" ".siegerc" ".sh_history" ".semantic-cache/" ".sake" ".s3cfg" ".rvmrc" ".rvm/" ".ruby_inline/" ".rsense" ".rnd" ".riece/" ".ri/" ".rediscli_history" ".recently-used" ".recentf" ".README.md" ".rdebug_hist" ".rake_task_cache/" ".rake/" ".rails.d" ".rails-plugin-sources" ".qt/" ".pwsafe.dat~" ".pwsafe.dat" ".putty/" ".psql_history" ".pryrc" ".pry_history" ".projects.ede" ".profile" ".pow/" ".port_history" ".pip/" ".pgpass" ".passenger/" ".parallels_settings" ".oracle_jre_usage/" ".nvm/" ".npmrc" ".npm/" ".notes" ".node-gyp/" ".netrc" ".netbeans/" ".mysql_history" ".mongorc.js" ".mix/" ".mini_exiftool/" ".macports/" ".m2/" ".local/" ".lesshst" ".langhelp/" ".labrador/" ".keystore" ".kde/" ".kajeet-build.properties" ".jswat/" ".jruby/" ".jobon-android/" ".jets3t/" ".itmstransporter/" ".ispell_english" ".irbrc" ".irb_history" ".irb-history" ".ido.last" ".idlerc/" ".ICEauthority" ".htaccess" ".hoerc" ".hgignore_global" ".hex/" ".heroku/" ".guard_history" ".gnupg/" ".gitk" ".gitignore_global" ".gitconfig" ".gimp-2.2/" ".gemrc" ".gem/" ".gdb_history" ".fonts.cache-1" ".fontconfig/" ".fastri-index" ".eshell/" ".emacs.old" ".emacs.d/" ".emacs.bmk" ".emacs" ".el4rrc.rb" ".el4r/" ".ehdc/" ".editedhistory" ".eclipse_keyring" ".ecb-tip-of-day.el" ".ec2/" ".dvdcss/" ".DS_Store" ".drush/" ".dropbox/" ".distlib/" ".dbvis/" ".dbshell" ".cvspass" ".cups/" ".crv2008/" ".cordova/" ".config/" ".COLReg" ".coffee_history" ".clickatell" ".cim_install_log" ".cheat/" ".CFUserTextEncoding" ".cache/" ".bzr.log" ".bundle/" ".bm-repository~" ".bm-repository" ".basilisk_ii_prefs" ".bashrc" ".bash_sessions/" ".bash_profile" ".bash_history" ".bash_env" ".bash_aliases" ".aws/" ".autotest.d/" ".autotest" ".atom/" ".aspell.en.pws" ".aspell.en.prepl" ".AppData/" ".ant/" ".android/" ".adobe/" ".abbrev_defs_old" ".abbrev_defs" "../" "./")
+
  ("/Users/rchristie/dev/jobon/config/environments/" (22449 15464 0 0) "test.rb" "staging.rb" "production.rb" "development.rb" "../" "./")
 
- ("/Users/rchristie/dev/narms/" (22450 47892 0 0) "VERSION" "vendor/" "tmp/" "test/" "startupEC2/" "solr/" "script/" "RELEASE_NOTES" "README.markdown" "Rakefile" "public/" "Procfile" "mobile/" "log/" "lib/" "Guardfile" "Gemfile.lock" "Gemfile" "doc/" "db/" "config.ru" "config/" "app/" ".slugignore" ".settings/" ".ruby_inline/" ".ruby-version" ".project" ".powrc" ".gitignore" ".git/" ".flexProperties" ".DS_Store" ".autotest" ".actionScriptProperties" ".#config.ru" "#config.ru#" "../" "./")
-
  ("/Users/rchristie/dev/narms/config/initializers/" (22445 16717 0 0) "zencoder.rb" "time_formats.rb" "session_store.rb" "secret_token.rb" "s3_direct_uploader.rb" "pry.rb" "mime_types.rb" "inflections.rb" "haml.rb" "geocoder.rb" "form_builder.rb" "devise_password_hacks.rb" "devise_async.rb" "devise.rb" "core_ext.rb" "cgi_escape_fix.rb" "carrierwave.rb" "backtrace_silencers.rb" "backbone.rb" "app_config.rb" "airbrake.rb" "02_redis.rb" "01_dependencies.rb" "../" "./")
-
- ("/Users/rchristie/dev/jobon/config/" (22450 39425 0 0) "zencoder_s3_permissions.json" "unicorn.rb" "sunspot.yml" "sitemap.rb" "routes.rb" "newrelic.yml" "mail.yml.example" "mactag.rb" "locales/" "initializers/" "environments/" "environment.rb" "database.yml.example" "database.yml" "compass.rb" "boot.rb" "application.rb" "app_config.yml.example" "app_config.yml" "../" "./")
 
  ("/Users/rchristie/dev/jobon/app/" (22449 15464 0 0) "views/" "uploaders/" "services/" "models/" "mailers/" "helpers/" "flex/" "datatables/" "controllers/" "assets/" "../" "./")
 
  ("/Users/rchristie/dev/jobon/app/flex/" (22117 14717 0 0) "recorder/" "PhotoBooth/" "jwplayer-mirror-plugin/" ".gitignore" "../" "./")
 
  ("/Users/rchristie/dev/jobon/app/flex/recorder/" (22117 14717 0 0) "RecordingController.as" "locale/" "libs/" "JobOnRecorder.mxml" "JobOnRecorder.css" "assets/" ".settings/" ".project" ".flexProperties" ".actionScriptProperties" "../" "./")
-
- ("/Users/rchristie/dev/jobon/" (22449 15464 0 0) "VERSION" "vendor/" "tmp/" "test/" "solr/" "README.markdown" "Rakefile" "public/" "Procfile" "log/" "lib/" "imports/" "Guardfile" "Gemfile.lock" "Gemfile" "db/" "config.ru" "config/" "CHANGELOG.md" "bin/" "artwork/" "app/" ".slugignore" ".settings/" ".ruby-version" ".projectile" ".project" ".powrc" ".powenv" ".gitignore" ".git/" ".flexProperties" ".env-example" ".env" ".autotest" ".actionScriptProperties" ".#README.markdown" "#README.markdown#" "../" "./")
-
- ("/Users/rchristie/dev/narms/app/models/" (22449 17510 0 0) "view.rb" "video_answer.rb" "user.rb" "system_notification.rb" "stats.rb" "role.rb" "required_question.rb" "request_token.rb" "rating.rb" "question.rb" "position.rb" "plan_pak.rb" "occupation.rb" "oauth_token.rb" "oauth_nonce.rb" "oauth2_verifier.rb" "oauth2_token.rb" "narms_api.rb" "job_type.rb" "industry.rb" "external_source.rb" "export.rb" "encoding_job.rb" "company.rb" "client_application.rb" "cart_item.rb" "cart.rb" "application.rb" "answer.rb" "all_users_export.rb" "addressable_pak_position.rb" "address.rb" "account.rb" "access_token.rb" "ability.rb" "../" "./")
 
  ("/Users/rchristie/dev/narms/config/" (22297 46101 0 0) "zencoder_s3_permissions.json" "unicorn.rb" "sunspot.yml" "sitemap.rb" "shortswitch.yml" "routes.rb" "newrelic.yml" "mail.yml.example" "mail.yml" "mactag.rb" "locales/" "initializers/" "facebook.yml.example" "facebook.yml" "environments/" "environment.rb" "database.yml.example" "database.yml" "boot.rb" "application.rb" "app_config.yml.example" "app_config.yml" "../" "./")
 
@@ -265,8 +293,6 @@
  ("/Users/rchristie/dev/jobon/app/mailers/" (22332 3603 0 0) "user_mailer.rb" "support_mailer.rb" "positions_mailer.rb" "invitations_mailer.rb" "application_mailer.rb" "account_notifications_mailer.rb" "../" "./")
 
  ("/Users/rchristie/dev/jobon/app/controllers/super_admin/" (22273 61277 0 0) "users_controller.rb" "super_admin_controller.rb" "questions_controller.rb" "minisites_controller.rb" "companies_controller.rb" "applications_controller.rb" "answers_controller.rb" "accounts_controller.rb" "../" "./")
-
- ("/Users/rchristie/Documents/elasticsearch-presentation/" (22432 15738 0 0) "search_architecture.png" "presentation.md" "image2016-6-27 16-15-1.png" "image2016-6-27 16-11-23.png" ".DS_Store" ".#presentation.md" "../" "./")
 
  ("/Users/rchristie/dev/searchapp-expert/app/models/concerns/" (22432 14516 0 0) "searchable.rb" ".keep" "../" "./")
 
@@ -284,8 +310,6 @@
 
  ("/Users/rchristie/dev/searchapp/" (22432 13265 0 0) "vendor/" "tmp/" "test/" "README.rdoc" "Rakefile" "public/" "log/" "lib/" "Gemfile.lock" "Gemfile" "db/" "config.ru" "config/" "bin/" "app/" ".gitignore" ".git/" "../" "./")
 
- ("/Users/rchristie/dev/elasticsearch-demo/app/views/users/" (22432 7177 0 0) "show.json.jbuilder" "show.html.haml" "new.html.haml" "index.json.jbuilder" "index.html.haml" "edit.html.haml" "_user.json.jbuilder" "_form.html.haml" "../" "./")
-
  ("/Users/rchristie/dev/elasticsearch-demo/app/views/" (22432 7177 0 0) "users/" "layouts/" "../" "./")
 
  ("/Users/rchristie/dev/elasticsearch-demo/app/assets/stylesheets/" (22432 10682 0 0) "users.scss" "users.css.map" "users.css" "scaffolds.scss" "scaffolds.css.map" "scaffolds.css" "application.scss" ".sass-cache/" "../" "./")
@@ -300,10 +324,6 @@
 
  ("/Users/rchristie/dev/jobon-old/" (22117 14537 0 0) "VERSION" "vendor/" "tmp/" "test/" "solr/" "README.markdown" "Rakefile" "public/" "Procfile" "log/" "lib/" "kitchen/" "Guardfile" "Gemfile.lock" "Gemfile" "db/" "config.ru" "config/" "CHANGELOG.md" "bin/" "artwork/" "app/" ".slugignore" ".settings/" ".ruby-version" ".project" ".powrc" ".gitignore" ".git/" ".flexProperties" ".env-example" ".DS_Store" ".bundle/" ".autotest" ".actionScriptProperties" "../" "./")
 
- ("/Users/rchristie/dev/elasticsearch-demo/config/" (22432 10605 0 0) "secrets.yml" "routes.rb" "mongoid.yml" "locales/" "initializers/" "environments/" "environment.rb" "database.yml" "boot.rb" "application.rb" "../" "./")
-
- ("/Users/rchristie/dev/elasticsearch-demo/app/assets/javascripts/" (22432 7177 0 0) "users.coffee" "application.js" "../" "./")
-
  ("/Users/rchristie/dev/elasticsearch-demo/app/assets/" (22432 6515 0 0) "stylesheets/" "javascripts/" "images/" "../" "./")
 
  ("/Users/rchristie/dev/elasticsearch-demo/" (22432 9671 0 0) "vendor/" "tmp/" "test/" "README.rdoc" "Rakefile" "public/" "log/" "lib/" "Gemfile.lock" "Gemfile" "db/" "config.ru" "config/" "bin/" "app/" ".ruby-version" ".ruby-gemset" ".gitignore" ".git/" "../" "./")
@@ -311,8 +331,6 @@
  ("/Users/rchristie/dev/elasticsearch-demo/app/models/" (22432 9230 0 0) "user.rb" "concerns/" "address.rb" ".keep" "../" "./")
 
  ("/Users/rchristie/dev/sandbox/" (22355 43106 0 0) "xmptmp-out37119w0G.rb" "xmptmp-in37119jqA.rb" "xmptmp-in2721ijS.rb" "wordpress.xml" "wordpress.2010-08-10.xml" "word2vizz.xsl" "word.xml" "wesley_ruby_test.rb" "vrbo_vail.rb" "vrbo_santa_cruz.rb" "validation-global.xml" "usser_test_messager.rb" "url_validation.rb" "uploads.csv" "tunnel.thor.txt" "tracking_self.rb" "tproductattr.sql" "tmp.sql" "tmp.rb" "tm_bundle_parsing.rb" "tm/" "Thumbs.db" "textmarks_sandbox.rb" "textbox_bg_small.acorn" "textbox_bg.acorn" "teststuff.rb" "testruby.rb" "TestRack.rb" "testnet_dns.rb" "testmech/" "testformswitchit.html" "testformsubmit.html" "testfoooo.xml" "testfoo.xml" "testfoo.txt" "testfoo.rb" "testfileio.rb" "testfile.txt" "testcrack.rb" "testcar/" "testActivation.xml.rob" "test_yahoo_boss.rb" "test_two_remoting.rb" "test_ssl.rb" "test_soap.rb" "test_snippet.rb" "test_sinatra.rb" "test_selenium.rb" "test_script.rb" "test_scp.rb" "test_ruby.rb" "test_remote_file_read.rb" "test_parslet_work.rb" "test_parslet.rb" "test_list.rb" "test_gchart.rb" "test_ftp.rb" "test_dsl.txt" "test_d2.rb" "test_d.rb" "test_csv.rb" "test_cole.rb" "test_attr_logger3.rb" "test_attr_logger2.rb" "test_attr_logger.rb" "test_alias.rb" "test2_parslet.rb" "test2.xml" "test2.txt" "test2.rb" "test.yml" "test.xml" "test.txt" "test.script" "test.scpt" "test.rb" "test.py" "test.notes" "test.json" "test.js" "Test.java" "test.csv" "test.css" "test.coffee" "test-graphviz.rb" "test-git/" "sunspot_stub.txt" "store-product-descriptions.txt" "store-product-descriptions.sql" "stats.txt" "starter-kit-1.7.0/" "ssl-props.xml" "SqlLite.db" "sqlbuffer.sql" "soap-log.txt_purgeRequest_response.xml" "soap-log.txt_purgeRequest_request.xml" "snippet_copier.rb" "smtp_test.rb" "slurp_phone.rb" "show_memcache.rb" "shortswitch_notes.txt" "shipAdvice10000.xml" "shipAdvice10000-2.xml" "shipAdvice.xml" "server.rb" "screencast.md" "scrape_vrbo.rb" "scrape_redcross.rb" "scrap_co_ski_town.rb" "sample-data.xml" "s3sync.tar.gz" "rubyscratch.rb" "rubyists/" "rubyhw1.rb" "ruby_test.rb" "ruby-mode/" "ruby-mapquest.rb" "ruby-mapquest-2.rb" "ruby-Mapquest-0.005.rb" "roman.rb" "rmaToBrightpoint.xml" "rmastoOrderAndLineNo.txt" "rmaResponseFromBrightpoint.xml" "returnReceiptFromBrightpoint.xml" "returnReceipt-10000-10000.xml" "retire/" "remoting.rb" "RegexTestHarness.java" "random_project_gen.rb" "rails-shoulda-bundle.el" "rails-rake.patch" "rails/" "queries.js" "python_sorting_science_project.py" "python_sorting.py" "python_alg.py" "products_to_value.txt" "postgresql.sql" "pop_size_reader.rb" "plustrce.sql" "plsql_and_paypal_response" "pie_graph.png" "permutation.rb" "pci-changes/" "PayPalManagerTest.java" "payflo-test.txt" "otx.sql" "oracle_specific_schema.rb" "oracle_fixtures.rake" "ora.txt" "open_uri_test.rb" "oldPhoneImages/" "old_scripts/" "old_prem_result.html.erb" "oilsite/" "object_roles_test/" "oauth_util.rb" "novesk.rb" "notesOnSettingUpProductionServer.txt" "notesOnAddingStoreAttribute.txt" "noteOnReturnStatuses.txt" "nonzero/" "Nested-Drag-and-Drop-with-Ancestry/" "mytest.txt" "mytest.rb" "mysqlbuffer.sql" "my_fruity_graph.png" "my_fruity_bar_graph.png" "multimedia/" "morse_test.rb" "morse_code_flymake_flymake.rb" "morse_code_flymake.rb" "morse_code_2.rb" "modules_foo.rb" "Minimalistic/" "mfema/" "metaprogramming2.rb" "metaprogramming.rb" "mechanize_test.rb" "mainline/" "macros.rb" "macros.el" "macro-article.txt" "kakuro2.rb" "kakuro.rb" "kajeetshopping.txt" "kajeetbuffer.sql" "jruby-test.rb" "jruby-test/" "jQuery-Awesome-Nested-Set-Drag-and-Drop/" "instasave/" "insight.txt" "innovectra.yml" "index.shtm" "html.rb" "how_ruby_activerecord_modules_are_setup.rb" "HibernateMetricsPatch.txt" "hello.pl" "hello.coffee" "gry-bttstrt.png" "gry-bttmid.png" "gry-bttend.png" "gruff_test_pie.rb" "gruff_test_bar.rb" "gruff_test.rb" "goodbye2.pl" "goodbye.pl.es" "goodbye.pl" "gmailtest2.rb" "gmailtest.rb" "gmail.rb" "github-test.rb" "gchart.rb" "foo_test.rb" "foo_provider.rb" "foo.rb" "foo/" "fo.txt" "fizzbuzz.rb" "file_munger.rb" "fib2.rb" "fib.rb" "facebook_picture_post.rb" "ex2.txt" "ex1.rb" "eval_foo.rb" "drop_portal.sql" "domain_category.sql" "doctor.rb" "disqus_import.rb" "diff_for_calendar" "dereference_test.rb" "demo.java" "defaultMappingRegistry.rb" "defaultDriver.rb" "default.rb" "datamodeltelecon.txt" "couchtest.rb" "continuation_example.rb" "contact.json" "comments.xml" "cole_test.html" "cole.rb" "coerce_string.rb" "clipurl.txt" "client_mike.rb" "class_definition_active.rb" "checkgems.rb" "ccuapi.wsdl" "carter.rb" "CareAccountNoteForm.java" "CareAccountNoteAction.java" "burlap_reply.txt" "build_parser.rb" "bp.txt" "bm.rb" "bluroute_history.xml" "baruch_data.csv" "auth_notes.txt" "assignment_issue.rb" "array_to_hash.rb" "ApplicationResources.properties" "align_rules.el" "airlines.txt" "ai_dev.sql" "adv_rails_notes.txt" "addAccountNote.jsp" "activeacl/" "active_record_oracle_extensions/" "activateOfferServiceClient.rb" "acl_system/" "accountDetails.jsp" "3155i_US_es.pdf" "3155i_US_en.pdf" ".DS_Store" ".#response_from_bing.rb" ".#facebook_picture_post.rb" "#response_from_bing.rb#" "#random_project_gen.rb#" "#facebook_picture_post.rb#" "../" "./")
-
- ("/Users/rchristie/dev/jobon/app/models/" (22404 37669 0 0) "view.rb" "video_answer.rb" "user.rb" "text_answer.rb" "support.rb" "stats.rb" "settings.rb" "role.rb" "required_question.rb" "request_token.rb" "rating.rb" "quick_question.rb" "quick_answer.rb" "question.rb" "position.rb" "portfolio.rb" "oauth_token.rb" "oauth_nonce.rb" "oauth2_verifier.rb" "oauth2_token.rb" "newsletter.rb" "multiple_choice_option.rb" "minisite.rb" "guest_view_link.rb" "external_source.rb" "export.rb" "events/" "event.rb" "encoding_job.rb" "employment_table.rb" "email_template_preview.rb" "email_template.rb" "custom_question_set_position.rb" "custom_question_set.rb" "custom_question_custom_question_set.rb" "custom_question.rb" "custom_answer.rb" "company.rb" "comment.rb" "client_application.rb" "application_form.rb" "application.rb" "answer.rb" "all_users_export.rb" "address.rb" "account.rb" "access_token.rb" "ability.rb" "../" "./")
 
  ("/Users/rchristie/dev/jobon/app/controllers/" (22404 38862 0 0) "welcome_controller.rb" "users_controller.rb" "support_controller.rb" "super_admin/" "sessions_controller.rb" "registrations_controller.rb" "quick_questions_controller.rb" "quick_answers_controller.rb" "questions_controller.rb" "positions_controller.rb" "pages_controller.rb" "oauth_controller.rb" "oauth_clients_controller.rb" "newsletters_controller.rb" "minisites_controller.rb" "invitations_controller.rb" "guest/" "encoding_jobs_controller.rb" "employer/" "custom_questions_controller.rb" "custom_question_sets_controller.rb" "concerns/" "comments_controller.rb" "applications_controller.rb" "application_forms_controller.rb" "application_controller.rb" "api/" "answers_controller.rb" "accounts_controller.rb" "../" "./")
 
@@ -322,8 +340,6 @@
 
  ("/Users/rchristie/dev/elasticsearch-demo/app/" (22432 6515 0 0) "views/" "models/" "mailers/" "helpers/" "controllers/" "assets/" "../" "./")
 
- ("/Users/rchristie/dev/elasticsearch-demo/db/" (22432 7657 0 0) "seeds.rb" "development.sqlite3" ".#seeds.rb" "#seeds.rb#" "../" "./")
-
  ("/Users/rchristie/dev/elasticsearch-demo/config/initializers/" (22432 6515 0 0) "wrap_parameters.rb" "session_store.rb" "mime_types.rb" "inflections.rb" "filter_parameter_logging.rb" "cookies_serializer.rb" "backtrace_silencers.rb" "assets.rb" "../" "./")
 
  ("/Users/rchristie/Desktop/" (22423 6745 0 0) "x-wing/" "vmshare/" "tmp/" "timesheet-2016-07-25.png" "tie-fighter/" "test_assets/" "saminframe.jpg" "review/" "parmalee-room-parents/" "jobon/" "jawa-playset/" "IMG_0620.JPG" "IMG_0620 (1).JPG" "hsa-2014/" "docs/" "devstuff/" "clarity.png" "cantina-playset/" "avery-frame.png" "approved-timesheet.png" ".localized" ".jpg" ".DS_Store" ".#url_validation.csv" ".#map-template.html" "../" "./")
@@ -331,8 +347,6 @@
  ("/Users/rchristie/Documents/" (22430 53043 0 0) "~$Pac 435 Recharter Form.xlsx" "YouthProtectionTraining.pdf" "workspace/" "What You Get for $485,000 - NYTimes.com.pdf" "WebEx/" "web_framework_overview.pdf" "web_framework_overview.pages/" "wats-letter.pdf" "Walmart.com - Checkout.pdf" "VzInHomeAgent/" "vrfinder_1_page.pages" "vrcompliance_status.docx" "Virtual Machines.localized/" "UTD-document.pdf" "Updater5/" "Ultimate iPhone.gstencil/" "uci-response.docx" "uci-response-092530091.pdf" "uci-response-092530091.docx" "tmp/" "test.mpg" "tax_extension_2010.pdf" "taber-bathroom-remodel.pdf" "staticelectricity.doc" "Standard Form 312, Classified Information Nondisclosure Agreement, January 2000 copy.pdf" "Sportline Team SportsReceipt.pdf" "SpecTemplate.dot" "Southwest Airlines - Purchase Confirmation.pdf" "soccer_registration.pdf" "skunkworks/" "ski_trip_checlist.xls" "ShortSwitchOverview.docx" "ShortSwitchBizDev.docx" "shortswitch_intro.screenflow/" "shortswitch1.screenflow/" "shirt order.pages" "shared_vm/" "sf86_signatures.pdf" "SF-86_copy_2012_4_22.pdf" "seops_es_presentation.key/" "seops-overview.key/" "sel.html" "se_win06.pdf" "SD Card Order 111-9953397-1577855.pdf" "schwaner-flowers.pdf" "SCGEnterprisesContract.pdf" "SCCeFileCHHagerstown.pdf" "satellite_internet.pdf" "robsnowboarding.MPG" "rob_christie_background.pdf" "riding-on-rails.md" "resume/" "Reservations - Budget Car Rental Costa Rica.pdf" "Reservation 546755 - Virgin Vacations.pdf" "Reflections_Red.jpg" "Reflections_LandingPage 2015 v2.jpg" "reflections-ribbons.pdf" "reflections-poster-2015.jpg" "receipts/" "Receipt-ken-gift.pdf" "RDC Connections/" "rails_deployment_options.pdf" "rails_deployment_options.pages" "rails_deployment_options.doc" "PuebloTournamentApplication.pdf" "Proposal Template.dot" "properties.xlsx" "proof_of_insurance_new.pdf" "proof_of_insurance.pdf" "procam.pdf" "previewribbon.psd" "PinewoodDerbyCarStand.pdf" "Pinewood Derby Car Stand.docx" "pete-ops-team-notes.txt" "Personal.dmg" "personal/" "pcsoffers.sql" "pci_saq_c_v2.pdf" "passports.pdf" "ParmaleeElementary.xls" "parmalee_elementary_reflections.xls" "parmalee/" "Pack1459SummerTimeActivities.pdf" "output2.gif" "output.gif" "Ops tickets.xls" "Open_Letter_-_UT_Seller.pdf" "open-blue/" "op-meeting-samir.txt" "OmniFocus Backups/" "Official Change of Address Form.pdf" "notes_seops.txt" "NIHproposal.xls" "newsletter_submission.pages/" "NCRs.pdf" "money/" "mobiled-ubiquitor.txt" "mobile_initiatives.txt" "mobile_discovery/" "mlkjr.pages/" "Microsoft User Data/" "merit-badge-sign-up.pdf" "Medical-release-form-signed.pdf" "MD-meeting-24-Sept-2007.doc" "Manifest Image-Ursulla.pdf" "MacHeist » Bundle Receipt.pdf" "M1st_Tote_Bags.xls" "logos.pages" "LogicalFallaciesInfographic_A3.pdf" "LogicalFallaciesInfographic_A1.pdf" "loan_docs/" "lifetouch_checks.pages" "Letter To Editor - Suggestions for future GTA games.pdf" "LendingTreePreQual.pdf" "kelly-insurance-change-request.pdf" "kajeet_thank_you.doc" "kajeet_ppc.pdf" "kajeet_ppc.key/" "jruby_rails.pages/" "jenny-happy-holidays.pages/" "jenny/" "jeffco_school_forms.pdf" "It’s A Baby Shower.docx" "irs_penalty_abatement.pages" "irs_abatement.pdf" "IRS-CP2000Notice.pdf" "Inventory and Damage Report.docx" "increasing_ltd.pages/" "IHFD Meeting-1.pdf" "iChats/" "https___www.paypal.com - Receipt - PayPal.pdf" "HP Photo Creations/" "how to study.pages" "HouseholdClaimReviewPrint.pdf" "house_evaluation.numbers" "house/" "HOPL2-Uncut.pdf" "home_equity_line.pdf" "home_brochure.pages" "home/" "hertz_rental_receipt.pdf" "Hershey Park Online Purchase Receipt.pdf" "HealthPlans.xlsx" "healthcoverage/" "healthcare_analysis_working.xls" "healthcare_analysis.xls" "HagerstownAmendment to Exhibit A 9.12.pdf" "git-cheat-sheet-medium.png" "fraud_doc.pdf" "Flex Builder 3/" "Fit US sales numbers.xls" "ferrell_gas_application.pdf" "fema-app-specs-version1_CB.doc" "fax_to_opthalmologist.pdf" "FairfaxRealEstateTax-PaymentReceipt.pdf" "Fairfax Real Estate Tax - Successful Payment Receipt.pdf" "Fairfax Real Estate Tax - Payment Receipt.pdf" "Fairfax Real Estate Tax - Payment Receipt 2009-07.pdf" "Fairfax Real Estate Tax - Payment Receipt - 2.pdf" "Fairfax County Property Taxes - Payment Receipt.pdf" "Fairfax County Property Taxes - Payment Receipt - 2011.pdf" "Facts-Tuition-Avery.pdf" "EyeStreet/" "Eye Street Solutions LLC Mail - [SA] Receipt: Csm.pdf" "Eye Street Research Contract Performance Deal Sheet.pdf" "Experian-Credit-Report.pdf" "example_file_of_data.xlsx" "eventfinder-review-notes.pdf" "eventfinder-review-notes.pages" "Event1.pdf" "event-finder-notes.txt" "EquifaxCreditReport.pdf" "ep6-notes.txt" "emergency_numbers.pages/" "elasticsearch-presentation/" "eFax Messenger User Data/" "ECG_Invoice_2014_October_2320391_22867727.pdf" "eBooks/" "e-QIP_Request_12226880_Archival_Copy.pdf" "drools_evaluation.txt" "dr_permission.docx" "diamond/" "DenLeaderFastStart.pdf" "Decompiler Data/" "dbvis.license" "data-model.pdf" "cubscout_codes.docx" "cub_scout_promise.pages/" "contract_template.doc" "Compiler Book Receipt.pdf" "Colloquy Transcripts/" "coles_birthday_meal.pages/" "cole_soccer_names.docx" "cole_science.pages" "cole_school_docs.pdf" "cole-club-registration.pdf" "cole-algebra-agreement.pdf" "Cole ALP.pdf" "cole/" "clipart_heart.pages" "ChristieConsultingJobonSDA.pdf" "chhagerstown-p_and_l.xlsx" "CheckCrossIcons/" "CertifiedScrumMasterTraining-RegOnline.pdf" "century-link-bill.pdf" "cast_development.sql" "carterbackpacking.pages" "carter-change-request-for-biology.pdf" "carter/" "car_buying.txt" "BUSINESS PLAN NEW-8-2007.doc" "business/" "BSA Training Validation-Youth Protection.pdf" "brick orderform-1.pdf" "boyscouts/" "before_phonnables.sql" "before_compliant_import.sql" "bday.ppt" "Bass Pro Shops - Order Confirmation.pdf" "base_requirements.csv" "bar_stools.pdf" "Balsamiq Mockups/" "balsamiq/" "BackgroundCheckAuthorization.pdf" "AXS Red Rocks Amphitheatre - Ticketing System.pdf" "Avery C ALP.pdf" "avery/" "agile/" "Adobe Flash Builder 4/" "ACS - Pay By Web - MD Ticket.pdf" "ACA Online Registration - Print Confirmation Form.pdf" "3100ClosingDocs.pdf" "3100ClosingDocs-2.pdf" "2015-16-how-to-run.pdf" "2015 Christie_C_Liability Waiver.pdf" "2014IRSHSAIssue.pages" "1984.pages" ".parallels-vm-directory/" ".localized" ".DS_Store" "../" "./")
 
  ("/Users/rchristie/dev/runout_placards/" (22355 50198 0 0) "VERSION" "vendor/" "tmp/" "spec/" "script/" "Runout Displays Manual.docx" "Runout Displays Acceptance Testing.docx" "README.rdoc" "README.md" "Rakefile" "public/" "proftpd.conf" "log/" "lib/" "Guardfile" "Gemfile.lock" "Gemfile" "doc/" "db/" "config.ru" "config/" "Capfile" "app/" ".rspec" ".powrc" ".gitignore" ".git/" ".bundle/" "../" "./")
-
- ("/Users/rchristie/" (22388 48515 0 0) "vmwarevms/" "vmware_tmp/" "VirtualBox VMs/" "tmp/" "Timeline 2.0.key/" "test.abbrev_defs" "test-soapui-project.xml" "Ten Thumbs Students/" "store/" "sqlstuff/" "soapUI-Tutorials/" "soapui-settings.xml" "Snapshots/" "Sites/" "site-lisp/" "semantic.cache" "rubber-secret.yml" "rails3-templates/" "Public/" "Pictures/" "oracle_notes.txt" "myports.txt" "myactive_ports.txt" "Music/" "Movies" "Mingle/" "menu/" "mbox" "Mail/" "linux_notes.txt" "Library/" "java/" "isus/" "Dropbox (Personal)/" "Dropbox (Eye Street Solutions)/" "Dropbox/" "Downloads/" "Documents/" "dmps/" "dev/" "Desktop/" "DeLorme/" "default-soapui-workspace.xml" "bin/" "bash-completion.d/" "backups/" "backup/" "auto/" "Applications/" "Adobe Creative Suite Cleaner Tool.log" ".zshrc" ".z" ".yjp/" ".yarg" ".XcodeDefaultPerspective.mode1v3" ".Xcode/" ".Xauthority" ".vulcan" ".virtualenvs/" ".viminfo" ".vim/" ".vegas/" ".vagrant.d/" ".tunnel.yml" ".Trash/" ".tramp_history" ".tor/" ".tmux.conf" ".thumbnails/" ".thor/" ".texlive2008/" ".terminitor/" ".svn/" ".subversion/" ".ssh/" ".sqlplus_history" ".sqlite_history" ".sqldeveloper/" ".siegerc" ".sh_history" ".semantic-cache/" ".sake" ".s3cfg" ".rvmrc" ".rvm/" ".ruby_inline/" ".rsense" ".rnd" ".riece/" ".ri/" ".rediscli_history" ".recently-used" ".recentf" ".README.md" ".rdebug_hist" ".rake_task_cache/" ".rake/" ".rails.d" ".rails-plugin-sources" ".qt/" ".pwsafe.dat~" ".pwsafe.dat" ".putty/" ".psql_history" ".pryrc" ".pry_history" ".projects.ede" ".profile" ".pow/" ".port_history" ".pip/" ".pgpass" ".passenger/" ".parallels_settings" ".oracle_jre_usage/" ".nvm/" ".npmrc" ".npm/" ".notes" ".node-gyp/" ".netrc" ".netbeans/" ".mysql_history" ".mongorc.js" ".mix/" ".mini_exiftool/" ".macports/" ".m2/" ".local/" ".lesshst" ".langhelp/" ".labrador/" ".keystore" ".kde/" ".kajeet-build.properties" ".jswat/" ".jruby/" ".jobon-android/" ".jets3t/" ".itmstransporter/" ".ispell_english" ".irbrc" ".irb_history" ".irb-history" ".ido.last" ".idlerc/" ".ICEauthority" ".htaccess" ".hoerc" ".hgignore_global" ".hex/" ".heroku/" ".guard_history" ".gnupg/" ".gitk" ".gitignore_global" ".gitconfig" ".gimp-2.2/" ".gemrc" ".gem/" ".gdb_history" ".fonts.cache-1" ".fontconfig/" ".fastri-index" ".eshell/" ".emacs.old" ".emacs.d/" ".emacs.bmk" ".emacs" ".el4rrc.rb" ".el4r/" ".ehdc/" ".editedhistory" ".eclipse_keyring" ".ecb-tip-of-day.el" ".ec2/" ".dvdcss/" ".DS_Store" ".drush/" ".dropbox/" ".distlib/" ".dbvis/" ".dbshell" ".cvspass" ".cups/" ".crv2008/" ".cordova/" ".config/" ".COLReg" ".coffee_history" ".clickatell" ".cim_install_log" ".cheat/" ".CFUserTextEncoding" ".cache/" ".bzr.log" ".bundle/" ".bm-repository~" ".bm-repository" ".basilisk_ii_prefs" ".bashrc" ".bash_sessions/" ".bash_profile" ".bash_history" ".bash_env" ".bash_aliases" ".aws/" ".autotest.d/" ".autotest" ".atom/" ".aspell.en.pws" ".aspell.en.prepl" ".AppData/" ".ant/" ".android/" ".adobe/" ".abbrev_defs_old" ".abbrev_defs" "../" "./")
 
  ("/Users/rchristie/dev/runout_placards/app/models/" (21040 55497 0 0) "sort_plan.rb" "runout_sort_plan.rb" "runout.rb" "placard_assignment.rb" "placard.rb" "header.rb" ".gitkeep" "../" "./")
 
@@ -384,8 +398,6 @@
 
  ("/Users/rchristie/dev/isjonsnowalive/config/" (22309 46595 0 0) "test.exs" "prod.secret.exs" "prod.exs" "dev.exs" "config.exs" "../" "./")
 
- ("/Users/rchristie/dev/jobon/lib/" (22273 61198 0 0) "validators/" "utils/" "tasks/" "searchable.rb" "redis_store.rb" "pry_commands.rb" "pry_commands/" "middleware/" "jobs/" "geocoder_cache.rb" "devise_security_extension/" "core_ext/" "constraints/" "clock.rb" "active_record_extensions.rb" "action_helper.rb" "../" "./")
-
  ("/Users/rchristie/dev/isjonsnowalive/web/templates/page/" (22309 45933 0 0) "index.html.eex" "../" "./")
 
  ("/Users/rchristie/dev/isjonsnowalive/web/static/css/" (22309 44386 0 0) "app.css" "../" "./")
@@ -414,8 +426,6 @@
 
  ("/Users/rchristie/dev/isjonsnowalive/" (22309 40549 0 0) "web/" "test/" "README.md" "priv/" "package.json" "node_modules/" "mix.lock" "mix.exs" "lib/" "deps/" "config/" "brunch-config.js" "_build/" ".gitignore" ".git/" "../" "./")
 
- ("/Users/rchristie/dev/dotfiles/" (22309 40162 0 0) "tmux.conf" "README.md" "pryrc" "irbrc" "install.rb" "gitconfig" "emacs.old" "emacs.d/" "emacs" "bashrc" "bash_profile" "bash_priv_env" "bash_env" "bash_aliases" "autotest.d/" "autotest" ".gitmodules" ".gitignore" ".git/" ".DS_Store" "../" "./")
-
  ("/Users/rchristie/dev/narms/app/views/employer/accounts/" (22305 38474 0 0) "switch.html.haml" "select.json.jbuilder" "result.html.haml" "new.html.haml" "link.html.haml" "find.html.haml" "edit.html.haml" "confirm.html.haml" "_link_form.html.haml" "_form.html.haml" "_account.html.haml" "../" "./")
 
  ("/Users/rchristie/dev/dam/app/views/digital_assets/" (22263 25454 0 0) "upload.html.haml" "simple_show.html.haml" "show.js.haml" "show.html.haml" "replaced_photo.js.haml" "replace_photo.js.haml" "related_video_asset.js.haml" "related_transcript_asset.js.haml" "related_close_caption_asset.js.haml" "related_audio_asset.js.haml" "new.html.haml" "mobile_asset_map.html.haml" "index.html.haml" "feed.atom.builder" "edit.html.haml" "direct_upload.html.haml" "create.js.haml" "cover_photo.js.haml" "bulk_upload.html.haml" "asset_map.html.haml" "add_to_collection.js.haml" "_video_asset.html.haml" "_upload_form.html.haml" "_transcript_asset.html.haml" "_text_asset.html.haml" "_replaced_photo.haml" "_nav_tabs.html.haml" "_image_asset.html.haml" "_form.html.haml" "_digital_assets.html.haml" "_digital_asset_table_view.html.haml" "_digital_asset_list_view.html.haml" "_digital_asset.html.haml" "_diamond_map_asset.html.haml" "_cover_photo_asset.html.haml" "_audio_asset.html.haml" "../" "./")
@@ -423,16 +433,6 @@
  ("/Users/rchristie/dev/dam/app/views/pick_lists/" (22247 35977 0 0) "show.html.haml" "new.html.haml" "index.html.haml" "edit.html.haml" "_pick_list_controls.html.haml" "_pick_list.html.haml" "_form.html.haml" "../" "./")
 
  ("/Users/rchristie/dev/dam/spec/" (22148 19870 0 0) "workers/" "views/" "uploaders/" "support/" "spec_helper.rb" "routing/" "requests/" "models/" "mailers/" "helpers/" "fixtures/" "features/" "factories/" "controllers/" ".DS_Store" "../" "./")
-
- ("/Users/rchristie/dev/dam/tmp/" (22264 4163 0 0) "workers.conf" "unicorn.old" "unicorn" "TPS_Report_Cover_Sheet.pdf" "TPS Report Cover Sheet.pdf" "testfiles/" "test_files/" "test/" "sockets/" "sessions/" "restart.txt" "railsweb" "pli_changes.rb" "pids/" "orphaned_files.csv.last" "orphaned_files.csv.gz" "old_files/" "mmedia/" "miniprofiler/" "metric_fu/" "keypair/" "images/" "files_with_encodings.csv" "files/" "docindex.html" "dam.conf" "cache/" "brakeman-report.json" "brakeman-report.html" "brakeman-19OCT2015.zip" "brakeman-19OCT2015/" "assets_with_locations.csv.gz" "assets_with_filenames_with_spaces_before_script.csv" "assets_with_filenames_with_spaces.csv" "141023-H-ZZ999-181.jpg.2" "141023-H-ZZ999-181.jpg.1" "141023-H-ZZ999-181.jpg" ".DS_Store" "../" "./")
-
- ("/Users/rchristie/dev/dam/lib/utils/fema/" (22274 3557 0 0) "verify_s3_items.rb" "remove_space_encodings_from_file_names.rb" "remove-cd-on-demand-pick-list.rb" "move_subdocuments.rb" "migrate_asset_hazard_types_to_disaster_types.rb" "merge_contacts_redux.rb" "merge_contacts.rb" "irl_file_server/" "fix_missing_file_sizes.rb" "fix_inactive_acls_for_existing_files.rb" "fix_headlines_with_spaces.rb" "fix_files_with_spaces_in_filenames.rb" "fix_files.rb" "fix_deleted_files.rb" "fix_content_type_for_assets.rb" "fix_close_caption_content_type.rb" "fix_chaptitle.rb" "find_urls_for_sub_docs_based_on_asset_url.rb" "find_files_with_encodings.rb" "direct_links.rb" "deactivate_missing.rb" "create_list_assets_with_locations.rb" "create_failed_validations_report.rb" "check_files.rb" "add_video_details.rb" "add_values_to_program_pick_list.rb" "add_dimensions.rb" "../" "./")
-
- ("/Users/rchristie/dev/dam/lib/tasks/" (22270 777 0 0) "utilities.rake" "fema.rake" "deploy.rake" "dam.rake" "ckeditor.rake" ".gitkeep" "../" "./")
-
- ("/Users/rchristie/dev/jobon/app/views/pages/" (22273 61277 0 0) "training.html.haml" "test.html.haml" "terms.html.haml" "tech_crunch_video.html" "privacy.html.haml" "press.html.haml" "pr-120211.html.haml" "pr-120115.html.haml" "pr-111512.html.haml" "pr-110811.html.haml" "pr-110711.html.haml" "pr-110411.html.haml" "pr-101712.html.haml" "pr-101111.html.haml" "pr-092611.html.haml" "pr-092512.html.haml" "pr-072815.html.haml" "pr-050613.html.haml" "pr-031912.html.haml" "pr-021012.html.haml" "pr-011212.html.haml" "index.html.haml" "faq.html.haml" "demo.html.haml" "core.html.haml" "about.html.haml" "_slider_container.html.haml" "_section_counters.html.haml" "_search_row.html.haml" "_jobon_is.html.haml" "_customers.html.haml" "../" "./")
-
- ("/Users/rchristie/.ssh/" (22190 62033 0 0) "retirehq-production.pem" "known_hosts" "jobon_production.pem" "identity.heroku.personal.pub" "identity.heroku.personal" "id_rsa.pub" "id_rsa" "github_rsa_bak-github" "github_rsa.pub_bak-github" "github_rsa.pub" "github_rsa" "femasoc.pem" "fema.pem" "config.old" "config" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----

@@ -140,7 +140,7 @@
  ("/Users/rchristie/.emacs.d/" . "lisp/")
  ("/Users/rchristie/dev/dotfiles/emacs.d/" . "lisp/")
  ("/Users/rchristie/dev/dotfiles/" . "emacs.d/")
- ("/Users/rchristie/dev/" . "sandbox/")
+ ("/Users/rchristie/dev/" . "dotfiles/")
  ("/Users/rchristie/" . "dev/")
  ("/Users/90053/dev/investors_mobile-tmp/config/" . "initializers/")
  ("/Users/90053/dev/investors_mobile-tmp/spec/" . "acceptance/")
@@ -166,11 +166,11 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/rchristie/dev/dotfiles/emacs.d/lisp/"
  "/Users/rchristie/dev/dotfiles/"
- "/Users/rchristie/dev/sandbox/"
  "/Users/rchristie/dev/jobon/app/models/"
  "/Users/rchristie/dev/jobon/"
+ "/Users/rchristie/dev/dotfiles/emacs.d/lisp/"
+ "/Users/rchristie/dev/sandbox/"
  "/Users/rchristie/dev/jobon/lib/jobs/"
  "/Users/rchristie/dev/jobon/app/controllers/"
  "/Users/rchristie/dev/jobon/lib/utils/"
@@ -220,27 +220,27 @@
 
 ;; ----- ido-work-file-list -----
 (
- "rwc-nxml.el"
  "emacs"
- "test.rb"
- "rwc-ruby.el"
+ "user.rb"
+ ".ruby-version"
  "ability.rb"
+ "rwc-ruby.el"
+ "rwc-nxml.el"
+ "test.rb"
  "Gemfile"
  "delayed_encoding_job.rb"
  "answers_controller.rb"
- "encoding_job.rb"
- "README.md"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/rchristie/dev/dotfiles/emacs.d/lisp/" (22467 43087 0 0) "unit-test.el" "twittering-mode.el" "rwc-yasnippet.el" "rwc-yaml.el" "rwc-xhtml.el" "rwc-twitter.el" "rwc-tty-format.el" "rwc-textile.el" "rwc-tabs.el" "rwc-svn.el" "rwc-ruby.el" "rwc-rails-reloaded.el" "rwc-projectile.el" "rwc-powerline.el" "rwc-package.el" "rwc-nxml.el" "rwc-mode-line-bell.el" "rwc-markdown.el" "rwc-linemark.el" "rwc-key-maps.el" "rwc-javascript.el" "rwc-ido.el" "rwc-html.el" "rwc-highlight-line.el" "rwc-globals.el" "rwc-git.el" "rwc-flyspell.el" "rwc-eol-conversion.el" "rwc-envs.el" "rwc-el-get.el" "rwc-defuns.el" "rwc-deft.el" "rwc-css.el" "rwc-comint.el" "rwc-color-theme.el" "rwc-c.el" "rwc-bash.el" "rwc-auctex.el" "custom.el" "auto-install.el" "../" "./")
+ ("/Users/rchristie/dev/dotfiles/emacs.d/lisp/" (22467 43840 0 0) "unit-test.el" "twittering-mode.el" "rwc-yasnippet.el" "rwc-yaml.el" "rwc-xhtml.el" "rwc-twitter.el" "rwc-tty-format.el" "rwc-textile.el" "rwc-tabs.el" "rwc-svn.el" "rwc-ruby.el" "rwc-rails-reloaded.el" "rwc-projectile.el" "rwc-powerline.el" "rwc-package.el" "rwc-nxml.el" "rwc-mode-line-bell.el" "rwc-markdown.el" "rwc-linemark.el" "rwc-key-maps.el" "rwc-javascript.el" "rwc-ido.el" "rwc-html.el" "rwc-highlight-line.el" "rwc-globals.el" "rwc-git.el" "rwc-flyspell.el" "rwc-eol-conversion.el" "rwc-envs.el" "rwc-el-get.el" "rwc-defuns.el" "rwc-deft.el" "rwc-css.el" "rwc-comint.el" "rwc-color-theme.el" "rwc-c.el" "rwc-bash.el" "rwc-auctex.el" "custom.el" "auto-install.el" "../" "./")
 
- ("/Users/rchristie/dev/dotfiles/emacs.d/" (22467 43074 0 0) "yasnippets-shoulda/" "vendor/" "tutorial/" "semanticdb/" "rcodetools/" "projectile.cache" "projectile-bookmarks.eld" "lisp/" "ido.last" "games/" "find-recursive/" "eol-conversion/" "elpa/" "el-get/" "auto-save-list/" "auto-install/" ".DS_Store" "../" "./")
+ ("/Users/rchristie/dev/dotfiles/emacs.d/" (22467 43767 0 0) "yasnippets-shoulda/" "vendor/" "tutorial/" "semanticdb/" "rcodetools/" "projectile.cache" "projectile-bookmarks.eld" "lisp/" "ido.last" "games/" "find-recursive/" "eol-conversion/" "elpa/" "el-get/" "auto-save-list/" "auto-install/" ".DS_Store" "../" "./")
 
- ("/Users/rchristie/dev/dotfiles/" (22467 43074 0 0) "tmux.conf" "README.md" "pryrc" "irbrc" "install.rb" "gitconfig" "emacs.old" "emacs.d/" "emacs" "bashrc" "bash_profile" "bash_priv_env" "bash_env" "bash_aliases" "autotest.d/" "autotest" ".gitmodules" ".gitignore" ".git/" ".DS_Store" "../" "./")
+ ("/Users/rchristie/dev/dotfiles/" (22467 43465 0 0) "tmux.conf" "README.md" "pryrc" "irbrc" "install.rb" "gitconfig" "emacs.old" "emacs.d/" "emacs" "bashrc" "bash_profile" "bash_priv_env" "bash_env" "bash_aliases" "autotest.d/" "autotest" ".gitmodules" ".gitignore" ".git/" ".DS_Store" "../" "./")
 
- ("/Users/rchristie/" (22467 42096 0 0) "vmwarevms/" "VirtualBox VMs/" "tmp/" "Timeline 2.0.key/" "test.abbrev_defs" "Ten Thumbs Students/" "store/" "sqlstuff/" "Snapshots/" "Sites/" "site-lisp/" "semantic.cache" "rubber-secret.yml" "rails3-templates/" "Public/" "prelude.emacs.d/" "Pictures/" "Music/" "Movies" "Mingle/" "menu/" "Mail/" "Library/" "isus/" "Dropbox (Personal)/" "Dropbox (Eye Street Solutions)/" "Dropbox/" "Downloads/" "Documents/" "dev/" "Desktop/" "DeLorme/" "bin/" "bash-completion.d/" "backups/" "auto/" "Applications/" ".zshrc" ".z" ".yjp/" ".XcodeDefaultPerspective.mode1v3" ".Xcode/" ".Xauthority" ".vulcan" ".virtualenvs/" ".viminfo" ".vim/" ".vegas/" ".vagrant.d/" ".tunnel.yml" ".Trash/" ".tramp_history" ".tor/" ".tmux.conf" ".thumbnails/" ".thor/" ".texlive2008/" ".terminitor/" ".svn/" ".subversion/" ".ssh/" ".sqlplus_history" ".sqlite_history" ".sqldeveloper/" ".siegerc" ".sh_history" ".semantic-cache/" ".sake" ".s3cfg" ".rvmrc" ".rvm/" ".ruby_inline/" ".rsense" ".rnd" ".riece/" ".ri/" ".rediscli_history" ".recently-used" ".recentf" ".README.md" ".rdebug_hist" ".rake_task_cache/" ".rake/" ".rails-plugin-sources" ".qt/" ".pwsafe.dat~" ".pwsafe.dat" ".putty/" ".psql_history" ".pryrc" ".pry_history" ".projects.ede" ".profile" ".pow/" ".port_history" ".pip/" ".pgpass" ".passenger/" ".parallels_settings" ".oracle_jre_usage/" ".nvm/" ".npmrc" ".npm/" ".notes" ".node-gyp/" ".netrc" ".netbeans/" ".mysql_history" ".mongorc.js" ".mix/" ".mini_exiftool/" ".macports/" ".m2/" ".local/" ".lesshst" ".langhelp/" ".labrador/" ".keystore" ".kde/" ".kajeet-build.properties" ".jswat/" ".jruby/" ".jobon-android/" ".jets3t/" ".itmstransporter/" ".ispell_english" ".irbrc" ".irb_history" ".irb-history" ".ido.last" ".idlerc/" ".ICEauthority" ".htaccess" ".hoerc" ".hgignore_global" ".hex/" ".heroku/" ".guard_history" ".gnupg/" ".gitk" ".gitignore_global" ".gitconfig" ".gimp-2.2/" ".gemrc" ".gem/" ".gdb_history" ".fonts.cache-1" ".fontconfig/" ".fastri-index" ".eshell/" ".emacs.d.pre-prelude.tar" ".emacs.d/" ".emacs" ".ehdc/" ".editedhistory" ".eclipse_keyring" ".ecb-tip-of-day.el" ".ec2/" ".dvdcss/" ".DS_Store" ".drush/" ".dropbox/" ".distlib/" ".dbvis/" ".dbshell" ".cvspass" ".cups/" ".crv2008/" ".cordova/" ".config/" ".COLReg" ".coffee_history" ".clickatell" ".cim_install_log" ".cheat/" ".CFUserTextEncoding" ".cache/" ".bzr.log" ".bundle/" ".bm-repository~" ".bm-repository" ".basilisk_ii_prefs" ".bashrc" ".bash_sessions/" ".bash_profile" ".bash_history" ".bash_env" ".bash_aliases" ".aws/" ".autotest.d/" ".autotest" ".atom/" ".aspell.en.pws" ".aspell.en.prepl" ".AppData/" ".ant/" ".android/" ".adobe/" ".abbrev_defs_old" ".abbrev_defs" "../" "./")
+ ("/Users/rchristie/" (22467 43449 0 0) "vmwarevms/" "VirtualBox VMs/" "tmp/" "Timeline 2.0.key/" "test.abbrev_defs" "Ten Thumbs Students/" "store/" "sqlstuff/" "Snapshots/" "Sites/" "site-lisp/" "semantic.cache" "rubber-secret.yml" "rails3-templates/" "Public/" "prelude.emacs.d/" "Pictures/" "Music/" "Movies" "Mingle/" "menu/" "Mail/" "Library/" "isus/" "Dropbox (Personal)/" "Dropbox (Eye Street Solutions)/" "Dropbox/" "Downloads/" "Documents/" "dev/" "Desktop/" "DeLorme/" "bin/" "bash-completion.d/" "backups/" "auto/" "Applications/" ".zshrc" ".z" ".yjp/" ".XcodeDefaultPerspective.mode1v3" ".Xcode/" ".Xauthority" ".vulcan" ".virtualenvs/" ".viminfo" ".vim/" ".vegas/" ".vagrant.d/" ".tunnel.yml" ".Trash/" ".tramp_history" ".tor/" ".tmux.conf" ".thumbnails/" ".thor/" ".texlive2008/" ".terminitor/" ".svn/" ".subversion/" ".ssh/" ".sqlplus_history" ".sqlite_history" ".sqldeveloper/" ".siegerc" ".sh_history" ".semantic-cache/" ".sake" ".s3cfg" ".rvmrc" ".rvm/" ".ruby_inline/" ".rsense" ".rnd" ".riece/" ".ri/" ".rediscli_history" ".recently-used" ".recentf" ".README.md" ".rdebug_hist" ".rake_task_cache/" ".rake/" ".rails-plugin-sources" ".qt/" ".pwsafe.dat~" ".pwsafe.dat" ".putty/" ".psql_history" ".pryrc" ".pry_history" ".projects.ede" ".profile" ".pow/" ".port_history" ".pip/" ".pgpass" ".passenger/" ".parallels_settings" ".oracle_jre_usage/" ".nvm/" ".npmrc" ".npm/" ".notes" ".node-gyp/" ".netrc" ".netbeans/" ".mysql_history" ".mongorc.js" ".mix/" ".mini_exiftool/" ".macports/" ".m2/" ".local/" ".lesshst" ".langhelp/" ".labrador/" ".keystore" ".kde/" ".kajeet-build.properties" ".jswat/" ".jruby/" ".jobon-android/" ".jets3t/" ".itmstransporter/" ".ispell_english" ".irbrc" ".irb_history" ".irb-history" ".ido.last" ".idlerc/" ".ICEauthority" ".htaccess" ".hoerc" ".hgignore_global" ".hex/" ".heroku/" ".guard_history" ".gnupg/" ".gitk" ".gitignore_global" ".gitconfig" ".gimp-2.2/" ".gemrc" ".gem/" ".gdb_history" ".fonts.cache-1" ".fontconfig/" ".fastri-index" ".eshell/" ".emacs.d.pre-prelude.tar" ".emacs.d/" ".emacs" ".ehdc/" ".editedhistory" ".eclipse_keyring" ".ecb-tip-of-day.el" ".ec2/" ".dvdcss/" ".DS_Store" ".drush/" ".dropbox/" ".distlib/" ".dbvis/" ".dbshell" ".cvspass" ".cups/" ".crv2008/" ".cordova/" ".config/" ".COLReg" ".coffee_history" ".clickatell" ".cim_install_log" ".cheat/" ".CFUserTextEncoding" ".cache/" ".bzr.log" ".bundle/" ".bm-repository~" ".bm-repository" ".basilisk_ii_prefs" ".bashrc" ".bash_sessions/" ".bash_profile" ".bash_history" ".bash_env" ".bash_aliases" ".aws/" ".autotest.d/" ".autotest" ".atom/" ".aspell.en.pws" ".aspell.en.prepl" ".AppData/" ".ant/" ".android/" ".adobe/" ".abbrev_defs_old" ".abbrev_defs" "../" "./")
 
  ("/Users/rchristie/dev/jobon/lib/jobs/" (22451 57568 0 0) "zencoder_resubmission_job.rb" "unfinished_application_email_job.rb" "super_admin_stats_job.rb" "simply_hired_xml_feed_job.rb" "reindex_minisite_job.rb" "reindex_job.rb" "positions_insert_job.rb" "positions_delete_job.rb" "position_invitation_job.rb" "interview_session_submitted_event_job.rb" "interview_session_decision_submitted_event_job.rb" "interview_session_created_event_job.rb" "interview_request_job.rb" "hired_event_job.rb" "export_all_users_job.rb" "delete_positions_by_table_name_job.rb" "delayed_encoding_job.rb" "delayed_encoding_intro_video_job.rb" "contact_applicant_event_job.rb" "batch_position_insert_handler_job.rb" "batch_mark_inactive_job.rb" "batch_handler_job.rb" "batch_delete_job.rb" "batch_delete_handler_job.rb" "batch_account_rename_job.rb" "avatar_job.rb" "application_submitted_event_job.rb" "answer_recorded_event_job.rb" "accounts_delete_job.rb" "../" "./")
 

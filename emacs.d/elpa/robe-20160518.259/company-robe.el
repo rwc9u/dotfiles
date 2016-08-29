@@ -1,7 +1,7 @@
 (eval-when-compile (require 'robe))
 
 ;;;###autoload
-(defun company-robe (command &optional arg)
+(defun company-robe (command &optional arg &rest ignore)
   "A `company-mode' completion back-end for `robe-mode'."
   (interactive (list 'interactive))
   (case command
@@ -25,9 +25,11 @@
                       (get-buffer "*robe-doc*")))))))
 
 (defun company-robe--prefix ()
-  (let ((prefix (company-grab-symbol)))
-    (when (robe-complete-symbol-p (- (point) (length prefix)))
-      prefix)))
+  (let ((bounds (robe-complete-bounds)))
+    (when (and bounds
+               (equal (point) (cdr bounds))
+               (robe-complete-symbol-p (car bounds)))
+      (buffer-substring (car bounds) (cdr bounds)))))
 
 (defun company-robe--choose-spec (thing)
   (let ((specs (robe-cached-specs thing)))
@@ -37,7 +39,7 @@
                              for module = (robe-spec-module spec)
                              when module
                              collect (cons module spec))))
-            (cdr (assoc (ido-completing-read "Module: " alist nil t) alist)))
+            (cdr (assoc (robe-completing-read "Module: " alist nil t) alist)))
         (car specs)))))
 
 (provide 'company-robe)

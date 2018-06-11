@@ -4,7 +4,7 @@ inf-mongo.el provides a REPL buffer connected to a MongoDB shell
 Install
 
 $ cd ~/.emacs.d/vendor
-$ git clone git://github.com/tobiassvn/inf-mongo.git
+$ git clone git://github.com/endofunky/inf-mongo.git
 
 In your emacs config:
 

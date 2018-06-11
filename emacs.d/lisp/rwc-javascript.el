@@ -11,16 +11,20 @@
 ;; (setq js2-basic-offset 2)
 ;; (setq js2-use-font-lock-faces t)
 ;; (setq js2-highlight-level 3)
-(custom-set-variables
- '(js3-lazy-commas t)
- '(js3-lazy-operators t)
- ;; '(js3-pretty-vars-spaces 2)
- ;; '(js3-continued-expr-mult 1)
- '(js3-expr-indent-offset 2)
- '(js3-paren-indent-offset 2)
- '(js3-square-indent-offset 2)
- '(js3-curly-indent-offset 0)  ;; this seems to fix indentation within functions for me
- )
+
+(defalias 'js3 'js3-mode) 
+
+
+;; (custom-set-variables
+;;  '(js3-lazy-commas t)
+;;  '(js3-lazy-operators t)
+;;  ;; '(js3-pretty-vars-spaces 2)
+;;  ;; '(js3-continued-expr-mult 1)
+;;  '(js3-expr-indent-offset 2)
+;;  '(js3-paren-indent-offset 2)
+;;  '(js3-square-indent-offset 2)
+;;  '(js3-curly-indent-offset 0)  ;; this seems to fix indentation within functions for me
+;;  )
 
 
 

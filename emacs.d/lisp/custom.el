@@ -50,6 +50,7 @@
  '(isearch-allow-scroll t)
  '(iswitchb-max-to-show 40)
  '(js-indent-level 2)
+ '(js2-basic-offset 2)
  '(markdown-command "/usr/local/bin/markdown")
  '(markdown-css-path
    "https://gist.github.com/jasonm23/516763/raw/632b066c7c18edc91485ba13b37ba50a9b2caac7/screen.css")

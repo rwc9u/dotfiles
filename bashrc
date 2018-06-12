@@ -166,7 +166,8 @@ fi
 ############################################################
 ## Setting up rvm for multiple ruby envs
 ############################################################
-if [[ -s /Users/rchristie/.rvm/scripts/rvm ]] ; then source /Users/rchristie/.rvm/scripts/rvm ; fi
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -r $rvm_path/scripts/completion ]] && source $rvm_path/scripts/completion
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

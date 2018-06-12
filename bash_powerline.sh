@@ -1,91 +1,168 @@
 #!/usr/bin/env bash
 
-## Uncomment to disable git info
-#POWERLINE_GIT=0
+# Borrowed and customized from https://github.com/riobard/bash-powerline
+# and https://github.com/rmm5t/dotfiles/blob/master/bash_powerline
 
 __powerline() {
-    # Colorscheme
-    readonly RESET='\[\033[m\]'
-    readonly COLOR_CWD='\[\033[0;34m\]' # blue
-    readonly COLOR_GIT='\[\033[0;36m\]' # cyan
-    readonly COLOR_SUCCESS='\[\033[0;32m\]' # green
-    readonly COLOR_FAILURE='\[\033[0;31m\]' # red
 
-    readonly SYMBOL_GIT_BRANCH='⑂'
-    readonly SYMBOL_GIT_MODIFIED='*'
-    readonly SYMBOL_GIT_PUSH='↑'
-    readonly SYMBOL_GIT_PULL='↓'
+  # Unicode symbols
+  readonly PS_SYMBOL_DARWIN=''
+  # readonly PS_SYMBOL_LINUX='$'
+  readonly PS_SYMBOL_LINUX='🐧 '
+  readonly PS_SYMBOL_OTHER='%'
+  readonly GIT_BRANCH_SYMBOL='⑂'
+  readonly GIT_BRANCH_CHANGED_SYMBOL='+'
+  readonly GIT_NEED_PUSH_SYMBOL='⇡'
+  readonly GIT_NEED_PULL_SYMBOL='⇣'
+  readonly RUBY_SYMBOL='⬙'
+  readonly NODE_SYMBOL='⬢'
 
-    if [[ -z "$PS_SYMBOL" ]]; then
-      case "$(uname)" in
-          Darwin)   PS_SYMBOL='';;
-          Linux)    PS_SYMBOL='$';;
-          *)        PS_SYMBOL='%';;
-      esac
+  function __tput { tput $* 2> /dev/null; }
+
+  readonly FG_BLACK="\[$(__tput setaf 0)\]"
+
+  readonly FG_GRAY1="\[$(__tput setaf 15)\]"
+  readonly FG_GRAY2="\[$(__tput setaf 7)\]"
+  readonly FG_GRAY3="\[$(__tput setaf 8)\]"
+
+  readonly FG_RED="\[$(__tput setaf 9)\]"
+  readonly FG_GREEN="\[$(__tput setaf 10)\]"
+  readonly FG_YELLOW="\[$(__tput setaf 11)\]"
+  readonly FG_BLUE="\[$(__tput setaf 12)\]"
+  readonly FG_MAGENTA="\[$(__tput setaf 13)\]"
+  readonly FG_CYAN="\[$(__tput setaf 14)\]"
+
+  readonly FG_DARK_RED="\[$(__tput setaf 1)\]"
+  readonly FG_DARK_GREEN="\[$(__tput setaf 2)\]"
+  readonly FG_MUSTARD="\[$(__tput setaf 3)\]"
+  readonly FG_NAVY="\[$(__tput setaf 4)\]"
+  readonly FG_PURPLE="\[$(__tput setaf 5)\]"
+  readonly FG_TURQUOISE="\[$(__tput setaf 6)\]"
+
+  readonly BG_BLACK="\[$(__tput setab 0)\]"
+
+  readonly BG_GRAY1="\[$(__tput setab 15)\]"
+  readonly BG_GRAY2="\[$(__tput setab 7)\]"
+  readonly BG_GRAY3="\[$(__tput setab 8)\]"
+
+  readonly BG_RED="\[$(__tput setab 9)\]"
+  readonly BG_GREEN="\[$(__tput setab 10)\]"
+  readonly BG_YELLOW="\[$(__tput setab 11)\]"
+  readonly BG_BLUE="\[$(__tput setab 12)\]"
+  readonly BG_MAGENTA="\[$(__tput setab 13)\]"
+  readonly BG_CYAN="\[$(__tput setab 14)\]"
+
+  readonly BG_DARK_RED="\[$(__tput setab 1)\]"
+  readonly BG_DARK_GREEN="\[$(__tput setab 2)\]"
+  readonly BG_MUSTARD="\[$(__tput setab 3)\]"
+  readonly BG_NAVY="\[$(__tput setab 4)\]"
+  readonly BG_PURPLE="\[$(__tput setab 5)\]"
+  readonly BG_TURQUOISE="\[$(__tput setab 6)\]"
+
+  readonly BG_DEEP_GREEN="\[$(__tput setab 22)\]"
+
+  readonly DIM="\[$(__tput dim)\]"
+  readonly REVERSE="\[$(__tput rev)\]"
+  readonly RESET="\[$(__tput sgr0)\]"
+  readonly BOLD="\[$(__tput bold)\]"
+
+  # what OS?
+  case "$(uname)" in
+    Darwin)
+      readonly PS_SYMBOL=$PS_SYMBOL_DARWIN
+      ;;
+    Linux)
+      readonly PS_SYMBOL=$PS_SYMBOL_LINUX
+      ;;
+    *)
+      readonly PS_SYMBOL=$PS_SYMBOL_OTHER
+  esac
+
+  ### Ruby #######################################################
+  if [ `which rvm 2> /dev/null` ]; then
+      __ruby_version() { printf $(~/.rvm/bin/rvm-prompt i v s g); }
+  elif [ `which ruby 2> /dev/null` ]; then
+      __ruby_version() { printf $(ruby --version | cut -d' ' -f2); }
+  else
+    __ruby_version() { return; }
+  fi
+
+  __ruby_info() {
+    local version=$(__ruby_version)
+    [ -z "${version}" ] && return
+    printf " $RUBY_SYMBOL ${version} "
+  }
+
+  ### Node.js ####################################################
+  if [ `which nodenv 2> /dev/null` ]; then
+    __node_version() { printf $(nodenv version-name); }
+  elif [ `which node 2> /dev/null` ]; then
+    __node_version() { printf $(node -v | cut -d'v' -f2); }
+  else
+    __node_version() { return; }
+  fi
+
+  __node_info() {
+    local version=$(__node_version)
+    [ -z "${version}" ] && return
+    printf " $NODE_SYMBOL ${version} "
+  }
+
+  ### Git ########################################################
+  __git_info() {
+    [ -x "$(which git)" ] || return    # git not found
+
+    local git_eng="env LANG=C git"   # force git output in English to make our work easier
+    # get current branch name or short SHA1 hash for detached head
+    local branch="$($git_eng symbolic-ref --short HEAD 2>/dev/null || $git_eng describe --tags --always 2>/dev/null)"
+    [ -n "$branch" ] || return  # git branch not found
+
+    local marks
+
+    # branch is modified?
+    [ -n "$($git_eng status --porcelain)" ] && marks+=" $GIT_BRANCH_CHANGED_SYMBOL"
+
+    # how many commits local branch is ahead/behind of remote?
+    local stat="$($git_eng status --porcelain --branch | grep '^##' | grep -o '\[.\+\]$')"
+    local aheadN="$(echo $stat | grep -o 'ahead [[:digit:]]\+' | grep -o '[[:digit:]]\+')"
+    local behindN="$(echo $stat | grep -o 'behind [[:digit:]]\+' | grep -o '[[:digit:]]\+')"
+    [ -n "$aheadN" ] && marks+=" $GIT_NEED_PUSH_SYMBOL$aheadN"
+    [ -n "$behindN" ] && marks+=" $GIT_NEED_PULL_SYMBOL$behindN"
+
+    printf " $GIT_BRANCH_SYMBOL $branch$marks "
+  }
+
+  ### PROMPT #####################################################
+  __title_info() { echo -ne "${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}"; }
+
+  case $TERM in
+    xterm*|rxvt|Eterm|eterm)
+      title() { echo -ne "\033]0;$(__title_info)\007"; }
+      ;;
+    screen)
+      title() { echo -ne "\033_$(__title_info)\033\\"; }
+      ;;
+  esac
+
+  ps1() {
+    # Check the exit code of the previous command and display different
+    # colors in the prompt accordingly.
+    if [ $? -eq 0 ]; then
+      local BG_EXIT="$BG_DARK_GREEN"
+    else
+      local BG_EXIT="$BG_RED"
     fi
 
-    __git_info() { 
-        [[ $POWERLINE_GIT = 0 ]] && return # disabled
-        hash git 2>/dev/null || return # git not found
-        local git_eng="env LANG=C git"   # force git output in English to make our work easier
+    PS1="\n$BG_GRAY3$FG_GRAY1 \s $RESET"
+    PS1+="$BG_MUSTARD$FG_BLACK \w $RESET"
+    PS1+="$BG_DARK_RED$FG_GRAY1$(__ruby_info)$RESET"
+    PS1+="$BG_DEEP_GREEN$FG_GRAY1$(__node_info)$RESET"
+    PS1+="$BG_BLUE$FG_GRAY1$(__git_info)$RESET\n"
+    PS1+="$BG_GRAY2$FG_BLACK \u@\h $RESET"
+    PS1+="$BG_EXIT$FG_GRAY1 $PS_SYMBOL $RESET "
+  }
 
-        # get current branch name
-        local ref=$($git_eng symbolic-ref --short HEAD 2>/dev/null)
-
-        if [[ -n "$ref" ]]; then
-            # prepend branch symbol
-            ref=$SYMBOL_GIT_BRANCH$ref
-        else
-            # get tag name or short unique hash
-            ref=$($git_eng describe --tags --always 2>/dev/null)
-        fi
-
-        [[ -n "$ref" ]] || return  # not a git repo
-
-        local marks
-
-        # scan first two lines of output from `git status`
-        while IFS= read -r line; do
-            if [[ $line =~ ^## ]]; then # header line
-                [[ $line =~ ahead\ ([0-9]+) ]] && marks+=" $SYMBOL_GIT_PUSH${BASH_REMATCH[1]}"
-                [[ $line =~ behind\ ([0-9]+) ]] && marks+=" $SYMBOL_GIT_PULL${BASH_REMATCH[1]}"
-            else # branch is modified if output contains more lines after the header line
-                marks="$SYMBOL_GIT_MODIFIED$marks"
-                break
-            fi
-        done < <($git_eng status --porcelain --branch 2>/dev/null)  # note the space between the two <
-
-        # print the git branch segment without a trailing newline
-        printf " $ref$marks"
-    }
-
-    ps1() {
-        # Check the exit code of the previous command and display different
-        # colors in the prompt accordingly. 
-        if [ $? -eq 0 ]; then
-            local symbol="$COLOR_SUCCESS $PS_SYMBOL $RESET"
-        else
-            local symbol="$COLOR_FAILURE $PS_SYMBOL $RESET"
-        fi
-
-        local cwd="$COLOR_CWD\w$RESET"
-        # Bash by default expands the content of PS1 unless promptvars is disabled.
-        # We must use another layer of reference to prevent expanding any user
-        # provided strings, which would cause security issues.
-        # POC: https://github.com/njhartwell/pw3nage
-        # Related fix in git-bash: https://github.com/git/git/blob/9d77b0405ce6b471cb5ce3a904368fc25e55643d/contrib/completion/git-prompt.sh#L324
-        if shopt -q promptvars; then
-            __powerline_git_info="$(__git_info)"
-            local git="$COLOR_GIT\${__powerline_git_info}$RESET"
-        else
-            # promptvars is disabled. Avoid creating unnecessary env var.
-            local git="$COLOR_GIT$(__git_info)$RESET"
-        fi
-
-        PS1="$cwd$git$symbol"
-    }
-
-    PROMPT_COMMAND="ps1${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
+  PROMPT_COMMAND="ps1 && title"
 }
 
 __powerline

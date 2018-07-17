@@ -201,8 +201,8 @@ through a terminal."
 ;;==============================
 (require 'rvm)
 ;; this seems to be slowing down ruby file opening
-;; (add-hook 'ruby-mode-hook
-;;           (lambda () (rvm-activate-corresponding-ruby)))
+(add-hook 'ruby-mode-hook
+           (lambda () (rvm-activate-corresponding-ruby)))
 
 ;;==============================
 ;; ruby tools

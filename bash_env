@@ -51,9 +51,9 @@ if [ -d /usr/local/ant/bin ] ; then
 PATH="/usr/local/ant/bin:${PATH}"
 fi
 
-# webtest
-if [ -d ~/dev/webtest/bin ] ; then
-PATH="~/dev/webtest/bin:${PATH}"
+# postgresql client
+if [ -d /usr/local/opt/postgresql@9.6/bin ] ; then
+PATH="/usr/local/opt/postgresql@9.6/bin:${PATH}"
 fi
 
 # rake completion
@@ -80,13 +80,13 @@ PATH="${PATH}:/opt/nginx/sbin"
 fi
 
 # rsense isntallation
-if [ -d /Users/rchristie/dev/dotfiles/emacs.d/vendor/rsense ] ; then
-export RSENSE_HOME="/Users/rchristie/dev/dotfiles/emacs.d/vendor/rsense"
+if [ -d /Users/f5119/dev/dotfiles/emacs.d/vendor/rsense ] ; then
+export RSENSE_HOME="/Users/f5119/dev/dotfiles/emacs.d/vendor/rsense"
 fi
 
 # z sense
-if [ -d /Users/rchristie/bin/z.sh ] ; then
-. /Users/rchristie/bin/z.sh
+if [ -d /Users/f5119/bin/z.sh ] ; then
+. /Users/f5119/bin/z.sh
 fi
 
 # ec2
@@ -105,10 +105,10 @@ fi
 export RUBYOPT=rubygems
 
 # node and coffeescript setup
-export NODE_PATH=/usr/local/lib/node_modules
-export NODE_NO_READLINE=1
+# export NODE_PATH=/usr/local/lib/node_modules
+# export NODE_NO_READLINE=1
 
-export PATH=./node_modules/.bin:$PATH
+# export PATH=./node_modules/.bin:$PATH
 
 
 # AWS CLI config

@@ -45,6 +45,7 @@ alias gsr="git cherry -v trunk"
 alias gg="git log --pretty=oneline"
 alias ggs="git log --stat"
 alias gsl="git shortlog -s -n"
+alias gclean="git fetch -p && for branch in \`git branch -vv | grep ': gone]' | awk '{print \$1}'\`; do git branch -d \$branch; done"
  
 # Useful report of what has been committed locally but not yet pushed to another
 # branch. Defaults to the remote origin/master. The u is supposed to stand for
@@ -216,3 +217,5 @@ alias browserstack="java -jar BrowserStackTunnel.jar u8YSVjSTSO7ny5XqQ75z diamon
 alias elasticsearch_start="elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml"
 
 alias kill-sidekiq="killall -9 -m sidekiq"
+
+alias specnojs="be rspec spec --format progress --tag ~@javascript --tag ~@js"

@@ -69,31 +69,35 @@ MANPATH="/opt/local/man:/opt/local/share/man:${MANPATH}"
 ############################################################
 ## Terminal behavior
 ############################################################
+if [ -f ~/.bash_powerline ]; then
+  . ~/.bash_powerline
+fi
+
 
 # Change the window title of X terminals 
-case $TERM in
-  xterm*|rxvt|Eterm|eterm)
-    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
-    ;;
-  screen)
-    PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\033\\"'
-    ;;
-esac
+# case $TERM in
+#   xterm*|rxvt|Eterm|eterm)
+#     PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
+#     ;;
+#   screen)
+#     PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\033\\"'
+#     ;;
+# esac
 
-# Show the git branch and dirty state in the prompt.
-# Borrowed from: http://henrik.nyh.se/2008/12/git-dirty-prompt
-function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
-}
-function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\(\1$(parse_git_dirty)\)/"
-}
+# # Show the git branch and dirty state in the prompt.
+# # Borrowed from: http://henrik.nyh.se/2008/12/git-dirty-prompt
+# function parse_git_dirty {
+#   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "*"
+# }
+# function parse_git_branch {
+#   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\(\1$(parse_git_dirty)\)/"
+# }
 
-# Do not set PS1 for dumb terminals
-if [ "$TERM" != 'dumb'  ] && [ -n "$BASH" ]
-then
-  export PS1='\[\033[32m\]\n[\s: \w] $(parse_git_branch) (rvm: $(~/.rvm/bin/rvm-prompt i v s g))\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
-fi
+# # Do not set PS1 for dumb terminals
+# if [ "$TERM" != 'dumb'  ] && [ -n "$BASH" ]
+# then
+#   export PS1='\[\033[32m\]\n[\s: \w] $(parse_git_branch) (rvm: $(~/.rvm/bin/rvm-prompt i v s g))\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
+# fi
 
 
 ############################################################
@@ -162,6 +166,11 @@ if [[ "$USER" == '' ]]; then
   # mainly for cygwin terminals. set USER env var if not already set
   USER=$USERNAME
 fi
+
+############################################################
+## nodenv
+############################################################
+eval "$(nodenv init -)"
 
 ############################################################
 ## Setting up rvm for multiple ruby envs

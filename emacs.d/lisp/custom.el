@@ -37,6 +37,19 @@
      ("[0-9]+\\.tex\\'" flymake-master-tex-init flymake-master-cleanup)
      ("\\.tex\\'" flymake-simple-tex-init)
      ("\\.idl\\'" flymake-simple-make-init))))
+ '(flymake-proc-allowed-file-name-masks
+   (quote
+    (("\\.c\\'" flymake-simple-make-init)
+     ("\\.cpp\\'" flymake-simple-make-init)
+     ("\\.xml\\'" flymake-xml-init)
+     ("\\.html?\\'" flymake-xml-init)
+     ("\\.cs\\'" flymake-simple-make-init)
+     ("\\.pl\\'" flymake-perl-init)
+     ("\\.h\\'" flymake-master-make-header-init flymake-master-cleanup)
+     ("\\.java\\'" jde-ecj-server-flymake-init jde-ecj-flymake-cleanup)
+     ("[0-9]+\\.tex\\'" flymake-master-tex-init flymake-master-cleanup)
+     ("\\.tex\\'" flymake-simple-tex-init)
+     ("\\.idl\\'" flymake-simple-make-init))))
  '(global-font-lock-mode t nil (font-lock))
  '(grep-find-command
    "find . -path '*/.svn/*' -or -path '*/build/*' -or -path '*/.git/*' -prune -o -type f -print0 | xargs -0 grep -nH -e ")
@@ -67,7 +80,7 @@
      (inlined-javascript-mode javascript-mode ecmascript-mode))))
  '(package-selected-packages
    (quote
-    (projectile inf-mongo web-mode robe rspec-mode ruby-tools fill-column-indicator rubocop flycheck zenburn-theme yasnippet yari yaml-mode textmate scss-mode sass-mode rvm rinari rainbow-mode psvn powerline nodejs-repl memory-usage markdown-mode magit-svn heroku handlebars-sgml-mode gist flymake-sass flymake-ruby flymake-haml flx-ido eyedropper es-mode deft company color-theme-solarized color-theme coffee-mode browse-kill-ring autopair applescript-mode)))
+    (apples-mode projectile web-mode rspec-mode ruby-tools fill-column-indicator rubocop flycheck zenburn-theme yasnippet yari yaml-mode textmate scss-mode sass-mode rvm rinari rainbow-mode psvn powerline nodejs-repl memory-usage markdown-mode magit-svn heroku handlebars-sgml-mode gist flymake-sass flymake-ruby flymake-haml flx-ido eyedropper es-mode deft company color-theme-solarized color-theme coffee-mode browse-kill-ring autopair)))
  '(rails-webrick:use-mongrel t)
  '(rails-ws:default-server-type "mongrel")
  '(rng-schema-locating-files (quote ("schemas.xml" "~/dev/schemas/schemas.xml")))
@@ -95,8 +108,8 @@
  '(diff-removed ((t (:inherit diff-changed :background "#FF453C"))))
  '(enh-ruby-op-face ((t (:foreground "gray69"))))
  '(enh-ruby-string-delimiter-face ((t (:foreground "#259185"))))
- '(flymake-errline ((((class color)) (:background "#330000" :overline "red" :underline "red"))))
- '(flymake-warnline ((((class color)) (:background "#333300" :overline "yellow" :underline "yellow"))))
+ '(flymake-errline ((((class color)) (:background "#330000" :overline "red" :underline "red"))) t)
+ '(flymake-warnline ((((class color)) (:background "#333300" :overline "yellow" :underline "yellow"))) t)
  '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)) nil)))
  '(mumamo-background-chunk-submode ((((class color) (min-colors 88) (background dark)) (:background "gray28"))) t)
  '(nxml-attribute-local-name-face ((t (:inherit nxml-name-face :foreground "blue" :weight semi-bold))) t)

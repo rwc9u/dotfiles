@@ -63,7 +63,7 @@
  '(isearch-allow-scroll t)
  '(iswitchb-max-to-show 40)
  '(js-indent-level 2)
- '(js2-basic-offset 2)
+ '(js2-basic-offset 2 t)
  '(markdown-command "/usr/local/bin/markdown")
  '(markdown-css-path
    "https://gist.github.com/jasonm23/516763/raw/632b066c7c18edc91485ba13b37ba50a9b2caac7/screen.css")
@@ -80,7 +80,7 @@
      (inlined-javascript-mode javascript-mode ecmascript-mode))))
  '(package-selected-packages
    (quote
-    (apples-mode projectile web-mode rspec-mode ruby-tools fill-column-indicator rubocop flycheck zenburn-theme yasnippet yari yaml-mode textmate scss-mode sass-mode rvm rinari rainbow-mode psvn powerline nodejs-repl memory-usage markdown-mode magit-svn heroku handlebars-sgml-mode gist flymake-sass flymake-ruby flymake-haml flx-ido eyedropper es-mode deft company color-theme-solarized color-theme coffee-mode browse-kill-ring autopair)))
+    (js2-mode apples-mode projectile web-mode rspec-mode ruby-tools fill-column-indicator rubocop zenburn-theme yasnippet yari yaml-mode textmate scss-mode sass-mode rvm rinari rainbow-mode psvn powerline nodejs-repl memory-usage markdown-mode magit-svn heroku handlebars-sgml-mode flymake-sass flymake-ruby flymake-haml flx-ido eyedropper es-mode deft color-theme-solarized color-theme browse-kill-ring autopair)))
  '(rails-webrick:use-mongrel t)
  '(rails-ws:default-server-type "mongrel")
  '(rng-schema-locating-files (quote ("schemas.xml" "~/dev/schemas/schemas.xml")))

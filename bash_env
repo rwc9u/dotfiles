@@ -101,9 +101,6 @@ export PATH=$PATH:$AWS_RDS_HOME/bin
 fi
 
 
-# add use of rubygems by default
-export RUBYOPT=rubygems
-
 # node and coffeescript setup
 # export NODE_PATH=/usr/local/lib/node_modules
 # export NODE_NO_READLINE=1

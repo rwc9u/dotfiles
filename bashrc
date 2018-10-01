@@ -180,3 +180,6 @@ eval "$(nodenv init -)"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Addu direnv support
+eval "$(direnv hook bash)"

@@ -126,9 +126,9 @@
 (autoload 'robe-mode "robe" "\
 Improved navigation for Ruby
 \(fn &optional ARG)" t nil)
-(autoload 'company-robe "robe-company" "\
-A `company-mode' completion back-end for `robe-mode'.
-\(fn COMMAND &optional ARG)" t nil)
+;; (autoload 'company-robe "robe-company" "\
+;; A `company-mode' completion back-end for `robe-mode'.
+;; \(fn COMMAND &optional ARG)" t nil)
 (add-hook 'ruby-mode-hook 'robe-mode)
 (eval-after-load 'company
   '(push 'company-robe company-backends))

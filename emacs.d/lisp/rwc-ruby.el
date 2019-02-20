@@ -71,6 +71,7 @@
             (set (make-local-variable 'tab-width) 2)
             (imenu-add-to-menubar "IMENU")
             (local-set-key [(control c) (control e)] 'ruby-insert-end)
+            (local-set-key [(control c) (.)] 'xref-find-definitions)
             (local-set-key (kbd "TAB") 'smart-tab)
             (substitute-key-definition 'ruby-electric-brace nil ruby-mode-map)
             ))

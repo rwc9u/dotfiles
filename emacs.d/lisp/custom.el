@@ -79,7 +79,7 @@
      (inlined-javascript-mode javascript-mode ecmascript-mode))))
  '(package-selected-packages
    (quote
-    (bm apples-mode projectile web-mode rspec-mode ruby-tools fill-column-indicator rubocop zenburn-theme yasnippet yari yaml-mode textmate scss-mode sass-mode rvm rinari rainbow-mode psvn nodejs-repl memory-usage markdown-mode magit-svn heroku handlebars-sgml-mode flymake-sass flymake-ruby flymake-haml flx-ido eyedropper es-mode deft color-theme-solarized color-theme browse-kill-ring autopair)))
+    (magit bm apples-mode projectile web-mode rspec-mode ruby-tools fill-column-indicator rubocop zenburn-theme yasnippet yari yaml-mode textmate scss-mode sass-mode rvm rinari rainbow-mode psvn nodejs-repl memory-usage markdown-mode magit-svn heroku handlebars-sgml-mode flymake-sass flymake-ruby flymake-haml flx-ido eyedropper es-mode deft color-theme-solarized color-theme browse-kill-ring autopair)))
  '(rails-webrick:use-mongrel t)
  '(rails-ws:default-server-type "mongrel")
  '(rng-schema-locating-files (quote ("schemas.xml" "~/dev/schemas/schemas.xml")))

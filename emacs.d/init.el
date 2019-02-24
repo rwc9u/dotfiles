@@ -49,7 +49,7 @@
 (package 'yasnippet)
 (package 'bm)
 (package 'flycheck)
-
+(package 'markdown-mode)
 
 ;;============================================================
 ;; javascript

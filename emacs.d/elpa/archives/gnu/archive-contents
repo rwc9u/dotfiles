@@ -298,7 +298,7 @@
 	     ((:url . "http://www.dr-qubit.org/emacs.php")
 	      (:keywords "extensions" "matching" "data structures trie" "tree" "dictionary" "completion" "regexp"))])
  (diff-hl .
-	  [(1 8 5)
+	  [(1 8 6)
 	   ((cl-lib
 	     (0 2))
 	    (emacs
@@ -590,6 +590,17 @@
 	   "gnamù reader, a reader with espeak tts" tar
 	   ((:keywords "tools" "accessibility")
 	    (:url . "http://elpa.gnu.org/packages/greader.html"))])
+ (guess-language .
+		 [(0 0 1)
+		  ((cl-lib
+		    (0 5))
+		   (emacs
+		    (24))
+		   (advice
+		    (0 1)))
+		  "Robust automatic language detection" single
+		  ((:url . "https://github.com/tmalsburg/guess-language.el")
+		   (:keywords))])
  (heap .
        [(0 5)
 	nil "Heap (a.k.a. priority queue) data structure" single

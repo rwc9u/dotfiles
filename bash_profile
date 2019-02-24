@@ -15,4 +15,3 @@ if [ -e ~/.bash_priv_env ] ; then
   . ~/.bash_priv_env
 fi
 
-export PATH="/usr/local/sbin:$PATH"

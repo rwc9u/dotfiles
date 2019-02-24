@@ -1,0 +1,515 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/f5119/dev/portfolio-analyzer/app/assets/" . "javascripts/")
+ ("/Users/f5119/dev/investors/app/assets/javascripts/application/components/" . "global/")
+ ("/Users/f5119/dev/investors/app/assets/javascripts/application/" . "components/")
+ ("/Users/f5119/dev/investors/app/views/international/funds/" . "funds/")
+ ("/Users/f5119/dev/investors/app/views/international/" . "funds/")
+ ("/Users/f5119/dev/investors/spec/controllers/international/" . "funds/")
+ ("/Users/f5119/dev/investors/app/controllers/international/" . "products/")
+ ("/Users/f5119/dev/investors/client/app/bundles/components/products/documents/" . "buttons/")
+ ("/Users/f5119/dev/investors/lib/fund/" . "product/")
+ ("/Users/f5119/DevTools/sts-bundle/pivotal-tc-server/" . "ofi529/")
+ ("/Users/f5119/DevTools/sts-bundle/" . "pivotal-tc-server/")
+ ("/Users/f5119/DevTools/sts-bundle/pivotal-tc-server/ofi529/" . "conf/")
+ ("/Users/f5119/DevTools/" . "sts-bundle/")
+ ("/Users/f5119/Downloads/Archive/" . "Marketing/")
+ ("/Users/f5119/dev/529-marketing/" . "WebContent/")
+ ("/usr/local/Cellar/mongodb/" . "3.6.5/")
+ ("/usr/local/Cellar/" . "mongodb/")
+ ("/usr/local/" . "etc/")
+ ("/usr/" . "local/")
+ ("/Users/f5119/.emacs.d/elpa/" . "js2-mode-20180301/")
+ ("/Users/f5119/dev/investors/app/assets/javascripts/advisor/components/" . "custom/")
+ ("/Users/f5119/dev/investors/app/assets/javascripts/advisor/" . "components/")
+ ("/Users/f5119/dev/investors/app/assets/javascripts/" . "application/")
+ ("/Users/f5119/dev/factor-exposure-calculator/app/" . "controllers/")
+ ("/Users/f5119/dev/investors/client/app/" . "bundles/")
+ ("/Users/f5119/dev/investors/client/" . "app/")
+ ("/Users/f5119/dev/investors/client/app/bundles/" . "components/")
+ ("/Users/f5119/dev/content-integration-hub/spec/models/" . "website/")
+ ("/Users/f5119/dev/content-integration-hub/spec/" . "models/")
+ ("/Users/f5119/dev/cms/app/controllers/" . "personalities/")
+ ("/Users/f5119/dev/cms/app/" . "controllers/")
+ ("/Users/f5119/dev/investors/app/views/ofi/scaffolding/literature_center/" . "home/")
+ ("/Users/f5119/dev/investors/app/views/ofi/scaffolding/funds/" . "landing/")
+ ("/Users/f5119/dev/investors/client/app/bundles/components/products/" . "documents/")
+ ("/Users/f5119/dev/investors/client/app/bundles/components/" . "international/")
+ ("/Users/f5119/dev/portfolio-analyzer/app/" . "assets/")
+ ("/Users/f5119/dev/investors/spec/factories/" . "product/")
+ ("/Users/f5119/dev/investors/app/views/uhnw/" . "base/")
+ ("/Users/f5119/dev/investors/app/views/ofi/scaffolding/products/" . "base/")
+ ("/Users/f5119/dev/investors/spec/decorators/" . "funds/")
+ ("/Users/f5119/dev/investors/spec/support/fixtures/vcr_cassettes/FundManagerLanding/" . "visit_fund_manager_landing/")
+ ("/Users/f5119/dev/investors/spec/features/" . "advisors/")
+ ("/Users/f5119/dev/investors/spec/features/advisors/" . "funds/")
+ ("/Users/f5119/dev/investors/spec/support/fixtures/vcr_cassettes/AutomaticTransactions/" . "purchases/")
+ ("/Users/f5119/dev/investors/spec/support/fixtures/vcr_cassettes/" . "Contact_Decoratable/")
+ ("/Users/f5119/dev/investors/spec/support/fixtures/" . "vcr_cassettes/")
+ ("/Users/f5119/dev/investors/spec/support/" . "fixtures/")
+ ("/Users/f5119/dev/investors/spec/controllers/investors/portfolio_summary/" . "automatic_transactions/")
+ ("/Users/f5119/dev/investors/spec/controllers/investors/" . "portfolio_summary/")
+ ("/Users/f5119/dev/investors/spec/controllers/" . "international/")
+ ("/Users/f5119/dev/investors/lib/fund/product/ucits_benchmark/" . "calendar_year/")
+ ("/Users/f5119/dev/gem-ofi-logger/lib/ofi/logger/" . "middleware/")
+ ("/Users/f5119/dev/gem-ofi-logger/lib/ofi/" . "logger/")
+ ("/Users/f5119/dev/gem-ofi-logger/lib/" . "ofi/")
+ ("/Users/f5119/dev/gem-ofi-logger/" . "lib/")
+ ("/Users/f5119/.rvm/gems/ruby-2.5.1/gems/semantic_logger-3.4.1/lib/semantic_logger/" . "formatters/")
+ ("/Users/f5119/.rvm/gems/ruby-2.5.1/gems/semantic_logger-3.4.1/lib/" . "semantic_logger/")
+ ("/Users/f5119/.rvm/gems/ruby-2.5.1/gems/semantic_logger-3.4.1/" . "lib/")
+ ("/Users/f5119/.rvm/gems/ruby-2.5.1/gems/semantic_logger-4.3.1/lib/semantic_logger/" . "formatters/")
+ ("/Users/f5119/dev/investors/app/controllers/ofi/" . "oppenheimerfunds/")
+ ("/Users/f5119/dev/identity/spec/models/" . "ofi/")
+ ("/Users/f5119/dev/saturn/spec/controllers/" . "v2/")
+ ("/Users/f5119/dev/identity/app/views/" . "home/")
+ ("/Users/f5119/dev/account-service/app/views/admin/" . "advisors/")
+ ("/Users/f5119/dev/investors/app/controllers/concerns/advisors/" . "my_book/")
+ ("/Users/f5119/dev/content-integration-hub/app/services/fund/" . "product/")
+ ("/Users/f5119/dev/content-integration-hub/app/services/" . "investors/")
+ ("/Users/f5119/dev/content-integration-hub/config/" . "initializers/")
+ ("/Users/f5119/dev/portfolio-analyzer/config/" . "environments/")
+ ("/Users/f5119/dev/account-service/gems/trac/lib/trac/" . "api_operations/")
+ ("/Users/f5119/.rvm/gems/jruby-9.1.12.0@identity/gems/ofi_auth-0.6.14/lib/" . "ofi_auth/")
+ ("/Users/f5119/.rvm/gems/jruby-9.1.12.0@identity/gems/ofi_auth-0.6.14/" . "lib/")
+ ("/Users/f5119/dev/gem-ofi-auth/lib/" . "ofi_auth/")
+ ("/Users/f5119/dev/gem-ofi-auth/spec/" . "ofi_auth/")
+ ("/Users/f5119/dev/gem-ofi-auth/" . "lib/")
+ ("/Users/f5119/dev/identity/spec/lib/ofi/" . "warden/")
+ ("/Users/f5119/dev/identity/spec/lib/" . "ofi/")
+ ("/Users/f5119/.rvm/gems/jruby-9.1.12.0@identity/gems/" . "ofi_auth-0.6.14/")
+ ("/Users/f5119/.rvm/gems/jruby-9.1.12.0/" . "gems/")
+ ("/Users/f5119/.rvm/gems/jruby-9.1.12.0@global/" . "gems/")
+ ("/Users/f5119/dev/portfolio-analyzer/" . "app/")
+ ("/Users/f5119/dev/account-service/.git/" . "hooks/")
+ ("/Users/f5119/dev/saturn/spec/" . "controllers/")
+ ("/Users/f5119/.rvm/gems/ruby-2.5.1/gems/actionpack-5.2.1/lib/" . "action_pack/")
+ ("/Users/f5119/.rvm/gems/ruby-2.5.1/gems/actionpack-5.2.1/" . "lib/")
+ ("/Users/f5119/.rvm/gems/ruby-2.5.1/gems/" . "semantic_logger-3.4.1/")
+ ("/Users/f5119/.rvm/gems/ruby-2.5.1@global/" . "gems/")
+ ("/Users/f5119/.rvm/gems/jruby-9.1.13.0@saturn/gems/" . "activerecord-oracle_enhanced-adapter-1.5.6/")
+ ("/Users/f5119/.rvm/gems/jruby-9.1.13.0@saturn/" . "gems/")
+ ("/Users/f5119/dev/identity/lib/ofi/warden/" . "strategies/")
+ ("/Users/f5119/dev/identity/lib/ofi/" . "warden/")
+ ("/Users/f5119/dev/identity/app/lib/" . "ofi/")
+ ("/Users/f5119/dev/saturn/app/services/" . "oppforce/")
+ ("/Users/f5119/dev/saturn/lib/" . "middleware/")
+ ("/Users/f5119/dev/account-service/gems/trac/test/" . "trac/")
+ ("/Users/f5119/dev/dotfiles/emacs.d/elpa/" . "robe-20171116.1249/")
+ ("/Users/f5119/dev/account-service/app/assets/" . "javascripts/")
+ ("/Users/f5119/dev/identity/lib/" . "tasks/")
+ ("/Users/f5119/dev/identity/db/" . "migrate/")
+ ("/Users/f5119/dev/identity/app/connectors/ofi/" . "connector/")
+ ("/Users/f5119/dev/identity/app/connectors/" . "ofi/")
+ ("/Users/f5119/dev/identity/spec/controllers/api/" . "v1/")
+ ("/Users/f5119/dev/identity/spec/controllers/" . "api/")
+ ("/Users/f5119/dev/identity/spec/" . "controllers/")
+ ("/Users/f5119/dev/identity/app/models/" . "ofi/")
+ ("/Users/f5119/dev/identity/app/services/" . "investors/")
+ ("/Users/f5119/dev/identity/app/controllers/api/" . "v1/")
+ ("/Users/f5119/dev/identity/app/controllers/" . "api/")
+ ("/Users/f5119/dev/investors/app/controllers/advisors/" . "funds/")
+ ("/Users/f5119/dev/tutorials/react-course-projects/indecision-app/" . "src/")
+ ("/Users/f5119/dev/tutorials/react-course-projects/indecision-app/public/" . "scripts/")
+ ("/Users/f5119/dev/investors/lib/ofi/authorization/" . "lib/")
+ ("/Users/f5119/dev/account-service/gems/ccr/lib/ccr/" . "api_operations/")
+ ("/Users/f5119/dev/vendor/stripe-ruby/lib/" . "stripe/")
+ ("/Users/f5119/dev/vendor/stripe-ruby/" . "lib/")
+ ("/Users/f5119/dev/vendor/" . "stripe-ruby/")
+ ("/Users/f5119/dev/account-service/gems/ccr/test/" . "ccr/")
+ ("/Users/f5119/dev/account-service/engines/dst/lib/dst/testing/" . "trac/")
+ ("/Users/f5119/dev/account-service/engines/dst/lib/dst/" . "testing/")
+ ("/Users/f5119/dev/ccr-mocks/" . "api/")
+ ("/Users/f5119/.gem/specs/artifactory.internal.ofiglobal.net%443/api/gems/" . "gems/")
+ ("/Users/f5119/.gem/specs/artifactory.internal.ofiglobal.net%443/api/" . "gems/")
+ ("/Users/f5119/.gem/specs/artifactory.internal.ofiglobal.net%443/" . "api/")
+ ("/Users/f5119/.gem/specs/" . "artifactory.internal.ofiglobal.net%443/")
+ ("/Users/f5119/.gem/" . "specs/")
+ ("/Users/f5119/.rvm/gems/ruby-2.5.1/" . "gems/")
+ ("/Users/f5119/dev/cms/config/" . "routes/")
+ ("/Users/f5119/dev/cms/" . "app/")
+ ("/Users/f5119/dev/account-service/app/views/transactions/" . "redemptions/")
+ ("/Users/f5119/dev/investors/app/assets/" . "javascripts/")
+ ("/Users/f5119/dev/investors/app/models/advisors/" . "clients/")
+ ("/Users/f5119/dev/tutorials/react-course-projects/indecision/" . "public/")
+ ("/Users/f5119/dev/tutorials/react-course-projects/" . "indecision-app/")
+ ("/Users/f5119/dev/tutorials/" . "react-course-projects/")
+ ("/Users/f5119/dev/saturn/app/models/" . "advisors/")
+ ("/Users/f5119/dev/investors/app/models/data_services/" . "indexing/")
+ ("/Users/f5119/dev/accent-replicator/config/" . "deploy/")
+ ("/Users/f5119/dev/accent-replicator/" . "config/")
+ ("/Users/f5119/dev/account-service/engines/dst/test/" . "dst/")
+ ("/Users/f5119/.rvm/gems/ruby-2.4.4/gems/magic_lamp-1.8.1/app/controllers/" . "magic_lamp/")
+ ("/Users/f5119/.rvm/gems/ruby-2.4.4/gems/magic_lamp-1.8.1/app/" . "controllers/")
+ ("/Users/f5119/.rvm/gems/ruby-2.4.4/gems/magic_lamp-1.8.1/" . "lib/")
+ ("/Users/f5119/.rvm/gems/ruby-2.4.4/gems/magic_lamp-1.8.1/lib/" . "magic_lamp/")
+ ("/Users/f5119/.rvm/gems/ruby-2.4.4/gems/jasmine-rails-0.14.8/lib/" . "jasmine_rails/")
+ ("/Users/f5119/dev/account-service/config/" . "locales/")
+ ("/Users/f5119/dev/investors/app/forms/ofi/" . "form_object/")
+ ("/Users/f5119/Downloads/ruby-client/lib/swagger_client/" . "models/")
+ ("/Users/f5119/Downloads/ruby-client/lib/" . "swagger_client/")
+ ("/Users/f5119/Downloads/ruby-client/" . "docs/")
+ ("/Users/f5119/Downloads/" . "ruby-client/")
+ ("/Users/f5119/dev/account-service/gems/trac/lib/" . "trac/")
+ ("/Users/f5119/dev/account-service/gems/trac/" . "lib/")
+ ("/Users/f5119/dev/account-service/gems/ccr/lib/" . "ccr/")
+ ("/Users/f5119/dev/account-service/gems/ccr/" . "lib/")
+ ("/Users/f5119/dev/account-service/gems/ta2000/lib/ta2000/" . "api_operations/")
+ ("/Users/f5119/dev/account-service/app/controllers/" . "admin/")
+ ("/Users/f5119/dev/account-service/test/" . "models/")
+ ("/Users/f5119/dev/account-service/app/views/" . "addresses/")
+ ("/Users/f5119/dev/account-service/gems/ta2000/lib/" . "ta2000/")
+ ("/Users/f5119/dev/account-service/gems/" . "trac/")
+ ("/Users/f5119/dev/account-service/gems/ta2000/test/" . "ta2000/")
+ ("/Users/f5119/dev/account-service/gems/ta2000/" . "test/")
+ ("/Users/f5119/dev/account-service/engines/dst/lib/" . "dst/")
+ ("/Users/f5119/dev/account-service/engines/dst/" . "lib/")
+ ("/Users/f5119/dev/account-service/engines/" . "dst/")
+ ("/Users/f5119/dev/account-service/app/models/" . "concerns/")
+ ("/Users/f5119/dev/account-service/app/" . "views/")
+ ("/Users/f5119/dev/account-service/" . "app/")
+ ("/Users/f5119/dev/saturn/app/controllers/advisors/" . "heartbeats/")
+ ("/Users/f5119/dev/saturn/app/controllers/" . "investors/")
+ ("/Users/f5119/dev/saturn/app/" . "controllers/")
+ ("/Users/f5119/dev/ruby-batch/config/" . "initializers/")
+ ("/Users/f5119/dev/identity/app/" . "controllers/")
+ ("/Users/f5119/dev/content-integration-hub/app/models/" . "resources/")
+ ("/Users/f5119/dev/content-integration-hub/app/" . "models/")
+ ("/Users/f5119/dev/content-integration-hub/" . "config/")
+ ("/Users/f5119/dev/investors/app/models/" . "products/")
+ ("/Users/f5119/.emacs.d/" . "elpa/")
+ ("/Users/f5119/dev/investors/spec/lib/ofi/middleware/" . "cookie_manager/")
+ ("/Users/f5119/dev/investors/spec/lib/ofi/" . "middleware/")
+ ("/Users/f5119/dev/investors/app/views/ofi/scaffolding/auth/" . "lite_registration/")
+ ("/Users/f5119/dev/investors/app/controllers/concerns/" . "ofi/")
+ ("/Users/f5119/dev/edd-admin/config/" . "settings/")
+ ("/Users/f5119/dev/edd-admin/" . "config/")
+ ("/Users/f5119/dev/investors/app/views/advisors/" . "megamenu/")
+ ("/Users/f5119/dev/investors/app/blacklists/" . "seo_redirect/")
+ ("/Users/f5119/dev/investors/spec/lib/" . "ofi/")
+ ("/Users/f5119/dev/investors/lib/ofi/" . "blacklist/")
+ ("/Users/f5119/dev/investors/lib/" . "ofi/")
+ ("/Users/f5119/dev/investors/spec/models/" . "search/")
+ ("/Users/f5119/dev/investors/app/controllers/" . "international/")
+ ("/Users/f5119/.rvm/gems/jruby-9.1.12.0@identity/" . "gems/")
+ ("/Users/f5119/.rvm/gems/" . "jruby-9.1.12.0@identity/")
+ ("/Users/f5119/.rvm/" . "gems/")
+ ("/Users/f5119/dev/identity/config/" . "initializers/")
+ ("/Users/f5119/dev/identity/" . "app/")
+ ("/Users/f5119/dev/investors/app/mixins/" . "ofi/")
+ ("/Users/f5119/dev/dotfiles/emacs.d/" . "lisp/")
+ ("/Users/f5119/dev/dotfiles/" . "emacs.d/")
+ ("/Users/f5119/dev/ruby-batch/" . "lib/")
+ ("/Users/f5119/dev/investors/app/forms/" . "ofi/")
+ ("/Users/f5119/dev/investors/spec/services/" . "advisors/")
+ ("/Users/f5119/dev/investors/app/services/" . "advisors/")
+ ("/Users/f5119/dev/investors/app/controllers/concerns/ofi/scaffolding/" . "products/")
+ ("/Users/f5119/dev/investors/app/controllers/concerns/ofi/" . "scaffolding/")
+ ("/Users/f5119/dev/investors/app/views/ofi/scaffolding/" . "funds/")
+ ("/Users/f5119/dev/investors/app/views/ofi/" . "scaffolding/")
+ ("/Users/f5119/dev/investors/app/views/" . "international/")
+ ("/Users/f5119/dev/investors/app/decorators/" . "funds/")
+ ("/Users/f5119/dev/investors/app/" . "assets/")
+ ("/Users/f5119/dev/transaction-service-ruby/config/" . "environments/")
+ ("/Users/f5119/dev/transaction-service-ruby/" . "config/")
+ ("/Users/f5119/dev/investors/spec/connectors/ofi/" . "connector/")
+ ("/Users/f5119/dev/investors/spec/connectors/" . "ofi/")
+ ("/Users/f5119/dev/investors/spec/" . "factories/")
+ ("/Users/f5119/" . "dev/")
+ ("/Users/f5119/dev/mongo-copy/" . "config/")
+ ("/Users/f5119/dev/docker-files/" . "digital-build-jruby/")
+ ("/Users/f5119/dev/orig-data-copy/" . "data-copy/")
+ ("/Users/f5119/dev/pb-client-wrapper/src/main/" . "resources/")
+ ("/Users/f5119/dev/pb-client-wrapper/src/" . "main/")
+ ("/Users/f5119/dev/pb-client-wrapper/" . "src/")
+ ("/Users/f5119/dev/faa/config/" . "environments/")
+ ("/Users/f5119/dev/faa/" . "config/")
+ ("/Users/f5119/dev/investors/config/" . "routes/")
+ ("/Users/f5119/dev/plan-admin/config/" . "environments/")
+ ("/Users/f5119/dev/plan-admin/" . "config/")
+ ("/Users/f5119/dev/configs/" . "investors/")
+ ("/Users/f5119/dev/factor-derby/config/" . "initializers/")
+ ("/Users/f5119/dev/factor-derby/" . "config/")
+ ("/Users/f5119/dev/investors/" . "app/")
+ ("/Users/f5119/dev/saturn/config/" . "initializers/")
+ ("/Users/f5119/dev/saturn/" . "app/")
+ ("/Users/f5119/dev/factor-exposure-calculator/config/" . "initializers/")
+ ("/Users/f5119/dev/factor-exposure-calculator/" . "config/")
+ ("/Users/f5119/dev/" . "dotfiles/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/f5119/dev/dotfiles/"
+ "/Users/f5119/dev/investors/app/assets/javascripts/application/components/global/"
+ "/Users/f5119/dev/investors/"
+ "/Users/f5119/dev/investors/app/assets/javascripts/"
+ "/Users/f5119/dev/investors/app/decorators/funds/"
+ "/Users/f5119/dev/portfolio-analyzer/app/assets/javascripts/"
+ "/Users/f5119/dev/investors/client/app/bundles/components/international/"
+ "/Users/f5119/dev/dotfiles/emacs.d/lisp/"
+ "/Users/f5119/dev/investors/spec/factories/product/"
+ "/Users/f5119/dev/investors/spec/factories/"
+ "/Users/f5119/dev/investors/spec/decorators/funds/"
+ "/Users/f5119/dev/investors/app/controllers/international/products/"
+ "/Users/f5119/dev/investors/client/app/bundles/components/products/documents/"
+ "/Users/f5119/dev/investors/config/routes/"
+ "/Users/f5119/dev/investors/app/views/international/funds/funds/"
+ "/Users/f5119/dev/investors/app/controllers/international/funds/"
+ "/Users/f5119/dev/investors/spec/controllers/international/funds/"
+ "/Users/f5119/dev/investors/app/decorators/"
+ "/Users/f5119/dev/investors/app/controllers/international/"
+ "/Users/f5119/dev/investors/app/blacklists/seo_redirect/"
+ "/Users/f5119/dev/investors/lib/ofi/blacklist/"
+ "/Users/f5119/dev/investors/lib/ofi/"
+ "/Users/f5119/dev/investors/client/app/bundles/components/products/documents/buttons/"
+ "/Users/f5119/dev/investors/client/app/bundles/utilities/"
+ "/Users/f5119/dev/investors/app/models/"
+ "/Users/f5119/dev/investors/lib/fund/product/"
+ "/Users/f5119/dev/saturn/"
+ "/Users/f5119/dev/docker-files/digital-build-jruby/"
+ "/Users/f5119/dev/saturn/app/controllers/"
+ "/Users/f5119/DevTools/sts-bundle/pivotal-tc-server/ofi529/conf/"
+ "/Users/f5119/dev/529-marketing/"
+ "/Users/f5119/dev/notes/"
+ "/Users/f5119/dev/content-integration-hub/"
+ "/usr/local/etc/"
+ "/Users/f5119/dev/content-integration-hub/config/initializers/"
+ "/Users/f5119/dev/content-integration-hub/app/models/"
+ "/Users/f5119/dev/content-integration-hub/app/models/resources/"
+ "/Users/f5119/dev/investors/app/models/resources/"
+ "/Users/f5119/dev/mongo-copy/"
+ "/Users/f5119/dev/cms/"
+ "/Users/f5119/dev/content-integration-hub/app/models/concerns/"
+ "/Users/f5119/dev/portfolio-analyzer/config/"
+ "/Users/f5119/dev/investors/client/app/bundles/components/TeamMembersPanel/"
+ "/Users/f5119/dev/investors/app/assets/javascripts/advisor/components/custom/"
+ "/Users/f5119/.emacs.d/lisp/"
+ "/Users/f5119/dev/content-integration-hub/config/"
+ "/Users/f5119/dev/factor-derby/config/"
+ "/Users/f5119/dev/factor-exposure-calculator/config/"
+ "/Users/f5119/dev/factor-exposure-calculator/app/controllers/"
+ "/Users/f5119/dev/portfolio-analyzer/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "emacs"
+ "README.md"
+ "jump_pagination.js"
+ "developer.js"
+ "fund_document_decorator.rb"
+ "application.js"
+ "advisor_phone.js"
+ "advisor.js"
+ "document_row.jsx"
+ ".projectile"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/f5119/" (23664 4465 655199 443000) ".account" ".bash_env" ".groovy/" ".guard_history" ".3T/" ".zlogin" ".viminfo" ".bash_history" ".mongorc.js" ".README.md" "backups/" ".gitconfig" ".aws/" ".cache/" "tmp/" ".emacsenv.d/" "Downloads/" ".rediscli_history" ".gem/" ".pry_history" ".bash_profile" ".phantomjs/" ".vscode/" ".swt/" ".autotest" "Documents/" ".nodenv/" ".npm/" ".pryrc" ".zoomus/" "dev/" ".Trash/" ".profile" ".dbshell" "Applications/" ".emacs" "Movies/" ".ssh/" "docs.tgz" "DevTools/" ".bash_aliases" "Public/" ".bash_sessions/" ".cups/" ".gitignore_global" ".emacs.d/" ".bm-repository" ".bashrc_orig" ".oracle_jre_usage/" ".lesshst" ".chromedriver-helper/" ".mkshrc" ".irb-history" "Library/" "Desktop/" ".rvm/" ".geckodriver-helper/" ".gitconfig_orig" ".bundle/" "Pictures/" ".irbrc" ".local/" ".autotest.d/" ".zshrc" ".bashrc" ".subversion/" "bin/" ".tooling/" ".hgignore_global" ".stCommitMsg" ".CFUserTextEncoding" ".yarnrc" ".tmux.conf" ".dbvis/" ".DS_Store" ".bash_powerline" ".node-gyp/" ".ivy2/" ".docker/" ".gemrc" ".base_profile_orig" "Music/" ".config/" "../" "./")
+
+ ("/Users/f5119/dev/dotfiles/" (23664 4205 742531 316000) ".git/" "Brewfile" "emacs.d/" "autotest.d/" ".gitignore" "bash_powerline" "gitconfig" "irbrc" "README.md" "emacs" ".gitmodules" "bashrc" "bash_aliases" "autotest" "bash_env" "tmux.conf" "bash_profile" "install.rb" "pryrc" "../" "./")
+
+ ("/Users/f5119/dev/dotfiles/emacs.d/lisp/" (23663 2197 827397 158000) "rwc-ruby.el" "rwc-nxml.el" "auto-install.el" "rwc-highlight-line.el" "rwc-tty-format.el" "rwc-globals.el" "rwc-xhtml.el" "rwc-javascript.el" "rwc-color-theme.el" "rwc-linemark.el" "rwc-html.el" "rwc-bash.el" "rwc-git.el" "rwc-projectile.el" "rwc-flyspell.el" "rwc-eol-conversion.el" "rwc-tabs.el" "rwc-svn.el" "rwc-c.el" "rwc-envs.el" "rwc-flycheck.el" "rwc-package.el" "rwc-key-maps.el" "rwc-deft.el" "rwc-ido.el" "rwc-auctex.el" "custom.el" "rwc-powerline.el" "rwc-textile.el" "rwc-rails-reloaded.el" "rwc-markdown.el" "rwc-el-get.el" "rwc-css.el" "twittering-mode.el" "rwc-yasnippet.el" "rwc-yaml.el" "rwc-twitter.el" "rwc-mode-line-bell.el" "rwc-comint.el" "unit-test.el" "rwc-defuns.el" "../" "./")
+
+ ("/Users/f5119/dev/dotfiles/emacs.d/" (23663 2141 295139 509000) "vendor/" "games/" "rake.cache" "elpa/" "el-get/" "auto-install/" "semanticdb/" "console_log.notes" "find-recursive/" "auto-save-list/" "var/" "eol-conversion/" "projectile.cache" "tramp" "projectile-bookmarks.eld" "lisp/" "tutorial/" "menu_log.notes" "rcodetools/" "ido.last" "snippets/" "../" "./")
+
+ ("/Users/f5119/dev/portfolio-analyzer/app/assets/javascripts/" (23602 58671 391940 793000) "channels/" "logging/" "application.js" "metrics/" "../" "./")
+
+ ("/Users/f5119/dev/portfolio-analyzer/app/assets/" (23493 64090 716068 993000) "stylesheets/" "javascripts/" "images/" "config/" "../" "./")
+
+ ("/Users/f5119/dev/portfolio-analyzer/app/" (23602 58671 564918 839000) "channels/" "services/" "helpers/" "assets/" "views/" "controllers/" "jobs/" "javascript/" "workers/" "lib/" "transformers/" "procs/" "presenters/" "policies/" "models/" "queries/" "providers/" "accessors/" "mixins/" "mailers/" "clients/" "connectors/" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/assets/javascripts/application/components/global/" (23661 48178 305769 173000) "jump_pagination.js" "local_storage_private_mode.js" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/assets/javascripts/application/components/" (23327 24594 776158 938000) "global/" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/assets/javascripts/application/" (23327 24594 776058 240000) "components/" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/controllers/concerns/ofi/scaffolding/funds/" (23661 48178 647842 730000) "morningstar_highlights.rb" "landing.rb" "documents.rb" "historical_prices.rb" "distributions.rb" "morningstar_comparison.rb" "funds.rb" "base.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/views/ofi/scaffolding/funds/landing/" (23661 48178 735607 213000) "_list.html+phone.haml" "_filters.html.haml" "_list_alpha.html.haml" "index.html.haml" "_list.html.haml" "_ucits_list.html.haml" "_compare_tool.html.haml" "_landing.html.haml" "../" "./")
+
+ ("/Users/f5119/dev/portfolio-analyzer/" (23644 36401 437337 609000) "vendor/" ".eslintrc.json" "tmp/" ".git/" "test-setup.js" "Procfile" "Brewfile" "Gemfile.lock" "log/" ".rubocop.yml" "Gemfile" "db/" "lib/" "Jenkinsfile" ".ebextensions/" "Procfile.dev" "package.json" "package-lock.json" ".gitignore" "public/" ".node-version" "yarn.lock" "Rakefile" "README.md" "spec/" "node_modules/" "config.ru" "config/" "bin/" ".yarnrc" "dump.rdb" ".ruby-version" "app/" ".ruby-gemset" ".rspec" "Guardfile" ".postcssrc.yml" ".babelrc" "../" "./")
+
+ ("/Users/f5119/dev/factor-exposure-calculator/app/controllers/" (23485 32422 605643 427000) "concerns/" "api/" "refresh_controller.rb" "factor_exposure_calculator_controller.rb" "health_controller.rb" "application_controller.rb" "../" "./")
+
+ ("/Users/f5119/dev/factor-exposure-calculator/config/" (23485 32422 629278 793000) "initializers/" "settings.yml" "webpacker.yml" "boot.rb" "webpack/" "puma.rb" "application.rb" "environment.rb" "spring.rb" "environments/" "cable.yml" "locales/" "sidekiq.yml" "routes.rb" "secrets.yml" "settings/" "../" "./")
+
+ ("/Users/f5119/dev/factor-derby/config/" (23485 32072 823886 544000) "initializers/" "routes/" "webpacker.yml" "boot.rb" "webpack/" "puma.rb" "application.rb" "environment.rb" "spring.rb" "environments/" "cable.yml" "locales/" "mongoid.yml" "sidekiq.yml" "routes.rb" "secrets.yml" "../" "./")
+
+ ("/Users/f5119/dev/content-integration-hub/config/" (23651 42305 248553 68000) "initializers/" "mongoid-ORIG.yml" "boot.rb" "puma.rb" "application.rb" "environment.rb" "environments/" "locales/" "mongoid.yml" "routes.rb" "secrets.yml" "../" "./")
+
+ ("/Users/f5119/.emacs.d/lisp/" (23663 1688 796597 694000) "rwc-ruby.el" "rwc-nxml.el" "auto-install.el" "rwc-highlight-line.el" "rwc-tty-format.el" "rwc-globals.el" "rwc-xhtml.el" "rwc-javascript.el" "rwc-color-theme.el" "rwc-linemark.el" "rwc-html.el" "rwc-bash.el" "rwc-git.el" "rwc-projectile.el" "rwc-flyspell.el" "rwc-eol-conversion.el" "rwc-tabs.el" "rwc-svn.el" "rwc-c.el" "rwc-envs.el" "rwc-flycheck.el" "rwc-package.el" "rwc-key-maps.el" "rwc-deft.el" "rwc-ido.el" "rwc-auctex.el" "custom.el" "rwc-powerline.el" "rwc-textile.el" "rwc-rails-reloaded.el" "rwc-markdown.el" "rwc-el-get.el" "rwc-css.el" "twittering-mode.el" "rwc-yasnippet.el" "rwc-yaml.el" "rwc-twitter.el" "rwc-mode-line-bell.el" "rwc-comint.el" "unit-test.el" "rwc-defuns.el" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/assets/javascripts/advisor/components/custom/" (23661 48178 304205 496000) "consultant_images.js" "consultant_pdf_opener.js" "../" "./")
+
+ ("/Users/f5119/dev/investors/client/app/bundles/components/TeamMembersPanel/" (23661 48182 449115 644000) "views/" "index.jsx" "components/" "../" "./")
+
+ ("/Users/f5119/dev/portfolio-analyzer/config/" (23644 36401 418685 67000) "initializers/" "webpacker.yml" "boot.rb" "webpack/" "database.yml" "puma.rb" "application.rb" "environment.rb" "spring.rb" "environments/" "cable.yml" "locales/" "sidekiq.yml" "routes.rb" "secrets.yml" "../" "./")
+
+ ("/Users/f5119/dev/cms/" (23661 39165 515084 19000) "vendor/" "coverage/" "tmp/" ".env.development" ".git/" "Capfile" "Procfile" "Gemfile.lock" "log/" ".rubocop.yml" "Gemfile" "db/" "lib/" "Jenkinsfile" ".projectile" ".env" "Procfile.dev" "package.json" ".gitignore" "public/" "yarn.lock" "Rakefile" "Procfile.dev-server" "README.md" "TAGS" "script/" "docs/" "ckeditor/" ".env.test" ".rails_footnotes" "postman/" "spec/" "features/" "node_modules/" "config.ru" "config/" "bin/" ".ruby-version" "app/" ".rspec" "Guardfile" ".rubocop_todo.yml" ".postcssrc.yml" ".babelrc" "../" "./")
+
+ ("/Users/f5119/dev/mongo-copy/" (23346 42436 337731 653000) "data/" "backup/" ".git/" "Gemfile.lock" "Gemfile" "lib/" ".gitignore" "README.md" "mongo_copy.rb" "config/" ".ruby-version" ".ruby-gemset" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/models/resources/" (23602 58526 580 181000) "link.rb" "digital_asset.rb" "theme.rb" "product.rb" "video_container.rb" "simple_page.rb" "interior_landing_page.rb" "article.rb" "base.rb" "../" "./")
+
+ ("/Users/f5119/dev/content-integration-hub/app/models/resources/" (23341 24088 376675 931000) "link.rb" "digital_asset.rb" "theme.rb" "product.rb" "video_container.rb" "simple_page.rb" "interior_landing_page.rb" "article.rb" "base.rb" "../" "./")
+
+ ("/Users/f5119/dev/content-integration-hub/app/models/" (23618 7851 951848 7000) "fund/" "personality.rb" "fund_snapshot/" "fund_detail.rb" "refresh_diagnostics.rb" "concerns/" "event.rb" "slide.rb" "cca/" "international_location/" "link.rb" "op_log/" "footnote.rb" "pages/" "searchable.rb" "podcast.rb" "fund_snapshot.rb" "article/" "international_location.rb" "closed_fund_snapshot.rb" "phone_number.rb" "redirect/" "product_detail_landing.rb" "vanity_url_map.rb" "quote.rb" "fund_personality_profile.rb" "cms/" "team.rb" "fund_price_date.rb" "resource.rb" "event_related_resource.rb" "degree.rb" "content_integration_hub/" "product_conversion.rb" "content.rb" "hero_resources/" "product_classification.rb" ".keep" "campaign_ad.rb" "fund_manager_landing.rb" "presentation.rb" "accolade.rb" "social_media.rb" "topic.rb" "resources/" "seo_data.rb" "program.rb" "refresh_timestamp.rb" "interior_landing/" "text.rb" "ucits/" "firm.rb" "interactive_content_object.rb" "fund_detail_landing.rb" "page_seo.rb" "tey_calculation.rb" "contact.rb" "article.rb" "video.rb" "hero.rb" "tey/" "image.rb" "marketing_product.rb" "marketing_product/" "../" "./")
+
+ ("/usr/local/etc/" (23661 38515 485735 72000) "openssl/" "openssl@1.1/" "pkcs11/" "redis.conf" "mongod.conf" "redis-sentinel.conf" "gitconfig" "ImageMagick-7/" "bash_completion.d/" "mongod.conf.default" "../" "./")
+
+ ("/Users/f5119/dev/content-integration-hub/" (23651 42305 226636 141000) "vendor/" "coverage/" "tmp/" ".env.development" ".git/" "Capfile" "Procfile" "Gemfile.lock" "log/" ".rubocop.yml" "Gemfile" "db/" "lib/" "Jenkinsfile" ".env" ".gitignore" "public/" "Rakefile" ".rubocop" "README.md" ".env.test" "postman/" "spec/" "config.ru" ".rubocop-shared.yml" "config/" "bin/" ".ruby-version" "app/" ".rspec" "Guardfile" ".rubocop_todo.yml" "../" "./")
+
+ ("/Users/f5119/dev/investors/lib/fund/product/" (23661 48182 455842 630000) "lipper.rb" "histogram/" "money_market_history/" "capital_gain.rb" "performance/" "asset.rb" "return_chart.rb" "net_flow.rb" "holding.rb" "dividend/" "ucits_benchmark/" "enterprise_product.rb" "histogram.rb" "benchmarks/" "taxes/" "ucits_average_annual_total_return.rb" "yields.rb" "money_market_history.rb" "team.rb" "mpt_stat.rb" "characteristics/" "ucits_benchmark.rb" "morningstar.rb" "concrete_product.rb" "investment_benchmark.rb" "taxes.rb" "performance_chart.rb" "cumulative_return_chart.rb" "asset/" "portfolio_holding.rb" "price.rb" "expense_ratio.rb" "benchmarks.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/models/" (23661 48182 434886 310000) "strategy/" "personality.rb" "fund_snapshot/" "investors/" "data_services/" "concerns/" "international/" "strategy_cache.rb" "event.rb" "slide.rb" "elasticsearch/" "ofi/" "uhnw_insight_article.rb" "international_location/" "email_share.rb" "link.rb" "digital_asset.rb" "event/" "footnote.rb" "funds_landing.rb" "pages/" "quick_facts.rb" "searchable.rb" "podcast.rb" "accent_term_label.rb" "literature_center/" "fund_snapshot.rb" "article/" "strategy_seo_metadata.rb" "product_rule.rb" "private_client_groups/" "international_location.rb" "closed_fund_snapshot.rb" "contact_us_form.rb" "press_room.rb" "phone_number.rb" "strategy_snapshot.rb" "content_folder.rb" "redirect/" "institutional_investors/" "redirect.rb" "mockup_struct.rb" "vanity_url_map.rb" "quote.rb" "fund_personality_profile.rb" "uploadform.rb" "ucit_fund_snapshot.rb" "cms/" "registered_investment_advisors/" "fund_watch_list.rb" "team.rb" "site_monitor/" "fund_price_date.rb" "common/" "resource.rb" "session.rb" "alerts/" "tweet.rb" "search/" "contact_us.rb" "degree.rb" "merrill_lynch_document.rb" "content.rb" "hero_resources/" "product_classification.rb" "fund_details/" "hnw_firm.rb" "fund_manager_landing.rb" "video_asset.rb" "seo_data_hack.rb" "uhnw/" "insight.rb" "daengine/" "presentation.rb" "social_media.rb" "topic.rb" "product.rb" "resources/" "program.rb" "refresh_timestamp.rb" "advisors/" "search_title_struct.rb" "podcast_item.rb" "user_slide.rb" "feature_map.rb" "interior_landing/" "cwmc/" "text.rb" "digital_assets_linkage.rb" "insight_article.rb" "interactive_content_object.rb" "site_monitor.rb" "products/" "page_seo.rb" "contact.rb" "static_seo_container.rb" "article.rb" "video.rb" "web_activity/" "hero.rb" "funds_landing/" "firm_name.rb" "tey/" "image.rb" "marketing_product.rb" "marketing_product/" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/assets/javascripts/" (23661 48178 602196 994000) "application_uhnw_phone.js" "compatability.js" "print_overrides.js" "application.js" "investor/" "application/" "test-running.js" "styleguide/" "components.js" "developer.js" "advisor_phone.js" "retail/" "morningstar_metrics.js" "uhnw/" "application-marketing.js" "metrics.js" "application_phone.js" "styleguide.js" "application-marketing_phone.js" "oppencore/" "advisor/" "advisor.js" "application_shared/" "application_uhnw.js" "digital-application.js" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/views/international/funds/funds/" (23662 64126 81765 10000) "index.html.haml" "../" "./")
+
+ ("/Users/f5119/dev/investors/spec/decorators/funds/" (23663 635 103401 245000) "fund_meta_only_decorator_spec.rb" "funds_landing_decoratable_spec.rb" "fund_manager_landing_decorator_spec.rb" "funds_landing_decorator_spec.rb" "product/" "fund_decoratable_spec.rb" "fund_document_decorator_spec.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/assets/" (23661 48178 318538 354000) "stylesheets/" "swf/" "fonts/" "javascripts/" "webpack/" "images/" "../" "./")
+
+ ("/Users/f5119/dev/investors/spec/factories/" (23663 439 129013 311000) "fund/" "strategy/" "investors/" "slide.rb" "forgot_user_ids.rb" "funds_landing.rb" "presentations.rb" "fund_snapshots.rb" "searchable.rb" "podcast.rb" "contents.rb" "managed_fund.rb" "literature_center/" "homes.rb" "quote_elements.rb" "user_profiles.rb" "teams.rb" "strategy_snapshot.rb" "content_folder.rb" "international_location_sub_channel.rb" "events.rb" "ofi_users.rb" "international_locations.rb" "common/" "vanity_url_maps.rb" "search/" "fund_details_lipper.rb" "fund_details/" "programs.rb" "product/" "topics.rb" "body_sections.rb" "daengine/" "personalities.rb" "carousels.rb" "fund_manager_landings.rb" "insight_articles.rb" "digital_assets.rb" "ucit_fund_snapshots.rb" "product_rules.rb" "product.rb" "articles.rb" "resources.rb" "seo_data.rb" "advisors/" "images.rb" "plannings.rb" "interior_landing/" "right_rails.rb" "insights.rb" "interactive_content_object.rb" "quotes.rb" "web_activity_user.rb" "videos.rb" "product_classifications.rb" "footnotes.rb" "hero.rb" "marketing_product.rb" "marketing_product/" "../" "./")
+
+ ("/Users/f5119/dev/investors/spec/factories/product/" (23661 48182 464633 512000) "subclass.rb" "porfolio_holding.rb" "products.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/spec/factories/marketing_product/" (23327 24595 911426 562000) "campaign_hero.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/spec/decorators/" (23661 58101 368771 271000) "fund/" "strategy/" "data_services/" "article_decorator_spec.rb" "international/" "international_location/" "event/" "resource_decorator_spec.rb" "funds/" "literature_center/" "event_decorator_spec.rb" "article/" "ucit_fund_snapshot_decorator_spec.rb" "insight_decorator_spec.rb" "digital_asset_decorator_spec.rb" "interactive_content_object_decorator_spec.rb" "api/" "common/" "home_decorator_spec.rb" "search/" "digital_assets/" "personality_decorator_spec.rb" "faq_decorator_spec.rb" "uhnw/" "institutional/" "advisors/" "faq/" "interior_landing/" "api_transform_decoratable_spec.rb" "historical_price_decorator_spec.rb" "products/" "strategy_snapshot_decorator_spec.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/controllers/international/funds/" (23662 64113 14231 294000) "funds_controller.rb" "landing_controller.rb" "base_controller.rb" "documents_controller.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/client/app/bundles/components/products/documents/" (23662 63201 266521 471000) "document_row.jsx" "documents_container.jsx" "documents_table.jsx" "buttons/" "../" "./")
+
+ ("/Users/f5119/dev/investors/config/routes/" (23661 48182 452912 977000) "myofi.routes.rb" "institutional.routes.rb" "uhnw.routes.rb" "international.routes.rb" "site_monitor.routes.rb" "styleguide.routes.rb" "investor.routes.rb" "admin.routes.rb" "daengine.routes.rb" "cross_channel.routes.rb" "advisor.routes.rb" "ofi_global_advisor.routes.rb" "developer.routes.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/config/" (23661 48178 760603 393000) "initializers/" "crawler-user-agents.json" "routes/" "jslint.yml" "boot.rb" "savon/" "puma.rb" "application.rb" "environment.rb" "environments/" "locales/" "mongoid.yml" "routes.rb" "secrets.yml" "cucumber.yml" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/controllers/international/products/" (23327 24595 11609 769000) "products_controller.rb" "base_controller.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/decorators/" (23662 59075 344322 416000) "event_decorator.rb" "fund/" "full_page_ico_decorator.rb" "strategy/" "historical_price_decorator.rb" "interactive_content_object_decorator.rb" "data_services/" "slide_decorator.rb" "email_share_decorator.rb" "international/" "interior_landing_page_decorator.rb" "fund_snapshot_decorator.rb" "international_location/" "event/" "pages/" "funds/" "literature_center/" "article/" "fund_manager_landing_decorator.rb" "api/" "seo_data_hack_decorator.rb" "quick_facts_decorator.rb" "marketing_product_decorator.rb" "faq_decorator.rb" "common/" "international_location_decorator.rb" "strategy_snapshot_decorator.rb" "insight_article_decorator.rb" "video_decorator.rb" "personality_decorator.rb" "search/" "resource_decorator.rb" "article_decorator.rb" "digital_assets/" "closed_fund_snapshot_decorator.rb" "channel_selector_service_decorator.rb" "hero_decorator.rb" "personality_decoratable.rb" "digital_asset_decorator.rb" "uhnw/" "insight_decorator.rb" "institutional/" "website/" "meta_only_decorator.rb" "advisors/" "faq/" "interior_landing/" "cwmc/" "presentation_decorator.rb" "link_decorator.rb" "team_decoratable.rb" "document_decoratable.rb" "ucit_fund_snapshot_decorator.rb" "products/" "program_decorator.rb" "degree_decorator.rb" "home_decorator.rb" "team_decorator.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/spec/controllers/international/funds/" (23327 24595 868841 451000) "funds_controller_spec.rb" "landing_controller_spec.rb" "documents_controller_spec.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/spec/controllers/international/" (23642 29106 816987 421000) "personality_controller_spec.rb" "articles_controller_spec.rb" "funds/" "home_controller_spec.rb" "logger_controller_spec.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/spec/controllers/" (23661 48178 507947 0) "investors/" "concerns/" "international/" "ofi/" "articles_controller_spec.rb" "digital_assets_controller_spec.rb" "ofi_global_advisors/" "institutional_investors/" "historical_prices_controller_spec.rb" "uhnw/" "daengine/" "advisors/" "external_controller_spec.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/spec/" (23661 48178 821425 115000) "initializers/" "protractor-test/" "services/" "helpers/" "data/" "controllers/" "jobs/" "routing/" "teaspoon_env.rb" "lib/" "javascripts/" "factories/" "support/" "rack_cors_spec.rb" "shortcodes/" "presenters/" "policies/" "models/" "features/" "decorators/" "magic_lamp_config.rb" "mixins/" "mailers/" "forms/" "spec_helper.rb" "connectors/" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/views/" (23661 48178 495026 913000) "investors/" "international/" "ofi/" "unknown/" "application/" "snw_mailer/" "myofi/" "uhnw_mail/" "institutional_investors/" "investors_mail/" "layouts/" "kaminari/" "shortcodes/" "advisors_mail/" "models/" "shared/" "uhnw/" "daengine/" "advisors/" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/views/international/" (23661 48178 430418 481000) "base/" "funds/" "about_us/" "megamenu/" "search/" "contact_us/" "consultant/" "audiences/" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/views/international/funds/" (23327 24595 411211 223000) "funds/" "../" "./")
+
+ ("/Users/f5119/dev/investors/client/app/bundles/components/international/" (23327 24595 734328 992000) "download_all_button.jsx" "ucits_container.jsx" "select.jsx" "document_row.jsx" "document_table.jsx" "../" "./")
+
+ ("/Users/f5119/dev/investors/client/app/" (23643 47451 764851 255000) "bundles/" ".DS_Store" "../" "./")
+
+ ("/Users/f5119/dev/investors/client/" (23661 48182 450980 786000) "package.json" "package-lock.json" "yarn.lock" "webpack.config.js" "node_modules/" "app/" ".DS_Store" ".babelrc" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/controllers/international/" (23661 48178 654359 477000) "consultant_controller.rb" "fund_managers_controller.rb" "podcasts_controller.rb" "funds/" "digital_assets_controller.rb" "errors_controller.rb" "press_rooms_controller.rb" "about_us_controller.rb" "interactive_content_object_controller.rb" "home_controller.rb" "interior_landing_controller.rb" "search_controller.rb" "personality_controller.rb" "audiences_controller.rb" "full_page_icos_controller.rb" "articles_controller.rb" "sitemaps_controller.rb" "contact_us_controller.rb" "themes_controller.rb" "logger_controller.rb" "auth/" "products/" "events_controller.rb" "base_controller.rb" "insights_controller.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/controllers/" (23661 48178 660256 208000) "investors/" "concerns/" "international/" "ofi/" "bare_bones_application_controller.rb" "myofi/" "ofi_global_advisors/" "institutional_investors/" "uhnw/" "daengine/" "advisors/" "shortcodes_controller.rb" "application_controller.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/db/" (23440 11756 230914 778000) "seeds/" "migrate/" "seeds.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/decorators/funds/" (23661 54832 943636 190000) "funds_landing_decorator.rb" "fund_decoratable.rb" "historical_prices_meta_only_decorator.rb" "fund_tile_decorator.rb" "funds_replace_decorator.rb" "fund_list_decorator.rb" "landing_meta_only_decorator.rb" "funds_morningstar_landing_decorator.rb" "va_share_class_mapper.rb" "funds_landing_decoratable.rb" "distributions_meta_only_decorator.rb" "funds_historical_prices_landing_decorator.rb" "funds_print_decorator.rb" "documents_meta_only_decorator.rb" "morningstar_meta_only_decorator.rb" "fund_meta_only_decorator.rb" "ucit_list_decorator.rb" "fund_document_decorator.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/lib/ofi/blacklist/" (23347 14901 649195 110000) "list.rb" "rule.rb" "lists/" "middleware.rb" "base.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/lib/ofi/middleware/" (23661 48178 769927 912000) "device_detection.rb" "uri_sanitizer.rb" "vanity_redirection.rb" "app_identification.rb" "tokenization.rb" "visitor_identification.rb" "external_monitor_identification.rb" "post_data_logger.rb" "visitor_type_identification.rb" "user_identification.rb" "cookie_manager.rb" "base.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/lib/ofi/" (23661 48178 767849 232000) "services/" "authorization/" "blacklist/" "distribution_channel.rb" "errors_controller_resolver.rb" "device_experience/" "application_scope.rb" "sins_to_haunt_us/" "routing.rb" "device_experience.rb" "blacklist.rb" "constraints/" "distribution_channel/" "middleware.rb" "middleware/" "../" "./")
+
+ ("/Users/f5119/dev/investors/lib/" (23661 48178 772637 508000) "fund/" "ofi_faraday_logger.rb" "investors/" "service_unavailable_error.rb" "formatter.rb" "fund_storage.rb" "fund_detail_not_found.rb" "ofi/" "ofi_voight_kampff_test.rb" "memento.rb" "assets/" "ofi_formatter.rb" "wrap_it_up.rb" "feature_flag_disabled_error.rb" "templates/" "teams.rb" "ofi.rb" "feature.rb" "log_request_bodies.rb" "ofi_config.rb" "utils/" "webmock_support.rb" "encrypted_id.rb" "debug_user_middleware.rb" "advisors/" "null_object.rb" "ofi_jsonable.rb" "clean_to_json.rb" "asset_class_type.rb" "website_storage.rb" "products/" "tasks/" "steelpath.rb" "middleware/" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/" (23661 48178 386269 955000) "inputs/" "services/" "blacklists/" "helpers/" "assets/" "views/" "controllers/" "jobs/" "validators/" "factories/" "shortcodes/" "presenters/" "policies/" "models/" "ui_components/" "decorators/" "mixins/" "mailers/" "forms/" "connectors/" "uploaders/" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/blacklists/" (23327 24594 938859 381000) "ported_edist_features/" "moved_features/" "desktop_only/" "seo_redirect/" "../" "./")
+
+ ("/Users/f5119/dev/investors/app/blacklists/seo_redirect/" (23327 24594 939208 217000) "blacklist.rb" "middleware.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/client/app/bundles/components/products/documents/buttons/" (23327 24595 736544 68000) "checkout.jsx" "cart.jsx" "download_all.jsx" "../" "./")
+
+ ("/Users/f5119/dev/investors/client/app/bundles/utilities/" (23652 29099 799247 443000) "utilities.js" "../" "./")
+
+ ("/Users/f5119/dev/investors/client/app/bundles/" (23643 47451 767244 444000) "startup/" "components/" "utilities/" ".DS_Store" "../" "./")
+
+ ("/Users/f5119/dev/investors/client/app/bundles/components/" (23661 48182 447152 122000) "TeamMembersPanel/" "international/" "error_message.jsx" "megamenu/" "channel_selector/" "products/" ".DS_Store" "../" "./")
+
+ ("/Users/f5119/dev/investors/" (23661 48182 421978 688000) "vendor/" ".eslintrc.json" "coverage/" "client/" "tmp/" ".env.development" ".vscode/" ".git/" "Procfile" "doc/" "Gemfile.lock" "log/" ".rubocop.yml" "Gemfile" "db/" "lib/" ".sass-lint.yml" "Jenkinsfile" ".projectile" "Procfile.dev" "package.json" "package-lock.json" ".gitignore" "public/" ".node-version" "yarn.lock" "Rakefile" ".rubocop" "README.md" "TAGS" "script/" "shared/" ".env.test" "postman/" "spec/" "node_modules/" "cucumber/" "config.ru" ".rubocop-shared.yml" "config/" "bin/" ".ruby-version" "app/" ".ruby-gemset" ".DS_Store" ".rspec" "Guardfile" ".rubocop_todo.yml" "../" "./")
+
+ ("/Users/f5119/dev/investors/lib/fund/" (23327 24595 808197 447000) "product/" "../" "./")
+
+ ("/Users/f5119/dev/529-functional/" (23654 63565 519323 947000) ".git/" "build/" ".project" ".settings/" ".gitignore" ".classpath" "dist/" "bin/" "test/" "appsrv/" ".DS_Store" "../" "./")
+
+ ("/Users/f5119/dev/docker-files/digital-build-jruby/" (23327 25358 908459 989000) "mongod.conf" "pg_hba.conf" "Dockerfile" "../" "./")
+
+ ("/Users/f5119/dev/docker-files/digital-build-ruby/" (23660 10588 853516 123000) "Dockerfile" "mongod" "../" "./")
+
+ ("/Users/f5119/dev/docker-files/" (23660 10588 852649 868000) ".git/" "digital-build-java/" "Gemfile.lock" "Gemfile" "Rakefile" "README.md" "digital-build-jruby/" "digital-build-node/" "digital-build-ruby/" "bin/" ".ruby-version" "../" "./")
+
+ ("/Users/f5119/dev/saturn/app/models/" (23608 50617 130883 555000) "investors/" "concerns/" "account_transaction_service.rb" "group_plan_request_builder.rb" "ofi/" "authorization_error.rb" "fund.rb" "digital_asset.rb" "footnote.rb" "investor_edd_history.rb" "litcenter_order.rb" "memento.rb" "account_stage.rb" "bene_designation.rb" "iam_investor_phone_history.rb" "beneficiary.rb" "visitor_id.rb" "validation_error.rb" "not_acceptable_error.rb" "db_maintenance_area.rb" "resource_not_found_legit_error.rb" "document_service.rb" "article_event.rb" "bank_account.rb" "transaction_alert_email.rb" "service_unavailable.rb" "excluded_funds.rb" "blocked_ssn.rb" "stop_code_error.rb" "internal_server_error.rb" "bene_change_adapter.rb" "historical.rb" "digital_asset_linkage.rb" "investor_letter.rb" "adv_email_newsletter.rb" "xml_assignment.rb" "account_transaction.rb" "mred_request_builder.rb" "investor_edd.rb" "internal_user.rb" "audit_logger.rb" "invalid_state_error.rb" "dst/" "pb_transactions.rb" "resource_not_found_error.rb" "bene_wrapper.rb" "oppenheimer_date.rb" "accent_replication_key.rb" "advisors/" "unprocessable_entity.rb" "pb_tran_alerts.rb" "group_plan_response_builder.rb" "visitor_identity.rb" "auto_txns/" "gps/" "transaction_alert_ssn.rb" "required_result_error.rb" "oppforce/" "iam_investor_phone.rb" "user_security_questions.rb" "pb/" "login_history.rb" "account.rb" "transaction_alert_subscription.rb" "identity.rb" "account_transactions.rb" "../" "./")
+
+ ("/Users/f5119/dev/saturn/app/controllers/investors/" (23558 8027 54278 258000) "registration_controller.rb" "banks_controller.rb" "account_transactions_controller.rb" "profiles_controller.rb" "ofx/" "authentication_controller.rb" "bank_log_controller.rb" "profile_admin_controller.rb" "application_controller.rb" "../" "./")
+
+ ("/Users/f5119/dev/saturn/app/controllers/" (23608 48684 698743 137000) "site_monitors_controller.rb" "investors/" "litcenter_orders_controller.rb" "transaction_alert_emails_controller.rb" "visitor_id_controller.rb" "audit_log_controller.rb" "excluded_funds_controller.rb" "group_plan_allocation_controller.rb" "admin_controller.rb" "internal_users_controller.rb" "transaction_alerts_controller.rb" "auto_txns_controller.rb" "v2/" "dates_controller.rb" "site_maintenance_controller.rb" "loans_controller.rb" "lite_users_controller.rb" "pdf_controller.rb" "bene_controller.rb" "advisors/" "login_histories_controller.rb" "customer_authentication_controller.rb" "accent_replication_keys_controller.rb" "oppforce/" "base_application_controller.rb" "application_controller.rb" "document_controller.rb" "footnotes_controller.rb" "../" "./")
+
+ ("/Users/f5119/dev/saturn/app/" (23327 63995 590191 608000) "services/" "helpers/" "assets/" "views/" "controllers/" "validators/" "serializers/" "models/" "translators/" "../" "./")
+
+ ("/Users/f5119/dev/saturn/" (23608 48684 697072 389000) "vendor/" "tmp/" ".env.development" ".git/" "Capfile" "Procfile" "Gemfile.lock" "log/" "Gemfile" "db/" "lib/" "Jenkinsfile" ".env" ".gitignore" "public/" "Rakefile" "README.md" "script/" "docs/" ".env.test" "postman/" "spec/" "config.ru" "config/" "bin/" ".ruby-version" "app/" ".ruby-gemset" ".rspec" "Guardfile" "../" "./")
+
+ ("/Users/f5119/dev/factor-exposure-calculator/" (23485 32431 959443 877000) "vendor/" "tmp/" ".env.development" ".git/" "test-setup.js" "Procfile" "Gemfile.lock" "log/" ".rubocop.yml" "Gemfile" "db/" "lib/" "Jenkinsfile" ".env" "Procfile.dev" "package.json" "package-lock.json" ".gitignore" "public/" "yarn.lock" "Rakefile" "Procfile.dev-server" "README.md" "postman/" "spec/" "config.ru" "config/" "bin/" "test/" ".ruby-version" "app/" ".env.local" ".rspec" "Guardfile" ".rubocop_todo.yml" ".postcssrc.yml" ".babelrc" "../" "./")
+
+ ("/Users/f5119/dev/account-service/config/" (23579 12997 135549 616000) "initializers/" "keys/" "boot.rb" "certs/" "database.yml" "puma.rb" "application.rb" "storage.yml" "environment.rb" "spring.rb" "environments/" "cable.yml" "locales/" "sidekiq.yml" "routes.rb" "secrets.yml" "../" "./")
+
+ ("/Users/f5119/dev/account-service/app/controllers/" (23626 8168 718759 73000) "registrations_controller.rb" "concerns/" "exchanges_controller.rb" "allocation_models_controller.rb" "cost_basis_controller.rb" "phone_numbers_controller.rb" "purchases_controller.rb" "addresses_controller.rb" "transactions_controller.rb" "systematic_agreements_controller.rb" "document_deliveries_controller.rb" "styleguide_controller.rb" "realized_cost_basis_controller.rb" "welcome_controller.rb" "sessions_controller.rb" "bank_instructions_controller.rb" "beneficiaries_controller.rb" "loans_controller.rb" "ofx_controller.rb" "future_contributions_controller.rb" "admin/" "loan_payments_controller.rb" "redemptions_controller.rb" "loan_calculations_controller.rb" "dashboards_controller.rb" "authorization_contexts_controller.rb" "calculations_controller.rb" "application_controller.rb" "documents_controller.rb" "../" "./")
+
+ ("/Users/f5119/dev/accent-replicator/" (23626 23392 880600 323000) ".git/" "Capfile" "Gemfile.lock" "Gemfile" "lib/" "delta_proto.rb" ".gitignore" "Rakefile" "spec/" "template/" "delete_proto.rb" "config/" "jil/" "../" "./")
+
+ ("/Users/f5119/dev/cms/config/" (23525 59688 826971 766000) "initializers/" "routes/" "webpacker.yml" "boot.rb" "webpack/" "puma.rb" "application.rb" "environment.rb" "spring.rb" "environments/" "locales/" "mongoid.yml" "sidekiq.yml" "routes.rb" "secrets.yml" "../" "./")
+
+ ("/Users/f5119/dev/cms/config/routes/" (23485 30425 143783 879000) "authentication.routes.rb" "page_seo.routes.rb" "api/" "activity.routes.rb" "pages.routes.rb" "content/" "admin.routes.rb" "legacy.routes.rb" "media.routes.rb" "article.routes.rb" "../" "./")
+
+ ("/Users/f5119/dev/cms/app/controllers/" (23651 22353 157722 507000) "topics_controller.rb" "concerns/" "funds_controller.rb" "pages/" "podcasts_controller.rb" "interactive_content_objects_controller.rb" "login_pages_controller.rb" "presentations_controller.rb" "tweets_controller.rb" "media_controller.rb" "linkedin_controller.rb" "api/" "admin_controller.rb" "links_controller.rb" "video_articles_controller.rb" "programs_controller.rb" "welcome_controller.rb" "cms/" "efm_personalities_controller.rb" "quotes_controller.rb" "page_seos/" "hello_world_controller.rb" "personalities/" "products_controller.rb" "international_locations_controller.rb" "full_page_icos_controller.rb" "home_landing_pages_controller.rb" "legacy/" "articles_controller.rb" "admin/" "cms2/" "themes_controller.rb" "text_resource_controller.rb" "features_controller.rb" "professional_development_landing_pages_controller.rb" "slides_controller.rb" "activity/" "personalities_controller.rb" "digital_asset_containers_controller.rb" "omniauth_callbacks_controller.rb" "tab_sections_controller.rb" "landing_pages_controller.rb" "publish_controller.rb" "contents_controller.rb" "events_controller.rb" "publish_set_carts_controller.rb" "searchables_controller.rb" "capabilities_landing_pages_controller.rb" "mediapoller_controller.rb" "application_controller.rb" "images_controller.rb" "interior_landing_pages_controller.rb" "../" "./")
+
+ ("/Users/f5119/dev/content-integration-hub/spec/models/website/" (23651 42305 261029 821000) "link_spec.rb" "searchable_spec.rb" "fund_personality_profile_spec.rb" "concerns/" "footnote_spec.rb" "international_location/" "video_spec.rb" "program_spec.rb" "interactive_content_object_spec.rb" "quote_spec.rb" "content_spec.rb" "podcast_spec.rb" "event_spec.rb" "slide_spec.rb" "vanity_url_map_spec.rb" "degree_spec.rb" "personality_spec.rb" "campaign_ad_spec.rb" "refresh_timestamp_spec.rb" "event_related_resource_spec.rb" "page_seo_spec.rb" "social_media_spec.rb" "resource_spec.rb" "article_spec.rb" "image_spec.rb" "international_location_spec.rb" "presentation_spec.rb" "seo_data_spec.rb" "interior_landing/" "marketing_product_spec.rb" "topic_spec.rb" "contact_spec.rb" "marketing_product/" "../" "./")
+
+ ("/Users/f5119/dev/investors/client/app/bundles/startup/" (23652 29099 798377 159000) "registration.jsx" "../" "./")
+
+ ("/Users/f5119/dev/investors/client/app/bundles/components/megamenu/" (23327 24595 735711 344000) "menu_tools.jsx" "menu_column.jsx" "megamenu_products.jsx" "menu_link.jsx" "menu_tab.jsx" "../" "./")
+
+ ("/Users/f5119/dev/investors/config/initializers/" (23652 29099 803371 395000) "auth_strategies.rb" "exceptions_app.rb" "aaa_twitter_patch.rb" "nested_try.rb" "blacklists.rb" "simple_form_foundation.rb" "rack_profiler.rb" "inflections.rb" "ofi_logger.rb" "blank_safe_image_tag.rb" "faraday_ssl_patch.rb" "simple_form.rb" "enable_webmock_mocks.rb" "translations.rb" "ofi.rb" "secure_headers.rb" "carmen.rb" "fiscali.rb" "aaa_request_patch.rb" "mongodb_fund_database.rb" "shortcodes.rb" "set_mailer_options.rb" "generators.rb" "cookies_serializer.rb" "kaminari_config.rb" "aws_s3.rb" "react_on_rails.rb" "notifications.rb" "local_f5_rewrites.rb" "assets.rb" "wrap_parameters.rb" "sucker_punch.rb" "session_store.rb" "okcomputer.rb" "filter_parameter_logging.rb" "mime_types.rb" "warden.rb" "middleware.rb" "dragonfly/" "jsroutes.rb" "backtrace_silencers.rb" "ofi_auth.rb" "carrierwave_fog.rb" "aaa_string_patch.rb" "../" "./")
+
+ ("/Users/f5119/dev/investors/client/app/bundles/components/products/" (23652 29099 784911 426000) "overlay_sub_asset.jsx" "overlay_asset_class.jsx" "documents/" "overlay_list_item.jsx" "overlay_list.jsx" "ratings/" "overlay_container.jsx" "../" "./")
+
+ ("/Users/f5119/dev/content-integration-hub/app/models/concerns/" (23651 43746 538112 289000) "fund_storage.rb" "product_cache_priming.rb" "status_methods.rb" "website_deployment.rb" "change_validator.rb" "tey_calculations_request_update.rb" "multisite_support.rb" ".keep" "institutional/" "resources/" "fund_data_refresh.rb" "footnotes.rb" "../" "./")
+
+ ("/Users/f5119/dev/notes/" (23652 29138 498642 410000) "emacs_notes.txt" "artifactory.txt" ".#cloud_foundry.txt" "splunk_searches.txt" "queries.sql" "mongo_notes.txt" "urls.txt" "elasticsearch.md" "consul.txt" "solr.txt" "aem.txt" "upgrading_from_rails_2_to_rails_3.txt" "deployment.txt" "dst_notes.txt" "labels.txt" "sublime_text.md" "saturn-salesforce.txt" "oracle_notes.txt" "fund_refresh.txt" "debug_emacs.txt" "pull_request_template.md" "mynotes.txt" "hotketys.txt" "#cloud_foundry.txt#" "curl.txt" "environments.json" "mongo_queries.js" "potention_security_list.txt" "debug_factory_girl.rb" "aws.txt" "../" "./")
+
+ ("/Users/f5119/DevTools/sts-bundle/pivotal-tc-server/ofi529/conf/" (23654 58068 336294 852000) "tc-server-nio-ssl.keystore" "web.xml" "catalina.policy" "context.xml" "jmxremote.password" "tomcat-users.xml" "tomcat.version" "Catalina/" ".DS_Store" "server.xml" "jmxremote.access" "catalina.properties" "logging.properties" "../" "./")
+
+ ("/Users/f5119/dev/529-functional/appsrv/" (23654 63887 464560 430000) "src/" "startWLS.cmd" ".cvsignore" "ivy.settings.xml" "tomcatJars/" "ivyconf.properties" "build-compile-529.xml" "report/" "lib/" "anthill.properties" "setenv.cmd" "build-local-tcserver.xml" "ivy.xml" "libNoVersion/" "${proj.base}/" "G" "startWLS.sh" "ivyconf.xml" "build-wl.xml" "buildAddOn.properties" "build.xml" "build-config.xml" "build-local-tcserver.properties" "config/" "setenv.sh" "build-anthill.xml" "test/" "wls_eclipse_path.txt" "build-ivy.xml" "ivy.settings.properties" "antJars/" "build-test.xml" "build-clean.xml" "build-jenkins.properties" "build.properties" "build-local.xml" "build-jenkins.xml" "../" "./")
+
+ ("/Users/f5119/dev/529-marketing/" (23654 60943 879871 585000) "src/" "wsdl/" ".git/" "build/" "scripts/" ".project" ".settings/" ".gitignore" "build-local-tcserver.xml" "page529/" ".classpath" "certificates/" "build.xml" "build-local-tcserver.properties" "config/" "dist/" "build-local.properties" "WebContent/" "test/" "build-test.xml" "build-jenkins.properties" "build-local.xml" "build-jenkins.xml" "../" "./")
+
+ ("/Users/f5119/dev/" (23653 57042 20952 929000) "pb-client-wrapper/" "factor-derby/" "investors/" "mongo-copy/" "vendor/" "plan-admin/" "faa/" "account-service-2/" "gem-shared_assets/" "529-content/" "ofi-carlyle/" "docker-files/" "tutorials/" "investors-test/" "github_token" "configs/" "accent-replicator/" "orig-data-copy/" "gem-ofi-auth/" "cms/" "edd-admin/" "notes/" "529-functional/" "account-information/" "saturn/" "rob-data-copy.tgz" "ofi-digital-signage/" "swagger.yaml" "ccr-mocks/" "transaction-service-ruby/" "cwmc-pdf/" "identity/" "dotfiles/" "factor-exposure-calculator/" "529-marketing/" ".DS_Store" "account-service/" "portfolio-analyzer/" "ruby-batch/" "gem-ofi-logger/" "mongo-data-copy/" "content-integration-hub/" "../" "./")
+
+ ("/Users/f5119/DevTools/sts-bundle/pivotal-tc-server/" (23652 26139 825354 994000) "developer-4.0.4.RELEASE/" "runtimes/" "ofi529/" ".DS_Store" "../" "./")
+
+ ("/Users/f5119/DevTools/sts-bundle/pivotal-tc-server/ofi529/" (23653 58042 346749 225000) ".tc-runtime-instance" "conf/" "backup/" "wtpwebapps/" "README.txt" "lib/" "work/" "logs/" ".layout" "bin/" ".DS_Store" "temp/" "webapps/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

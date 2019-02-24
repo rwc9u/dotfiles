@@ -69,31 +69,35 @@ MANPATH="/opt/local/man:/opt/local/share/man:${MANPATH}"
 ############################################################
 ## Terminal behavior
 ############################################################
+if [ -f ~/.bash_powerline ]; then
+  . ~/.bash_powerline
+fi
+
 
 # Change the window title of X terminals 
-case $TERM in
-  xterm*|rxvt|Eterm|eterm)
-    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
-    ;;
-  screen)
-    PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\033\\"'
-    ;;
-esac
+# case $TERM in
+#   xterm*|rxvt|Eterm|eterm)
+#     PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
+#     ;;
+#   screen)
+#     PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\033\\"'
+#     ;;
+# esac
 
-# Show the git branch and dirty state in the prompt.
-# Borrowed from: http://henrik.nyh.se/2008/12/git-dirty-prompt
-function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
-}
-function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\(\1$(parse_git_dirty)\)/"
-}
+# # Show the git branch and dirty state in the prompt.
+# # Borrowed from: http://henrik.nyh.se/2008/12/git-dirty-prompt
+# function parse_git_dirty {
+#   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "*"
+# }
+# function parse_git_branch {
+#   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\(\1$(parse_git_dirty)\)/"
+# }
 
-# Do not set PS1 for dumb terminals
-if [ "$TERM" != 'dumb'  ] && [ -n "$BASH" ]
-then
-  export PS1='\[\033[32m\]\n[\s: \w] $(parse_git_branch) (rvm: $(~/.rvm/bin/rvm-prompt i v s g))\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
-fi
+# # Do not set PS1 for dumb terminals
+# if [ "$TERM" != 'dumb'  ] && [ -n "$BASH" ]
+# then
+#   export PS1='\[\033[32m\]\n[\s: \w] $(parse_git_branch) (rvm: $(~/.rvm/bin/rvm-prompt i v s g))\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
+# fi
 
 
 ############################################################
@@ -164,9 +168,18 @@ if [[ "$USER" == '' ]]; then
 fi
 
 ############################################################
+## nodenv
+############################################################
+eval "$(nodenv init -)"
+
+############################################################
 ## Setting up rvm for multiple ruby envs
 ############################################################
-if [[ -s /Users/rchristie/.rvm/scripts/rvm ]] ; then source /Users/rchristie/.rvm/scripts/rvm ; fi
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -r $rvm_path/scripts/completion ]] && source $rvm_path/scripts/completion
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Addu direnv support
+eval "$(direnv hook bash)"

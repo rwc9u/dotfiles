@@ -1,6 +1,6 @@
 [user]
 	name = Rob Christie
-	email = robchristie@gmail.com
+	email = rchristie@ofiglobal.com
 [github]
 	user = rwc9u
 [alias]
@@ -11,6 +11,9 @@
   ribbon = tag --force _ribbon origin/master
   catchup = log --patch --reverse --topo-order _ribbon..origin/master
   daily-report = !git --no-pager log --author=Rob --since='yesterday' --format='%s' --no-merges
+  repo-stats = shortlog -s -n --all
+  find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 -s | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
+  show-merge = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"
 [apply]
 	whitespace = nowarn
 [color]
@@ -25,7 +28,7 @@
 [pull]
 	rebase = true
 [core]
-	excludesfile = /Users/rchristie/.gitignore_global
+	excludesfile = /Users/f5119/.gitignore_global
 
 [push]
 	default = simple
@@ -35,3 +38,7 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[url "https://github.com/"]
+	insteadOf = git://github.com/
+[commit]
+	template = /Users/f5119/.stCommitMsg

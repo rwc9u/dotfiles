@@ -1,0 +1,6 @@
+# -*- mode: snippet  -*-
+# name: Insert file name
+# key: file
+# binding: direct-keybinding
+# --
+`(yas-with-comment (file-relative-name (buffer-file-name (current-buffer)) (projectile-project-root)))`

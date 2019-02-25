@@ -9,8 +9,6 @@
  '(comint-move-point-for-output (quote all))
  '(compilation-scroll-output t)
  '(compilation-skip-threshold 2)
- '(current-language-environment "Latin-1")
- '(default-input-method "latin-1-prefix")
  '(ediff-split-window-function (quote split-window-horizontally))
  '(fill-column 120)
  '(flx-ido-threshold 100)

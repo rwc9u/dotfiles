@@ -28,7 +28,7 @@
 [pull]
 	rebase = true
 [core]
-	excludesfile = /Users/f5119/.gitignore_global
+	excludesfile = /Users/chrisrw/.gitignore_global
 
 [push]
 	default = simple
@@ -41,4 +41,4 @@
 [url "https://github.com/"]
 	insteadOf = git://github.com/
 [commit]
-	template = /Users/f5119/.stCommitMsg
+	template = /Users/chrisrw/.stCommitMsg

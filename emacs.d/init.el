@@ -30,6 +30,7 @@
 (package 'magit)
 (package 'powerline)
 (package 'js2-mode)
+(package 'js2-refactor)
 (package 'coffee-mode)
 (package 'color-theme-sanityinc-solarized)
 (package 'solarized-theme)
@@ -50,6 +51,7 @@
 (package 'bm)
 (package 'flycheck)
 (package 'markdown-mode)
+(package 'ag)
 
 ;;============================================================
 ;; javascript

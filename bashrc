@@ -40,7 +40,7 @@ if [ -d /opt/local/lib/postgresql91/bin ] ; then
 fi
 
 # Python
-PATH=${PATH}:/usr/local/share/python
+# PATH=${PATH}:/usr/local/share/python
 
 # Heroku
 if [ -d /usr/local/heroku/bin ] ; then
@@ -171,6 +171,13 @@ fi
 ## nodenv
 ############################################################
 eval "$(nodenv init -)"
+
+############################################################
+## pyenv
+############################################################
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
 ############################################################
 ## Setting up rvm for multiple ruby envs

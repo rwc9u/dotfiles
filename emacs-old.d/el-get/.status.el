@@ -1,1 +1,0 @@
-(:el-get "installed" :magithub "removed" :growl "installed")

@@ -28,7 +28,7 @@
 [pull]
 	rebase = true
 [core]
-	excludesfile = /Users/f5119/.gitignore_global
+	excludesfile = /Users/chrisrw/.gitignore_global
 
 [push]
 	default = simple
@@ -39,4 +39,4 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	template = /Users/f5119/.stCommitMsg
+	template = /Users/chrisrw/.stCommitMsg

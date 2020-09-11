@@ -9,6 +9,10 @@
  '(comint-move-point-for-output (quote all))
  '(compilation-scroll-output t)
  '(compilation-skip-threshold 2)
+ '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
+ '(custom-safe-themes
+   (quote
+    ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(ediff-split-window-function (quote split-window-horizontally))
  '(fill-column 120)
  '(flx-ido-threshold 100)
@@ -57,13 +61,9 @@
    "https://gist.github.com/jasonm23/516763/raw/632b066c7c18edc91485ba13b37ba50a9b2caac7/screen.css")
  '(max-lisp-eval-depth 1024)
  '(max-specpdl-size 15000)
- '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
- '(custom-safe-themes
-   (quote
-    ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(package-selected-packages
    (quote
-    (powerline color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode js2-mode magit))))
+    (dockerfile-mode docker-compose-mode projectile-rails groovy-mode js2-refactor powerline color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode js2-mode magit))))
 '(ruby-program-name "/opt/local/bin/irb --inf-ruby-mode" t)
 '(scss-compile-at-save nil)
 '(user-full-name "Rob Christie")
@@ -82,5 +82,4 @@
  '(enh-ruby-op-face ((t (:foreground "gray69"))))
  '(enh-ruby-string-delimiter-face ((t (:foreground "#259185"))))
  '(flymake-errline ((((class color)) (:background "#330000" :overline "red" :underline "red"))) t)
- '(flymake-warnline ((((class color)) (:background "#333300" :overline "yellow" :underline "yellow"))) t)
- )
+ '(flymake-warnline ((((class color)) (:background "#333300" :overline "yellow" :underline "yellow"))) t))

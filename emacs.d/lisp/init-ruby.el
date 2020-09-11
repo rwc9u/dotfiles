@@ -47,8 +47,8 @@
 ;; (setq rinari-tags-file-name "TAGS")
 ;; (global-rinari-mode)
 
-(add-hook 'projectile-mode-hook 'projectile-rails-on)
-
+;; (add-hook 'projectile-mode-hook 'projectile-rails-on)
+(projectile-rails-global-mode)
 
 
 (defun ruby-insert-end ()

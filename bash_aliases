@@ -219,3 +219,9 @@ alias elasticsearch_start="elasticsearch --config=/usr/local/opt/elasticsearch/c
 alias kill-sidekiq="killall -9 -m sidekiq"
 
 alias specnojs="be rspec spec --format progress --tag ~@javascript --tag ~@js"
+
+
+# alias python=/usr/local/bin/python3
+# alias pip=/usr/local/bin/pip3
+
+alias aws='docker run --rm -it --tty -v "${HOME}/.aws:/root/.aws" -v "${PWD}:/aws" "amazon/aws-cli"'

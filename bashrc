@@ -28,17 +28,6 @@ if [ -d /usr/local/bin ] ; then
   PATH="/usr/local/bin:${PATH}"
 fi
 
-
-# MySql
-if [ -d /usr/local/mysql/bin ] ; then
-  PATH="${PATH}:/usr/local/mysql/bin"
-fi
-
-# Postgres
-if [ -d /opt/local/lib/postgresql91/bin ] ; then
-  PATH="${PATH}:/opt/local/lib/postgresql91/bin"
-fi
-
 # Python
 # PATH=${PATH}:/usr/local/share/python
 

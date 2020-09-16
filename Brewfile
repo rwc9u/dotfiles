@@ -1,14 +1,14 @@
-tap 'caskroom/cask'
-tap 'homebrew/boneyard'
+tap 'homebrew/cask'
 # add support for Brewfile and brew bundle
-tap 'homebrew/bundle'
-tap 'homebrew/core'
-tap 'homebrew/services'
-tap 'nodenv/nodenv'
 tap 'railwaycat/emacsmacport'
+# set arguments for all 'brew cask install' commands
+cask_args appdir: "~/Applications"
 brew 'autoconf'
-brew 'automate'
 brew 'imagemagick'
 brew 'glib'
 brew 'nodenv'
 brew 'emacs-mac'
+
+cask 'iterm2'
+cask 'skype'
+cask 'slack'

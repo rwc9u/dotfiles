@@ -141,6 +141,15 @@
             "appdir": "~/Applications"
           }
         }
+      },
+      "visual-studio-code": {
+        "version": "1.49.0",
+        "options": {
+          "full_name": "visual-studio-code",
+          "args": {
+            "appdir": "~/Applications"
+          }
+        }
       }
     }
   },

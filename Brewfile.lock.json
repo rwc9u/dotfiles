@@ -6,6 +6,9 @@
       },
       "railwaycat/emacsmacport": {
         "revision": "e4df6a9b83f113770c5ac70723d6798a4c8a9cdf"
+      },
+      "heroku/brew": {
+        "revision": "6799ed0b4abcd57b9de2ca1a60305d2868d7c66c"
       }
     },
     "brew": {
@@ -321,6 +324,10 @@
             }
           }
         }
+      },
+      "heroku": {
+        "version": "7.42.13",
+        "bottle": false
       }
     },
     "cask": {

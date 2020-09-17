@@ -1,3 +1,4 @@
+tap 'heroku/brew'
 tap 'homebrew/cask'
 tap 'railwaycat/emacsmacport'
 
@@ -7,6 +8,7 @@ brew 'emacs-mac'
 brew 'forego'
 brew 'git'
 brew 'glib'
+brew 'heroku'
 brew 'imagemagick'
 brew 'libxslt'
 brew 'libyaml'

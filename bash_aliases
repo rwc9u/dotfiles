@@ -27,6 +27,10 @@ alias l="ls"
 alias ll="ls -l"
 alias la="ls -a"
 alias lal="ls -al"
+
+# Force less to consume color
+alias less='less -R'
+
  
 ############################################################
 ## Git

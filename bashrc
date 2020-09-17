@@ -169,6 +169,13 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 ############################################################
+# Go dev
+############################################################
+export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
+############################################################
 ## Setting up rvm for multiple ruby envs
 ############################################################
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

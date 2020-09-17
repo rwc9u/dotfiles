@@ -113,3 +113,8 @@ export AWS_CONFIG_FILE=/Users/rchristie/.aws/awsconfig.txt
 
 # Android Dev
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# Go dev
+export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"

@@ -15,6 +15,10 @@ $ xcode-select --install
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 ### Install rvm
+* Install [rvm](https://rvm.io)
+```
+$ curl -sSL https://get.rvm.io | bash -s stable
+```
 
 ### Dotfile and Emacs Configuration
 Clone this (or a forked version of this) repository, and update all the git submodules within.

@@ -1,11 +1,12 @@
 tap 'heroku/brew'
 tap 'homebrew/cask'
 tap 'railwaycat/emacsmacport'
+tap 'rwc9u/forego'
 
 brew 'autoconf'
 brew 'direnv'
 brew 'emacs-mac'
-brew 'forego'
+brew 'rwc9u/forego/forego'
 brew 'git'
 brew 'glib'
 brew 'golang'

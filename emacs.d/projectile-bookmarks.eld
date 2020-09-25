@@ -1,1 +1,0 @@
-("~/dev/dotfiles/" "~/go/src/forego/" "~/dev/homebrew-forego/" "~/" "~/dev/helloworld/" "~/dev/account-service/" "~/Downloads/" "~/dev/investors/" "~/dev/docker-files/" "~/dev/identity/" "~/dev/content-integration-hub/" "~/dev/cms/")

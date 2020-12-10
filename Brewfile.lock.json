@@ -2,13 +2,16 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "4f914ca088976ec3dab9858cade039fc17ce5677"
+        "revision": "3dd3b04483137323c57de938bad2d4f11cfc834d"
       },
       "railwaycat/emacsmacport": {
         "revision": "e4df6a9b83f113770c5ac70723d6798a4c8a9cdf"
       },
       "heroku/brew": {
-        "revision": "6799ed0b4abcd57b9de2ca1a60305d2868d7c66c"
+        "revision": "5d521fc67513cd756621fde879d0a907a66b974c"
+      },
+      "rwc9u/forego": {
+        "revision": "dd66369c49e3d43374dcf4c34d81a454cd741175"
       }
     },
     "brew": {
@@ -50,22 +53,22 @@
         }
       },
       "imagemagick": {
-        "version": "7.0.10-29",
+        "version": "7.0.10-33",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-29.catalina.bottle.tar.gz",
-              "sha256": "b78cb828d6e3652bd84f0cea56778f355c0a73f95a6ea694e44d0376e604ebc8"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-33.catalina.bottle.tar.gz",
+              "sha256": "bc5a25edeb996c917fc2958847227e70dcd6b8a0d1525424a3642f60f81d3336"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-29.mojave.bottle.tar.gz",
-              "sha256": "e003b972aee4579d626f9b24e40a256b9a192152c6209c48afc2bc8ab2822055"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-33.mojave.bottle.tar.gz",
+              "sha256": "362bc4a26c86ca61332baa7f6aeca06b24965e1aa1baaeef73c1459cac59a629"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-29.high_sierra.bottle.tar.gz",
-              "sha256": "d7adcdaaa74f9f501e8797da436f497fca809955a0ed62654328e415ea9fafc6"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-33.high_sierra.bottle.tar.gz",
+              "sha256": "df37704f87ffdce5adc54214d42ff1e82b39183a8d7c9c4fa64ebdd7fe0a756a"
             }
           }
         }
@@ -160,6 +163,9 @@
               "sha256": "458627bc0cd6dfa2d0c430cac842234ea3beb10725f2b0cc7ca246ec4ffe0017"
             }
           }
+        },
+        "options": {
+          "restart_service": true
         }
       },
       "postgresql": {
@@ -181,6 +187,9 @@
               "sha256": "c210ec1143b73616108891c3cefaa31754c5bd5fda0222e2e3266035488a1353"
             }
           }
+        },
+        "options": {
+          "restart_service": true
         }
       },
       "forego": {
@@ -326,9 +335,11 @@
         }
       },
       "heroku": {
-        "version": "7.42.13",
+        "version": "7.44.0",
         "bottle": false
-      }
+      },
+      "rwc9u/forego/forego": null,
+      "golang": null
     },
     "cask": {
       "iterm2": {
@@ -350,7 +361,7 @@
         }
       },
       "skype": {
-        "version": "8.64.0.80",
+        "version": "8.65.0.76",
         "options": {
           "full_name": "skype",
           "args": {
@@ -359,12 +370,21 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.49.0",
+        "version": "1.49.3",
         "options": {
           "full_name": "visual-studio-code",
           "args": {
             "appdir": "~/Applications"
           }
+        }
+      },
+      "docker": {
+        "version": "2.4.0.0,48506",
+        "options": {
+          "args": {
+            "appdir": "/Applications"
+          },
+          "full_name": "docker"
         }
       }
     }
@@ -372,11 +392,11 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.5.0",
+        "HOMEBREW_VERSION": "2.5.3",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "cb4247e7dabeba6b96259b7f21f635cefb590908",
-        "CLT": "",
-        "Xcode": "11.7",
+        "Homebrew/homebrew-core": "bdd2cb60343224f5db3292e4c4c41d98b0cc6147",
+        "CLT": "12.0.0.0.1.1599194153",
+        "Xcode": "12.0.1",
         "macOS": "10.15.6"
       }
     }

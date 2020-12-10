@@ -1,6 +1,6 @@
 [user]
 	name = Rob Christie
-	email = robchristie@gmail.com
+	email = rob@kajabi.com
 [github]
 	user = rwc9u
 [alias]
@@ -28,7 +28,7 @@
 [pull]
 	rebase = true
 [core]
-	excludesfile = /Users/chrisrw/.gitignore_global
+	excludesfile = /Users/robchristie/.gitignore_global
 
 [push]
 	default = simple
@@ -39,4 +39,9 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	template = /Users/rchristie/.stCommitMsg
+	template = /Users/robchristie/.stCommitMsg
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

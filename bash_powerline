@@ -132,6 +132,14 @@ __powerline() {
     printf " $GIT_BRANCH_SYMBOL $branch$marks "
   }
 
+  ### AWS Profile ################################################
+  __aws_info() {
+    [ -z "${AWSUME_PROFILE}" ] && return
+    printf " AWS: ${AWSUME_PROFILE} "
+  }
+
+  
+
   ### PROMPT #####################################################
   __title_info() { echo -ne "${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}"; }
 
@@ -157,6 +165,7 @@ __powerline() {
     PS1+="$BG_MUSTARD$FG_BLACK \w $RESET"
     PS1+="$BG_DARK_RED$FG_GRAY1$(__ruby_info)$RESET"
     PS1+="$BG_DEEP_GREEN$FG_GRAY1$(__node_info)$RESET"
+    PS1+="$BG_MAGENTA$FG_GRAY1$(__aws_info)$RESET"
     PS1+="$BG_BLUE$FG_GRAY1$(__git_info)$RESET\n"
     PS1+="$BG_GRAY2$FG_BLACK \u@\h $RESET"
     PS1+="$BG_EXIT$FG_GRAY1 $PS_SYMBOL $RESET "

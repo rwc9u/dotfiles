@@ -24,6 +24,10 @@ if [ -d /opt/local/sbin ] ; then
   PATH="/opt/local/sbin:${PATH}"
 fi
 
+# Homebrew
+if [ -d /usr/local/sbin ] ; then
+  PATH="/usr/local/sbin:${PATH}"
+fi
 if [ -d /usr/local/bin ] ; then
   PATH="/usr/local/bin:${PATH}"
 fi
@@ -99,7 +103,7 @@ shopt -s checkwinsize
 
 export PAGER="less"
 export EDITOR="vi"
-
+export GEM_EDITOR="emacsclient"
 
 ############################################################
 ## History
@@ -174,6 +178,11 @@ fi
 export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
+############################################################
+# tfenv
+############################################################
+export PATH="$HOME/.tfenv/bin:$PATH"
 
 ############################################################
 ## Setting up rvm for multiple ruby envs

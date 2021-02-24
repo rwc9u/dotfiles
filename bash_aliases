@@ -206,3 +206,6 @@ alias aws-docker='docker run --rm -it --tty -v "${HOME}/.aws:/root/.aws" -v "${P
 alias circleci-pack='circleci config pack config/circleci > ./.circleci/config.yml'
 
 alias awsume=". awsume"
+
+alias tf="terraform"
+alias tg="terragrunt"

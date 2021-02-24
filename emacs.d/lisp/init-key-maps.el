@@ -16,7 +16,8 @@
 (global-set-key [f7] 'kmacro-end-or-call-macro)
 (global-set-key [f8] 'sql-send-region)
 (global-set-key [(control f8)] 'sql-send-buffer)
-(global-set-key [(control f9)] 'rails-svn-status-into-root)
+(global-set-key [f13] 'magit-status)
+(global-set-key [f14] 'neotree-toggle)
 (global-set-key [(meta f1)]    'ri)
 
 (global-set-key "%" 'match-paren)

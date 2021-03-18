@@ -38,6 +38,8 @@
 (add-hook 'compilation-minor-mode-hook 'ansi-color-for-comint-mode-on)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
+;; turn off adding of magic comment
+(setq ruby-insert-encoding-magic-comment nil)
 
 ;;============================================================
 ;; Rinari

@@ -209,3 +209,5 @@ alias awsume=". awsume"
 
 alias tf="terraform"
 alias tg="terragrunt"
+
+alias flush-cache="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"

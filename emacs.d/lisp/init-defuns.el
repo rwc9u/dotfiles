@@ -170,6 +170,17 @@ Symbols matching the text at point are put first in the completion list."
     (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
 
 
+(defun sort-words (reverse beg end)
+  "Sort words in region alphabetically, in REVERSE if negative.
+    Prefixed with negative \\[universal-argument], sorts in reverse.
+  
+    The variable `sort-fold-case' determines whether alphabetic case
+    affects the sort order.
+  
+    See `sort-regexp-fields'."
+  (interactive "*P\nr")
+  (sort-regexp-fields reverse "\\w+" "\\&" beg end))
+
 
 (provide 'init-defuns)
 ;;; init-defuns.el ends here

@@ -50,6 +50,8 @@ alias gg="git log --pretty=oneline"
 alias ggs="git log --stat"
 alias gsl="git shortlog -s -n"
 alias gclean="git fetch -p && for branch in \`git branch -vv | grep ': gone]' | awk '{print \$1}'\`; do git branch -d \$branch; done"
+# merged but still a local branch
+alias gmerged="git branch --merged | egrep -v '(^\*|main|dev)'"
  
 # Useful report of what has been committed locally but not yet pushed to another
 # branch. Defaults to the remote origin/master. The u is supposed to stand for
@@ -181,15 +183,12 @@ alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
 alias emacs_coffee="export NODE_NO_READLINE=1 && coffee"
 
 alias E="SUDO_EDITOR=\"emacsclient -c -a emacs\" sudo -e"
-# slightly modified version which takes care of relative paths:
-# function E() {
-# filename=$1
-# without_beg_slash="${1##/}"
-# if [[ $without_beg_slash == $1 ]];then
-# filename="${PWD%//}/$1"
-# fi
-# emacsclient -c -a emacs "/sudo:root@localhost:$filename"
-# }
+
+############################################################
+## kajabi
+############################################################
+alias berc="DISABLE_SPRING=1 be rails c"
+alias ber="DISABLE_SPRING=1 be rails s -b 'ssl://127.0.0.1:3000?key=/Users/robchristie/dev/kajabi-products/.ssl/key.pem&cert=/Users/robchristie/dev/kajabi-products/.ssl/cert.pem'"
 
 
 alias browserstack="java -jar BrowserStackTunnel.jar u8YSVjSTSO7ny5XqQ75z diamond.dev,80,0"
@@ -211,3 +210,14 @@ alias tf="terraform"
 alias tg="terragrunt"
 
 alias flush-cache="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+
+alias eks-dev="aws eks update-kubeconfig --name dev-eks-cluster \
+&& kubectl config set-context --current --namespace=kajabi-products"
+
+alias eks-staging="aws eks update-kubeconfig --name stage-eks-cluster \
+&& kubectl config set-context --current --namespace=kajabi-products"
+
+alias eks-prod="aws eks update-kubeconfig --name prod-eks-cluster \
+&& kubectl config set-context --current --namespace=kajabi-products"
+
+alias kc="kubectl"

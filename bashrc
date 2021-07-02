@@ -185,6 +185,12 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 export PATH="$HOME/.tfenv/bin:$PATH"
 
 ############################################################
+# bash completion
+############################################################
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+complete -F __start_kubectl kc
+
+############################################################
 ## Setting up rvm for multiple ruby envs
 ############################################################
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
@@ -195,3 +201,11 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Addu direnv support
 eval "$(direnv hook bash)"
+
+
+dtags () {
+    local image="${1}"
+
+    wget -q https://registry.hub.docker.com/v1/repositories/"${image}"/tags -O - \
+        | tr -d '[]" ' | tr '}' '\n' | awk -F: '{print $3}'
+}

@@ -98,8 +98,8 @@ __powerline() {
     __node_version() { printf $(nodenv version-name); }
   elif [ `which node 2> /dev/null` ]; then
     __node_version() { printf $(node -v | cut -d'v' -f2); }
-  else
-    __node_version() { return; }
+  node
+    __else_version() { return; }
   fi
 
   __node_info() {
@@ -138,6 +138,11 @@ __powerline() {
     printf " AWS: ${AWSUME_PROFILE} "
   }
 
+  # ### Kubernetes Info ############################################
+  # source /usr/local/share/kube-ps1.sh
+  # __kube_info() {
+  #   printf " $(kube_ps1) "
+  # }
   
 
   ### PROMPT #####################################################

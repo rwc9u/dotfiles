@@ -60,7 +60,7 @@
    '(("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "https://melpa.org/packages/")))
  '(package-selected-packages
-   '(rvm flycheck neotree company-terraform terraform-mode go-mode dockerfile-mode docker-compose-mode projectile-rails groovy-mode js2-refactor powerline color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode js2-mode magit)))
+   '(dash-at-point rvm flycheck neotree company-terraform terraform-mode go-mode dockerfile-mode docker-compose-mode projectile-rails groovy-mode js2-refactor powerline color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode js2-mode magit)))
 '(ruby-program-name "/opt/local/bin/irb --inf-ruby-mode" t)
 '(scss-compile-at-save nil)
 '(user-full-name "Rob Christie")

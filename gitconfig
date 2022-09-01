@@ -1,7 +1,7 @@
 [user]
 	name = Rob Christie
-	email = rob@kajabi.com
-	signingkey = 414204B1102F3E48
+	email = rob.christie@kajabi.com
+	signingkey = 8A3CF7328C397D9F
 [github]
 	user = rwc9u
 [alias]
@@ -21,9 +21,9 @@
 	diff = auto
 	status = auto
 	branch = auto
-        interactive = auto
-        ui = true
-        pager = true
+  interactive = auto
+  ui = true
+  pager = true
 [merge]
 	summary = true
 [pull]
@@ -41,8 +41,11 @@
 	trustExitCode = true
 [commit]
 	template = /Users/robchristie/.stCommitMsg
+	gpgsign = true
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[init]
+	defaultBranch = main

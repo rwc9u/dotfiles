@@ -50,6 +50,7 @@ alias gg="git log --pretty=oneline"
 alias ggs="git log --stat"
 alias gsl="git shortlog -s -n"
 alias gclean="git fetch -p && for branch in \`git branch -vv | grep ': gone]' | awk '{print \$1}'\`; do git branch -d \$branch; done"
+alias gclean-force="git fetch -p && for branch in \`git branch -vv | grep ': gone]' | awk '{print \$1}'\`; do git branch -D \$branch; done"
 # merged but still a local branch
 alias gmerged="git branch --merged | egrep -v '(^\*|main|dev)'"
  
@@ -211,13 +212,31 @@ alias tg="terragrunt"
 
 alias flush-cache="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
-alias eks-dev="aws eks update-kubeconfig --name dev-eks-cluster \
-&& kubectl config set-context --current --namespace=kajabi-products"
+# alias eks-dev="aws eks update-kubeconfig --name dev-eks-cluster \
+# && kubectl config set-context --current --namespace=kajabi-products"
 
-alias eks-staging="aws eks update-kubeconfig --name stage-eks-cluster \
-&& kubectl config set-context --current --namespace=kajabi-products"
+# alias eks-staging="aws eks update-kubeconfig --name stage-eks-cluster \
+# && kubectl config set-context --current --namespace=kajabi-products"
 
-alias eks-prod="aws eks update-kubeconfig --name prod-eks-cluster \
-&& kubectl config set-context --current --namespace=kajabi-products"
+# alias eks-prod="aws eks update-kubeconfig --name prod-eks-cluster \
+# && kubectl config set-context --current --namespace=kajabi-products"
 
 alias kc="kubectl"
+
+alias eks-dev="aws-sso-util login && awsume kajabi-development-admin \
+&& kubectx dev-eks-cluster && kubens kajabi-products"
+
+alias eks-qa="aws-sso-util login && awsume kajabi-qa-admin \
+&& kubectx qa-eks-cluster && kubens kajabi-products"
+
+alias eks-perf="aws-sso-util login && awsume kajabi-qa-admin \
+&& kubectx qa-perf-eks-cluster && kubens kajabi-products"
+
+alias eks-stage="aws-sso-util login && awsume kajabi-staging-admin \
+&& kubectx stage-eks-cluster && kubens kajabi-products"
+
+alias eks-prod="aws-sso-util login && awsume kajabi-production-admin \
+&& kubectx prod-eks-cluster && kubens kajabi-products"
+
+alias ecr-login="aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 937028213865.dkr.ecr.us-east-1.amazonaws.com"
+alias k8s-show-ns="kubectl api-resources --verbs=list --namespaced -o name  | xargs -n 1 kubectl get --show-kind --ignore-not-found  -n"

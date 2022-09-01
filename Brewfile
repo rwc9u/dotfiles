@@ -4,6 +4,7 @@ tap 'railwaycat/emacsmacport'
 tap 'rwc9u/forego'
 
 brew 'autoconf'
+brew 'bat'
 brew 'direnv'
 brew 'emacs-mac'
 brew 'rwc9u/forego/forego'
@@ -14,6 +15,8 @@ brew 'heroku'
 brew 'imagemagick'
 brew 'libxslt'
 brew 'libyaml'
+brew 'lsd'                            # new ls
+brew 'mcfly'
 brew 'memcached'
 brew 'nodenv'
 brew 'postgresql', restart_service: true

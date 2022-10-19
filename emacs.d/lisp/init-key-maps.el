@@ -55,11 +55,11 @@
 ;;============================================================
 ;; minibuffer space completion
 ;;============================================================
-(define-key minibuffer-local-filename-completion-map (kbd "SPC")
-  'minibuffer-complete-word)
+;; (define-key minibuffer-local-filename-completion-map (kbd "SPC")
+;;   'minibuffer-complete-word)
 
-(define-key minibuffer-local-must-match-filename-map (kbd "SPC")
-  'minibuffer-complete-word)
+;; (define-key minibuffer-local-must-match-filename-map (kbd "SPC")
+;;   'minibuffer-complete-word)
 
 ;;============================================================
 ;; Use of command key with emacs 23 on mac

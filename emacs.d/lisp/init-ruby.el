@@ -136,6 +136,10 @@ Improved navigation for Ruby
   '(push 'company-robe company-backends))
 (add-hook 'after-init-hook 'global-company-mode)
 
+(with-eval-after-load 'company
+ (define-key company-active-map (kbd "TAB") #'company-complete-common-or-cycle)
+ (define-key company-active-map (kbd "<backtab>") (lambda () (interactive) (company-complete-common-or-cycle -1))))
+
 ;; ;;============================================================
 ;; ;; rcode tools
 ;; ;;============================================================

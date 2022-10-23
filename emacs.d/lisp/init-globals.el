@@ -51,10 +51,6 @@
 ;;============================================================
 (electric-pair-mode 1)
 ;;============================================================
-;; window/buffer movement with arrow keys
-;; overrides a few things and must be below pc-selection-mode
-;;============================================================
-(windmove-default-keybindings 'meta)
 
 
 ;;============================================================

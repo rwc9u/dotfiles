@@ -14,44 +14,44 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
+(eval-when-compile
+  ;; Following line is not needed if use-package.el is in ~/.emacs.d
+  (require 'use-package))
+
 ;;============================================================
 ;; helper functions
 ;;============================================================
 (require 'init-defuns)
 
 ;;============================================================
-;; package managers
-;;============================================================
-(require 'init-package)
-
-;;============================================================
 ;; packages
 ;;============================================================
-(package 'magit)
-(package 'powerline)
-(package 'js2-mode)
-(package 'js2-refactor)
-(package 'coffee-mode)
-(package 'color-theme-sanityinc-solarized)
-(package 'solarized-theme)
-(package 'flx-ido)
-(package 'yaml-mode)
-(package 'fill-column-indicator)
-(package 'projectile)
-(package 'inf-ruby)
-(package 'ruby-compilation)
-(package 'robe)
-(package 'company)
-(package 'haml-mode)
-(package 'sass-mode)
-(package 'rvm)
-(package 'ruby-tools)
-(package 'web-mode)
-(package 'yasnippet)
-(package 'bm)
-(package 'flycheck)
-(package 'markdown-mode)
-(package 'ag)
+(use-package magit)
+(use-package powerline)
+(use-package js2-mode)
+(use-package js2-refactor)
+(use-package coffee-mode)
+(use-package color-theme-sanityinc-solarized)
+(use-package solarized-theme
+  :config (load-theme 'solarized-dark t))
+(use-package flx-ido)
+(use-package yaml-mode)
+(use-package fill-column-indicator)
+(use-package projectile)
+(use-package inf-ruby)
+(use-package ruby-compilation)
+(use-package robe)
+(use-package company)
+(use-package haml-mode)
+(use-package sass-mode)
+(use-package rvm)
+(use-package ruby-tools)
+(use-package web-mode)
+(use-package yasnippet)
+(use-package bm)
+(use-package flycheck)
+(use-package markdown-mode)
+(use-package ag)
 
 ;;============================================================
 ;; javascript
@@ -67,11 +67,6 @@
 ;; tab management thx Ryan
 ;;============================================================
 (require 'init-tabs)
-
-;;============================================================
-;; color themes
-;;============================================================
-(require 'init-color-theme)
 
 ;;============================================================
 ;; highlight current line

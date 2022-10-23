@@ -1,11 +1,4 @@
 
-;; For loading packages from the Emacs Lisp Package Archive (ELPA)
-;; from rmm5t
-(defun package (package)
-    (when (not (package-installed-p package))
-      (package-install package)))
-
-
 ;; For loading libraries from the vendor directory
 ;; Modified from defunkt and rmm5t versions.
 ;; http://github.com/defunkt/emacs/blob/master/defunkt/defuns.el

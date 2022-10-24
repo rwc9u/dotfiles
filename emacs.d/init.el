@@ -55,7 +55,10 @@
 (use-package yasnippet)
 (use-package bm)
 (use-package flycheck)
-(use-package markdown-mode)
+(use-package markdown-mode
+  :ensure t
+  :mode ("README\\.md\\'" . gfm-mode)
+  :init (setq markdown-command "multimarkdown"))
 (use-package ag)
 
 ;;============================================================
@@ -87,7 +90,6 @@
 ;;============================================================
 ;; various configs
 ;;============================================================
-(require 'init-markdown)
 (require 'init-ido)
 (require 'init-svn)
 (require 'init-comint)

@@ -26,7 +26,12 @@
 ;;============================================================
 ;; packages
 ;;============================================================
-(use-package magit)
+(use-package magit
+  :bind (:map magit-mode-map
+              ("M-3" . split-window-horizontally)
+              ("M-2" . split-window-vertically)
+              ("M-1" . delete-other-windows)
+              ))
 (use-package powerline)
 (use-package js2-mode)
 (use-package js2-refactor)
@@ -82,7 +87,6 @@
 ;;============================================================
 ;; various configs
 ;;============================================================
-(require 'init-git)
 (require 'init-markdown)
 (require 'init-ido)
 (require 'init-svn)

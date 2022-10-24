@@ -53,7 +53,20 @@
 (use-package ruby-tools)
 (use-package web-mode)
 (use-package yasnippet)
-(use-package bm)
+(use-package bm
+  :init
+  (setq bm-restore-repository-on-load t)
+  :bind
+  (("<M-f2>" . bm-toggle)
+   ("<f2>" . bm-next)
+   ("<S-f2>" . bm-previous))
+  :hook
+  ((after-init . bm-repository-load)
+   (find-file . bm-buffer-restore)
+   (kill-buffer . bm-buffer-save)
+   (kill-emacs . (lambda nil
+                   (bm-buffer-save-all)
+                   (bm-repository-save)))))
 (use-package flycheck)
 (use-package markdown-mode
   :ensure t
@@ -86,7 +99,7 @@
 ;;============================================================
 (require 'init-ido)
 (require 'init-comint)
-(require 'init-utf8)
+;; (require 'init-utf8)
 
 ;;============================================================
 ;; Projectile
@@ -102,11 +115,6 @@
 ;; Snippets
 ;;============================================================
 (require 'init-yasnippet)
-
-;;============================================================
-;; linemark functionality
-;;============================================================
-(require 'init-linemark)
 
 ;;============================================================
 ;; flycheck
@@ -157,11 +165,6 @@
 ;; lsp
 ;;============================================================
 (require 'init-lsp)
-
-;; ;;============================================================
-;; ;; mode line bell
-;; ;;============================================================
-;; (require 'init-mode-line-bell)
 
 ;;============================================================
 ;; private

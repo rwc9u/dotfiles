@@ -85,7 +85,6 @@
 ;; various configs
 ;;============================================================
 (require 'init-ido)
-(require 'init-svn)
 (require 'init-comint)
 (require 'init-yaml)
 (require 'init-utf8)

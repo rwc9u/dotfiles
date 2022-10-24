@@ -41,6 +41,7 @@
      ("\\.tex\\'" flymake-simple-tex-init)
      ("\\.idl\\'" flymake-simple-make-init)))
  '(global-font-lock-mode t nil (font-lock))
+ '(global-hl-line-mode t)
  '(grep-find-command
    "find . -path '*/.svn/*' -or -path '*/build/*' -or -path '*/.git/*' -prune -o -type f -print0 | xargs -0 grep -nH -e ")
  '(grep-find-ignored-directories
@@ -80,4 +81,5 @@
  '(enh-ruby-op-face ((t (:foreground "gray69"))))
  '(enh-ruby-string-delimiter-face ((t (:foreground "#259185"))))
  '(flymake-errline ((((class color)) (:background "#330000" :overline "red" :underline "red"))) t)
- '(flymake-warnline ((((class color)) (:background "#333300" :overline "yellow" :underline "yellow"))) t))
+ '(flymake-warnline ((((class color)) (:background "#333300" :overline "yellow" :underline "yellow"))) t)
+ '(hl-line ((t (:extend t :background "#111")))))

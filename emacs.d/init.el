@@ -77,12 +77,6 @@
 (require 'init-tabs)
 
 ;;============================================================
-;; highlight current line
-;; depends: color theme
-;;============================================================
-(require 'init-highlight-line)
-
-;;============================================================
 ;; powerline - prettifying the modeline
 ;;============================================================
 (require 'init-powerline)

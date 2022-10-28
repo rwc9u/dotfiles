@@ -57,8 +57,6 @@
   (moody-replace-vc-mode)
   (moody-replace-eldoc-minibuffer-message-function))
 
-
-
 (use-package magit
   :bind (:map magit-mode-map
               ("M-3" . split-window-horizontally)
@@ -81,7 +79,7 @@
         ("M-d" . projectile-find-dir)
         ("M-p" . projectile-switch-project)
         ("M-F" . projectile-find-file)
-        ("M-G" . projectile-ag))
+        ("M-G" . projectile-ripgrep))
   :config
   (setq projectile-switch-project-action 'projectile-dired)
   (projectile-global-mode))
@@ -91,6 +89,7 @@
 (use-package company)
 (use-package haml-mode)
 (use-package sass-mode)
+(use-package ripgrep)
 (use-package rvm)
 (use-package ruby-tools)
 (use-package web-mode)
@@ -116,6 +115,9 @@
   :init (setq markdown-command "multimarkdown"))
 (use-package ag)
 
+(use-package terraform-mode)
+(use-package company-terraform)
+
 ;;============================================================
 ;; javascript
 ;;============================================================
@@ -135,7 +137,6 @@
 ;; various configs
 ;;============================================================
 (require 'init-ido)
-(require 'init-comint)
 ;; (require 'init-utf8)
 
 ;;============================================================

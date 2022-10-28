@@ -58,7 +58,8 @@
   (moody-replace-eldoc-minibuffer-message-function))
 
 (use-package magit
-  :bind (:map magit-mode-map
+  :bind (("C-g" . magit-status)
+         :map magit-mode-map
               ("M-3" . split-window-horizontally)
               ("M-2" . split-window-vertically)
               ("M-1" . delete-other-windows)
@@ -83,14 +84,10 @@
   :config
   (setq projectile-switch-project-action 'projectile-dired)
   (projectile-global-mode))
-(use-package inf-ruby)
-(use-package ruby-compilation)
-(use-package robe)
-(use-package company)
-(use-package haml-mode)
-(use-package sass-mode)
+(use-package company
+  :config
+  (company-mode))
 (use-package ripgrep)
-(use-package rvm)
 (use-package ruby-tools)
 (use-package web-mode)
 (use-package yasnippet)
@@ -115,6 +112,10 @@
   :init (setq markdown-command "multimarkdown"))
 (use-package ag)
 
+
+;;============================================================
+;; terraform
+;;============================================================
 (use-package terraform-mode)
 (use-package company-terraform)
 
@@ -142,6 +143,18 @@
 ;;============================================================
 ;; Ruby/Rails/Ri
 ;;============================================================
+(use-package rvm
+  :hook
+  ((ruby-mode . rvm-activate-corresponding-ruby)))
+
+(use-package projectile-rails
+  :config
+  (projectile-rails-global-mode))
+(use-package inf-ruby)
+(use-package ruby-compilation)
+(use-package robe)
+(use-package haml-mode)
+(use-package sass-mode)
 (require 'init-ruby)
 
 ;;============================================================

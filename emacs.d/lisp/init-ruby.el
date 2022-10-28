@@ -41,24 +41,12 @@
 ;; turn off adding of magic comment
 (setq ruby-insert-encoding-magic-comment nil)
 
-;;============================================================
-;; Rinari
-;;============================================================
-;; (require 'rinari)
-;; (setq rinari-tags-file-name "TAGS")
-;; (global-rinari-mode)
-
-;; (add-hook 'projectile-mode-hook 'projectile-rails-on)
-(projectile-rails-global-mode)
-
-
 (defun ruby-insert-end ()
   "Insert \"end\" at point and reindent current line."
   (interactive)
   (insert "end")
   (ruby-indent-line t)
   (end-of-line))
-
 
 (add-hook 'ruby-mode-hook
           (lambda()
@@ -122,8 +110,6 @@
 ;;============================================================
 ;; robe
 ;;============================================================
-(autoload 'company-mode "company" nil t)
-(company-mode)
 
 (autoload 'robe-mode "robe" "\
 Improved navigation for Ruby
@@ -197,18 +183,6 @@ through a terminal."
     (kill-line 1)
     (insert command)))
 
-;; ;;==============================
-;; ;; rcov integration
-;; ;;==============================
-;; (require 'rcov)
-
-;;==============================
-;; rvm integration
-;;==============================
-(require 'rvm)
-;; this seems to be slowing down ruby file opening
-(add-hook 'ruby-mode-hook
-           (lambda () (rvm-activate-corresponding-ruby)))
 
 ;;==============================
 ;; ruby tools

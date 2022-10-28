@@ -42,6 +42,7 @@
      ("\\.idl\\'" flymake-simple-make-init)))
  '(global-font-lock-mode t nil (font-lock))
  '(global-hl-line-mode t)
+ '(global-prettify-symbols-mode t)
  '(grep-find-command
    "find . -path '*/.svn/*' -or -path '*/build/*' -or -path '*/.git/*' -prune -o -type f -print0 | xargs -0 grep -nH -e ")
  '(grep-find-ignored-directories
@@ -58,11 +59,14 @@
    "https://gist.github.com/jasonm23/516763/raw/632b066c7c18edc91485ba13b37ba50a9b2caac7/screen.css")
  '(max-lisp-eval-depth 1024)
  '(max-specpdl-size 15000)
+ '(org-support-shift-select t)
+ '(org-todo-keywords '((sequence "TODO" "DOING" "DONE")))
  '(package-archives
    '(("gnu" . "http://elpa.gnu.org/packages/")
-     ("melpa" . "https://melpa.org/packages/")))
+     ("melpa" . "https://melpa.org/packages/")
+     ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
  '(package-selected-packages
-   '(bm use-package lsp-ui lsp-mode dash-at-point rvm neotree company-terraform terraform-mode go-mode docker-compose-mode groovy-mode js2-refactor powerline color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode js2-mode))
+   '(moody sass-mode bm use-package lsp-ui lsp-mode dash-at-point rvm neotree company-terraform terraform-mode go-mode docker-compose-mode groovy-mode js2-refactor powerline color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode js2-mode))
  '(windmove-default-keybindings '([ignore] meta alt)))
 '(ruby-program-name "/opt/local/bin/irb --inf-ruby-mode" t)
 '(scss-compile-at-save nil)

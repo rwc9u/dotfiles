@@ -52,6 +52,9 @@
 ;; on NeXT/OpenStep Emacs.app, the physical Del key located under Ins key shows up in emacs as <kp-delete>, but on Carbon Emacs and Aquaemacs, it shows up as <delete>.
 (global-set-key (kbd "<kp-delete>") 'delete-char) 
 
+;; ISSUE: this is not getting picked up in customize settings
+(windmove-default-keybindings '(meta alt))
+
 ;;============================================================
 ;; minibuffer space completion
 ;;============================================================

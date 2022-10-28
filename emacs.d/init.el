@@ -84,12 +84,7 @@
   :config
   (setq projectile-switch-project-action 'projectile-dired)
   (projectile-global-mode))
-(use-package company
-  :config
-  (company-mode))
-(use-package ripgrep)
-(use-package ruby-tools)
-(use-package web-mode)
+
 (use-package yasnippet)
 (use-package bm
   :init
@@ -110,8 +105,23 @@
   :ensure t
   :mode ("README\\.md\\'" . gfm-mode)
   :init (setq markdown-command "multimarkdown"))
-(use-package ag)
 
+(use-package ag)
+(use-package ripgrep)
+
+;;============================================================
+;; company
+;;============================================================
+(use-package company
+  :config
+  (company-mode))
+(use-package all-the-icons)
+(use-package company-box
+  :after company
+  :hook (company-mode . company-box-mode)
+
+  :config
+  (setq company-box-icons-alist 'company-box-icons-all-the-icons))
 
 ;;============================================================
 ;; terraform
@@ -150,11 +160,24 @@
 (use-package projectile-rails
   :config
   (projectile-rails-global-mode))
+
 (use-package inf-ruby)
 (use-package ruby-compilation)
 (use-package robe)
 (use-package haml-mode)
 (use-package sass-mode)
+(use-package ruby-tools)
+
+(use-package web-mode
+  :init
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-indent-style 2)
+  :mode ("\\.erb$"
+         "\\.html$"
+         "\\.php$"))
+
 (require 'init-ruby)
 
 ;;============================================================
@@ -202,11 +225,29 @@
 ;;============================================================
 (require 'init-go)
 
-
 ;;============================================================
 ;; lsp
 ;;============================================================
 ;; (require 'init-lsp)
+
+;;============================================================
+;; org
+;;============================================================
+(use-package org-superstar
+  :config
+  (setq org-superstar-special-todo-items t)
+  (setq org-hide-leading-stars t)
+  (add-hook 'org-mode-hook (lambda ()
+                             (org-superstar-mode 1))))
+
+(setq org-hide-emphasis-markers t)
+
+(use-package org-appear
+  :hook (org-mode . org-appear-mode))
+
+(setq org-ellipsis "…")
+(setq org-src-fontify-natively t)
+(setq org-src-window-setup 'current-window)
 
 ;;============================================================
 ;; private

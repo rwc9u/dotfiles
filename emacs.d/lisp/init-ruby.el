@@ -183,36 +183,6 @@ through a terminal."
     (kill-line 1)
     (insert command)))
 
-
-;;==============================
-;; ruby tools
-;;==============================
-(require 'ruby-tools)
-
-;;==============================
-;; testing web-mode
-''==============================
-(require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(setq web-mode-markup-indent-offset 2)
-(setq web-mode-css-indent-offset 2)
-(setq web-mode-code-indent-offset 2)
-(setq web-mode-indent-style 2)
-
-;;==============================
-;; apidock integration
-;; http://simple-and-basic.com/2009/02/emacs-apidock-integration.html
-;;==============================
-;; (defun search-apidock-rails ()
-;;   "Search current word in apidock for rails"
-;;   (interactive)
-;;   (let* ((word-at-point (thing-at-point 'symbol))
-;; 		(word (read-string "Search apidock for? " word-at-point)))
-;; 	(browse-url (concat "http://apidock.com/rails/" word))))
-
-;; (define-key ruby-mode-map (kbd "C-c d") 'search-apidock-rails)
-
-
 (defun convert-hash-rocket (BEG END)
   "Convert hash rocket syntax to JSON syntax"
   (interactive "r")

@@ -75,7 +75,16 @@
 (use-package flx-ido)
 (use-package yaml-mode)
 (use-package fill-column-indicator)
-(use-package projectile)
+(use-package projectile
+  :bind
+  (:map projectile-mode-map
+        ("M-d" . projectile-find-dir)
+        ("M-p" . projectile-switch-project)
+        ("M-F" . projectile-find-file)
+        ("M-G" . projectile-ag))
+  :config
+  (setq projectile-switch-project-action 'projectile-dired)
+  (projectile-global-mode))
 (use-package inf-ruby)
 (use-package ruby-compilation)
 (use-package robe)
@@ -130,11 +139,6 @@
 ;; (require 'init-utf8)
 
 ;;============================================================
-;; Projectile
-;;============================================================
-(require 'init-projectile)
-
-;;============================================================
 ;; Ruby/Rails/Ri
 ;;============================================================
 (require 'init-ruby)
@@ -184,20 +188,6 @@
 ;;============================================================
 (require 'init-go)
 
-;; (defun org-key-overrides()
-;;   ;; Override windmove globals for org mode
-;;   ;; (windmove-mode -1)
-;;   (local-set-key (kbd "M-<up>") 'org-metaup)
-;;   (local-set-key (kbd "M-<down>") 'org-metadown)
-;;   (local-set-key (kbd "M-<left>") 'org-metaleft)
-;;   (local-set-key (kbd "M-<right>") 'org-metaright)
-;;   )
-;; (add-hook 'org-mode-hook #'org-key-overrides)
-
-;; (use-package org
-;;   :bind (:map org-mode-map
-;;               ("M-<up>" . org-metaup)
-;;               ("M-<down>" . org-metadown)))
 
 ;;============================================================
 ;; lsp

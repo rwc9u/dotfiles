@@ -5,6 +5,7 @@ tap 'rwc9u/forego'
 
 brew 'autoconf'
 brew 'bat'
+brew 'ctags'
 brew 'direnv'
 brew 'emacs-mac'
 brew 'rwc9u/forego/forego'

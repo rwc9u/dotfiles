@@ -56,7 +56,6 @@
   (moody-replace-mode-line-buffer-identification)
   (moody-replace-vc-mode)
   (moody-replace-eldoc-minibuffer-message-function))
-;; (use-package powerline)
 
 
 
@@ -118,11 +117,6 @@
 ;; tab management thx Ryan
 ;;============================================================
 (require 'init-tabs)
-
-;;============================================================
-;; powerline - prettifying the modeline
-;;============================================================
-;; (require 'init-powerline)
 
 ;;============================================================
 ;; various configs

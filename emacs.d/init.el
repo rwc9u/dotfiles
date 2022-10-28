@@ -65,6 +65,10 @@
               ("M-2" . split-window-vertically)
               ("M-1" . delete-other-windows)
               ))
+
+(use-package dash-at-point
+  :bind
+  ("C-c d" . dash-at-point))
 (use-package js2-mode)
 (use-package js2-refactor)
 (use-package coffee-mode)
@@ -179,12 +183,6 @@
 ;; go 
 ;;============================================================
 (require 'init-go)
-
-;;============================================================
-;; dash 
-;;============================================================
-(require 'init-dash)
-
 
 ;; (defun org-key-overrides()
 ;;   ;; Override windmove globals for org mode

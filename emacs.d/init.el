@@ -36,7 +36,7 @@
 (require 'init-defuns)
 
 ;;============================================================
-;; packages
+;; themes and mode line
 ;;============================================================
 (use-package color-theme-sanityinc-solarized)
 (use-package solarized-theme
@@ -57,6 +57,10 @@
   (moody-replace-vc-mode)
   (moody-replace-eldoc-minibuffer-message-function))
 
+
+;;============================================================
+;; programming
+;;============================================================
 (use-package magit
   :bind (("C-g" . magit-status)
          :map magit-mode-map
@@ -113,13 +117,11 @@
 ;; company
 ;;============================================================
 (use-package company
-  :config
-  (company-mode))
+  :hook (prog-mode . company-mode))
 (use-package all-the-icons)
 (use-package company-box
   :after company
   :hook (company-mode . company-box-mode)
-
   :config
   (setq company-box-icons-alist 'company-box-icons-all-the-icons))
 
@@ -188,7 +190,8 @@
 ;;============================================================
 ;; flycheck
 ;;============================================================
-(require 'init-flycheck)
+(use-package flycheck
+  :init (global-flycheck-mode))
 
 ;;============================================================
 ;; flyspell

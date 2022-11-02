@@ -200,7 +200,21 @@
 ;;============================================================
 ;; flyspell
 ;;============================================================
-(require 'init-flyspell)
+(use-package flyspell
+  :init
+  (flyspell-mode)
+  :config
+  (setq flyspell-use-meta-tab nil)
+  :bind
+  (:map flyspell-mouse-map
+        ([down-mouse-3] . flyspell-auto-correct-word))
+  :hook
+  ((text-mode . flyspell-mode-on)
+   (LaTeX-mod . flyspell-mode-on)
+   (c-mode-common . flyspell-prog-mode)
+   (c++-mode-common . flyspell-prog-mode)
+   (emacs-lisp-mode . flyspell-prog-mode)
+   (c++-mode . flyspell-prog-mode)))
 
 ;;============================================================
 ;; eol-conversion

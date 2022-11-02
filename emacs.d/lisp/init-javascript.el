@@ -27,22 +27,6 @@
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
 (js2r-add-keybindings-with-prefix "C-c C-m")
 
-(require 'coffee-mode)
-
-(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
-(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
-
-(defun coffee-custom ()
-  "coffee-mode-hook"
- (set (make-local-variable 'tab-width) 2))
-
-(add-hook 'coffee-mode-hook
-  '(lambda() (coffee-custom)))
-
-(define-key coffee-mode-map [(meta r)] 'coffee-compile-buffer)
-(define-key coffee-mode-map [(meta R)] 'coffee-compile-region)
-
-
 (setenv "NODE_NO_READLINE" "1")
 
 (provide 'init-javascript)

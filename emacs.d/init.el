@@ -89,7 +89,12 @@
   (setq projectile-switch-project-action 'projectile-dired)
   (projectile-global-mode))
 
-(use-package yasnippet)
+(use-package yasnippet
+  :config
+  (yas-global-mode 1)
+  :hook
+  (projectile-rails-mode . (lambda ()
+                             (yas-activate-extra-mode 'rails-mode))))
 (use-package bm
   :init
   (setq bm-restore-repository-on-load t)
@@ -104,7 +109,7 @@
    (kill-emacs . (lambda nil
                    (bm-buffer-save-all)
                    (bm-repository-save)))))
-(use-package flycheck)
+
 (use-package markdown-mode
   :ensure t
   :mode ("README\\.md\\'" . gfm-mode)
@@ -112,6 +117,9 @@
 
 (use-package ag)
 (use-package ripgrep)
+
+(use-package sql-indent
+  :hook (sql-mode . sqlind-minor-mode))
 
 ;;============================================================
 ;; company
@@ -182,10 +190,6 @@
 
 (require 'init-ruby)
 
-;;============================================================
-;; Snippets
-;;============================================================
-(require 'init-yasnippet)
 
 ;;============================================================
 ;; flycheck
@@ -217,11 +221,6 @@
 ;; environment settings
 ;;============================================================
 (require 'init-envs)
-
-;;============================================================
-;; my-c-style
-;;============================================================
-(require 'init-c)
 
 ;;============================================================
 ;; go 

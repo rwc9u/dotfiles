@@ -130,11 +130,14 @@
 ;; company
 ;;============================================================
 (use-package company
-  :hook (prog-mode . company-mode))
+  :hook
+  (prog-mode . company-mode)
+  (after-init . global-company-mode))
 (use-package all-the-icons)
 (use-package company-box
   :after company
-  :hook (company-mode . company-box-mode)
+  :hook
+  (company-mode . company-box-mode)
   :config
   (setq company-box-icons-alist 'company-box-icons-all-the-icons))
 
@@ -178,9 +181,32 @@
 
 (use-package inf-ruby)
 (use-package ruby-compilation)
-(use-package robe)
-(use-package haml-mode)
-(use-package sass-mode)
+
+;; (use-package robe
+;;   :hook
+;;   (ruby-mode . robe-mode)
+;;   :config
+;;   )
+
+;; (eval-after-load 'company
+;;   '(push 'company-robe company-backends))
+
+;; (with-eval-after-load 'company
+;;  (define-key company-active-map (kbd "TAB") #'company-complete-common-or-cycle)
+;;  (define-key company-active-map (kbd "<backtab>") (lambda () (interactive) (company-complete-common-or-cycle -1))))
+
+(use-package haml-mode
+    :mode ("html\\.haml$"
+         "\\.html\\.haml$"
+         "\\.hamlbars$")
+    :hook ((haml-mode . (lambda()
+                          (add-hook 'local-write-file-hooks
+                                    '(lambda()
+                                       (save-excursion
+                                         (delete-trailing-whitespace)
+                                         )))))))
+(use-package sass-mode
+  :mode ("\\.sass$"))
 (use-package ruby-tools)
 
 (use-package web-mode
@@ -249,7 +275,24 @@
 ;;============================================================
 ;; lsp
 ;;============================================================
-;; (require 'init-lsp)
+(use-package lsp-mode
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  :commands (lsp lsp-deferred)
+  :hook ((go-mode ruby-mode) . lsp-deferred)
+
+  :custom
+  (lsp-eldoc-render-all t))
+
+(use-package lsp-ui
+  :commands lsp-ui-mode
+  :defer t
+  :hook (lsp-mode . lsp-ui-mode)
+
+  :custom
+  (lsp-ui-peek-always-show t)
+  (lsp-ui-sideline-show-hover t)
+  (lsp-ui-doc-enable nil))
 
 ;;============================================================
 ;; org

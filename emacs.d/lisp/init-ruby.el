@@ -107,24 +107,6 @@
 ))
 
 
-;;============================================================
-;; robe
-;;============================================================
-
-(autoload 'robe-mode "robe" "\
-Improved navigation for Ruby
-\(fn &optional ARG)" t nil)
-;; (autoload 'company-robe "robe-company" "\
-;; A `company-mode' completion back-end for `robe-mode'.
-;; \(fn COMMAND &optional ARG)" t nil)
-(add-hook 'ruby-mode-hook 'robe-mode)
-(eval-after-load 'company
-  '(push 'company-robe company-backends))
-(add-hook 'after-init-hook 'global-company-mode)
-
-(with-eval-after-load 'company
- (define-key company-active-map (kbd "TAB") #'company-complete-common-or-cycle)
- (define-key company-active-map (kbd "<backtab>") (lambda () (interactive) (company-complete-common-or-cycle -1))))
 
 ;; ;;============================================================
 ;; ;; rcode tools
@@ -132,27 +114,6 @@ Improved navigation for Ruby
 ;; ;; commented out because it was slowing down ruby file load
 ;; ;; (add-to-list 'load-path  (expand-file-name "~/.emacs.d/rcodetools"))
 ;; ;; (require 'rcodetools)
-
-;;============================================================
-;; haml templating
-;;============================================================
-(require 'haml-mode)
-(require 'sass-mode)
-(add-to-list 'auto-mode-alist '("html\\.haml$" . haml-mode))
-(add-to-list 'auto-mode-alist '("\\.html\\.haml$" . haml-mode))
-(add-to-list 'auto-mode-alist '("\\.hamlbars$" . haml-mode))
-(add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
-(add-hook 'haml-mode-hook
-          (lambda()
-            (add-hook 'local-write-file-hooks
-                      '(lambda()
-                         (save-excursion
-                           (delete-trailing-whitespace)
-                           )))
-            ))
-
-
-
 
 (defun shell-command-on-region-to-string (beg end command)
   (with-output-to-string

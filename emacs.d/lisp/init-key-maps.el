@@ -4,11 +4,8 @@
 (global-set-key [S-f3] 'grep-find)
 
 (global-set-key [(control f3)] 'gse-locate)
-;; (global-set-key [(control f4)] 'semantic-tag-folding-fold-block)
-;; (global-set-key [(control meta f4)] 'semantic-tag-folding-show-block)
-(global-set-key [(control f4)] 'magit-status)
+
 (global-set-key [f4] 'html-script-toggle-narrow)
-;; (global-set-key [f5] 'jde-build)
 (global-set-key [S-f5] 'ruby-eval-buffer)
 (global-set-key [(control f5)] 'xmp)
 (global-set-key [f6] 'goto-line)
@@ -16,7 +13,6 @@
 (global-set-key [f7] 'kmacro-end-or-call-macro)
 (global-set-key [f8] 'sql-send-region)
 (global-set-key [(control f8)] 'sql-send-buffer)
-(global-set-key [f13] 'magit-status)
 (global-set-key [f14] 'neotree-toggle)
 (global-set-key [(meta f1)]    'ri)
 

@@ -63,6 +63,7 @@
 ;;============================================================
 (use-package magit
   :bind (("C-g" . magit-status)
+         ("<f13>" . magit-status)
          :map magit-mode-map
               ("M-3" . split-window-horizontally)
               ("M-2" . split-window-vertically)
@@ -120,6 +121,10 @@
 
 (use-package sql-indent
   :hook (sql-mode . sqlind-minor-mode))
+
+(use-package git-link
+  :bind
+  ("C-c g l" . git-link))
 
 ;;============================================================
 ;; company

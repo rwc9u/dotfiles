@@ -66,7 +66,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
  '(package-selected-packages
-   '(flyspell sql-indent org-appear org-superstar company-box all-the-icons ripgrep moody use-package lsp-ui lsp-mode dash-at-point rvm neotree company-terraform terraform-mode go-mode docker-compose-mode groovy-mode js2-refactor color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode js2-mode))
+   '(git-link flyspell sql-indent org-appear org-superstar company-box all-the-icons ripgrep moody use-package lsp-ui lsp-mode dash-at-point rvm neotree company-terraform terraform-mode go-mode docker-compose-mode groovy-mode js2-refactor color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode js2-mode))
  '(windmove-default-keybindings '([ignore] meta alt)))
 '(ruby-program-name "/opt/local/bin/irb --inf-ruby-mode" t)
 '(scss-compile-at-save nil)

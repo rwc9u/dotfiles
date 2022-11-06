@@ -76,7 +76,6 @@
 (use-package js2-mode)
 (use-package js2-refactor)
 (use-package coffee-mode)
-(use-package flx-ido)
 (use-package yaml-mode)
 (use-package fill-column-indicator)
 (use-package projectile
@@ -126,6 +125,17 @@
   :bind
   ("C-c g l" . git-link))
 
+(use-package ido
+  :init
+  (setq ido-enable-flex-matching t)
+  :config
+  (ido-mode t)
+  (ido-everywhere 1)
+  :hook
+  (ido-setup . (lambda()
+                 (define-key ido-completion-map [tab] 'ido-complete))))
+(use-package flx-ido)
+
 ;;============================================================
 ;; company
 ;;============================================================
@@ -162,10 +172,7 @@
 ;;============================================================
 (require 'init-tabs)
 
-;;============================================================
-;; various configs
-;;============================================================
-(require 'init-ido)
+
 ;; (require 'init-utf8)
 
 ;;============================================================
@@ -266,7 +273,7 @@
 ;;============================================================
 ;; environment settings
 ;;============================================================
-(require 'init-envs)
+;; (require 'init-envs)
 
 ;;============================================================
 ;; go 

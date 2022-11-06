@@ -226,22 +226,23 @@
 ;; flycheck
 ;;============================================================
 (use-package flycheck
-  :init (global-flycheck-mode))
+  :config (global-flycheck-mode))
 
 ;;============================================================
 ;; flyspell
 ;;============================================================
 (use-package flyspell
   :init
-  (flyspell-mode)
-  :config
   (setq flyspell-use-meta-tab nil)
+  :config
+  (flyspell-mode)
   :bind
   (:map flyspell-mouse-map
         ([down-mouse-3] . flyspell-auto-correct-word))
   :hook
   ((text-mode . flyspell-mode-on)
-   (LaTeX-mod . flyspell-mode-on)
+   (LaTeX-mode . flyspell-mode-on)
+   (org-mode . flyspell-mode-on)
    (c-mode-common . flyspell-prog-mode)
    (c++-mode-common . flyspell-prog-mode)
    (emacs-lisp-mode . flyspell-prog-mode)
@@ -270,7 +271,19 @@
 ;;============================================================
 ;; go 
 ;;============================================================
-(require 'init-go)
+(use-package go-mode
+  :init
+  (setq lsp-gopls-staticcheck t)
+  (setq lsp-eldoc-render-all t)
+  (setq lsp-gopls-complete-unimported t)
+  :bind
+  (:map go-mode-map ("C-c C-c" . compile))
+  :hook
+  (go-mode . (lambda ()
+             (flycheck-select-checker 'go-golint)
+             (setq flycheck-disabled-checkers '(go-build go-vet)))))
+
+(use-package protobuf-mode)
 
 ;;============================================================
 ;; lsp

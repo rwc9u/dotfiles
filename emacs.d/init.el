@@ -312,6 +312,7 @@
 ;;============================================================
 ;; org
 ;;============================================================
+;; heavily inspired/copied from https://github.com/hrs/dotfiles/blob/main/emacs/.config/emacs/configuration.org#coq
 (use-package org-superstar
   :config
   (setq org-superstar-special-todo-items t)
@@ -327,6 +328,28 @@
 (setq org-ellipsis "…")
 (setq org-src-fontify-natively t)
 (setq org-src-window-setup 'current-window)
+
+(setq org-directory "~/org")
+
+(defun org-file-path (filename)
+  "Return the absolute address of an org file, given its relative name."
+  (concat (file-name-as-directory org-directory) filename))
+
+(setq org-index-file (org-file-path "index.org"))
+(setq org-archive-location
+      (concat
+       (org-file-path (format "archive/archive-%s.org" (format-time-string "%Y")))
+       "::* From %s"))
+
+(setq org-refile-targets `((,org-index-file :level . 1)
+                           (,(org-file-path "tasks.org") :level . 1)))
+
+(setq org-agenda-files (list org-index-file
+                             (org-file-path "tasks.org")
+                             (org-file-path "work.org")))
+
+(advice-add 'org-archive-subtree :after 'org-save-all-org-buffers)
+(setq org-log-done 'time)
 
 ;;============================================================
 ;; private

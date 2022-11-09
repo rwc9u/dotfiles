@@ -889,7 +889,7 @@
 	       ("Leo Liu" . "sdl.web@gmail.com"))
 	      (:commit . "f155d19c528e27f8f6c72f0d75f652edbdcab37f"))])
  (ebdb .
-       [(0 8 14)
+       [(0 8 16)
 	((emacs
 	  (25 1))
 	 (seq
@@ -900,7 +900,7 @@
 	 (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net")
 	 (:authors
 	  ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
-	 (:commit . "c98512ebb6984701bbf090f1eabedb120c51e7bd"))])
+	 (:commit . "a961744cc49a6e9b96474ef8ea90dc34feaef24c"))])
  (ebdb-gnorb .
 	     [(1 0 2)
 	      ((gnorb
@@ -933,7 +933,7 @@
 	       ("Markus Triska" . "triska@metalevel.at"))
 	      (:commit . "cfcdf9e42821d246b7fbc84877aa4ecacc184a1c"))])
  (eev .
-      [(20221015)
+      [(20221108)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -942,7 +942,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "e80c5efd00214613e6837fa11036bf8463040529"))])
+	(:commit . "34d4e02b19e94a95648f125110a18c97414d547f"))])
  (ef-themes .
 	    [(0 9 0)
 	     ((emacs
@@ -2512,7 +2512,7 @@
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	   (:commit . "e01a8f7e80c5c83dfcfb87b10e0213d4963e4d15"))])
  (pyim .
-       [(5 2 7)
+       [(5 2 8)
 	((emacs
 	  (25 1))
 	 (async
@@ -2526,7 +2526,7 @@
 	 (:authors
 	  ("Ye Wenbin" . "wenbinye@163.com")
 	  ("Feng Shu" . "tumashu@163.com"))
-	 (:commit . "8c4f7d40c05dc06b3c96c2955e5d72ec268f2b61"))])
+	 (:commit . "93fab3c9e8c2490687781d45c1cecead0bd3ecf2"))])
  (pyim-basedict .
 		[(0 5 4)
 		 nil "The default pinyin dict of pyim" tar
@@ -3325,6 +3325,19 @@
 	 (:authors
 	  ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 	 (:keywords "extensions" "matching" "data structures trie" "ternary search tree" "tree" "completion" "regexp"))])
+ (triples .
+	  [(0 1)
+	   ((seq
+	     (2 0))
+	    (emacs
+	     (25)))
+	   "A flexible triple-based database for us in apps." tar
+	   ((:url . "https://github.com/ahyatt/triples")
+	    (:keywords "triples" "kg" "data" "sqlite")
+	    (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
+	    (:authors
+	     ("Andrew Hyatt" . "ahyatt@gmail.com"))
+	    (:commit . "e91514ddd71fff76f8f92934a2c1d8cb7da789cc"))])
  (undo-tree .
 	    [(0 8 2)
 	     ((queue

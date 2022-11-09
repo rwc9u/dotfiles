@@ -66,6 +66,12 @@
 ;;============================================================
 (setq gc-cons-threshold 100000000)
 
+;;============================================================
+;; change amount of data which emacs reads from a process
+;;============================================================
+(setq read-process-output-max (* 1024 1024 2)) 
+
+
 ;; scroll the compilation buffer 
 (setq compilation-scroll-output t)
 

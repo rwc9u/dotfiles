@@ -136,6 +136,11 @@
                  (define-key ido-completion-map [tab] 'ido-complete))))
 (use-package flx-ido)
 
+(use-package which-key
+  :config
+  (which-key-mode)
+  (which-key-setup-side-window-right-bottom))
+
 ;;============================================================
 ;; company
 ;;============================================================

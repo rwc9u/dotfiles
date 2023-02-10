@@ -107,6 +107,7 @@ plugins=(
   ruby
   rvm
   direnv
+  pyenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -148,6 +149,7 @@ export EDITOR="vi"
 export GEM_EDITOR="emacsclient"
 eval "$(nodenv init -)"
 eval "$(mcfly init zsh)"
+
 
 
 function kubectlgetall {

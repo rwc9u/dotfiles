@@ -38,6 +38,24 @@
 ;;============================================================
 ;; themes and mode line
 ;;============================================================
+(use-package moody
+  :config
+  (setq x-underline-at-descent-line t)
+  (moody-replace-mode-line-buffer-identification)
+  (moody-replace-vc-mode)
+  (moody-replace-eldoc-minibuffer-message-function))
+
+;; (use-package ef-themes
+;;   :custom
+;;    (ef-themes-headings
+;;          '((0 . (1.3))
+;;            (1 . (1.3))
+;;            (2 . (1.2))
+;;            (t . (1.1))))
+;;    (ef-themes-mixed-fonts t))
+
+;; (ef-themes-select 'ef-night)
+
 (use-package color-theme-sanityinc-solarized)
 (use-package solarized-theme
   :config
@@ -49,14 +67,6 @@
 	(set-face-attribute 'mode-line          nil :box        nil)
 	(set-face-attribute 'mode-line-inactive nil :box        nil)
 	(set-face-attribute 'mode-line-inactive nil :background "#073642")))
-
-(use-package moody
-  :config
-  (setq x-underline-at-descent-line t)
-  (moody-replace-mode-line-buffer-identification)
-  (moody-replace-vc-mode)
-  (moody-replace-eldoc-minibuffer-message-function))
-
 
 ;;============================================================
 ;; programming
@@ -73,9 +83,10 @@
 (use-package dash-at-point
   :bind
   ("C-c d" . dash-at-point))
-(use-package js2-mode)
-(use-package js2-refactor)
-(use-package coffee-mode)
+(use-package coffee-mode
+   :ensure t
+   :init
+   (setq-default coffee-tab-width 2))
 (use-package yaml-mode)
 (use-package fill-column-indicator)
 (use-package projectile
@@ -117,6 +128,8 @@
 
 (use-package ag)
 (use-package ripgrep)
+
+(use-package docker-compose-mode)
 
 (use-package sql-indent
   :hook (sql-mode . sqlind-minor-mode))
@@ -165,7 +178,33 @@
 ;;============================================================
 ;; javascript
 ;;============================================================
-(require 'init-javascript)
+(use-package js2-mode
+  :ensure t
+  :init
+  (setq js-basic-indent 2)
+  (setq-default js2-basic-indent 2
+                js2-basic-offset 2
+                js2-auto-indent-p t
+                js2-cleanup-whitespace t
+                js2-enter-indents-newline t
+                js2-indent-on-enter-key t
+                js2-global-externs (list "window" "module" "require" "buster" "sinon" "assert" "refute" "setTimeout" "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON" "jQuery" "$"))
+
+  ;; (add-hook 'js2-mode-hook
+  ;;           (lambda ()
+  ;;             (push '("function" . ?ƒ) prettify-symbols-alist)))
+
+  (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode)))
+(use-package js2-refactor
+  :ensure t
+  :init   (add-hook 'js2-mode-hook 'js2-refactor-mode)
+  :config (js2r-add-keybindings-with-prefix "C-c ."))
+(use-package tide
+  :ensure t
+  :after (typescript-mode company flycheck)
+  :hook ((typescript-mode . tide-setup)
+         (typescript-mode . tide-hl-identifier-mode)
+         (before-save . tide-format-before-save)))
 
 ;;============================================================
 ;; some global defaults
@@ -355,6 +394,13 @@
 
 (advice-add 'org-archive-subtree :after 'org-save-all-org-buffers)
 (setq org-log-done 'time)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (ruby . t)
+   (shell . t)))
+
 
 ;;============================================================
 ;; private

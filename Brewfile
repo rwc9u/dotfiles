@@ -1,36 +1,53 @@
 tap 'heroku/brew'
 tap 'homebrew/cask'
 tap 'railwaycat/emacsmacport'
-tap 'rwc9u/forego'
 
+brew 'argocd'
 brew 'autoconf'
+brew 'awscli'
+brew 'awsume'
 brew 'bat'
 brew 'ctags'
+brew 'circleci'
 brew 'direnv'
 brew 'emacs-mac'
-brew 'rwc9u/forego/forego'
 brew 'git'
 brew 'glib'
 brew 'golang'
+brew 'helm'
 brew 'heroku'
 brew 'imagemagick'
+brew 'kube-ps1'
+brew 'kubectl-argo-rollouts'
+brew 'kubectx'
+brew 'kubernetes-cli'
 brew 'libxslt'
 brew 'libyaml'
-brew 'lsd'                            # new ls
+brew 'lsd' # new ls
 brew 'mcfly'
 brew 'memcached'
+brew 'minikube'
 brew 'nodenv'
-brew 'postgresql', restart_service: true
+brew 'overmind'
+brew 'postgresql@12', restart_service: true
 brew 'redis', restart_service: true
+brew 'ripgrep'
+brew 'ripgrep-all'
+brew 'terraform'
+brew 'tfenv'
 brew 'the_silver_searcher'
+brew 'tmux'
 brew 'yarn'
+brew 'vault'
 
 # set arguments for all 'brew cask install' commands
-cask_args appdir: "~/Applications"
+# cask_args appdir: "~/Applications"
 
-cask "docker", args: { appdir: "/Applications" }
+cask '1password'
+cask '1password-cli'
+cask 'docker', args: { appdir: '/Applications' }
 cask 'iterm2'
-cask 'skype'
+# cask 'skype'
 cask 'slack'
 cask 'visual-studio-code'
 cask 'cheatsheet'

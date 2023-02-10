@@ -60,6 +60,11 @@
  '(max-lisp-eval-depth 1024)
  '(max-specpdl-size 15000)
  '(org-agenda-files '("/Users/robchristie/org/index.org"))
+ '(org-capture-templates
+   '(("r" "Read later" entry
+      (file+olp+datetree "~/org/notes.org")
+      "* [[%:link][%:description]]" :immediate-finish t)))
+ '(org-export-backends '(ascii html icalendar latex md odt))
  '(org-support-shift-select t)
  '(org-todo-keywords '((sequence "TODO" "DOING" "DONE")))
  '(package-archives
@@ -67,7 +72,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
  '(package-selected-packages
-   '(which-key ido protobuf-mode git-link flyspell sql-indent org-appear org-superstar company-box all-the-icons ripgrep moody use-package lsp-ui lsp-mode dash-at-point rvm neotree company-terraform terraform-mode go-mode docker-compose-mode groovy-mode js2-refactor color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode js2-mode))
+   '(tide docker-tramp ox-slack which-key ido protobuf-mode git-link flyspell sql-indent org-appear org-superstar company-box all-the-icons ripgrep moody use-package lsp-ui lsp-mode dash-at-point rvm neotree company-terraform terraform-mode go-mode docker-compose-mode groovy-mode js2-refactor color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode js2-mode))
  '(windmove-default-keybindings '([ignore] meta alt)))
 '(ruby-program-name "/opt/local/bin/irb --inf-ruby-mode" t)
 '(scss-compile-at-save nil)

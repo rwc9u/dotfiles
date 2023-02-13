@@ -5,3 +5,4 @@ test_results/
 config/solargraph.rb
 .DS_Store
 .envrc
+.npmrc

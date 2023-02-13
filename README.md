@@ -45,3 +45,10 @@ Run `install.rb` to symlink non-dotted files in the main directory to their .dot
 $ cd ~/dev/dotfiles
 $ brew bundle
 ```
+
+### Install P10k
+* Install [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+
+``` bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```

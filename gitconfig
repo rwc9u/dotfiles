@@ -29,7 +29,7 @@
 [pull]
 	rebase = true
 [core]
-	excludesfile = /Users/robchristie/.gitignore_global
+	excludesfile = /Users/rob.christie/.gitignore_global
 
 [push]
 	default = simple
@@ -40,7 +40,7 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	template = /Users/robchristie/.stCommitMsg
+	template = /Users/rob.christie/.stCommitMsg
 	gpgsign = true
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
@@ -50,5 +50,5 @@
 [init]
 	defaultBranch = main
 [safe]
-	directory = /Users/robchristie/dev/kajabi-products
+	directory = /Users/rob.christie/dev/kajabi-products
 	directory = /workspace

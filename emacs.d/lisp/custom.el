@@ -59,7 +59,7 @@
    "https://gist.github.com/jasonm23/516763/raw/632b066c7c18edc91485ba13b37ba50a9b2caac7/screen.css")
  '(max-lisp-eval-depth 1024)
  '(max-specpdl-size 15000)
- '(org-agenda-files '("/Users/robchristie/org/index.org"))
+ '(org-agenda-files '("/Users/rob.christie/org/index.org"))
  '(org-capture-templates
    '(("r" "Read later" entry
       (file+olp+datetree "~/org/notes.org")

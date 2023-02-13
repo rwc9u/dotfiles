@@ -1,0 +1,7 @@
+*.code-workspace
+test_results/
+.byebug_history
+.solargraph.yml
+config/solargraph.rb
+.DS_Store
+.envrc

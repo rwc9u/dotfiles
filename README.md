@@ -19,6 +19,11 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 ```
 $ curl -sSL https://get.rvm.io | bash -s stable
 ```
+### Install oh-my-zsh
+* Install [oh-my-zsh](https://ohmyz.sh)
+```
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 ### Dotfile and Emacs Configuration
 Clone this (or a forked version of this) repository, and update all the git submodules within.
 
@@ -31,6 +36,8 @@ Run `install.rb` to symlink non-dotted files in the main directory to their .dot
 
     $ cd ~/dotfiles
     $ ./install.rb
+
+
 
 ### Brew Bundle
 * Install my gotos

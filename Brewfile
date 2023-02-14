@@ -36,6 +36,7 @@ brew 'memcached'
 brew 'minikube'
 brew 'nvm'
 brew 'overmind'
+brew 'pipx'
 brew 'postgresql@12', restart_service: true
 brew 'puma/puma/puma-dev'
 brew 'qt'

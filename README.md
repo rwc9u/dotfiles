@@ -52,3 +52,28 @@ $ brew bundle
 ``` bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
+
+### Install [aws-sso-util](https://github.com/benkehoe/aws-sso-util)
+
+I still like `awsume` and the ability to view my setup for aws from it. SSO throws in some additional issues.
+
+``` bash
+brew install pipx
+pipx ensurepath
+pipx install aws-sso-util
+```
+
+I then have something similar to the following in my config
+
+``` bash
+[profile tools-admin-sso]
+sso_start_url = https://foobar.awsapps.com/start
+sso_region = us-east-1
+sso_account_id = 12345
+sso_role_name = SSOAWS-Tools-Admin
+region = us-east-1
+output = json
+
+[profile kajabi-tools-admin]
+credential_process = aws-sso-util credential-process --profile tools-admin-sso
+```

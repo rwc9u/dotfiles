@@ -37,8 +37,6 @@ Run `install.rb` to symlink non-dotted files in the main directory to their .dot
     $ cd ~/dotfiles
     $ ./install.rb
 
-
-
 ### Brew Bundle
 * Install my gotos
 ```
@@ -74,6 +72,18 @@ sso_role_name = SSOAWS-Tools-Admin
 region = us-east-1
 output = json
 
-[profile kajabi-tools-admin]
+[profile tools-admin]
 credential_process = aws-sso-util credential-process --profile tools-admin-sso
 ```
+
+### Other files that may need to be synced out of band
+
+* `.kube/config`
+* `.aws/config`
+* `~/.priv` - my local .gitignored shell config
+* org files 
+* `~/.zsh_history`
+* mcfly history (ovrrerides ctrl-r for my zsh) - either `~/.mcfly/history.db` or `~/Library/Application Support/McFly/history.db`
+
+
+

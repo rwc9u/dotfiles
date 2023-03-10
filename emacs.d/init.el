@@ -230,8 +230,13 @@
   :config
   (projectile-rails-global-mode))
 
+(use-package ruby-mode
+  :custom
+  (ruby-align-to-stmt-keywords '(if)))
+
 (use-package inf-ruby)
 (use-package ruby-compilation)
+(use-package rubocop)
 
 ;; (use-package robe
 ;;   :hook

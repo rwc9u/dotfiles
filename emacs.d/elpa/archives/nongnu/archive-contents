@@ -28,13 +28,13 @@
 		(:authors
 		 ("Jordon Biondo" . "jordonbiondo@gmail.com")))])
  (annotate .
-	   [(1 8 5)
+	   [(1 9 0)
 	    nil "annotate files without changing them" tar
 	    ((:url . "https://github.com/bastibe/annotate.el")
 	     (:maintainer "Bastian Bechtold <bastibe.dev@mailbox.org>, cage" . "cage-dev@twistfold.it")
 	     (:authors
 	      ("Bastian Bechtold"))
-	     (:commit . "fb8e51da6ab37b6df2ac2b6a8555f3aa6b589fd6"))])
+	     (:commit . "44349cef8bd8383ff7955c66c3b2f5492b3b8914"))])
  (anti-zenburn-theme .
 		     [(2 5 1)
 		      nil "Low-contrast Zenburn-inverted theme" tar
@@ -1207,15 +1207,16 @@
 	      ("Aaron Smith" . "aaron-lua@gelatinous.com"))
 	     (:commit . "1cb83e691627fb92290d452cb08b6c5f73fe19b6"))])
  (macrostep .
-	    [(0 9)
+	    [(0 9 1)
 	     ((cl-lib
 	       (0 5)))
 	     "interactive macro expander" tar
-	     ((:url . "https://github.com/joddie/macrostep")
-	      (:maintainer "joddie" . "j.j.oddie@gmail.com")
+	     ((:url . "https://github.com/emacsorphanage/macrostep")
+	      (:keywords "lisp" "languages" "macro" "debugging")
+	      (:maintainer "Jon Oddie" . "j.j.oddie@gmail.com")
 	      (:authors
-	       ("joddie" . "j.j.oddie@gmail.com"))
-	      (:keywords "lisp" "languages" "macro" "debugging"))])
+	       ("Jon Oddie" . "j.j.oddie@gmail.com"))
+	      (:commit . "c7369e402c7de5dcb77aec1f16504cad1ca741d5"))])
  (magit .
 	[(3 3 0)
 	 ((emacs
@@ -1854,6 +1855,17 @@
 	     (:authors
 	      ("Campbell Barton" . "ideasman42@gmail.com"))
 	     (:commit . "ddad489f2c87467480520502a93e682f81bfac18"))])
+ (sqlite3 .
+	  [(0 17)
+	   ((emacs
+	     (25 1)))
+	   "Direct access to the core SQLite3 API" tar
+	   ((:url . "https://github.com/pekingduck/emacs-sqlite3-api")
+	    (:keywords "comm" "data" "sql")
+	    (:maintainer "Y. N. Lo" . "elisp@fastmail.com")
+	    (:authors
+	     ("Y. N. Lo" . "elisp@fastmail.com"))
+	    (:commit . "b513b71012f61895f771fc6948d6511ea8ded0a6"))])
  (stylus-mode .
 	      [(1 0 1)
 	       nil "Major mode for editing .styl files" tar
@@ -1873,7 +1885,7 @@
 		     ("John Olsson" . "john@cryon.se"))
 		    (:commit . "2d5acd143a153e16372d59000e57d76291ab81dd"))])
  (subed .
-	[(1 1 0)
+	[(1 2 0)
 	 ((emacs
 	   (25 1)))
 	 "A major mode for editing subtitles" tar
@@ -1882,7 +1894,7 @@
 	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
 	  (:authors
 	   ("Random User"))
-	  (:commit . "43fcde0c3aad7e897f1fdb9be46b320e2d2335bf"))])
+	  (:commit . "089d9f33db9e34512352b1344627cdb20b967409"))])
  (sweeprolog .
 	     [(0 17 0)
 	      ((emacs
@@ -2203,7 +2215,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(22 12 20230305005921)
+	       [(23 0 20230310115257)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -2212,7 +2224,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "ed4733bcea72591772c97bf1bf50f20982c87836"))])
+		 (:commit . "a590cf24998b44e0d1e3d5b8660fc6da8b51e1c0"))])
  (xkcd .
        [(1 1)
 	((json
@@ -2253,12 +2265,13 @@
 			("Andrea Crotti" . "andrea.crotti.0@gmail.com"))
 		       (:keywords "snippets"))])
  (zenburn-theme .
-		[(2 7 0)
+		[(2 8 0)
 		 nil "A low contrast color theme for Emacs." tar
 		 ((:url . "http://github.com/bbatsov/zenburn-emacs")
 		  (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
 		  (:authors
-		   ("Bozhidar Batsov" . "bozhidar@batsov.com")))])
+		   ("Bozhidar Batsov" . "bozhidar@batsov.com"))
+		  (:commit . "8a1f9d28f503615e5d9b3eac59a2f3c14e75fc20"))])
  (zig-mode .
 	   [(0 0 8)
 	    ((emacs

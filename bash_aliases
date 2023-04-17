@@ -229,8 +229,8 @@ alias eks-dev="aws-sso-util login && awsume kajabi-development-admin \
 alias eks-qa="aws-sso-util login && awsume kajabi-qa-admin \
 && kubectx qa-eks-cluster && kubens kajabi-products"
 
-alias eks-perf="aws-sso-util login && awsume kajabi-qa-admin \
-&& kubectx qa-perf-eks-cluster && kubens kajabi-products"
+alias eks-perf="aws-sso-util login && awsume kajabi-perf-admin \
+&& kubectx perf-eks-cluster && kubens kajabi-products"
 
 alias eks-stage="aws-sso-util login && awsume kajabi-staging-admin \
 && kubectx stage-eks-cluster && kubens kajabi-products"

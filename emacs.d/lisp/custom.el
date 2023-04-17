@@ -9,6 +9,7 @@
  '(comint-move-point-for-output 'all)
  '(compilation-scroll-output t)
  '(compilation-skip-threshold 2)
+ '(copilot-disable-predicates '(rk/copilot-disable-predicate))
  '(custom-enabled-themes '(sanityinc-solarized-dark))
  '(custom-safe-themes
    '("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))
@@ -16,6 +17,7 @@
  '(fill-column 120)
  '(flx-ido-threshold 100)
  '(flycheck-eslintrc nil)
+ '(flycheck-ruby-executable "bundle exec rubocop")
  '(flymake-allowed-file-name-masks
    '(("\\.c\\'" flymake-simple-make-init)
      ("\\.cpp\\'" flymake-simple-make-init)
@@ -54,7 +56,7 @@
  '(js-indent-level 2)
  '(js2-basic-offset 2)
  '(keyboard-coding-system 'utf-8-unix)
- '(markdown-command "/usr/local/bin/markdown")
+ '(markdown-command "/usr/local/bin/markdown" t)
  '(markdown-css-path
    "https://gist.github.com/jasonm23/516763/raw/632b066c7c18edc91485ba13b37ba50a9b2caac7/screen.css")
  '(max-lisp-eval-depth 1024)
@@ -72,7 +74,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
  '(package-selected-packages
-   '(rubocop tide docker-tramp ox-slack which-key ido protobuf-mode git-link flyspell sql-indent org-appear org-superstar company-box all-the-icons ripgrep moody use-package lsp-ui lsp-mode dash-at-point rvm neotree company-terraform terraform-mode go-mode docker-compose-mode groovy-mode js2-refactor color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode js2-mode))
+   '(nvm copilot editorconfig quelpa flycheck rubocop tide docker-tramp ox-slack which-key ido protobuf-mode git-link flyspell sql-indent org-appear org-superstar company-box all-the-icons ripgrep moody use-package lsp-ui lsp-mode dash-at-point rvm neotree company-terraform terraform-mode go-mode docker-compose-mode groovy-mode js2-refactor color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode js2-mode))
  '(windmove-default-keybindings '([ignore] meta alt)))
 '(ruby-program-name "/opt/local/bin/irb --inf-ruby-mode" t)
 '(scss-compile-at-save nil)

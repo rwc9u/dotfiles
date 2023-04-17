@@ -5,6 +5,6 @@
 (("org-capture-last-stored"
  (filename . "~/org/notes.org")
  (front-context-string . "**** [[https://w")
- (rear-context-string . "at the basics]]\n")
- (position . 7124))
+ (rear-context-string . "23-04-14 Friday\n")
+ (position . 10507))
 )

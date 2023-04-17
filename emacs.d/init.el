@@ -21,6 +21,12 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+(quelpa
+ '(quelpa-use-package
+   :fetcher git
+   :url "https://github.com/quelpa/quelpa-use-package.git"))
+(require 'quelpa-use-package)
+
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
@@ -72,8 +78,7 @@
 ;; programming
 ;;============================================================
 (use-package magit
-  :bind (("C-g" . magit-status)
-         ("<f13>" . magit-status)
+  :bind (("<f13>" . magit-status)
          :map magit-mode-map
               ("M-3" . split-window-horizontally)
               ("M-2" . split-window-vertically)
@@ -169,10 +174,19 @@
   :config
   (setq company-box-icons-alist 'company-box-icons-all-the-icons))
 
+
 ;;============================================================
 ;; terraform
 ;;============================================================
-(use-package terraform-mode)
+(use-package terraform-mode
+  :init
+  (setq lsp-semantic-tokens-enable t)
+  (setq lsp-semantic-tokens-honor-refresh-requests t)
+  (setq lsp-terraform-ls-enable-show-reference t))
+
+
+  ;; (setq lsp-terraform-ls-prefill-required-fields t)
+
 (use-package company-terraform)
 
 ;;============================================================
@@ -206,6 +220,8 @@
          (typescript-mode . tide-hl-identifier-mode)
          (before-save . tide-format-before-save)))
 
+(use-package nvm
+  :ensure t)
 ;;============================================================
 ;; some global defaults
 ;;============================================================
@@ -215,6 +231,8 @@
 ;; tab management thx Ryan
 ;;============================================================
 (require 'init-tabs)
+;; remap M-/ to hippie-expand
+(global-set-key [remap dabbrev-expand] 'hippie-expand)
 
 
 ;; (require 'init-utf8)
@@ -232,7 +250,7 @@
 
 (use-package ruby-mode
   :custom
-  (ruby-align-to-stmt-keywords '(if)))
+  (ruby-align-to-stmt-keywords '(if def)))
 
 (use-package inf-ruby)
 (use-package ruby-compilation)
@@ -343,7 +361,7 @@
   :init
   (setq lsp-keymap-prefix "C-c l")
   :commands (lsp lsp-deferred)
-  :hook ((go-mode ruby-mode) . lsp-deferred)
+  :hook ((go-mode ruby-mode terraform-mode) . lsp-deferred)
 
   :custom
   (lsp-eldoc-render-all t))
@@ -405,6 +423,119 @@
  '((emacs-lisp . t)
    (ruby . t)
    (shell . t)))
+
+;;============================================================
+;; copilot
+;;============================================================
+(quelpa-use-package-activate-advice)
+(use-package copilot
+  :quelpa (copilot :fetcher github
+                   :repo "zerolfx/copilot.el"
+                   :branch "main"
+                   :files ("dist" "*.el"))
+  :hook
+  (prog-mode . copilot-mode)
+  :config
+  (setq copilot-node-executable "/Users/rob.christie/.nvm/versions/node/v18.15.0/bin/node"))
+;; you can utilize :map :hook and :config to customize copilot
+(quelpa-use-package-deactivate-advice)
+
+(with-eval-after-load 'company
+  ;; disable inline previews
+  (delq 'company-preview-if-just-one-frontend company-frontends))
+
+(with-eval-after-load 'copilot
+(define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
+(define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion)
+(define-key copilot-mode-map (kbd "M-C-<down>") #'copilot-next-completion)
+(define-key copilot-mode-map (kbd "M-C-<up>") #'copilot-previous-completion)
+(define-key copilot-mode-map (kbd "M-C-<right>") #'copilot-accept-completion-by-word)
+(define-key copilot-mode-map (kbd "M-C-l") #'copilot-accept-completion-by-line))
+
+(define-key global-map (kbd "M-C-<return>") #'rk/copilot-complete-or-accept)
+
+;; from https://robert.kra.hn/posts/2023-02-22-copilot-emacs-setup/#tab-key
+
+(defun rk/no-copilot-mode ()
+  "Helper for `rk/no-copilot-modes'."
+  (copilot-mode -1))
+
+(defvar rk/no-copilot-modes '(shell-mode
+                              inferior-python-mode
+                              eshell-mode
+                              term-mode
+                              vterm-mode
+                              comint-mode
+                              compilation-mode
+                              debugger-mode
+                              dired-mode-hook
+                              compilation-mode-hook
+                              flutter-mode-hook
+                              minibuffer-mode-hook)
+  "Modes in which copilot is inconvenient.")
+
+(defvar rk/copilot-manual-mode nil
+  "When `t' will only show completions when manually triggered, e.g. via M-C-<return>.")
+
+(defun rk/copilot-disable-predicate ()
+  "When copilot should not automatically show completions."
+  (or rk/copilot-manual-mode
+      (member major-mode rk/no-copilot-modes)
+      (company--active-p)))
+
+;; (add-to-list 'copilot-disable-predicates #'rk/copilot-disable-predicate)
+
+
+(defun rk/copilot-change-activation ()
+  "Switch between three activation modes:
+- automatic: copilot will automatically overlay completions
+- manual: you need to press a key (M-C-<return>) to trigger completions
+- off: copilot is completely disabled."
+  (interactive)
+  (if (and copilot-mode rk/copilot-manual-mode)
+      (progn
+        (message "deactivating copilot")
+        (global-copilot-mode -1)
+        (setq rk/copilot-manual-mode nil))
+    (if copilot-mode
+        (progn
+          (message "activating copilot manual mode")
+          (setq rk/copilot-manual-mode t))
+      (message "activating copilot mode")
+      (global-copilot-mode))))
+
+(define-key global-map (kbd "M-C-<escape>") #'rk/copilot-change-activation)
+
+(defun rk/copilot-complete-or-accept ()
+  "Command that either triggers a completion or accepts one if one
+is available. Useful if you tend to hammer your keys like I do."
+  (interactive)
+  (if (copilot--overlay-visible)
+      (progn
+        (copilot-accept-completion)
+        (open-line 1)
+        (next-line))
+    (copilot-complete)))
+
+
+(defun rk/copilot-quit ()
+  "Run `copilot-clear-overlay' or `keyboard-quit'. If copilot is
+cleared, make sure the overlay doesn't come back too soon."
+  (interactive)
+  (condition-case err
+      (when copilot--overlay
+        (lexical-let ((pre-copilot-disable-predicates copilot-disable-predicates))
+          (setq copilot-disable-predicates (list (lambda () t)))
+          (copilot-clear-overlay)
+          (run-with-idle-timer
+           1.0
+           nil
+           (lambda ()
+             (setq copilot-disable-predicates pre-copilot-disable-predicates)))))
+    (error handler)))
+
+(advice-add 'keyboard-quit :before #'rk/copilot-quit)
+
 
 
 ;;============================================================

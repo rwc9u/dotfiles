@@ -317,6 +317,7 @@
   ((text-mode . flyspell-mode-on)
    (LaTeX-mode . flyspell-mode-on)
    (org-mode . flyspell-mode-on)
+   (markdown-mode . flyspell-mode)
    (c-mode-common . flyspell-prog-mode)
    (c++-mode-common . flyspell-prog-mode)
    (emacs-lisp-mode . flyspell-prog-mode)
@@ -424,8 +425,21 @@
    (ruby . t)
    (shell . t)))
 
+
+(use-package org-ai
+  :ensure
+  :commands (org-ai-mode)
+  :init
+  (add-hook 'org-mode-hook #'org-ai-mode)
+  :config
+  ;; if you are on the gpt-4 beta:
+  ;; (setq org-ai-default-chat-model "gpt-4")
+  ;; if you are using yasnippet and want `ai` snippets
+  (org-ai-install-yasnippets))
+
 ;;============================================================
 ;; copilot
+;; https://robert.kra.hn/posts/2023-02-22-copilot-emacs-setup/
 ;;============================================================
 (quelpa-use-package-activate-advice)
 (use-package copilot
@@ -536,7 +550,25 @@ cleared, make sure the overlay doesn't come back too soon."
 
 (advice-add 'keyboard-quit :before #'rk/copilot-quit)
 
+(quelpa-use-package-activate-advice)
+(use-package whisper
+  :quelpa (whisper :fetcher github
+                   :repo "natrys/whisper.el"
+                   :branch "master"
+                   :files ("*.el"))
+  :bind ("C-c w r" . whisper-run)
+  :config
+  (setq whisper-install-directory "/tmp/"
+        whisper-model "base"
+        whisper-language "en"
+        whisper-translate nil))
+(quelpa-use-package-deactivate-advice)
 
+;; (use-package flycheck-languagetool
+;;   :ensure t
+;;   :hook (text-mode . flycheck-languagetool-setup)
+;;   :init
+;;   (setq flycheck-languagetool-server-jar "/opt/homebrew/Cellar/languagetool/6.1/libexec/languagetool-server.jar"))
 
 ;;============================================================
 ;; private

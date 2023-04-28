@@ -6,3 +6,4 @@ config/solargraph.rb
 .DS_Store
 .envrc
 .npmrc
+.dir-locals.el

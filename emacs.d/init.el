@@ -574,3 +574,102 @@ cleared, make sure the overlay doesn't come back too soon."
 ;; private
 ;;============================================================
 (load "private" 'noerror)
+
+
+
+(defun rob-test-copilot-diagnose ()
+  "Restart and diagnose copilot."
+  (interactive)
+  (when copilot--connection
+    (jsonrpc-shutdown copilot--connection)
+    (setq copilot--connection nil))
+  (setq copilot--opened-buffers nil)
+  (copilot--async-request 'getPanelCompletions
+                          '(:doc (:version 0
+                                  :source "\n"
+                                  :path ""
+                                  :uri ""
+                                  :relativePath ""
+                                  :languageId "text"
+                                  :position (:line 0 :character 0))
+                            :panelId "rob")
+                          :success-fn (lambda (res)
+                                        (message "%s" res))
+                          :error-fn (lambda (err)
+                                      (message "Copilot error: %S" err))
+                          :timeout-fn (lambda ()
+                                        (message "Copilot agent timeout."))))
+
+(defun copilot--get-panel-completions (callback)
+  "Get panel completions with CALLBACK."
+  (copilot--async-request 'getPanelCompletions
+                          (list :doc (copilot--generate-doc)
+                                :panelId (generate-new-buffer-name "copilot-panel"))
+                          :success-fn callback
+                          :error-fn (lambda (err)
+                                      (message "Copilot error: %S" err))
+                          :timeout-fn (lambda ()
+                                        (message "Copilot agent timeout."))
+                          :timeout 45))
+
+
+(defun copilot-panel-complete ()
+  "Pop a buffer with a list of suggested completions based on the current file ."
+  (interactive)
+  (setq copilot--last-doc-version copilot--doc-version)
+
+  (setq copilot--completion-cache nil)
+
+  (let ((called-interactively (called-interactively-p 'interactive)))
+    (copilot--sync-doc)
+    (copilot--get-panel-completions
+     (lambda (res)
+       (message "%s" res)))
+    (switch-to-buffer
+     (get-buffer-create (concat "*copilot-panel*")))))
+
+
+
+;; (jsonrpc-lambda (&key completionText)
+;;         (let ((completion (if (seq-empty-p completions) nil (seq-elt completions 0))))
+;;           (if completion
+;;               (message "%s" completion)
+;;             (when called-interactively
+;;               (message "No completion is available.")))))
+
+
+;; (defun copilot--handle-notification (_server _method msg)
+;;   "Handle MSG from CONN."
+;;   (message "%s" (prin1-to-string _method))
+;;   (if (eql _method 'PanelSolution)
+;;       (progn
+;;         (let ((oldbuf (current-buffer))
+;;               (completion-text (plist-get msg :completionText)))
+;;            (with-temp-buffer (get-buffer-create "*copilot-panel*")
+;;                              (pop-to-buffer "*copilot-panel*")
+;;                              (insert completion-text)
+;;                              (insert "\n##############################################\n")
+;;                       ))
+;;         (message "%s" (plist-get msg :completionText))
+;;         (message "##############################################")
+;;         (message "%s" (prin1-to-string msg)))))
+
+;; (defun copilot--handle-notification (server method msg)
+;;   "Handle MSG of type method from server."
+;;   ;; (message "%s" (prin1-to-string method))
+;;   (if (eql method 'PanelSolution)
+;;       (let ((oldbuf (current-buffer))
+;;             (completion-text (plist-get msg :completionText))
+;;             (completion-score (plist-get msg :score)))
+;;         (with-temp-buffer (get-buffer-create "*copilot-panel*")
+;;                           (pop-to-buffer "*copilot-panel*")
+;;                           (insert completion-text)
+;;                           (insert "\n##############################################\n")
+;;                           )))
+;;   (if (eql method 'PanelSolutionsDone)    
+;;       (let ((oldbuf (current-buffer)))
+;;         (with-temp-buffer (get-buffer-create "*copilot-panel*")
+;;                           (pop-to-buffer "*copilot-panel*")
+;;                           (insert "\n## Panel Solution Done\n")
+;;                           ))))
+

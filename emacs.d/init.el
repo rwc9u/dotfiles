@@ -5,6 +5,7 @@
 ;; custom
 ;;============================================================
 (setq custom-file "~/.emacs.d/lisp/custom.el")
+(setq user-dev-directory "~/dev")
 (load custom-file 'noerror)
 
 
@@ -158,6 +159,10 @@
   :config
   (which-key-mode)
   (which-key-setup-side-window-right-bottom))
+
+(use-package smart-shift
+  :config
+  (global-smart-shift-mode 1))
 
 ;;============================================================
 ;; company
@@ -441,18 +446,32 @@
 ;; copilot
 ;; https://robert.kra.hn/posts/2023-02-22-copilot-emacs-setup/
 ;;============================================================
-(quelpa-use-package-activate-advice)
+
+(use-package s)
+(use-package dash)
+(use-package editorconfig)
+
+
 (use-package copilot
-  :quelpa (copilot :fetcher github
-                   :repo "zerolfx/copilot.el"
-                   :branch "main"
-                   :files ("dist" "*.el"))
+ 
+  :load-path "/Users/rob.christie/dev/copilot.el"  
   :hook
   (prog-mode . copilot-mode)
   :config
   (setq copilot-node-executable "/Users/rob.christie/.nvm/versions/node/v18.15.0/bin/node"))
-;; you can utilize :map :hook and :config to customize copilot
-(quelpa-use-package-deactivate-advice)
+
+;; (quelpa-use-package-activate-advice)
+;; (use-package copilot
+;;   :quelpa (copilot :fetcher github
+;;                    :repo "rwc9u/copilot.el"
+;;                    :branch "add-getPanelCompletions-support"
+;;                    :files ("dist" "*.el"))
+;;   :hook
+;;   (prog-mode . copilot-mode)
+;;   :config
+;;   (setq copilot-node-executable "/Users/rob.christie/.nvm/versions/node/v18.15.0/bin/node"))
+;; ;; you can utilize :map :hook and :config to customize copilot
+;; (quelpa-use-package-deactivate-advice)
 
 (with-eval-after-load 'company
   ;; disable inline previews
@@ -600,36 +619,40 @@ cleared, make sure the overlay doesn't come back too soon."
                           :timeout-fn (lambda ()
                                         (message "Copilot agent timeout."))))
 
-(defun copilot--get-panel-completions (callback)
-  "Get panel completions with CALLBACK."
-  (copilot--async-request 'getPanelCompletions
-                          (list :doc (copilot--generate-doc)
-                                :panelId (generate-new-buffer-name "copilot-panel"))
-                          :success-fn callback
-                          :error-fn (lambda (err)
-                                      (message "Copilot error: %S" err))
-                          :timeout-fn (lambda ()
-                                        (message "Copilot agent timeout."))
-                          :timeout 45))
+
+;;; Copilot getPanelCompletions
+;; (defun copilot--get-panel-completions (callback)
+;;   "Get panel completions with CALLBACK."
+;;   (copilot--async-request 'getPanelCompletions
+;;                           (list :doc (copilot--generate-doc)
+;;                                 :panelId (generate-new-buffer-name "copilot-panel"))
+;;                           :success-fn callback
+;;                           :error-fn (lambda (err)
+;;                                       (message "Copilot error: %S" err))
+;;                           :timeout-fn (lambda ()
+;;                                         (message "Copilot agent timeout."))
+;;                           :timeout 45))
 
 
-(defun copilot-panel-complete ()
-  "Pop a buffer with a list of suggested completions based on the current file ."
-  (interactive)
-  (setq copilot--last-doc-version copilot--doc-version)
+;; (defun copilot-panel-complete ()
+;;   "Pop a buffer with a list of suggested completions based on the current file ."
+;;   (interactive)
+;;   (setq copilot--last-doc-version copilot--doc-version)
 
-  (setq copilot--completion-cache nil)
+;;   (setq copilot--completion-cache nil)
 
-  (let ((called-interactively (called-interactively-p 'interactive)))
-    (copilot--sync-doc)
-    (copilot--get-panel-completions
-     (lambda (res)
-       (message "%s" res)))
-    (switch-to-buffer
-     (get-buffer-create (concat "*copilot-panel*")))))
+;;   (let ((called-interactively (called-interactively-p 'interactive)))
+;;     (copilot--sync-doc)
+;;     (copilot--get-panel-completions
+;;      (lambda (res)
+;;        (message "%s" res)))
+;;     (switch-to-buffer
+;;      (get-buffer-create (concat "*copilot-panel*")))))
+
+;;;;;;;;;;;;;;;;;;;
 
 
-
+;;;;;;;;;;;; Testing
 ;; (jsonrpc-lambda (&key completionText)
 ;;         (let ((completion (if (seq-empty-p completions) nil (seq-elt completions 0))))
 ;;           (if completion

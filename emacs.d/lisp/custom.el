@@ -75,7 +75,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
  '(package-selected-packages
-   '(magit org smart-shift copilot flycheck-languagetool whisper nvm editorconfig quelpa rubocop ox-slack which-key ido git-link flyspell sql-indent org-appear company-box all-the-icons ripgrep lsp-ui lsp-mode dash-at-point rvm neotree company-terraform go-mode docker-compose-mode groovy-mode color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode))
+   '(org smart-shift copilot flycheck-languagetool whisper nvm editorconfig quelpa rubocop ox-slack which-key ido git-link flyspell sql-indent org-appear company-box all-the-icons ripgrep lsp-ui lsp-mode dash-at-point rvm neotree company-terraform go-mode docker-compose-mode groovy-mode color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode))
  '(tide-node-executable "/Users/rob.christie/.nvm/versions/node/v18.15.0/bin/node")
  '(typescript-indent-level 2)
  '(windmove-default-keybindings '([ignore] meta alt)))

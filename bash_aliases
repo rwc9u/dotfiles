@@ -242,3 +242,5 @@ alias ecr-login="aws ecr get-login-password --region us-east-1 | docker login --
 alias k8s-show-ns="kubectl api-resources --verbs=list --namespaced -o name  | xargs -n 1 kubectl get --show-kind --ignore-not-found  -n"
 
 alias ecr-login="aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 937028213865.dkr.ecr.us-east-1.amazonaws.com"
+
+alias sed="gsed"

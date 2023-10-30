@@ -175,5 +175,11 @@ Symbols matching the text at point are put first in the completion list."
   (sort-regexp-fields reverse "\\w+" "\\&" beg end))
 
 
+(defun grep-switch() 
+  "pop to grep and select its window. Useful for macros"
+  (interactive)
+  (select-window (get-buffer-window "*grep*")))
+
+
 (provide 'init-defuns)
 ;;; init-defuns.el ends here

@@ -432,10 +432,12 @@
 
 
 (use-package org-ai
-  :ensure
-  :commands (org-ai-mode)
+  :ensure t
+  :commands (org-ai-mode
+             org-ai-global-mode)
   :init
   (add-hook 'org-mode-hook #'org-ai-mode)
+  (org-ai-global-mode) ; installs global keybindings on C-c M-a
   :config
   ;; if you are on the gpt-4 beta:
   ;; (setq org-ai-default-chat-model "gpt-4")
@@ -565,7 +567,9 @@ cleared, make sure the overlay doesn't come back too soon."
            nil
            (lambda ()
              (setq copilot-disable-predicates pre-copilot-disable-predicates)))))
-    (error handler)))
+    (error (lambda ()
+             (message "copilot not active, running `keyboard-quit'")
+             (keyboard-quit)))))
 
 (advice-add 'keyboard-quit :before #'rk/copilot-quit)
 

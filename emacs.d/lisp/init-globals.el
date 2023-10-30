@@ -60,6 +60,7 @@
 ;; setting turn on column marking
 ;;============================================================
 (require 'fill-column-indicator)
+(global-display-fill-column-indicator-mode)
 
 ;;============================================================
 ;; change garbage collection to help with non-responsiveness

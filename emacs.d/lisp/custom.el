@@ -61,7 +61,7 @@
  '(markdown-css-path
    "https://gist.github.com/jasonm23/516763/raw/632b066c7c18edc91485ba13b37ba50a9b2caac7/screen.css")
  '(max-lisp-eval-depth 1024)
- '(max-specpdl-size 15000)
+ '(max-specpdl-size 15000 t)
  '(org-agenda-files '("/Users/rob.christie/org/index.org"))
  '(org-capture-templates
    '(("r" "Read later" entry
@@ -75,8 +75,9 @@
      ("melpa" . "https://melpa.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
  '(package-selected-packages
-   '(smart-shift copilot flycheck-languagetool whisper org-ai nvm editorconfig quelpa flycheck rubocop tide docker-tramp ox-slack which-key ido protobuf-mode git-link flyspell sql-indent org-appear org-superstar company-box all-the-icons ripgrep moody use-package lsp-ui lsp-mode dash-at-point rvm neotree company-terraform terraform-mode go-mode docker-compose-mode groovy-mode js2-refactor color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode js2-mode))
+   '(magit org smart-shift copilot flycheck-languagetool whisper nvm editorconfig quelpa rubocop ox-slack which-key ido git-link flyspell sql-indent org-appear company-box all-the-icons ripgrep lsp-ui lsp-mode dash-at-point rvm neotree company-terraform go-mode docker-compose-mode groovy-mode color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode))
  '(tide-node-executable "/Users/rob.christie/.nvm/versions/node/v18.15.0/bin/node")
+ '(typescript-indent-level 2)
  '(windmove-default-keybindings '([ignore] meta alt)))
 '(ruby-program-name "/opt/local/bin/irb --inf-ruby-mode" t)
 '(scss-compile-at-save nil)

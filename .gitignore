@@ -12,3 +12,5 @@ emacs.d/ido.last
 emacs.d/projectile.cache
 emacs.d/projectile-bookmarks.eld
 emacs.d/transient
+emacs.d/elpa/
+emacs.d/.cache/

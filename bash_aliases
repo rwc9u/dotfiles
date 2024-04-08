@@ -51,6 +51,8 @@ alias ggs="git log --stat"
 alias gsl="git shortlog -s -n"
 alias gclean="git fetch -p && for branch in \`git branch -vv | grep ': gone]' | awk '{print \$1}'\`; do git branch -d \$branch; done"
 alias gclean-force="git fetch -p && for branch in \`git branch -vv | grep ': gone]' | awk '{print \$1}'\`; do git branch -D \$branch; done"
+# similar to gclean-force
+# git fetch -p && for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'); do git branch -D $branch; done
 # merged but still a local branch
 alias gmerged="git branch --merged | egrep -v '(^\*|main|dev)'"
  

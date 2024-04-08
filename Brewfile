@@ -50,11 +50,11 @@ brew 'snappy'
 brew 'tfenv'
 brew 'the_silver_searcher'
 brew 'tmux'
+brew 'brew'
 brew 'vault'
 brew 'yarn'
+brew 'ynqa/tap/jnv' # jq dynamic results
 
-# set arguments for all 'brew cask install' commands
-# cask_args appdir: '~/Applications'
 
 # cask '1password'
 cask '1password-cli'

@@ -4,7 +4,8 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
  (filename . "~/org/notes.org")
- (front-context-string . "**** [[https://w")
- (rear-context-string . "nce Community]]\n")
- (position . 16804))
+ (front-context-string . "**** [[https://t")
+ (rear-context-string . "es | Pinecone]]\n")
+ (position . 22701)
+ (last-modified 26113 2268 687571 0))
 )

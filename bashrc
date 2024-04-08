@@ -190,14 +190,6 @@ export PATH="$HOME/.tfenv/bin:$PATH"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 complete -F __start_kubectl kc
 
-############################################################
-## Setting up rvm for multiple ruby envs
-############################################################
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-[[ -r $rvm_path/scripts/completion ]] && source $rvm_path/scripts/completion
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Addu direnv support
 eval "$(direnv hook bash)"

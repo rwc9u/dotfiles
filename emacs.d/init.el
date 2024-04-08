@@ -142,7 +142,10 @@
 
 (use-package git-link
   :bind
-  ("C-c g l" . git-link))
+  ("C-c g l" . git-link)
+  :config
+  (setq git-link-open-in-browser t)
+  (setq git-link-default-branch "main"))
 
 (use-package ido
   :init
@@ -226,7 +229,12 @@
          (before-save . tide-format-before-save)))
 
 (use-package nvm
-  :ensure t)
+  :ensure t
+  :config
+  (nvm-use "18"))
+
+
+
 ;;============================================================
 ;; some global defaults
 ;;============================================================
@@ -242,12 +250,18 @@
 
 ;; (require 'init-utf8)
 
+(use-package asdf 
+  :load-path "/Users/rob.christie/dev/asdf.el"  
+  :hook
+  (prog-mode . asdf-enable)
+  :init
+  (setq asdf-binary "/opt/homebrew/opt/asdf/bin/asdf"))
 ;;============================================================
 ;; Ruby/Rails/Ri
 ;;============================================================
-(use-package rvm
-  :hook
-  ((ruby-mode . rvm-activate-corresponding-ruby)))
+;; (use-package rvm
+;;   :hook
+;;   ((ruby-mode . rvm-activate-corresponding-ruby)))
 
 (use-package projectile-rails
   :config
@@ -460,7 +474,8 @@
   :hook
   (prog-mode . copilot-mode)
   :config
-  (setq copilot-node-executable "/Users/rob.christie/.nvm/versions/node/v18.15.0/bin/node"))
+  (setq copilot-node-executable "/Users/rob.christie/.nvm/versions/node/v18.15.0/bin/node")
+  (setq copilot-npm-executable "/Users/rob.christie/.nvm/versions/node/v18.15.0/bin/npm"))
 
 ;; (quelpa-use-package-activate-advice)
 ;; (use-package copilot
@@ -700,3 +715,13 @@ cleared, make sure the overlay doesn't come back too soon."
 ;;                           (insert "\n## Panel Solution Done\n")
 ;;                           ))))
 
+;; setup for ts-mode
+(setq major-mode-remap-alist
+  '((ruby-mode . ruby-ts-mode)))
+
+(defun run-non-ts-hooks ()
+  (let ((major-name (symbol-name major-mode)))
+    (when (string-match-p ".*-ts-mode" major-name)
+      (run-hooks (intern (concat (replace-regexp-in-string "-ts" "" major-name) "-hook"))))))
+
+(add-hook 'prog-mode-hook 'run-non-ts-hooks)

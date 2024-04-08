@@ -1,26 +1,22 @@
 #-*-Ruby-*-
 require 'rubygems'
 require 'pp'
-require 'wirble'
-require 'hirb'
+# require 'hirb'
 # require 'ap'
-if RUBY_VERSION[0..2] == "1.9"
-  require 'flyrb'
-else
-  require 'utility_belt'
-end
+# if RUBY_VERSION[0..2] == "1.9"
+#   require 'flyrb'
+# else
+#   require 'utility_belt'
+# end
 require 'logger'
 # add pretty printing support to irb
 include PP::ObjectMixin
 
 
-# load wirble
-Wirble.init
-Wirble.colorize
 
 # load hirb
-Hirb.enable :pager => !(ENV['PAGER'] && "cat" == ENV['PAGER'].split(File::SEPARATOR).last)
-Hirb::View.enable
+# Hirb.enable :pager => !(ENV['PAGER'] && "cat" == ENV['PAGER'].split(File::SEPARATOR).last)
+# Hirb::View.enable
 
 IRB.conf[:AUTO_INDENT] = true
 
@@ -56,7 +52,7 @@ def show(obj)
   y(obj.send("column_names"))
 end
 
-puts "> all systems are go wirble/hirb/ap/show <"
+puts "> all systems are go hirb/ap/show <"
 
 
 class Object

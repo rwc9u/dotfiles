@@ -57,6 +57,7 @@
  '(js2-basic-offset 2)
  '(keyboard-coding-system 'utf-8-unix)
  '(lsp-disabled-clients '(lsp-solargraph))
+ '(major-mode-remap-alist '((ruby-mode . ruby-ts-mode)))
  '(markdown-command "/usr/local/bin/markdown")
  '(markdown-css-path
    "https://gist.github.com/jasonm23/516763/raw/632b066c7c18edc91485ba13b37ba50a9b2caac7/screen.css")
@@ -75,7 +76,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
  '(package-selected-packages
-   '(org smart-shift copilot flycheck-languagetool whisper nvm editorconfig quelpa rubocop ox-slack which-key ido git-link flyspell sql-indent org-appear company-box all-the-icons ripgrep lsp-ui lsp-mode dash-at-point rvm neotree company-terraform go-mode docker-compose-mode groovy-mode color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode))
+   '(org smart-shift copilot flycheck-languagetool whisper nvm editorconfig quelpa rubocop ox-slack which-key ido flyspell sql-indent org-appear company-box ripgrep lsp-ui lsp-mode dash-at-point rvm neotree company-terraform go-mode docker-compose-mode groovy-mode color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode))
  '(tide-node-executable "/Users/rob.christie/.nvm/versions/node/v18.15.0/bin/node")
  '(typescript-indent-level 2)
  '(windmove-default-keybindings '([ignore] meta alt)))

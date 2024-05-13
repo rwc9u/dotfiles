@@ -56,14 +56,12 @@ brew 'yarn'
 brew 'ynqa/tap/jnv' # jq dynamic results
 
 
-# cask '1password'
+
+
 cask '1password-cli'
 cask 'docker'
 cask 'iterm2'
-# cask 'skype'
-# cask 'slack'
 cask 'visual-studio-code'
-# cask 'cheatsheet'
 cask 'aws-vpn-client'
 cask 'loom'
 cask 'tuple'

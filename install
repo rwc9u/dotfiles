@@ -7,7 +7,6 @@ home = File.expand_path('~')
 Dir['*'].each do |file|
   next if file =~ /install/ ||
           file =~ /README/ ||
-          file =~ /Brewfile/ ||
           file =~ /bin/
   if file =~ /^[A-Z]/
     target = File.join(home, file)

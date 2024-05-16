@@ -175,3 +175,4 @@ function kubectlgetall {
 # [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"
 source /opt/homebrew/opt/asdf/libexec/asdf.sh
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"

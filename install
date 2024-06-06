@@ -13,5 +13,6 @@ Dir['*'].each do |file|
   else
     target = File.join(home, ".#{file}")
   end
+  puts "linking #{file} to #{target}"
   `ln -ns #{File.expand_path file} #{target}` unless File.exist?(target) || File.symlink?(target)
 end

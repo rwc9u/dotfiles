@@ -1,0 +1,58 @@
+#!/bin/sh
+set -e
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+ROOT_DIR=$SCRIPT_DIR/..
+
+echo "Installing..."
+
+echo "Checking Command Line Tools for Xcode"
+# Only run if the tools are not installed yet
+# To check that try to print the SDK path
+xcode-select -p &> /dev/null
+if [ $? -ne 0 ]; then
+  echo "Command Line Tools for Xcode not found. Installing from softwareupdate…"
+# This temporary file prompts the 'softwareupdate' utility to list the Command Line Tools
+  touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
+  PROD=$(softwareupdate -l | grep "\*.*Command Line" | tail -n 1 | sed 's/^[^C]* //')
+  softwareupdate -i "$PROD" --verbose;
+else
+  echo "Command Line Tools for Xcode have been installed."
+fi
+
+# Check for Homebrew and install if we don't have it
+if test ! $(which brew); then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Update Homebrew recipes
+brew update
+
+# Install all our dependencies with bundle (See Brewfile)
+brew tap homebrew/bundle
+brew bundle --force --file $ROOT_DIR/Brewfile
+
+echo "Linking configs..."
+# Link configs
+chmod a+x $ROOT_DIR/install
+$ROOT_DIR/install
+
+echo "Installing powerlevel10k..."
+# Install powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# Get cURL certs in the right place
+echo "Downloading cURL certs..."
+mkdir -p $HOME/.certs
+wget -O $HOME/.certs https://curl.se/ca/cacert.pem
+
+echo "asdf: installing plugins..."
+# Install asdf plugins
+asdf plugin add direnv
+asdf plugin add nodejs
+asdf plugin add pnpm
+asdf plugin add python
+asdf plugin add ruby

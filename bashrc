@@ -133,8 +133,8 @@ bind '"\e[B"':history-search-forward
 ## Aliases
 ############################################################
  
-if [ -e ~/.bash_aliases ] ; then
-  . ~/.bash_aliases
+if [ -e ~/.aliases ] ; then
+  . ~/.aliases
 fi
 
 

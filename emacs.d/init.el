@@ -1,6 +1,13 @@
 ;-*-Emacs-Lisp-*-
 
 (setq debug-on-error t)
+
+
+ ;;;; per https://github.com/emacs-lsp/lsp-mode#performance
+;; (setenv "LSP_USE_PLISTS" "true") ;; in early-init.el
+;; (setq read-process-output-max (* 10 1024 1024)) ;; 10mb
+;; (setq gc-cons-threshold 200000000)
+
 ;;============================================================
 ;; custom
 ;;============================================================
@@ -103,6 +110,7 @@
         ("M-F" . projectile-find-file)
         ("M-G" . projectile-ripgrep))
   :config
+  (setq projectile-dirconfig-comment-prefix "#")
   (setq projectile-switch-project-action 'projectile-dired)
   (projectile-global-mode))
 
@@ -174,6 +182,7 @@
   :hook
   (prog-mode . company-mode)
   (after-init . global-company-mode))
+
 (use-package all-the-icons)
 (use-package company-box
   :after company
@@ -181,6 +190,11 @@
   (company-mode . company-box-mode)
   :config
   (setq company-box-icons-alist 'company-box-icons-all-the-icons))
+
+
+;; (with-eval-after-load 'company
+;;  (define-key company-active-map (kbd "TAB") #'company-complete-common-or-cycle)
+;;  (define-key company-active-map (kbd "<backtab>") (lambda () (interactive) (company-complete-common-or-cycle -1))))
 
 
 ;;============================================================
@@ -200,38 +214,32 @@
 ;;============================================================
 ;; javascript
 ;;============================================================
-(use-package js2-mode
-  :ensure t
-  :init
-  (setq js-basic-indent 2)
-  (setq-default js2-basic-indent 2
-                js2-basic-offset 2
-                js2-auto-indent-p t
-                js2-cleanup-whitespace t
-                js2-enter-indents-newline t
-                js2-indent-on-enter-key t
-                js2-global-externs (list "window" "module" "require" "buster" "sinon" "assert" "refute" "setTimeout" "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON" "jQuery" "$"))
+;; (use-package js2-mode
+;;   :ensure t
+;;   :init
+;;   (setq js-basic-indent 2)
+;;   (setq-default js2-basic-indent 2
+;;                 js2-basic-offset 2
+;;                 js2-auto-indent-p t
+;;                 js2-cleanup-whitespace t
+;;                 js2-enter-indents-newline t
+;;                 js2-indent-on-enter-key t
+;;                 js2-global-externs (list "window" "module" "require" "buster" "sinon" "assert" "refute" "setTimeout" "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON" "jQuery" "$"))
+;;   (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode)))
 
-  ;; (add-hook 'js2-mode-hook
-  ;;           (lambda ()
-  ;;             (push '("function" . ?ƒ) prettify-symbols-alist)))
-
-  (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode)))
-(use-package js2-refactor
-  :ensure t
-  :init   (add-hook 'js2-mode-hook 'js2-refactor-mode)
-  :config (js2r-add-keybindings-with-prefix "C-c ."))
-(use-package tide
-  :ensure t
-  :after (typescript-mode company flycheck)
-  :hook ((typescript-mode . tide-setup)
-         (typescript-mode . tide-hl-identifier-mode)
-         (before-save . tide-format-before-save)))
-
-(use-package nvm
-  :ensure t
-  :config
-  (nvm-use "18"))
+;; (use-package js2-refactor
+;;   :ensure t
+;;   :init   (add-hook 'js2-mode-hook 'js2-refactor-mode)
+;;   :config (js2r-add-keybindings-with-prefix "C-c ."))
+;; (use-package tide
+;;   :ensure t
+;;   :after (typescript-mode company flycheck)
+;;   :hook ((typescript-mode . tide-setup)
+;;          (typescript-mode . tide-hl-identifier-mode)
+;;          (before-save . tide-format-before-save))
+;;   :init
+;;   (setq tide-tsserver-executable "/Users/rob.christie/.asdf/shims/tsserver")
+;;   (setq tide-tsserver-process-environment '("TSS_LOG=-level verbose -file /tmp/tss.log")))
 
 
 
@@ -255,7 +263,9 @@
   :hook
   (prog-mode . asdf-enable)
   :init
-  (setq asdf-binary "/opt/homebrew/opt/asdf/bin/asdf"))
+  (setq asdf-binary "/opt/homebrew/opt/asdf/bin/asdf")
+  :config
+  (asdf-enable))
 ;;============================================================
 ;; Ruby/Rails/Ri
 ;;============================================================
@@ -274,19 +284,6 @@
 (use-package inf-ruby)
 (use-package ruby-compilation)
 (use-package rubocop)
-
-;; (use-package robe
-;;   :hook
-;;   (ruby-mode . robe-mode)
-;;   :config
-;;   )
-
-;; (eval-after-load 'company
-;;   '(push 'company-robe company-backends))
-
-;; (with-eval-after-load 'company
-;;  (define-key company-active-map (kbd "TAB") #'company-complete-common-or-cycle)
-;;  (define-key company-active-map (kbd "<backtab>") (lambda () (interactive) (company-complete-common-or-cycle -1))))
 
 (use-package haml-mode
     :mode ("html\\.haml$"
@@ -381,7 +378,13 @@
   :init
   (setq lsp-keymap-prefix "C-c l")
   :commands (lsp lsp-deferred)
-  :hook ((go-mode ruby-mode terraform-mode) . lsp-deferred)
+  :hook ((lsp-mode . lsp-diagnostics-mode)
+         (lsp-mode . lsp-enable-which-key-integration)
+         (go-mode . lsp-deferred)
+         (ruby-mode . lsp-deferred)
+         (typescript-mode . lsp-deferred)
+         (javascript-mode . lsp-deferred)
+         (terraform-mode . lsp-deferred))
 
   :custom
   (lsp-eldoc-render-all t))
@@ -394,7 +397,8 @@
   :custom
   (lsp-ui-peek-always-show t)
   (lsp-ui-sideline-show-hover t)
-  (lsp-ui-doc-enable nil))
+  (lsp-ui-doc-enable t)
+  (lsp-ui-doc-use-webkit nil))
 
 ;;============================================================
 ;; org
@@ -458,6 +462,38 @@
   ;; if you are using yasnippet and want `ai` snippets
   (org-ai-install-yasnippets))
 
+(use-package org-roam
+  :ensure t
+  :custom
+  (org-roam-directory "/Users/rob.christie/org/")
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n g" . org-roam-graph)
+         ("C-c n i" . org-roam-node-insert)
+         ("C-c n c" . org-roam-capture)
+         ;; Dailies
+         ("C-c n j" . org-roam-dailies-capture-today))
+  :config
+  ;; If you're using a vertical completion framework, you might want a more informative completion interface
+  (setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
+  (org-roam-db-autosync-mode)
+  ;; If using org-roam-protocol
+  (require 'org-roam-protocol))
+
+(add-to-list 'display-buffer-alist
+             '("\\*org-roam\\*"
+               (display-buffer-in-direction)
+               (direction . right)
+               (window-width . 0.33)
+               (window-height . fit-window-to-buffer)))
+
+
+
+;;============================================================
+;; copilot-chat
+;;============================================================
+(use-package copilot-chat)
+
 ;;============================================================
 ;; copilot
 ;; https://robert.kra.hn/posts/2023-02-22-copilot-emacs-setup/
@@ -474,8 +510,8 @@
   :hook
   (prog-mode . copilot-mode)
   :config
-  (setq copilot-node-executable "/Users/rob.christie/.nvm/versions/node/v18.15.0/bin/node")
-  (setq copilot-npm-executable "/Users/rob.christie/.nvm/versions/node/v18.15.0/bin/npm"))
+  (setq copilot-node-executable "/Users/rob.christie/.asdf/installs/nodejs/v18.15.0/bin/node")
+  (setq copilot-npm-executable "/Users/rob.christie/.asdf/installs/nodejs/v18.15.0/bin/npm"))
 
 ;; (quelpa-use-package-activate-advice)
 ;; (use-package copilot
@@ -718,7 +754,7 @@ cleared, make sure the overlay doesn't come back too soon."
 ;; setup for ts-mode
 
 (setq treesit-language-source-alist
-'((ruby "https://github.com/tree-sitter/tree-sitter-ruby" "v0.19.0" "src")
+'((ruby "https://github.com/tree-sitter/tree-sitter-ruby" "v0.21.0" "src")
   (bash "https://github.com/tree-sitter/tree-sitter-bash")
   (cmake "https://github.com/uyha/tree-sitter-cmake")
   (css "https://github.com/tree-sitter/tree-sitter-css")
@@ -735,8 +771,12 @@ cleared, make sure the overlay doesn't come back too soon."
   (typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
   (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
 
-;; (setq major-mode-remap-alist
-;;   '((ruby-mode . ruby-ts-mode)))
+(setq major-mode-remap-alist
+      '((ruby-mode . ruby-ts-mode)
+        (javascript-mode . javascript-ts-mode)
+        (typescript-mode . typescript-ts-mode)
+        (tsx-mode . tsx-ts-mode)
+        (json-mode . json-ts-mode)))
 
 (defun run-non-ts-hooks ()
   (let ((major-name (symbol-name major-mode)))

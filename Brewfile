@@ -4,7 +4,7 @@ tap "depot/tap"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
-tap "kajabi/kjctl", "git@github.com:Kajabi/kjctl.git"
+# tap "kajabi/kjctl", "git@github.com:Kajabi/kjctl.git"
 tap "kreuzwerker/taps"
 tap "puma/puma"
 tap "railwaycat/emacsmacport"
@@ -105,6 +105,7 @@ brew "tokei"
 brew "tree-sitter"
 brew "vault"
 brew "watch"
+brew "wget"
 brew "yarn"
 brew "yq"
 brew "zlib"
@@ -113,7 +114,7 @@ brew "argoproj/tap/kubectl-argo-rollouts"
 brew "caarlos0/tap/org-stats"
 brew "depot/tap/depot"
 brew "hashicorp/tap/terraform-ls"
-brew "kajabi/kjctl/kjctl"
+# brew "kajabi/kjctl/kjctl"
 brew "kreuzwerker/taps/m1-terraform-provider-helper"
 brew "puma/puma/puma-dev"
 brew "railwaycat/emacsmacport/emacs-mac"
@@ -188,7 +189,7 @@ cask 'font-tinos-nerd-font'
 cask 'font-ubuntu-mono-nerd-font'
 cask 'font-ubuntu-nerd-font'
 cask 'font-victor-mono-nerd-font'
-cask 'homebrew/cask-fonts/font-fontawesome' # Font Awesome
+# cask 'homebrew/cask-fonts/font-fontawesome' # Font Awesome
 
 
 mas "Magnet", id: 441258766

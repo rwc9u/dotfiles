@@ -240,6 +240,9 @@ alias eks-stage="aws-sso-util login && awsume kajabi-staging-admin \
 alias eks-prod="aws-sso-util login && awsume kajabi-production-admin \
 && kubectx prod-eks-cluster && kubens kajabi-products"
 
+alias eks-tools="aws-sso-util login && awsume kajabi-tools-admin \
+&& kubectx tools-eks-cluster && kubens kajabi-products"
+
 alias ecr-login="aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 937028213865.dkr.ecr.us-east-1.amazonaws.com"
 alias k8s-show-ns="kubectl api-resources --verbs=list --namespaced -o name  | xargs -n 1 kubectl get --show-kind --ignore-not-found  -n"
 

@@ -7,3 +7,4 @@ config/solargraph.rb
 .envrc
 .npmrc
 .dir-locals.el
+.ignore

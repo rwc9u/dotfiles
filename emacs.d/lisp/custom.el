@@ -9,6 +9,7 @@
  '(comint-move-point-for-output 'all)
  '(compilation-scroll-output t)
  '(compilation-skip-threshold 2)
+ '(copilot-chat-model "claude-3.5-sonnet")
  '(copilot-disable-predicates '(rk/copilot-disable-predicate))
  '(custom-enabled-themes '(sanityinc-solarized-dark))
  '(custom-safe-themes
@@ -56,7 +57,6 @@
  '(js-indent-level 2)
  '(js2-basic-offset 2)
  '(keyboard-coding-system 'utf-8-unix)
- '(lsp-disabled-clients '(lsp-solargraph))
  '(major-mode-remap-alist nil)
  '(markdown-command "/usr/local/bin/markdown")
  '(markdown-css-path
@@ -76,8 +76,18 @@
      ("melpa" . "https://melpa.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
  '(package-selected-packages
-   '(dockerfile-mode org smart-shift copilot flycheck-languagetool whisper nvm editorconfig quelpa rubocop ox-slack which-key ido flyspell sql-indent org-appear company-box ripgrep lsp-ui lsp-mode dash-at-point rvm neotree company-terraform go-mode docker-compose-mode groovy-mode color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode))
- '(tide-node-executable "/Users/rob.christie/.nvm/versions/node/v18.15.0/bin/node")
+   '(copilot-chat lsp-mode org-roam company magit-section magit typescript-mode tide org smart-shift copilot flycheck-languagetool whisper nvm editorconfig quelpa rubocop ox-slack which-key ido flyspell sql-indent org-appear ripgrep dash-at-point rvm company-terraform go-mode docker-compose-mode groovy-mode color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode))
+ '(safe-local-variable-values
+   '((lsp-disabled-clients ruby-ls rubocop-ls)
+     (lsp-enabled-clients quote ruby-lsp-ls)
+     (lsp-enabled-clients quote
+                          (ruby-lsp-ls))
+     (ruby-compilation-executable . "ruby")
+     (ruby-compilation-executable . "ruby1.8")
+     (ruby-compilation-executable . "ruby1.9")
+     (ruby-compilation-executable . "rbx")
+     (ruby-compilation-executable . "jruby")))
+ '(tide-node-executable nil)
  '(typescript-indent-level 2)
  '(windmove-default-keybindings '([ignore] meta alt)))
 '(ruby-program-name "/opt/local/bin/irb --inf-ruby-mode" t)

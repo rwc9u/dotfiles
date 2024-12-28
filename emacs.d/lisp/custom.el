@@ -78,7 +78,8 @@
  '(package-selected-packages
    '(copilot-chat lsp-mode org-roam company magit-section magit typescript-mode tide org smart-shift copilot flycheck-languagetool whisper nvm editorconfig quelpa rubocop ox-slack which-key ido flyspell sql-indent org-appear ripgrep dash-at-point rvm company-terraform go-mode docker-compose-mode groovy-mode color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode))
  '(safe-local-variable-values
-   '((lsp-disabled-clients ruby-ls rubocop-ls)
+   '((lsp-disabled-clients ruby-ls rubocop-ls sorbet-ls)
+     (lsp-disabled-clients ruby-ls rubocop-ls)
      (lsp-enabled-clients quote ruby-lsp-ls)
      (lsp-enabled-clients quote
                           (ruby-lsp-ls))
@@ -88,8 +89,7 @@
      (ruby-compilation-executable . "rbx")
      (ruby-compilation-executable . "jruby")))
  '(tide-node-executable nil)
- '(typescript-indent-level 2)
- '(windmove-default-keybindings '([ignore] meta alt)))
+ '(typescript-indent-level 2))
 '(ruby-program-name "/opt/local/bin/irb --inf-ruby-mode" t)
 '(scss-compile-at-save nil)
 '(user-full-name "Rob Christie")

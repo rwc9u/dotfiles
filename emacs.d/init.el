@@ -3,7 +3,7 @@
 (setq debug-on-error t)
 
 
- ;;;; per https://github.com/emacs-lsp/lsp-mode#performance
+;;;; per https://github.com/emacs-lsp/lsp-mode#performance
 ;; (setenv "LSP_USE_PLISTS" "true") ;; in early-init.el
 ;; (setq read-process-output-max (* 10 1024 1024)) ;; 10mb
 ;; (setq gc-cons-threshold 200000000)
@@ -58,17 +58,6 @@
   (moody-replace-mode-line-buffer-identification)
   (moody-replace-vc-mode)
   (moody-replace-eldoc-minibuffer-message-function))
-
-;; (use-package ef-themes
-;;   :custom
-;;    (ef-themes-headings
-;;          '((0 . (1.3))
-;;            (1 . (1.3))
-;;            (2 . (1.2))
-;;            (t . (1.1))))
-;;    (ef-themes-mixed-fonts t))
-
-;; (ef-themes-select 'ef-night)
 
 (use-package color-theme-sanityinc-solarized)
 (use-package solarized-theme
@@ -192,11 +181,6 @@
   (setq company-box-icons-alist 'company-box-icons-all-the-icons))
 
 
-;; (with-eval-after-load 'company
-;;  (define-key company-active-map (kbd "TAB") #'company-complete-common-or-cycle)
-;;  (define-key company-active-map (kbd "<backtab>") (lambda () (interactive) (company-complete-common-or-cycle -1))))
-
-
 ;;============================================================
 ;; terraform
 ;;============================================================
@@ -269,10 +253,6 @@
 ;;============================================================
 ;; Ruby/Rails/Ri
 ;;============================================================
-;; (use-package rvm
-;;   :hook
-;;   ((ruby-mode . rvm-activate-corresponding-ruby)))
-
 (use-package projectile-rails
   :config
   (projectile-rails-global-mode))
@@ -512,19 +492,6 @@
   :config
   (setq copilot-node-executable "/Users/rob.christie/.asdf/installs/nodejs/v18.15.0/bin/node")
   (setq copilot-npm-executable "/Users/rob.christie/.asdf/installs/nodejs/v18.15.0/bin/npm"))
-
-;; (quelpa-use-package-activate-advice)
-;; (use-package copilot
-;;   :quelpa (copilot :fetcher github
-;;                    :repo "rwc9u/copilot.el"
-;;                    :branch "add-getPanelCompletions-support"
-;;                    :files ("dist" "*.el"))
-;;   :hook
-;;   (prog-mode . copilot-mode)
-;;   :config
-;;   (setq copilot-node-executable "/Users/rob.christie/.nvm/versions/node/v18.15.0/bin/node"))
-;; ;; you can utilize :map :hook and :config to customize copilot
-;; (quelpa-use-package-deactivate-advice)
 
 (with-eval-after-load 'company
   ;; disable inline previews

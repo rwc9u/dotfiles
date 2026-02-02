@@ -201,3 +201,4 @@ dtags () {
     wget -q https://registry.hub.docker.com/v1/repositories/"${image}"/tags -O - \
         | tr -d '[]" ' | tr '}' '\n' | awk -F: '{print $3}'
 }
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init bash)"; fi

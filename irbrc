@@ -30,19 +30,9 @@ if ENV.include?('RAILS_ENV')
     ActiveRecord::Base.connection.select_all(query)
   end
 
-  if ENV['RAILS_ENV'] == 'test'
-    require 'test/test_helper'
-  end
-
-# for rails 3
-elsif defined?(Rails) && !Rails.env.nil?
-  if Rails.logger
-    Rails.logger =Logger.new(STDOUT)
-    ActiveRecord::Base.logger = Rails.logger
-  end
-  if Rails.env == 'test'
-    require 'test/test_helper'
-  end
+  # if ENV['RAILS_ENV'] == 'test'
+  #   require 'test/test_helper'
+  # end
 else
   # nothing to do
 end
@@ -99,3 +89,6 @@ IRB.conf[:SAVE_HISTORY] = 1000
 # def hist
 #   puts Readline::HISTORY.entries.split("exit").last[0..-2].join("\n")
 # end
+
+# console to pbcopy
+def pbcopy(arg); IO.popen('pbcopy', 'w') { |io| io.puts arg }; end

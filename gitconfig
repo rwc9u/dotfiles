@@ -30,15 +30,13 @@
 	rebase = true
 [core]
 	excludesfile = /Users/rob.christie/.gitignore_global
+  fsmonitor = true
+  untrackedCache = true
 
 [push]
 	default = simple
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  autoSetupRemote = true
+  followTags = true
 [commit]
 	template = /Users/rob.christie/.stCommitMsg
 	gpgsign = true

@@ -113,14 +113,15 @@ plugins=(
   pyenv
 )
 
-source $ZSH/oh-my-zsh.sh
-PROMPT='$(kube_ps1)'$PROMPT
+if [[ -z "$CURSOR_AGENT" ]]; then
+  source $ZSH/oh-my-zsh.sh
+  PROMPT='$(kube_ps1)'$PROMPT
 
 # User configuration
 
 ### Syntax highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -157,7 +158,7 @@ eval "$(mcfly init zsh)"
 function kubectlgetall {
   for i in $(kubectl api-resources --verbs=list --namespaced -o name | grep -v "events.events.k8s.io" | grep -v "events" | sort | uniq); do
     echo "Resource:" $i
-    
+
     if [ -z "$1" ]
     then
         kubectl get --ignore-not-found ${i}
@@ -169,13 +170,45 @@ function kubectlgetall {
 
 
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Set a simple prompt if running in cursor, otherwise use p10k
+if [[ -n "$CURSOR_AGENT" ]]; then
+  PROMPT='%~ %# '
+  RPROMPT=''
+  export GH_PAGER=''
+else
+  # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+fi
 # eval "$(starship init zsh)"
 
 
 # [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 source /opt/homebrew/opt/asdf/libexec/asdf.sh
 source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 export PATH="/opt/homebrew/opt/ansible@9/bin:$PATH"
+
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+# Added by Windsurf
+export PATH="/Users/rob.christie/.codeium/windsurf/bin:$PATH"
+
+# krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# internal happy server
+export HAPPY_SERVER_URL="https://happy.tools.kajabi.farm"
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# cursor
+export PATH="$HOME/.local/bin:$PATH"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/rob.christie/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi

@@ -259,7 +259,9 @@
 
 (use-package ruby-mode
   :custom
-  (ruby-align-to-stmt-keywords '(if def)))
+  (ruby-align-to-stmt-keywords '(if def))
+  :init
+  (setq lsp-enable-indentation nil))
 
 (use-package inf-ruby)
 (use-package ruby-compilation)
@@ -472,7 +474,10 @@
 ;;============================================================
 ;; copilot-chat
 ;;============================================================
-(use-package copilot-chat)
+(use-package copilot-chat
+  :custom
+  (copilot-chat-frontend "org")
+  )
 
 ;;============================================================
 ;; copilot

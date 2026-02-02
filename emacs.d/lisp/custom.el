@@ -13,7 +13,7 @@
  '(copilot-disable-predicates '(rk/copilot-disable-predicate))
  '(custom-enabled-themes '(sanityinc-solarized-dark))
  '(custom-safe-themes
-   '("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))
+   '("48d34b6afe72407ca494387c8bea495bb2deee96bd88516f302db1f11e1810a1" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))
  '(ediff-split-window-function 'split-window-horizontally)
  '(fill-column 120)
  '(flx-ido-threshold 100)
@@ -76,7 +76,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
  '(package-selected-packages
-   '(copilot-chat lsp-mode org-roam company magit-section magit typescript-mode tide org smart-shift copilot flycheck-languagetool whisper nvm editorconfig quelpa rubocop ox-slack which-key ido flyspell sql-indent org-appear ripgrep dash-at-point rvm company-terraform go-mode docker-compose-mode groovy-mode color-theme-sanityinc-solarized color-theme fill-column-indicator coffee-mode))
+   '(yasnippet yaml-mode with-editor web-mode terraform-mode solarized-theme shell-maker protobuf-mode projectile ox-gist ox-gfm org-ai neotree multiple-cursors moody magit-section lsp-ui js2-mode inf-ruby ht hcl-mode haml-mode git-link flycheck flx-ido flx f emacsql ef-themes dockerfile-mode dash compat company copilot-chat org-roam tide org smart-shift copilot flycheck-languagetool whisper nvm editorconfig rubocop ox-slack which-key ido flyspell sql-indent org-appear ripgrep dash-at-point rvm company-terraform go-mode docker-compose-mode groovy-mode color-theme fill-column-indicator))
  '(safe-local-variable-values
    '((lsp-disabled-clients ruby-ls rubocop-ls sorbet-ls)
      (lsp-disabled-clients ruby-ls rubocop-ls)
@@ -99,14 +99,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(diff-added ((t (:inherit diff-changed :background "#70FB67" :foreground "black"))))
- '(diff-file-header ((((class color) (min-colors 88) (background dark)) (:background "#5686E2" :weight bold))))
- '(diff-header ((((class color) (min-colors 88) (background dark)) (:background "#3469D0"))))
  '(diff-hunk-header ((t (:inherit diff-header :background "#3469D0"))))
- '(diff-index ((t (:inherit diff-file-header :background "#5686E2"))))
- '(diff-removed ((t (:inherit diff-changed :background "#FF453C"))))
- '(enh-ruby-op-face ((t (:foreground "gray69"))))
- '(enh-ruby-string-delimiter-face ((t (:foreground "#259185"))))
- '(flymake-errline ((((class color)) (:background "#330000" :overline "red" :underline "red"))) t)
- '(flymake-warnline ((((class color)) (:background "#333300" :overline "yellow" :underline "yellow"))) t)
- '(hl-line ((t (:extend t :background "#111")))))
+ '(diff-index ((t (:inherit diff-file-header :background "#5686E2")))))

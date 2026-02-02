@@ -55,7 +55,8 @@ alias gclean-force="git fetch -p && for branch in \`git branch -vv | grep ': gon
 # git fetch -p && for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'); do git branch -D $branch; done
 # merged but still a local branch
 alias gmerged="git branch --merged | egrep -v '(^\*|main|dev)'"
- 
+alias clean-git-stashes='while [ $(git stash list | wc -l) -gt 10 ]; do git stash drop stash@{10}; done'
+
 # Useful report of what has been committed locally but not yet pushed to another
 # branch. Defaults to the remote origin/master. The u is supposed to stand for
 # undone, unpushed, or something.
@@ -71,6 +72,33 @@ function gu {
   echo $cmd
   $cmd
 }
+
+# Compare two git tags on GitHub
+# Usage: gitcompare <tag1> <tag2>  (uses current repo)
+#    or: gitcompare <owner/repo> <tag1> <tag2>
+alias gitcompare='function _gitcompare() {
+  local repo tag1 tag2;
+  if [ $# -eq 3 ]; then
+    repo="$1";
+    tag1="$2";
+    tag2="$3";
+  elif [ $# -eq 2 ]; then
+    repo=$(git config --get remote.origin.url 2>/dev/null | sed -E "s#.*github\.com[:/](.*)\.git#\1#" | sed "s#\.git\$##");
+    if [ -z "$repo" ]; then
+      echo "Error: Not a git repository or no GitHub remote found";
+      return 1;
+    fi;
+    tag1="$1";
+    tag2="$2";
+  else
+    echo "Usage: gitcompare <tag1> <tag2>";
+    echo "   or: gitcompare <owner/repo> <tag1> <tag2>";
+    return 1;
+  fi;
+  local url="https://github.com/$repo/compare/$tag1..$tag2";
+  echo "Opening: $url";
+  open "$url";
+}; _gitcompare'
  
 function gco {
   if [ -z "$1" ]; then
@@ -86,6 +114,29 @@ function st {
   else
     git status
   fi
+}
+
+function pr-ready-for-review {
+  local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+  if [ -z "$branch" ]; then
+    echo "Error: Not in a git repository"
+    return 1
+  fi
+
+  local pr_number=$(GH_PAGER="" gh pr list --head "$branch" --json number --jq '.[0].number' 2>/dev/null)
+  if [ -z "$pr_number" ]; then
+    echo "Error: No PR found for branch '$branch'"
+    return 1
+  fi
+
+  echo "Found PR #$pr_number for branch '$branch'"
+  echo "Marking PR as ready for review..."
+  GH_PAGER="" gh pr ready "$pr_number"
+
+  echo "Adding 'run-ci' label..."
+  GH_PAGER="" gh pr edit "$pr_number" --add-label "run-ci"
+
+  echo "✓ PR #$pr_number is now ready for review with CI triggered"
 }
  
 ############################################################
@@ -224,6 +275,7 @@ alias flush-cache="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
 # && kubectl config set-context --current --namespace=kajabi-products"
 
 alias kc="kubectl"
+alias kce='function _kce() { kc exec --stdin --tty "$1" -- /bin/bash; }; _kce'
 
 alias eks-dev="aws-sso-util login && awsume kajabi-development-admin \
 && kubectx dev-eks-cluster && kubens kajabi-products"
@@ -249,3 +301,9 @@ alias k8s-show-ns="kubectl api-resources --verbs=list --namespaced -o name  | xa
 alias ecr-login="aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 937028213865.dkr.ecr.us-east-1.amazonaws.com"
 
 alias sed="gsed"
+
+############################################################
+## Claude
+############################################################
+alias rob-ra="claude --agent research-assistant"
+

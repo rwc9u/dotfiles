@@ -8,3 +8,14 @@ config/solargraph.rb
 .npmrc
 .dir-locals.el
 .ignore
+.specstory
+working_context.md
+.cursorrules
+.cursorindexingignore
+# SpecStory explanation file
+.specstory/.what-is-this.md
+.cursor/rules/private*
+docs/private-*
+.vscode/
+**/.claude/settings.local.json
+.cursor/worktrees.json

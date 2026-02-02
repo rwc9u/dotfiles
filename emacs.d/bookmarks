@@ -4,8 +4,8 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
  (filename . "~/org/notes.org")
- (front-context-string . "**** [[https://w")
- (rear-context-string . "-12-19 Thursday\n")
- (position . 34525)
- (last-modified 26468 32851 795568 0))
+ (front-context-string . "**** [[https://m")
+ (rear-context-string . "26-01-16 Friday\n")
+ (position . 40902)
+ (last-modified 26986 23890 774222 0))
 )

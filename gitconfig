@@ -15,6 +15,36 @@
   repo-stats = shortlog -s -n --all
   find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 -s | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
   show-merge = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"
+  lol   = log --graph --decorate --pretty=oneline --abbrev-commit --all  
+  s     = status --short --branch
+  l     = log --graph --pretty='%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset'
+  ll    = log --parents
+  ld    = log -p --parents
+  who   = shortlog -s
+  d     = diff --color
+  ds    = diff --color --stat
+  dw    = diff --color-words
+  a     = add
+  aa    = add --all
+  aap   = add --all -p
+  c     = commit
+  cm    = commit -m
+  k     = checkout
+  kb    = checkout -b
+  b     = branch --sort=-committerdate -v 
+  bb    = branch -a -v
+  bd    = branch -d
+  bdd   = branch -D
+  m     = merge
+  p     = push
+  pt    = push --tags
+  u     = pull --ff-only
+  f     = fetch
+  rb    = rebase
+  rbf   = rebase --fork-point
+  rbo   = rebase --onto
+  chp   = cherry-pick
+  pn    = remote prune origin
 [apply]
 	whitespace = nowarn
 [color]

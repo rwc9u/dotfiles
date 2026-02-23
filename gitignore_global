@@ -19,3 +19,4 @@ docs/private-*
 .vscode/
 **/.claude/settings.local.json
 .cursor/worktrees.json
+.config/linear.toml

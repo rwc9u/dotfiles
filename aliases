@@ -305,5 +305,6 @@ alias sed="gsed"
 ############################################################
 ## Claude
 ############################################################
+alias cc="claude --dangerously-skip-permissions"
 alias rob-ra="claude --agent research-assistant"
 

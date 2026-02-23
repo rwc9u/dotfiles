@@ -15,6 +15,10 @@
 (setq user-dev-directory "~/dev")
 (load custom-file 'noerror)
 
+;; emacs-plus additions
+(setq ispell-program-name "aspell")
+(setq ring-bell-function 'ignore)
+
 
 ;;============================================================
 ;; default load directory
@@ -29,6 +33,12 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+
+(use-package exec-path-from-shell
+  :ensure t
+  :config
+  (exec-path-from-shell-initialize))
+
 (quelpa
  '(quelpa-use-package
    :fetcher git
@@ -41,9 +51,9 @@
 (use-package auto-compile
   :config (auto-compile-on-load-mode))
 
-(use-package use-package-ensure-system-package
-  :custom
-  (system-packages-package-manager 'brew))
+;; (use-package use-package-ensure-system-package
+;;  :custom
+;;  (system-packages-package-manager 'brew))
 ;;============================================================
 ;; helper functions
 ;;============================================================
@@ -495,8 +505,8 @@
   :hook
   (prog-mode . copilot-mode)
   :config
-  (setq copilot-node-executable "/Users/rob.christie/.asdf/installs/nodejs/v18.15.0/bin/node")
-  (setq copilot-npm-executable "/Users/rob.christie/.asdf/installs/nodejs/v18.15.0/bin/npm"))
+  (setq copilot-node-executable "/Users/rob.christie/.asdf/shims/node")
+  (setq copilot-npm-executable "/Users/rob.christie/.asdf/shims/npm"))
 
 (with-eval-after-load 'company
   ;; disable inline previews

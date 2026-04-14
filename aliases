@@ -303,8 +303,13 @@ alias ecr-login="aws ecr get-login-password --region us-east-1 | docker login --
 alias sed="gsed"
 
 ############################################################
+## Database
+############################################################
+alias db-generate-structure='git checkout origin/main -- db/structure.sql && RAILS_ENV=test bundle exec rake db:test:prepare && RAILS_ENV=test bundle exec rake db:migrate db:schema:dump db:structure:normalize'
+
+############################################################
 ## Claude
 ############################################################
 alias cc="claude --dangerously-skip-permissions"
-alias rob-ra="claude --agent research-assistant"
+alias rob-ra="claude --agent research-assistant --dangerously-skip-permissions"
 

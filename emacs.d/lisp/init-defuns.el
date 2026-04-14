@@ -181,5 +181,23 @@ Symbols matching the text at point are put first in the completion list."
   (select-window (get-buffer-window "*grep*")))
 
 
+(defun rc/copy-buffer-file-path ()
+  "Copy the full path of the current buffer's file to the kill ring."
+  (interactive)
+  (if buffer-file-name
+      (progn
+        (kill-new buffer-file-name)
+        (message "Copied: %s" buffer-file-name))
+    (message "Buffer is not visiting a file")))
+
+(defun rc/copy-file-path-with-line ()
+  "Copy the full file path with line number (e.g. /path/to/file.rb:42) to the kill ring."
+  (interactive)
+  (if buffer-file-name
+      (let ((path-with-line (format "%s:%d" buffer-file-name (line-number-at-pos))))
+        (kill-new path-with-line)
+        (message "%s" path-with-line))
+    (message "Buffer is not visiting a file")))
+
 (provide 'init-defuns)
 ;;; init-defuns.el ends here

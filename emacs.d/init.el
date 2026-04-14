@@ -29,11 +29,6 @@
 ;;============================================================
 ;; Ensure use-package is available
 ;;============================================================
-(when (not (package-installed-p 'use-package))
-  (package-refresh-contents)
-  (package-install 'use-package))
-
-
 (use-package exec-path-from-shell
   :ensure t
   :config
@@ -183,12 +178,12 @@
   (after-init . global-company-mode))
 
 (use-package all-the-icons)
-(use-package company-box
-  :after company
-  :hook
-  (company-mode . company-box-mode)
-  :config
-  (setq company-box-icons-alist 'company-box-icons-all-the-icons))
+;; (use-package company-box
+;;   :after company
+;;   :hook
+;;   (company-mode . company-box-mode)
+;;   :config
+;;   (setq company-box-icons-alist 'company-box-icons-all-the-icons))
 
 
 ;;============================================================
@@ -204,37 +199,6 @@
   ;; (setq lsp-terraform-ls-prefill-required-fields t)
 
 (use-package company-terraform)
-
-;;============================================================
-;; javascript
-;;============================================================
-;; (use-package js2-mode
-;;   :ensure t
-;;   :init
-;;   (setq js-basic-indent 2)
-;;   (setq-default js2-basic-indent 2
-;;                 js2-basic-offset 2
-;;                 js2-auto-indent-p t
-;;                 js2-cleanup-whitespace t
-;;                 js2-enter-indents-newline t
-;;                 js2-indent-on-enter-key t
-;;                 js2-global-externs (list "window" "module" "require" "buster" "sinon" "assert" "refute" "setTimeout" "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON" "jQuery" "$"))
-;;   (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode)))
-
-;; (use-package js2-refactor
-;;   :ensure t
-;;   :init   (add-hook 'js2-mode-hook 'js2-refactor-mode)
-;;   :config (js2r-add-keybindings-with-prefix "C-c ."))
-;; (use-package tide
-;;   :ensure t
-;;   :after (typescript-mode company flycheck)
-;;   :hook ((typescript-mode . tide-setup)
-;;          (typescript-mode . tide-hl-identifier-mode)
-;;          (before-save . tide-format-before-save))
-;;   :init
-;;   (setq tide-tsserver-executable "/Users/rob.christie/.asdf/shims/tsserver")
-;;   (setq tide-tsserver-process-environment '("TSS_LOG=-level verbose -file /tmp/tss.log")))
-
 
 
 ;;============================================================
@@ -502,18 +466,70 @@
 ;;   :init
 ;;   (setq flycheck-languagetool-server-jar "/opt/homebrew/Cellar/languagetool/6.1/libexec/languagetool-server.jar"))
 
+
+(defun rc/vterm-open-file-at-click (event)
+  "Open file:line reference at mouse click in a vterm buffer.
+Parses the text around the click point for patterns like
+`path/to/file.ext:123` and opens the file at that line."
+  (interactive "e")
+  (let* ((pos (posn-point (event-start event)))
+         line-text file-path line-num)
+    (when pos
+      (save-excursion
+        (goto-char pos)
+        (setq line-text (buffer-substring-no-properties
+                         (line-beginning-position) (line-end-position))))
+      ;; Match file:line patterns — absolute or relative paths
+      (when (string-match
+             "\\(/[^ \t:\"']+\\|[a-zA-Z0-9_.][^ \t:\"']*\\.[a-zA-Z0-9]+\\):\\([0-9]+\\)"
+             line-text)
+        (setq file-path (match-string 1 line-text))
+        (setq line-num (string-to-number (match-string 2 line-text)))
+        ;; Resolve relative paths against default-directory
+        (setq file-path (expand-file-name file-path default-directory))
+        (if (file-exists-p file-path)
+            (progn
+              (find-file-other-window file-path)
+              (when (> line-num 0)
+                (goto-char (point-min))
+                (forward-line (1- line-num))))
+          (message "File not found: %s" file-path))))))
+
+
+(use-package gterm
+  :load-path "/Users/rob.christie/dev/emacs-libgterm"
+  :init
+  (setq gterm-always-compile-module t))
+
+
+(use-package claude-code-ide
+  :load-path "/Users/rob.christie/dev/claude-code-ide.el"
+  :bind (("C-c C-'" . claude-code-ide-menu)
+         ("M-l" . claude-code-ide-insert-at-mentioned))
+  :init
+  (setq claude-code-ide-terminal-backend 'gterm)
+  (setq claude-code-ide-cli-path "claude")
+  (setq claude-code-ide-cli-extra-flags "--dangerously-skip-permissions")
+  (setq claude-code-ide-enable-mcp-server t)
+  :config
+  (claude-code-ide-emacs-tools-setup)
+  (with-eval-after-load 'vterm
+    (define-key vterm-mode-map [double-mouse-1] #'rc/vterm-open-file-at-click))
+  (with-eval-after-load 'gterm
+    (define-key gterm-mode-map [double-mouse-1] #'rc/vterm-open-file-at-click)))
+
+;; configuration vterm
+(setq vterm-shell "/bin/zsh")
+
 ;;============================================================
 ;; private
 ;;============================================================
 (load "private" 'noerror)
 
-
-
-
 ;; setup for ts-mode
 
 (setq treesit-language-source-alist
-'((ruby "https://github.com/tree-sitter/tree-sitter-ruby" "v0.21.0" "src")
+'((ruby "https://github.com/tree-sitter/tree-sitter-ruby" "v0.23.1" "src")
   (bash "https://github.com/tree-sitter/tree-sitter-bash")
   (cmake "https://github.com/uyha/tree-sitter-cmake")
   (css "https://github.com/tree-sitter/tree-sitter-css")

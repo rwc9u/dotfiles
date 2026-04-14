@@ -217,3 +217,4 @@ compinit
 # End of Docker CLI completions
 
 if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"

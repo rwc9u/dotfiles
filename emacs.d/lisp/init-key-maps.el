@@ -62,8 +62,12 @@
 ;;============================================================
 ;; Use of command key with emacs 23 on mac
 ;;============================================================
-(if (eq window-system 'ns)
-    (setq ns-command-modifier (quote meta)))
+(when (eq window-system 'ns)
+  (setq ns-command-modifier 'meta)
+  (setq ns-alternate-modifier 'alt))
+
+(global-set-key (kbd "C-c f p") 'rc/copy-buffer-file-path)
+(global-set-key (kbd "C-c f l") 'rc/copy-file-path-with-line)
 
 (provide 'init-key-maps)
 

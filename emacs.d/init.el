@@ -1,6 +1,6 @@
 ;-*-Emacs-Lisp-*-
 
-(setq debug-on-error t)
+;; (setq debug-on-error t)
 
 
 ;;;; per https://github.com/emacs-lsp/lsp-mode#performance
@@ -190,7 +190,7 @@
 
 ;; Embark - contextual actions on completion candidates
 (use-package embark
-  :bind (("C-."   . embark-act)
+  :bind (("C-,"   . embark-act)
          ("C-;"   . embark-dwim)
          ("C-h B" . embark-bindings)))
 
@@ -344,9 +344,12 @@
 (require 'init-key-maps)
 
 ;;============================================================
-;; bash
+;; shell
 ;;============================================================
-(require 'init-bash)
+(setq shell-file-name "/bin/zsh")
+(setq shell-command-switch "-c")
+(setq explicit-shell-file-name shell-file-name)
+(setenv "SHELL" shell-file-name)
 
 ;;============================================================
 ;; go 
@@ -558,6 +561,27 @@ Parses the text around the click point for patterns like
 
 ;; configuration vterm
 (setq vterm-shell "/bin/zsh")
+
+;; claude-code.el (stevemolitor) - terminal wrapper for Claude Code CLI
+(use-package inheritenv
+  :vc (:url "https://github.com/purcell/inheritenv" :rev :newest))
+
+(defun rc/claude-code-clean-env (_buffer-name _dir)
+  "Set environment for Claude running inside Emacs terminals.
+FORCE_CODE_TERMINAL prevents the CLI from using output modes
+that hang in embedded terminal emulators."
+  (list "FORCE_CODE_TERMINAL=true" "INSIDE_EMACS" "PAGER=cat"))
+
+(use-package claude-code
+  :vc (:url "https://github.com/stevemolitor/claude-code.el" :rev :newest)
+  :init
+  (setq claude-code-terminal-backend 'gterm)
+  (setq claude-code-program-switches '("--dangerously-skip-permissions"))
+  :config
+  (require 'claude-code-gterm)
+  (add-hook 'claude-code-process-environment-functions #'rc/claude-code-clean-env)
+  (claude-code-mode)
+  :bind-keymap ("C-c c" . claude-code-command-map))
 
 ;;============================================================
 ;; private

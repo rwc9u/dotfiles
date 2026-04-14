@@ -1,3 +1,4 @@
 ;;; -*- lisp-data -*-
-(("/Users/rob.christie/dev/dotfiles/") ("/Users/rob.christie/dev/dotfiles/emacs.d/elpa/gterm/")
+(("/Users/rob.christie/dev/dotfiles/") ("/Users/rob.christie/dev/dotfiles/emacs.d/elpa/claude-code/")
+ ("/Users/rob.christie/dev/dotfiles/emacs.d/elpa/inheritenv/") ("/Users/rob.christie/dev/dotfiles/emacs.d/elpa/gterm/")
  ("/Users/rob.christie/dev/dotfiles/emacs.d/elpa/claude-code-ide/"))

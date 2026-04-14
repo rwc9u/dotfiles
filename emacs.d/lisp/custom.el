@@ -66,7 +66,8 @@
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
  '(package-selected-packages nil)
  '(package-vc-selected-packages
-   '((gterm :url "https://github.com/rwc9u/emacs-libgterm" :branch "main")
+   '((claude-code :url "https://github.com/stevemolitor/claude-code.el")
+     (gterm :url "https://github.com/rwc9u/emacs-libgterm" :branch "main")
      (claude-code-ide :url "https://github.com/manzaltu/claude-code-ide.el")))
  '(safe-local-variable-values
    '((lsp-disabled-clients ruby-ls rubocop-ls sorbet-ls) (lsp-disabled-clients ruby-ls rubocop-ls)

@@ -137,7 +137,7 @@ through a terminal."
 		       (case (length completions)
 			 (0 nil)
 			 (1 (car completions))
-			 (t (ido-completing-read "possible completions: " completions nil 'confirm-only curr))))))
+			 (t (completing-read "possible completions: " completions nil 'confirm-only curr))))))
   (if (not command)
       (call-interactively 'indent-for-tab-command)
     (move-beginning-of-line 1)

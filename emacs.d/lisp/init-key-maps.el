@@ -22,8 +22,6 @@
 (global-set-key [(meta _)] 'zoom-in)
 (global-set-key [(meta +)] 'zoom-out)
 
-(global-set-key [(control .)] 'company-complete)
-
 
 
 (define-key global-map [(control meta n)]   'next-error)

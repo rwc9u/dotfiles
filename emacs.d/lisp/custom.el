@@ -17,7 +17,6 @@
      "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))
  '(ediff-split-window-function 'split-window-horizontally)
  '(fill-column 120)
- '(flx-ido-threshold 100)
  '(flycheck-eslintrc nil)
  '(flycheck-ruby-executable "bundle exec rubocop")
  '(flymake-allowed-file-name-masks

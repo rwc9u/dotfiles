@@ -149,16 +149,54 @@
   (setq git-link-open-in-browser t)
   (setq git-link-default-branch "main"))
 
-(use-package ido
+;; Persist history for better candidate sorting
+(use-package savehist
   :init
-  (setq ido-enable-flex-matching t)
-  :config
-  (ido-mode t)
-  (ido-everywhere 1)
-  :hook
-  (ido-setup . (lambda()
-                 (define-key ido-completion-map [tab] 'ido-complete))))
-(use-package flx-ido)
+  (savehist-mode))
+
+;; Vertico - vertical completion UI
+(use-package vertico
+  :custom
+  (vertico-cycle t)
+  :init
+  (vertico-mode))
+
+(use-package vertico-directory
+  :after vertico
+  :ensure nil
+  :bind (:map vertico-map
+         ("RET"   . vertico-directory-enter)
+         ("DEL"   . vertico-directory-delete-char)
+         ("M-DEL" . vertico-directory-delete-word))
+  :hook (rfn-eshadow-update-overlay . vertico-directory-tidy))
+
+;; Orderless - flexible matching
+(use-package orderless
+  :custom
+  (completion-styles '(orderless basic))
+  (completion-category-overrides '((file (styles basic partial-completion)))))
+
+;; Marginalia - rich annotations in minibuffer
+(use-package marginalia
+  :init
+  (marginalia-mode))
+
+;; Consult - enhanced search/navigation commands
+(use-package consult
+  :bind (("C-x b" . consult-buffer)
+         ("M-s r" . consult-ripgrep)
+         ("M-s f" . consult-find)
+         ("M-y"   . consult-yank-pop)))
+
+;; Embark - contextual actions on completion candidates
+(use-package embark
+  :bind (("C-."   . embark-act)
+         ("C-;"   . embark-dwim)
+         ("C-h B" . embark-bindings)))
+
+(use-package embark-consult
+  :after (embark consult)
+  :hook (embark-collect-mode . consult-preview-at-point-mode))
 
 (use-package which-key
   :config

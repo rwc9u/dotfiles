@@ -132,7 +132,11 @@
 (use-package markdown-mode
   :ensure t
   :mode ("README\\.md\\'" . gfm-mode)
-  :init (setq markdown-command "multimarkdown"))
+  :init (setq markdown-command
+              (concat "pandoc -f gfm -t html5 --standalone"
+                      " --metadata title=Preview"
+                      " -M document-css=false"
+                      " --css=" (expand-file-name "markdown-preview.css" user-emacs-directory))))
 
 (use-package ag)
 (use-package ripgrep)

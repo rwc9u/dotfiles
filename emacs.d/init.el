@@ -190,7 +190,7 @@
 
 ;; Embark - contextual actions on completion candidates
 (use-package embark
-  :bind (("C-,"   . embark-act)
+  :bind (("C-."   . embark-act)
          ("C-;"   . embark-dwim)
          ("C-h B" . embark-bindings)))
 
@@ -320,6 +320,8 @@
   (setq flyspell-use-meta-tab nil)
   :config
   (flyspell-mode)
+  (define-key flyspell-mode-map (kbd "C-.") nil)
+  (define-key flyspell-mode-map (kbd "C-,") nil)
   :bind
   (:map flyspell-mouse-map
         ([down-mouse-3] . flyspell-auto-correct-word))

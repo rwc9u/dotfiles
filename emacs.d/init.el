@@ -106,7 +106,7 @@
   :config
   (setq projectile-dirconfig-comment-prefix "#")
   (setq projectile-switch-project-action 'projectile-dired)
-  (projectile-global-mode))
+  (projectile-mode +1))
 
 (use-package yasnippet
   :config

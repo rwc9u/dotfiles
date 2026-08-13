@@ -153,6 +153,25 @@
   (setq git-link-open-in-browser t)
   (setq git-link-default-branch "main"))
 
+(use-package blamer
+  :ensure t
+  :bind (("s-i" . blamer-show-commit-info)
+         ("C-c i" . blamer-show-posframe-commit-info))
+  :defer 20
+  :custom
+  (blamer-idle-time 0.3)
+  (blamer-min-offset 70)
+  (blamer-view 'overlay-right)
+  (blamer-type 'visual)
+  (blamer-symbol-count-before-new-line 4)
+  :custom-face
+  (blamer-face ((t :foreground "#7a88cf"
+                    :background nil
+                    :height 140
+                    :italic t)))
+  :config
+  (global-blamer-mode 1))
+
 ;; Persist history for better candidate sorting
 (use-package savehist
   :init

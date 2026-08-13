@@ -312,4 +312,4 @@ alias db-generate-structure='git checkout origin/main -- db/structure.sql && RAI
 ############################################################
 alias cc="claude --dangerously-skip-permissions"
 alias rob-ra="claude --agent research-assistant --enable-auto-mode"
-alias cc-auto="claude --enable-auto-mode"
+alias cc-auto="claude --enable-auto-mode --chrome"

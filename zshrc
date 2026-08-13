@@ -156,6 +156,12 @@ source ~/.priv
 export PAGER="less"
 export EDITOR="vi"
 export GEM_EDITOR="emacsclient"
+
+# Shorten overmind's tmux socket name so bin/dev works in long-named worktrees.
+# macOS caps Unix sockets at 104 chars; overmind builds its socket as
+# overmind-<cwd-basename>-<randSuffix>, so long worktree names exceed the limit.
+# OVERMIND_TITLE overrides the <cwd-basename> portion.
+export OVERMIND_TITLE="kp"
 eval "$(mcfly init zsh)"
 
 

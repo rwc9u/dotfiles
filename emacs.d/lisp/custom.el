@@ -50,7 +50,7 @@
  '(js2-basic-offset 2)
  '(keyboard-coding-system 'utf-8-unix)
  '(major-mode-remap-alist nil)
- '(markdown-command "/usr/local/bin/markdown" t)
+ '(markdown-command "/usr/local/bin/markdown")
  '(markdown-css-path
    "https://gist.github.com/jasonm23/516763/raw/632b066c7c18edc91485ba13b37ba50a9b2caac7/screen.css")
  '(max-lisp-eval-depth 1024)
@@ -64,7 +64,13 @@
  '(package-archives
    '(("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "https://melpa.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
- '(package-selected-packages nil)
+ '(package-selected-packages
+   '(ag all-the-icons auto-compile bind-key blamer bm chatgpt-shell claude-code claude-code-ide coffee-mode
+        color-theme-sanityinc-solarized company-box company-terraform dash-at-point docker-compose-mode dockerfile-mode
+        embark-consult exec-path-from-shell fill-column-indicator flx-ido git-link go-mode groovy-mode gterm lsp-ui
+        magit magit-section marginalia moody orderless org-ai org-appear org-roam org-superstar packed projectile-rails
+        protobuf-mode quelpa-use-package request ripgrep rubocop ruby-compilation ruby-tools sass-mode smart-shift
+        solarized-theme sql-indent transient typescript-mode vertico vterm web-mode which-key whisper yasnippet))
  '(package-vc-selected-packages
    '((claude-code :url "https://github.com/stevemolitor/claude-code.el")
      (gterm :url "https://github.com/rwc9u/emacs-libgterm" :branch "main")

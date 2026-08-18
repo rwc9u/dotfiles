@@ -167,7 +167,7 @@
   :custom-face
   (blamer-face ((t :foreground "#7a88cf"
                     :background nil
-                    :height 140
+                    :height 120
                     :italic t)))
   :config
   (global-blamer-mode 1))

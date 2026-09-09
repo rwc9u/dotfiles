@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 (setq-default indent-tabs-mode nil)
 (line-number-mode 1)
 (column-number-mode 1)

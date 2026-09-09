@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 
 ;; For loading libraries from the vendor directory
 ;; Modified from defunkt and rmm5t versions.

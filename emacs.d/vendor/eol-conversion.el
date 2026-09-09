@@ -1,4 +1,4 @@
-;;; eol-conversion.el --- set end-of-line conversion for current buffer
+;;; eol-conversion.el --- set end-of-line conversion for current buffer -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2000 Francis J. Wright
 

@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;============================================================
 ;; Ruby when rails reloaded in use
 ;; or now when I want to use a newer version

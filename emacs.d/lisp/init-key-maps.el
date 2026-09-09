@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 (global-set-key [delete] 'delete-char)
 (global-set-key "\M-%" 'query-replace-regexp)
 (global-set-key [f3] 'projectile-grep)

@@ -1,5 +1,6 @@
 tap "argoproj/tap"
 tap "caarlos0/tap"
+tap "d12frosted/emacs-plus"
 tap "depot/tap"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
@@ -118,7 +119,8 @@ brew "hashicorp/tap/terraform-ls"
 # brew "kajabi/kjctl/kjctl"
 brew "kreuzwerker/taps/m1-terraform-provider-helper"
 brew "puma/puma/puma-dev"
-brew "railwaycat/emacsmacport/emacs-mac"
+# Superseded by the emacs-plus-app cask below; not installed.
+# brew "railwaycat/emacsmacport/emacs-mac"
 brew "ynqa/tap/jnv"
 
 cask "1password-cli"
@@ -126,6 +128,10 @@ cask "aws-vpn-client"
 # cask "cheatsheet"
 cask "datadog-agent"
 cask "docker"
+# Untrusted third-party tap. Before `brew bundle`, run:
+#   brew trust --cask d12frosted/emacs-plus/emacs-plus-app
+# Icon is picked from ~/.config/emacs-plus/build.yml (icon: liquid-glass).
+cask "emacs-plus-app"
 cask "iterm2"
 cask "loom"
 cask "ngrok"

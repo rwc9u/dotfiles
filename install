@@ -4,15 +4,32 @@
 
 home = File.expand_path('~')
 
+# Linked one level down rather than as a whole, so the real ~/.config -- which
+# holds state written by tools we do not manage -- is never replaced.
+XDG_DIR = 'config'
+
+def link(source, target)
+  puts "linking #{source} to #{target}"
+  return if File.exist?(target) || File.symlink?(target)
+  `ln -ns "#{File.expand_path source}" "#{target}"`
+end
+
 Dir['*'].each do |file|
   next if file =~ /install/ ||
           file =~ /README/ ||
-          file =~ /bin/
+          file =~ /bin/ ||
+          file == XDG_DIR
   if file =~ /^[A-Z]/
     target = File.join(home, file)
   else
     target = File.join(home, ".#{file}")
   end
-  puts "linking #{file} to #{target}"
-  `ln -ns #{File.expand_path file} #{target}` unless File.exist?(target) || File.symlink?(target)
+  link file, target
+end
+
+xdg_home = File.join(home, ".#{XDG_DIR}")
+Dir.mkdir(xdg_home) unless File.directory?(xdg_home)
+
+Dir["#{XDG_DIR}/*"].each do |path|
+  link path, File.join(xdg_home, File.basename(path))
 end

@@ -8,7 +8,6 @@ tap "homebrew/services"
 # tap "kajabi/kjctl", "git@github.com:Kajabi/kjctl.git"
 tap "kreuzwerker/taps"
 tap "puma/puma"
-tap "railwaycat/emacsmacport"
 tap "romkatv/powerlevel10k"
 tap "ynqa/tap"
 
@@ -119,8 +118,6 @@ brew "hashicorp/tap/terraform-ls"
 # brew "kajabi/kjctl/kjctl"
 brew "kreuzwerker/taps/m1-terraform-provider-helper"
 brew "puma/puma/puma-dev"
-# Superseded by the emacs-plus-app cask below; not installed.
-# brew "railwaycat/emacsmacport/emacs-mac"
 brew "ynqa/tap/jnv"
 
 cask "1password-cli"

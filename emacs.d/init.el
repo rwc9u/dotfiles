@@ -143,7 +143,19 @@
                       " --css=" (expand-file-name "markdown-preview.css" user-emacs-directory))))
 
 (use-package ag)
-(use-package ripgrep)
+(use-package ripgrep
+  :config
+  ;; ripgrep.el shell-quotes only the regexp, and `shell-file-name' here is zsh,
+  ;; which errors on an unmatched glob instead of passing it through like bash.
+  ;; Split first: projectile hands over "--fixed-strings --hidden" as one string
+  ;; and relies on the shell to word-split it.
+  (define-advice ripgrep-regexp (:filter-args (args) quote-args)
+    (let ((regexp (nth 0 args))
+          (directory (nth 1 args))
+          (extra (nth 2 args)))
+      (list regexp directory
+            (mapcar #'shell-quote-argument
+                    (mapcan (lambda (arg) (split-string arg nil t)) extra))))))
 
 (use-package docker-compose-mode)
 

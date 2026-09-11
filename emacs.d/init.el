@@ -632,7 +632,7 @@ that hang in embedded terminal emulators."
 ;; setup for ts-mode
 
 (setq treesit-language-source-alist
-'((ruby "https://github.com/tree-sitter/tree-sitter-ruby" "v0.23.1" "src")
+'((ruby "https://github.com/tree-sitter/tree-sitter-ruby" "master" "src")
   (bash "https://github.com/tree-sitter/tree-sitter-bash")
   (cmake "https://github.com/uyha/tree-sitter-cmake")
   (css "https://github.com/tree-sitter/tree-sitter-css")

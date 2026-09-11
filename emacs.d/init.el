@@ -1,6 +1,10 @@
-;-*-Emacs-Lisp-*-
+;;; -*- mode: emacs-lisp; lexical-binding: t; -*-
 
 ;; (setq debug-on-error t)
+
+;; Six abandoned MELPA packages predate the cookie and will never gain one;
+;; every file we own carries it.
+(add-to-list 'warning-inhibit-types '(files missing-lexbind-cookie))
 
 
 ;;;; per https://github.com/emacs-lsp/lsp-mode#performance

@@ -66,16 +66,14 @@
    '(("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "https://melpa.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
  '(package-selected-packages
-   '(ag all-the-icons auto-compile bind-key blamer bm chatgpt-shell claude-code claude-code-ide coffee-mode
-        color-theme-sanityinc-solarized company-box company-terraform dash-at-point docker-compose-mode dockerfile-mode
-        embark-consult exec-path-from-shell fill-column-indicator flx-ido git-link go-mode groovy-mode gterm lsp-ui
+   '(ag all-the-icons auto-compile bind-key blamer bm chatgpt-shell claude-code coffee-mode
+        color-theme-sanityinc-solarized company-terraform dash-at-point docker-compose-mode dockerfile-mode
+        embark-consult exec-path-from-shell fill-column-indicator flx-ido git-link go-mode groovy-mode lsp-ui
         magit magit-section marginalia moody orderless org-ai org-appear org-superstar packed projectile-rails
         protobuf-mode request ripgrep rubocop ruby-compilation ruby-tools sass-mode smart-shift
         solarized-theme sql-indent transient typescript-mode vertico vterm web-mode which-key whisper yasnippet))
  '(package-vc-selected-packages
    '((claude-code :url "https://github.com/stevemolitor/claude-code.el")
-     (gterm :url "https://github.com/rwc9u/emacs-libgterm" :branch "main")
-     (claude-code-ide :url "https://github.com/manzaltu/claude-code-ide.el")
      (whisper :url "https://github.com/natrys/whisper.el")))
  '(safe-local-variable-values
    '((lsp-disabled-clients ruby-ls rubocop-ls sorbet-ls) (lsp-disabled-clients ruby-ls rubocop-ls)

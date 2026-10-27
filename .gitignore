@@ -22,3 +22,4 @@ emacs.d/quelpa/
 emacs.d/projectile-frecency.eld
 \#*\#
 .\#*
+emacs.d/.chatgpt-shell.el

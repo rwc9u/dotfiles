@@ -176,7 +176,7 @@
   (blamer-symbol-count-before-new-line 4)
   :custom-face
   (blamer-face ((t :foreground "#7a88cf"
-                    :background nil
+                    :background unspecified
                     :height 120
                     :italic t)))
   :config

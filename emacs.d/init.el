@@ -6,6 +6,9 @@
 ;; every file we own carries it.
 (add-to-list 'warning-inhibit-types '(files missing-lexbind-cookie))
 
+;; Background native compilation of third-party packages is noisy and never actionable.
+(setq native-comp-async-report-warnings-errors 'silent)
+
 
 ;;;; per https://github.com/emacs-lsp/lsp-mode#performance
 ;; (setenv "LSP_USE_PLISTS" "true") ;; in early-init.el

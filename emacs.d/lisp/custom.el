@@ -69,7 +69,7 @@
    '(ag all-the-icons auto-compile bind-key blamer bm chatgpt-shell claude-code claude-code-ide coffee-mode
         color-theme-sanityinc-solarized company-box company-terraform dash-at-point docker-compose-mode dockerfile-mode
         embark-consult exec-path-from-shell fill-column-indicator flx-ido git-link go-mode groovy-mode gterm lsp-ui
-        magit magit-section marginalia moody orderless org-ai org-appear org-roam org-superstar packed projectile-rails
+        magit magit-section marginalia moody orderless org-ai org-appear org-superstar packed projectile-rails
         protobuf-mode quelpa-use-package request ripgrep rubocop ruby-compilation ruby-tools sass-mode smart-shift
         solarized-theme sql-indent transient typescript-mode vertico vterm web-mode which-key whisper yasnippet))
  '(package-vc-selected-packages

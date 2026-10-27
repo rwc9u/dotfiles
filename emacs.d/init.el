@@ -38,12 +38,6 @@
   :config
   (exec-path-from-shell-initialize))
 
-(quelpa
- '(quelpa-use-package
-   :fetcher git
-   :url "https://github.com/quelpa/quelpa-use-package.git"))
-(require 'quelpa-use-package)
-
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
@@ -502,19 +496,14 @@
 
 
 
-(quelpa-use-package-activate-advice)
 (use-package whisper
-  :quelpa (whisper :fetcher github
-                   :repo "natrys/whisper.el"
-                   :branch "master"
-                   :files ("*.el"))
+  :vc (:url "https://github.com/natrys/whisper.el" :rev :newest)
   :bind ("C-c w r" . whisper-run)
   :config
   (setq whisper-install-directory "/tmp/"
         whisper-model "base"
         whisper-language "en"
         whisper-translate nil))
-(quelpa-use-package-deactivate-advice)
 
 ;; (use-package flycheck-languagetool
 ;;   :ensure t

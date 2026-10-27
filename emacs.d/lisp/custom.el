@@ -70,12 +70,13 @@
         color-theme-sanityinc-solarized company-box company-terraform dash-at-point docker-compose-mode dockerfile-mode
         embark-consult exec-path-from-shell fill-column-indicator flx-ido git-link go-mode groovy-mode gterm lsp-ui
         magit magit-section marginalia moody orderless org-ai org-appear org-superstar packed projectile-rails
-        protobuf-mode quelpa-use-package request ripgrep rubocop ruby-compilation ruby-tools sass-mode smart-shift
+        protobuf-mode request ripgrep rubocop ruby-compilation ruby-tools sass-mode smart-shift
         solarized-theme sql-indent transient typescript-mode vertico vterm web-mode which-key whisper yasnippet))
  '(package-vc-selected-packages
    '((claude-code :url "https://github.com/stevemolitor/claude-code.el")
      (gterm :url "https://github.com/rwc9u/emacs-libgterm" :branch "main")
-     (claude-code-ide :url "https://github.com/manzaltu/claude-code-ide.el")))
+     (claude-code-ide :url "https://github.com/manzaltu/claude-code-ide.el")
+     (whisper :url "https://github.com/natrys/whisper.el")))
  '(safe-local-variable-values
    '((lsp-disabled-clients ruby-ls rubocop-ls sorbet-ls) (lsp-disabled-clients ruby-ls rubocop-ls)
      (lsp-enabled-clients quote ruby-lsp-ls) (lsp-enabled-clients quote (ruby-lsp-ls))

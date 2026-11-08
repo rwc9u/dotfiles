@@ -89,7 +89,6 @@ brew "ynqa/tap/jnv"
 
 cask "1password-cli"
 # cask "cheatsheet"
-cask "docker"
 # Untrusted third-party tap. Before `brew bundle`, run:
 #   brew trust --cask d12frosted/emacs-plus/emacs-plus-app
 # Icon is picked from ~/.config/emacs-plus/build.yml (icon: liquid-glass).
@@ -99,7 +98,6 @@ cask "visual-studio-code"
 cask 'caffeine'
 cask 'dash'
 cask 'github'
-cask 'wireshark'
 
 
 # Fonts

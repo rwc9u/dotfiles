@@ -36,8 +36,14 @@ fi
 brew update
 
 # Install all our dependencies with bundle (See Brewfile)
+# Homebrew 7 refuses third-party taps until they're trusted.
+brew tap d12frosted/emacs-plus
+brew tap ynqa/tap
+brew trust d12frosted/emacs-plus ynqa/tap
 brew bundle --force --file $ROOT_DIR/Brewfile
 if [ "$WORK" = "1" ]; then
+  for t in argoproj/tap caarlos0/tap depot/tap hashicorp/tap kreuzwerker/taps puma/puma; do brew tap $t; done
+  brew trust argoproj/tap caarlos0/tap depot/tap hashicorp/tap kreuzwerker/taps puma/puma
   brew bundle --force --file $ROOT_DIR/Brewfile.work
 fi
 

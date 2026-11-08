@@ -1,6 +1,5 @@
 tap "d12frosted/emacs-plus"
 # tap "kajabi/kjctl", "git@github.com:Kajabi/kjctl.git"
-tap "romkatv/powerlevel10k"
 tap "ynqa/tap"
 
 
@@ -138,9 +137,9 @@ cask 'font-meslo-lg-nerd-font'
 cask 'font-monofur-nerd-font'
 cask 'font-monoid-nerd-font'
 cask 'font-mononoki-nerd-font'
-cask 'font-mplus-nerd-font'
+cask 'font-m+-nerd-font'
 cask 'font-noto-nerd-font'
-cask 'font-open-dyslexic-nerd-font'
+cask 'font-opendyslexic-nerd-font'
 cask 'font-overpass-nerd-font'
 cask 'font-profont-nerd-font'
 cask 'font-proggy-clean-tt-nerd-font'

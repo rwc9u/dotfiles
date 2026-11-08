@@ -1,7 +1,6 @@
 [user]
 	name = Rob Christie
-	email = rob.christie@kajabi.com
-	signingkey = 306ABB80C368E645
+	email = robchristie@gmail.com
 [github]
 	user = rwc9u
 [alias]
@@ -59,7 +58,7 @@
 [pull]
 	rebase = true
 [core]
-	excludesfile = /Users/rob.christie/.gitignore_global
+	excludesfile = ~/.gitignore_global
   fsmonitor = true
   untrackedCache = true
 
@@ -67,9 +66,6 @@
 	default = simple
   autoSetupRemote = true
   followTags = true
-[commit]
-	template = /Users/rob.christie/.stCommitMsg
-	gpgsign = true
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
@@ -77,6 +73,7 @@
 	clean = git-lfs clean -- %f
 [init]
 	defaultBranch = main
-[safe]
-	directory = /Users/rob.christie/dev/kajabi-products
-	directory = /workspace
+# Machine-specific overrides (not in the repo). On a work machine bin/install
+# (WORK=1) creates this to include ~/.gitconfig-work. Missing file is ignored.
+[include]
+	path = ~/.gitconfig.local

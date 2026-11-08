@@ -21,6 +21,11 @@ followed by
 ./bin/install
 ```
 
+On a work machine, run `WORK=1 ./bin/install` instead. That also installs
+`Brewfile.work` (cloud/k8s/infra tools, Postgres/Redis, work apps), installs
+aws-sso-util, and creates `~/.gitconfig.local` to include `~/.gitconfig-work`
+(work email, GPG commit signing, commit template, safe directories).
+
 ### Install oh-my-zsh
 
 Or run the following

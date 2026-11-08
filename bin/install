@@ -6,6 +6,10 @@ ROOT_DIR=$SCRIPT_DIR/..
 
 echo "Installing..."
 
+# Set WORK=1 to also install work-only packages and git settings
+# (Brewfile.work, gitconfig-work, aws-sso-util).
+WORK=${WORK:-0}
+
 echo "Checking Command Line Tools for Xcode"
 # Only run if the tools are not installed yet
 # To check that try to print the SDK path
@@ -34,11 +38,19 @@ brew update
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
 brew bundle --force --file $ROOT_DIR/Brewfile
+if [ "$WORK" = "1" ]; then
+  brew bundle --force --file $ROOT_DIR/Brewfile.work
+fi
 
 echo "Linking configs..."
 # Link configs
 chmod a+x $ROOT_DIR/install
 $ROOT_DIR/install
+
+if [ "$WORK" = "1" ] && [ ! -e $HOME/.gitconfig.local ]; then
+  echo "Enabling work git settings in ~/.gitconfig.local..."
+  printf '[include]\n\tpath = ~/.gitconfig-work\n' > $HOME/.gitconfig.local
+fi
 
 echo "Installing powerlevel10k..."
 # Install powerlevel10k
@@ -62,6 +74,8 @@ asdf plugin add ruby
 echo "installing global .tool-versions"
 asdf install
 
-echo "installing aws-sso-util"
-pipx ensurepath
-pipx install aws-sso-util
+if [ "$WORK" = "1" ]; then
+  echo "installing aws-sso-util"
+  pipx ensurepath
+  pipx install aws-sso-util
+fi

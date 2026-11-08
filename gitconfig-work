@@ -1,0 +1,10 @@
+# Work-only git settings. Included via ~/.gitconfig.local when WORK=1.
+[user]
+	email = rob.christie@kajabi.com
+	signingkey = 306ABB80C368E645
+[commit]
+	template = ~/.stCommitMsg
+	gpgsign = true
+[safe]
+	directory = ~/dev/kajabi-products
+	directory = /workspace

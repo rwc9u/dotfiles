@@ -1,6 +1,4 @@
 tap "d12frosted/emacs-plus"
-tap "homebrew/bundle"
-tap "homebrew/services"
 # tap "kajabi/kjctl", "git@github.com:Kajabi/kjctl.git"
 tap "romkatv/powerlevel10k"
 tap "ynqa/tap"

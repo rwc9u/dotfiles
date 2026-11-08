@@ -1,10 +1,16 @@
-!/bin/sh
+#!/bin/sh
 # Initialize Oh My ZSH
 # Run ./bin/install when complete
 
-echo "Installing Oh My ZSH. Run ./install when done..."
+SCRIPT_DIR=$( cd -- "$( dirname -- "$0" )" &> /dev/null && pwd )
 
-# Check for Oh My Zsh and install if we don't have it
-if test ! $(which omz); then
-  /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
+# Link configs first so the Oh My Zsh installer finds our ~/.zshrc and keeps it.
+(cd "$SCRIPT_DIR/.." && ./install)
+
+if [ ! -d "${ZSH:-$HOME/.oh-my-zsh}" ]; then
+  echo "Installing Oh My ZSH..."
+  KEEP_ZSHRC=yes RUNZSH=no CHSH=no \
+    /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
 fi
+
+echo "Run ./bin/install next."
